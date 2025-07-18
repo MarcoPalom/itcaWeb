@@ -23,4 +23,47 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+body::-webkit-scrollbar {
+  display: none; 
+}
+
+html, body {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none; 
+}
+
+.custom-tabs .ant-tabs-nav {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 16px;
+  padding: 4px;
+  margin-bottom: 32px;
+}
+
+.custom-tabs .ant-tabs-tab {
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.custom-tabs .ant-tabs-tab-active {
+  background: linear-gradient(135deg, #8b5cf6, #a855f7) !important;
+  color: white !important;
+}
+
+.custom-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: white !important;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
