@@ -1,6 +1,6 @@
 import React from "react";
-import ScrollCurtain from "../../components/festival/ScrollCurtain";
+import Fastival from "../../components/festival/Fastival";
 
 export default function FestivalPage() {
-  return <ScrollCurtain />;
+  return <Fastival />;
 } 

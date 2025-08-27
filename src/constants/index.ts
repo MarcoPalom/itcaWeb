@@ -113,3 +113,132 @@ export const panels: PanelProps[] = [
       "Área encargada del fomento y difusión de la literatura, en especial de la realizada por escritores tamaulipecos. Coordinación y seguimiento a Salas de Lectura y Paralibros con los que cuenta el estado. Realización de convocatorias para concursos, edición y publicación de las obras de los autores locales. Desarrollar y llevar a cabo los programas para el fomento y difusión de la literatura.",
   },
 ];
+
+// Importar tipos compartidos
+export * from './types';
+
+// Importar data del Festival de Nuevo Laredo
+export * from './nvData';
+
+// Importar data del Festival del Municipio Guerrero
+export * from './guerreroData';
+
+// Importar data del Festival del Municipio Mier
+export * from './mierData';
+
+// Importar data del Festival del Municipio Miguel Alemán
+export * from './miguelAlemanData';
+
+// Importar data del Festival del Municipio Camargo
+export * from './camargoData';
+
+// Importar data del Festival del Municipio Gustavo Díaz Ordaz
+export * from './gustavoDiazOrdazData';
+
+// Importar data del Festival del Municipio Reynosa
+export * from './reynosaData';
+
+// Importar data del Festival del Municipio Río Bravo
+export * from './rioBravoData';
+
+// Importar data del Festival del Municipio Valle Hermoso
+export * from './valleHermosoData';
+
+// Importar data del Festival del Municipio Matamoros
+export * from './matamorosData';
+
+// Importar data del Festival del Municipio Méndez
+export * from './mendezData';
+
+// Importar data del Festival del Municipio San Fernando
+export * from './sanFernandoData';
+
+// Importar data del Festival del Municipio Burgos
+export * from './burgosData';
+
+// Importar data del Festival del Municipio San Nicolás
+export * from './sanNicolasData';
+
+// Importar data del Festival del Municipio San Carlos
+export * from './sanCarlosData';
+
+// Importar data del Festival del Municipio Mainero
+export * from './maineroData';
+
+// Importar data del Festival del Municipio Villagrán
+export * from './villagranData';
+
+// Importar data del Festival del Municipio Hidalgo
+export * from './hidalgoData';
+
+// Importar data del Festival del Municipio Jiménez
+export * from './jimenezData';
+
+// Importar data del Festival del Municipio Abasolo
+export * from './abasoloData';
+
+// Importar data del Festival del Municipio Soto la Marina
+export * from './sotoLaMarinaData';
+
+// Importar data del Festival del Municipio Padilla
+export * from './padillaData';
+
+// Importar data del Festival del Municipio Güémez
+export * from './guemezData';
+
+// Importar data del Festival del Municipio Casas
+export * from './casasData';
+
+// Importar data del Festival del Municipio Victoria
+export * from './victoriaData';
+
+// Importar data del Festival del Municipio Llera
+export * from './lleraData';
+
+// Importar data del Festival del Municipio Jaumave
+export * from './jaumaveData';
+
+// Importar data del Festival del Municipio Bustamante
+export * from './bustamanteData';
+
+// Importar data del Festival del Municipio Miquihuana
+export * from './miquihuanaData';
+
+// Importar data del Festival del Municipio Palmillas
+export * from './palmillasData';
+
+// Importar data del Festival del Municipio Tula
+export * from './tulaData';
+
+// Importar data del Festival del Municipio Ocampo
+export * from './ocampoData';
+
+// Importar data del Festival del Municipio Xicoténcatl
+export * from './xicotencatlData';
+
+// Importar data del Festival del Municipio Gómez Farías
+export * from './gomezFariasData';
+
+// Importar data del Festival del Municipio Mante
+export * from './manteData';
+
+// Importar data del Festival del Municipio Nuevo Morelos
+export * from './nuevoMorelosData';
+
+// Importar data del Festival del Municipio Antiguo Morelos
+export * from './antiguoMorelosData';
+
+// Importar data del Festival del Municipio González
+export * from './gonzalezData';
+
+// Importar data del Festival del Municipio Aldama
+export * from './aldamaData';
+
+// Importar data del Festival del Municipio Altamira
+export * from './altamiraData';
+
+// Importar data del Festival del Municipio Madero
+export * from './maderoData';
+
+// Importar data del Festival del Municipio Tampico
+export * from './tampicoData';
