@@ -1,7 +1,58 @@
-import { Search, ArrowLeft, Signal, Wifi, Battery } from "lucide-react"
+"use client"
+import { Search, ArrowLeft, Signal, Wifi, Battery, ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
+import { useState, useEffect } from "react"
+import { motion, AnimatePresence } from "framer-motion"
+import { internationalArtists } from "@/constants/internationalArtistData"
 
 export default function Fastival() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Mapeo de imágenes para cada artista
+  const artistImages: { [key: string]: string } = {
+    "Bianca Marroquín": "/images/bianca_marroquin.jpg",
+    "Argelia Fragoso": "/images/argelia_fragoso.jpg",
+    "Hands Percussion of Malaysia": "/images/hand_percusion.jpg",
+    "Charlotte Pescayre": "/images/charlotte.jpeg",
+    "Sabor Life is Rhythm": "/images/sabor_life.jpg", 
+    "Ballet Nepantla": "/images/ballet_nepantla.jpg",
+    "Matías Aguayo": "/images/matias_aguayo.jpg",
+    "Del Vali": "/images/del_vali.png",
+    "Wero Hernández": "/images/el_wero.jpg"
+  }
+
+  // Detectar el tamaño de pantalla
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    checkScreenSize()
+    window.addEventListener('resize', checkScreenSize)
+    
+    return () => window.removeEventListener('resize', checkScreenSize)
+  }, [])
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % internationalArtists.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => 
+      prev === 0 ? internationalArtists.length - 1 : prev - 1
+    )
+  }
+
+  // Cambio automático del carrusel cada 3 segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide()
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
          <div className="min-h-screen bg-black text-white w-full">
       {/* Status Bar - Solo visible en móvil */}
@@ -39,52 +90,58 @@ export default function Fastival() {
         </div>
       </div>
 
-      {/* Category Tabs */}
-      <div className="px-4 mb-6 md:px-6">
-        <div className="flex gap-2 md:gap-4">
-          <div className="relative bg-gradient-to-r from-orange-500 to-yellow-500 rounded-lg px-6 py-2 overflow-hidden md:px-8 md:py-3">
-            <div className="absolute inset-0 opacity-30">
-              <svg viewBox="0 0 100 40" className="w-full h-full">
-                <path d="M0,40 Q10,20 20,25 T40,30 T60,20 T80,35 T100,25 L100,40 Z" fill="black" opacity="0.3" />
-                <circle cx="15" cy="25" r="2" fill="black" opacity="0.4" />
-                <circle cx="25" cy="22" r="1.5" fill="black" opacity="0.4" />
-                <circle cx="35" cy="28" r="2" fill="black" opacity="0.4" />
-                <circle cx="45" cy="24" r="1.5" fill="black" opacity="0.4" />
-                <circle cx="55" cy="20" r="2" fill="black" opacity="0.4" />
-                <circle cx="65" cy="26" r="1.5" fill="black" opacity="0.4" />
-                <circle cx="75" cy="32" r="2" fill="black" opacity="0.4" />
-                <circle cx="85" cy="28" r="1.5" fill="black" opacity="0.4" />
-              </svg>
-            </div>
-            <span className="relative z-10 text-white font-medium text-sm md:text-base">Todos</span>
-          </div>
-                     <button
-             className="bg-gray-600 text-white hover:bg-gray-500 rounded-lg px-6 md:px-8 md:py-3 md:text-base"
-           >
-             Música
-           </button>
-           <button
-             className="bg-gray-600 text-white hover:bg-gray-500 rounded-lg px-6 md:px-8 md:py-3 md:text-base"
-           >
-             Danza
-           </button>
-        </div>
-      </div>
-
       {/* Artists Sections */}
       <div className="px-4 space-y-6 md:px-6 md:space-y-8">
-        {/* Artistas Internacionales */}
+        {/* Artistas Internacionales - Carrusel con Animaciones */}
         <section>
           <h2 className="text-lg font-semibold text-white mb-4 md:text-xl md:mb-6">Artistas Internacionales</h2>
-          <Link href="/artist/maria-katzarava" className="block">
-            <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl">
-              <img
-                src="/elegant-female-opera-singer-performing-on-stage.png"
-                alt="María Katzarava"
-                className="w-full h-48 object-cover md:h-64 lg:h-80"
-              />
+          
+          {/* Carrusel Container */}
+          <div className="relative overflow-hidden">
+            {/* Contenido del carrusel con animaciones */}
+            <div className="relative h-48 md:h-56 overflow-hidden">
+              <motion.div
+                className="flex gap-4 h-full"
+                animate={{ 
+                  x: -currentSlide * (isMobile ? 104 : 34.30) + "%"
+                }}
+                transition={{ 
+                  duration: 0.8, 
+                  ease: "easeInOut"
+                }}
+              >
+                {/* Duplicar los artistas para crear el efecto infinito */}
+                {[...internationalArtists, ...internationalArtists].map((artist, index) => (
+                  <motion.div
+                    key={`${artist.id}-${index}`}
+                    className="flex-shrink-0 w-full md:w-1/3"
+                  >
+                     <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
+                       <motion.div 
+                         className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-full relative"
+                         whileHover={{ 
+                           scale: 1.02,
+                           transition: { duration: 0.2 }
+                         }}
+                       >
+                         <img
+                           src={artistImages[artist.name] || "/elegant-female-opera-singer-performing-on-stage.png"}
+                           alt={artist.name}
+                           className="w-full h-full object-cover"
+                         />
+                         
+                         {/* Label en la parte inferior */}
+                         <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
+                           <h3 className="font-semibold text-white text-sm">{artist.name}</h3>
+                           <p className="text-gray-300 text-xs">{artist.category}</p>
+                         </div>
+                       </motion.div>
+                     </Link>
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
-          </Link>
+          </div>
         </section>
 
         {/* Artistas Nacionales */}
