@@ -121,7 +121,7 @@ export * from './types';
 export * from './Municipios/nvData';
 
 // Importar data del Festival del Municipio Guerrero
-export * from './guerreroData';
+export * from './Municipios/guerreroData';
 
 // Importar data del Festival del Municipio Mier
 export * from './Municipios/mierData';
@@ -130,10 +130,10 @@ export * from './Municipios/mierData';
 export * from './Municipios/miguelAlemanData';
 
 // Importar data del Festival del Municipio Camargo
-export * from './camargoData';
+export * from './Municipios/camargoData';
 
 // Importar data del Festival del Municipio Gustavo Díaz Ordaz
-export * from './gustavoDiazOrdazData';
+export * from './Municipios/gustavoDiazOrdazData';
 
 // Importar data del Festival del Municipio Reynosa
 export * from './Municipios/reynosaData';
@@ -154,7 +154,7 @@ export * from './Municipios/mendezData';
 export * from './Municipios/sanFernandoData';
 
 // Importar data del Festival del Municipio Burgos
-export * from './burgosData';
+export * from './Municipios/burgosData';
 
 // Importar data del Festival del Municipio San Nicolás
 export * from './Municipios/sanNicolasData';
@@ -169,13 +169,13 @@ export * from './Municipios/maineroData';
 export * from './Municipios/villagranData';
 
 // Importar data del Festival del Municipio Hidalgo
-export * from './hidalgoData';
+export * from './Municipios/hidalgoData';
 
 // Importar data del Festival del Municipio Jiménez
 export * from './Municipios/jimenezData';
 
 // Importar data del Festival del Municipio Abasolo
-export * from './abasoloData';
+export * from './Municipios/abasoloData';
 
 // Importar data del Festival del Municipio Soto la Marina
 export * from './Municipios/sotoLaMarinaData';
@@ -184,10 +184,10 @@ export * from './Municipios/sotoLaMarinaData';
 export * from './Municipios/padillaData';
 
 // Importar data del Festival del Municipio Güémez
-export * from './guemezData';
+export * from './Municipios/guemezData';
 
 // Importar data del Festival del Municipio Casas
-export * from './casasData';
+export * from './Municipios/casasData';
 
 // Importar data del Festival del Municipio Victoria
 export * from './Municipios/victoriaData';
@@ -199,7 +199,7 @@ export * from './Municipios/lleraData';
 export * from './Municipios/jaumaveData';
 
 // Importar data del Festival del Municipio Bustamante
-export * from './bustamanteData';
+export * from './Municipios/bustamanteData';
 
 // Importar data del Festival del Municipio Miquihuana
 export * from './Municipios/miquihuanaData';
@@ -217,7 +217,7 @@ export * from './Municipios/ocampoData';
 export * from './Municipios/xicotencatlData';
 
 // Importar data del Festival del Municipio Gómez Farías
-export * from './gomezFariasData';
+export * from './Municipios/gomezFariasData';
 
 // Importar data del Festival del Municipio Mante
 export * from './Municipios/manteData';
@@ -226,16 +226,16 @@ export * from './Municipios/manteData';
 export * from './Municipios/nuevoMorelosData';
 
 // Importar data del Festival del Municipio Antiguo Morelos
-export * from './antiguoMorelosData';
+export * from './Municipios/antiguoMorelosData';
 
 // Importar data del Festival del Municipio González
-export * from './gonzalezData';
+export * from './Municipios/gonzalezData';
 
 // Importar data del Festival del Municipio Aldama
-export * from './aldamaData';
+export * from './Municipios/aldamaData';
 
 // Importar data del Festival del Municipio Altamira
-export * from './altamiraData';
+export * from './Municipios/altamiraData';
 
 // Importar data del Festival del Municipio Madero
 export * from './Municipios/maderoData';

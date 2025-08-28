@@ -1,9 +1,10 @@
 "use client"
-import { Search, ArrowLeft, Signal, Wifi, Battery, ChevronLeft, ChevronRight } from "lucide-react"
+import { ArrowLeft, Signal, Wifi, Battery, ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { internationalArtists } from "@/constants/internationalArtistData"
+import { nationalArtists } from "@/constants/nationalArtistData"
 
 export default function Fastival() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -21,6 +22,24 @@ export default function Fastival() {
     "Del Vali": "/images/del_vali.png",
     "Wero Hernández": "/images/el_wero.jpg"
   }
+
+  // Mapeo de imágenes para artistas nacionales
+  const nationalArtistImages: { [key: string]: string } = {
+    "María Katzarava": "/images/national_artists/maria_katza.jpg", // Usando imagen similar
+    "Centro de Producción de Danza Contemporánea (CEPRODAC)": "/images/national_artists/grupo_tayer.jpg", // Imagen genérica para teatro
+    "La Percha Teatro": "/images/national_artists/la_percha.jpg", // Imagen genérica para danza
+    "Grupo La Trenza": "/images/national_artists/latrenza.jpg", // Imagen genérica para teatro
+    "Grupo Tayer": "/images/national_artists/grupo_tayer.jpg" // Imagen genérica para teatro
+  }
+
+  // Seleccionar 5 artistas nacionales al azar
+  const selectedNationalArtists = [
+    nationalArtists[0],  // María Katzarava
+    nationalArtists[1],  // CEPRODAC
+    nationalArtists[9],  // la percha teatro
+    nationalArtists[3],  // Grupo La Trenza
+    nationalArtists[4]   // Grupo Tayer
+  ]
 
   // Detectar el tamaño de pantalla
   useEffect(() => {
@@ -75,18 +94,6 @@ export default function Fastival() {
           <div className="w-1 h-1 bg-white rounded-full"></div>
           <div className="w-1 h-1 bg-white rounded-full"></div>
           <div className="w-1 h-1 bg-white rounded-full"></div>
-        </div>
-      </div>
-
-      {/* Search Bar */}
-      <div className="px-4 pb-4 md:px-6">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                     <input
-             type="text"
-             placeholder="Find band, artist, genre..."
-             className="pl-10 bg-gray-800 border-gray-700 text-white placeholder:text-gray-400 rounded-lg md:text-base w-full px-3 py-2 border rounded-lg"
-           />
         </div>
       </div>
 
@@ -152,48 +159,39 @@ export default function Fastival() {
               Ver todo
             </Link>
           </div>
-          <div className="flex gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:gap-4 md:overflow-visible">
-            <div className="flex-shrink-0 w-40 md:w-full">
-              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl">
-                <img
-                  src="/mexican-national-artist-performing-traditional-mus.png"
-                  alt="Artist"
-                  className="w-full h-32 object-cover md:h-40"
-                />
-                <div className="p-3 md:p-4">
-                  <h3 className="font-medium text-sm mb-1 text-white md:text-base">lorem ipsum</h3>
-                  <p className="text-xs text-gray-400 md:text-sm">Parc del Fòrum, Barcelona</p>
-                  <p className="text-xs text-gray-400 md:text-sm">22/09/2022</p>
-                </div>
+          <div className="flex gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-6 md:gap-4 md:overflow-visible">
+            {selectedNationalArtists.map((artist, index) => (
+              <div key={index} className="flex-shrink-0 w-40 md:w-full">
+                <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
+                  <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
+                    <img
+                      src={nationalArtistImages[artist.name] || "/elegant-female-opera-singer-performing-on-stage.png"}
+                      alt={artist.name}
+                      className="w-full h-full object-cover"
+                    />
+                    
+                    {/* Label en la parte inferior */}
+                    <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
+                      <h3 className="font-semibold text-white text-sm">{artist.name}</h3>
+                      <p className="text-gray-300 text-xs">{artist.category}</p>
+                    </div>
+                  </div>
+                </Link>
               </div>
-            </div>
+            ))}
             <div className="flex-shrink-0 w-40 md:w-full">
-              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl">
-                <img
-                  src="/mexican-folk-dancers-performing-in-colorful-costum.png"
-                  alt="Artist"
-                  className="w-full h-32 object-cover md:h-40"
-                />
-                <div className="p-3 md:p-4">
-                  <h3 className="font-medium text-sm mb-1 text-white md:text-base">lorem ipsum</h3>
-                  <p className="text-xs text-gray-400 md:text-sm">Palau Sant Jordi, Barcelona...</p>
-                  <p className="text-xs text-gray-400 md:text-sm">03/10/2022</p>
+              <Link href="/artists/nacional" className="block h-full">
+                <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-lg overflow-hidden md:rounded-xl h-full flex flex-col items-center justify-center p-4 border-2 border-blue-400 border-opacity-50 hover:from-green-500 hover:to-green-700 transition-all duration-300">
+                  <div className="text-white text-center">
+                    <div className="mb-2">
+                      <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                      </svg>
+                    </div>
+                    <h3 className="font-bold text-lg md:text-xl uppercase tracking-wide">Ver Todos</h3>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="flex-shrink-0 w-40 md:w-full">
-              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl">
-                <img
-                  src="/tamaulipas-regional-artist-performing-traditional-.png"
-                  alt="Artist"
-                  className="w-full h-32 object-cover md:h-40"
-                />
-                <div className="p-3 md:p-4">
-                  <h3 className="font-medium text-sm mb-1 text-white md:text-base">lorem ip</h3>
-                  <p className="text-xs text-gray-400 md:text-sm">Palau San</p>
-                  <p className="text-xs text-gray-400 md:text-sm">02/02/20</p>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
         </section>
@@ -206,30 +204,95 @@ export default function Fastival() {
               Ver todo
             </Link>
           </div>
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4 md:gap-4">
-            <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl">
-              <img
-                src="/tamaulipas-regional-artist-performing-traditional-.png"
-                alt="Artist"
-                className="w-full h-24 object-cover md:h-32"
-              />
-              <div className="p-3 md:p-4">
-                <h3 className="font-medium text-sm mb-1 text-white md:text-base">Lorem Ipsum</h3>
-                <p className="text-xs text-gray-400 md:text-sm">Parc del Fòrum, Barcelona</p>
-                <p className="text-xs text-gray-400 md:text-sm">22/09/2022</p>
+          <div className="flex gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-6 md:gap-4 md:overflow-visible">
+            <div className="flex-shrink-0 w-40 md:w-full">
+              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
+                <img
+                  src="/tamaulipas-regional-artist-performing-traditional-.png"
+                  alt="Artist"
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Label en la parte inferior */}
+                <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
+                  <h3 className="font-semibold text-white text-sm">Lorem Ipsum Dolor</h3>
+                  <p className="text-gray-300 text-xs">Teatro Regional</p>
+                </div>
               </div>
             </div>
-            <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl">
-              <img
-                src="/tamaulipas-traditional-music-group-with-regional-i.png"
-                alt="Artist"
-                className="w-full h-24 object-cover md:h-32"
-              />
-              <div className="p-3 md:p-4">
-                <h3 className="font-medium text-sm mb-1 text-white md:text-base">Lorem Ipsum</h3>
-                <p className="text-xs text-gray-400 md:text-sm">Palau Sant Jordi, Barcelona</p>
-                <p className="text-xs text-gray-400 md:text-sm">03/09/2022</p>
+            <div className="flex-shrink-0 w-40 md:w-full">
+              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
+                <img
+                  src="/tamaulipas-traditional-music-group-with-regional-i.png"
+                  alt="Artist"
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Label en la parte inferior */}
+                <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
+                  <h3 className="font-semibold text-white text-sm">Sit Amet Consectetur</h3>
+                  <p className="text-gray-300 text-xs">Música Tradicional</p>
+                </div>
               </div>
+            </div>
+            <div className="flex-shrink-0 w-40 md:w-full">
+              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
+                <img
+                  src="/tamaulipas-regional-artist-performing-traditional-.png"
+                  alt="Artist"
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Label en la parte inferior */}
+                <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
+                  <h3 className="font-semibold text-white text-sm">Adipiscing Elit Sed</h3>
+                  <p className="text-gray-300 text-xs">Danza Folklórica</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex-shrink-0 w-40 md:w-full">
+              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
+                <img
+                  src="/tamaulipas-traditional-music-group-with-regional-i.png"
+                  alt="Artist"
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Label en la parte inferior */}
+                <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
+                  <h3 className="font-semibold text-white text-sm">Do Eiusmod Tempor</h3>
+                  <p className="text-gray-300 text-xs">Artes Plásticas</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex-shrink-0 w-40 md:w-full">
+              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
+                <img
+                  src="/tamaulipas-regional-artist-performing-traditional-.png"
+                  alt="Artist"
+                  className="w-full h-full object-cover"
+                />
+                
+                {/* Label en la parte inferior */}
+                <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
+                  <h3 className="font-semibold text-white text-sm">Incididunt Ut Labore</h3>
+                  <p className="text-gray-300 text-xs">Literatura</p>
+                </div>
+              </div>
+            </div>
+            <div className="flex-shrink-0 w-40 md:w-full">
+              <Link href="/artists/tamaulipecos" className="block h-full">
+                <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 flex flex-col items-center justify-center p-4 border-2 border-blue-400 border-opacity-50 hover:from-green-500 hover:to-green-700 transition-all duration-300">
+                  <div className="text-white text-center">
+                    <div className="mb-2">
+                      <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                      </svg>
+                    </div>
+                    <h3 className="font-bold text-lg md:text-xl uppercase tracking-wide">Ver Todos</h3>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
         </section>
