@@ -1,9 +1,10 @@
 "use client"
 import { useState, useEffect } from "react"
-import { ArrowLeft, Signal, Wifi, Battery } from "lucide-react"
+import { ArrowLeft, Signal, Wifi, Battery, MapPin, Calendar, Clock } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
 import { internationalArtists } from "@/constants/internationalArtistData"
 import { nationalArtists } from "@/constants/nationalArtistData"
+import EventList from "@/components/artist/EventList"
 
 export default function ArtistPage() {
   const params = useParams()
@@ -70,16 +71,24 @@ export default function ArtistPage() {
     "Del Vali": "/images/del_vali.png",
     "Wero Hernández": "/images/el_wero.jpg",
     "María Katzarava": "/images/national_artists/maria_katza.jpg",
-    "Centro de Producción de Danza Contemporánea (CEPRODAC)": "/images/national_artists/grupo_tayer.jpg",
+    "Centro de Producción de Danza Contemporánea (CEPRODAC)": "/images/national_artists/ceprodac1.jpg",
     "Patricia Guerrero": "/images/national_artists/la_percha.jpg",
     "Grupo La Trenza": "/images/national_artists/latrenza.jpg",
-    "Grupo Tayer": "/images/national_artists/grupo_tayer.jpg"
+    "Grupo Tayer": "/images/national_artists/grupo_tayer.jpg",
+    "La Percha Teatro": "/images/national_artists/la_percha.jpg"
   }
 
-  const artistImage = artistImages[artist.name] || "/elegant-female-opera-singer-performing-on-stage.png"
+  const artistImage = artistImages[artist.name] || "/images/img_0.png"
   
   // Obtener municipios únicos
   const municipalities = [...new Set(artist.events.map((event: any) => event.municipality))]
+
+  // Ordenar eventos por fecha
+  const sortedEvents = [...artist.events].sort((a: any, b: any) => {
+    const dateA = parseInt(a.date) || 0
+    const dateB = parseInt(b.date) || 0
+    return dateA - dateB
+  })
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -119,7 +128,7 @@ export default function ArtistPage() {
         <div className="px-4 md:px-6 pb-6">
           {/* Artist Image */}
           <div className="flex justify-center mb-6">
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-blue-400 border-opacity-50">
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-yellow-400 border-opacity-50 shadow-2xl">
               <img
                 src={artistImage}
                 alt={artist.name}
@@ -131,8 +140,14 @@ export default function ArtistPage() {
           {/* Artist Details */}
           <div className="text-center mb-8">
             <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">{artist.name}</h1>
-            <div className="text-white mb-2">
-              {municipalities.join(", ")}
+            <div className="text-yellow-400 mb-2 font-medium">
+              {artist.origin}
+            </div>
+            <div className="text-gray-300 mb-2">
+              {artist.category}
+              {artist.subcategory && (
+                <span className="block text-sm mt-1 text-gray-400">{artist.subcategory}</span>
+              )}
             </div>
             <div className="text-white text-sm mb-4">
               Se presentará en {municipalities.length} municipio{municipalities.length !== 1 ? 's' : ''}
@@ -145,27 +160,27 @@ export default function ArtistPage() {
           </div>
 
           {/* Events */}
-          <div className="space-y-4">
-            <h2 className="text-xl md:text-2xl font-semibold text-white text-center mb-6">
-              Eventos
-            </h2>
-            {artist.events.map((event: any, index: number) => (
-              <div 
-                key={event.id || index}
-                className="bg-green-400 rounded-lg p-4 text-black"
-              >
-                <h3 className="font-bold text-lg mb-2">{event.municipality}</h3>
-                <div className="text-sm">
-                  <p><strong>Fecha:</strong> {event.day} {event.date}</p>
-                  {event.venue && event.venue !== "Por confirmar" && (
-                    <p><strong>Lugar:</strong> {event.venue}</p>
-                  )}
-                  {event.time && event.time !== "Por confirmar" && (
-                    <p><strong>Hora:</strong> {event.time}</p>
-                  )}
-                </div>
-              </div>
-            ))}
+          <EventList 
+            events={artist.events}
+            artistImage={artistImage}
+            artistName={artist.name}
+          />
+
+          {/* Municipalities Summary */}
+          <div className="mt-8 p-4 bg-gray-900 rounded-lg border border-gray-700">
+            <h3 className="text-lg font-semibold text-white mb-3 text-center">
+              Municipios Visitados
+            </h3>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {municipalities.map((municipality, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-yellow-500 text-black text-sm font-medium rounded-full"
+                >
+                  {municipality}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

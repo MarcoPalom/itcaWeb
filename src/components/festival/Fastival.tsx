@@ -155,7 +155,7 @@ export default function Fastival() {
         <section>
           <div className="flex items-center justify-between mb-4 md:mb-6">
             <h2 className="text-lg font-semibold text-white md:text-xl">Artistas Nacionales</h2>
-            <Link href="/artists/nacional" className="text-yellow-500 text-sm hover:underline md:text-base">
+            <Link href="/national-artists" className="text-yellow-500 text-sm hover:underline md:text-base">
               Ver todo
             </Link>
           </div>
@@ -180,7 +180,7 @@ export default function Fastival() {
               </div>
             ))}
             <div className="flex-shrink-0 w-40 md:w-full">
-              <Link href="/artists/nacional" className="block h-full">
+              <Link href="/national-artists" className="block h-full">
                 <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-lg overflow-hidden md:rounded-xl h-full flex flex-col items-center justify-center p-4 border-2 border-blue-400 border-opacity-50 hover:from-green-500 hover:to-green-700 transition-all duration-300">
                   <div className="text-white text-center">
                     <div className="mb-2">
@@ -200,7 +200,7 @@ export default function Fastival() {
         <section className="pb-6 md:pb-8">
           <div className="flex items-center justify-between mb-4 md:mb-6">
             <h2 className="text-lg font-semibold text-white md:text-xl">Artistas Tamaulipecos</h2>
-            <Link href="/artists/tamaulipecos" className="text-yellow-500 text-sm hover:underline md:text-base">
+            <Link href="/artists-tamaulipecos" className="text-yellow-500 text-sm hover:underline md:text-base">
               Ver todo
             </Link>
           </div>
@@ -281,7 +281,7 @@ export default function Fastival() {
               </div>
             </div>
             <div className="flex-shrink-0 w-40 md:w-full">
-              <Link href="/artists/tamaulipecos" className="block h-full">
+              <Link href="/artists-tamaulipecos" className="block h-full">
                 <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 flex flex-col items-center justify-center p-4 border-2 border-blue-400 border-opacity-50 hover:from-green-500 hover:to-green-700 transition-all duration-300">
                   <div className="text-white text-center">
                     <div className="mb-2">
