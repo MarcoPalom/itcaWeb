@@ -177,7 +177,7 @@ export default function ArtistPage() {
                   key={index}
                   className="px-3 py-1 bg-yellow-500 text-black text-sm font-medium rounded-full"
                 >
-                  {municipality}
+                  {municipality as string}
                 </span>
               ))}
             </div>

@@ -4,6 +4,7 @@ import { ArrowLeft, Signal, Wifi, Battery, Search } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { nationalArtists } from "@/constants/nationalArtistData"
 import ArtistListCard from "@/components/artist/ArtistListCard"
+import FestivalBackground from "@/components/festival/FestivalBackground"
 
 export default function NationalArtistsPage() {
   const router = useRouter()
@@ -34,39 +35,27 @@ export default function NationalArtistsPage() {
     return artistImages[artistName] || "/images/img_0.png"
   }
 
-  const navigateToArtist = (artistName: string) => {
-    const slug = artistName.toLowerCase().replace(/\s+/g, '-')
-    router.push(`/artist/${slug}`)
-  }
-
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Status Bar - Solo visible en móvil */}
-      <div className="flex items-center justify-between px-4 py-2 text-xs md:hidden">
-        <span className="font-medium">9:41</span>
-        <div className="flex items-center gap-1">
-          <Signal className="w-4 h-4" />
-          <Wifi className="w-4 h-4" />
-          <Battery className="w-4 h-4" />
+    <>
+      <FestivalBackground />
+      <div className="min-h-screen text-white w-full relative z-10">
+        {/* Status Bar - Solo visible en móvil */}
+        <div className="flex items-center justify-between px-4 py-2 text-xs md:hidden">
+          <span className="font-medium">9:41</span>
+          <div className="flex items-center gap-1">
+            <Signal className="w-4 h-4" />
+            <Wifi className="w-4 h-4" />
+            <Battery className="w-4 h-4" />
+          </div>
         </div>
-      </div>
 
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/fondo-hero-fest.jpg"
-          alt="Background"
-          className="w-full h-full object-cover filter grayscale blur-sm opacity-20"
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10">
+        {/* Content */}
+        <div className="relative z-10">
         {/* Header */}
         <div className="flex items-center justify-between p-4 md:p-6">
           <button 
             onClick={() => router.back()}
-            className="flex items-center gap-2 text-white hover:text-yellow-500 transition-colors"
+                         className="flex items-center gap-2 text-white hover:text-[#864e94] transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span className="text-sm font-medium md:text-lg">Volver</span>
@@ -94,7 +83,7 @@ export default function NationalArtistsPage() {
                 placeholder="Buscar artista..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500"
+                                 className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-[#864e94]"
               />
             </div>
 
@@ -102,7 +91,7 @@ export default function NationalArtistsPage() {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-yellow-500"
+                             className="px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-[#864e94]"
             >
               <option value="">Todas las categorías</option>
               {categories.map(category => (
@@ -133,14 +122,15 @@ export default function NationalArtistsPage() {
                   setSearchTerm("")
                   setSelectedCategory("")
                 }}
-                className="text-yellow-500 hover:underline mt-2"
+                                 className="text-[#864e94] hover:underline mt-2"
               >
                 Limpiar filtros
               </button>
             </div>
           )}
         </div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }

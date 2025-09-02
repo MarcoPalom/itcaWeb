@@ -13,8 +13,7 @@ export const tampicoFestival: FestivalEvent[] = [
     category: "Interdisciplinario",
     subcategory: "Teatro y música homenaje a compositores tamaulipecos",
     venue: "Teatro Principal del Espacio Cultural Metropolitano",
-    time: "Por confirmar",
-    cast: "Pepe Navarrete, Polo Rojas, Cynthia Sánchez, Héctor Gamaliel, Júpiter Bautista, Isabelle Govea y Carmen Sarahí"
+    time: "Por confirmar"
   },
   {
     id: "tp-2",
@@ -100,7 +99,6 @@ export const tampicoFestival: FestivalEvent[] = [
     subcategory: "Infantil",
     venue: "Por confirmar",
     time: "Por confirmar",
-    direction: "Valentín Arias Flores"
   },
   {
     id: "tp-9",
@@ -112,7 +110,6 @@ export const tampicoFestival: FestivalEvent[] = [
     category: "Teatro",
     venue: "Por confirmar",
     time: "Por confirmar",
-    direction: "Gabriela Vergara, José Becerra, Citlaly CE"
   },
   {
     id: "tp-10",

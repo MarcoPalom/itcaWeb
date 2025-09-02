@@ -1,14 +1,13 @@
 "use client";
 
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import TopNav from "../components/TopNav";
 import Footer from "../components/Footer";
-import { ReactNode, useRef, useEffect, useState } from "react";
+import { ReactNode, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion"
 import useJellyScroll from '../hooks/useJellyScroll';
 import { ScrollLockProvider } from '../hooks/ScrollLockContext';
+import { usePathname } from "next/navigation";
 
 function JellyScrollEffect() {
   useJellyScroll();
@@ -20,9 +19,13 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
+  const pathname = usePathname();
   const controls = useAnimation();
   const lastScroll = useRef(0);
   const ticking = useRef(false);
+
+  // Check if we're on the festival page
+  const isFestivalPage = pathname === '/festival';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,7 +80,7 @@ export default function RootLayout({
             style={{ minHeight: "100vh", width: "100vw", position: "fixed", top: 0, left: 0, zIndex: -1, background: "#f8fafc" }}
           />
           <div style={{ position: "relative", zIndex: 1 }}>
-            <TopNav />
+            {!isFestivalPage && <TopNav />}
             {children}
             <Footer />
           </div>

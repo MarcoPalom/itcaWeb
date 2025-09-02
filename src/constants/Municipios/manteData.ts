@@ -75,7 +75,6 @@ export const manteFestival: FestivalEvent[] = [
     venue: "Por confirmar",
     time: "Por confirmar, considerar realizar por la mañana e invitar a escuelas",
     artisticDirection: "Valentín Arias Flores",
-    dramaturgy: "Valentín Arias Flores"
   },
   {
     id: "ma-7",

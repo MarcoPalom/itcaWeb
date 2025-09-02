@@ -44,7 +44,7 @@ export default function ArtistListCard({ artist, imageSrc, isLast = false }: Art
             
             <div className="space-y-2 text-sm">
               <div className="flex items-center gap-2 text-gray-300">
-                <MapPin className="w-4 h-4 text-yellow-500" />
+                <MapPin className="w-4 h-4 text-[#864e94]" />
                 <span className="font-medium">{artist.origin}</span>
               </div>
               
@@ -57,7 +57,7 @@ export default function ArtistListCard({ artist, imageSrc, isLast = false }: Art
 
               {/* Events Summary */}
               <div className="flex items-center justify-between mt-3">
-                <span className="text-yellow-500 text-sm font-medium">
+                <span className="text-[#864e94] text-sm font-medium">
                   {artist.events.length} evento{artist.events.length !== 1 ? 's' : ''}
                 </span>
                 <div className="text-xs text-gray-500">

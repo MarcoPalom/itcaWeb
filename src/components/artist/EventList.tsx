@@ -34,7 +34,7 @@ export default function EventList({ events, artistImage, artistName }: EventList
       {sortedEvents.map((event, index) => (
         <div 
           key={event.id || index}
-          className="bg-gray-900 rounded-lg p-4 text-white border border-gray-700 hover:border-yellow-500 transition-all duration-300"
+          className="bg-gray-900 rounded-lg p-4 text-white border border-gray-700 hover:border-[#864e94] transition-all duration-300"
         >
           <div className="flex items-start gap-4">
             {/* Event Image */}
@@ -54,7 +54,7 @@ export default function EventList({ events, artistImage, artistName }: EventList
               
               <div className="space-y-2 text-sm md:text-base">
                 <div className="flex items-center gap-2 text-gray-300">
-                  <MapPin className="w-4 h-4 text-yellow-500" />
+                  <MapPin className="w-4 h-4 text-[#864e94]" />
                   <span className="font-medium">{event.municipality}</span>
                 </div>
                 
@@ -66,13 +66,13 @@ export default function EventList({ events, artistImage, artistName }: EventList
                 
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2 text-gray-300">
-                    <Calendar className="w-4 h-4 text-yellow-500" />
+                    <Calendar className="w-4 h-4 text-[#864e94]" />
                     <span>{event.day} {event.date}</span>
                   </div>
                   
                   {event.time && event.time !== "Por confirmar" && (
                     <div className="flex items-center gap-2 text-gray-300">
-                      <Clock className="w-4 h-4 text-yellow-500" />
+                      <Clock className="w-4 h-4 text-[#864e94]" />
                       <span>{event.time}</span>
                     </div>
                   )}

@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { Bubbles, Butterflies, HeroTextLeft, HeroTextRight, HeroBackground, HeroCenterColumn, HeroColumnsLayout } from './section1/HeroSection';
 import useWindowSize from '../hooks/useWindowSize';
 import useHeroScroll from '../hooks/useHeroScroll';
@@ -17,7 +17,6 @@ import {
   getCircleProgress
 } from '../utils/layout';
 import { ZOOM, PAN_RANGE, IMAGE } from './section1/HeroSection/heroConfig';
-import TopNav from './TopNav';
 import { Section2 } from './Section2';
 import Section3 from './Section3/Section3';
 import FestivalInspiration from "./Section4/FestivalInspiration"

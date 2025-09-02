@@ -5,6 +5,12 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { internationalArtists } from "@/constants/internationalArtistData"
 import { nationalArtists } from "@/constants/nationalArtistData"
+import FestivalBackground from "./FestivalBackground"
+import { victoriaFestivalInfo } from "@/constants/Municipios/victoriaData"
+import { matamorosFestivalInfo } from "@/constants/Municipios/matamorosData"
+import { tampicoFestivalInfo } from "@/constants/Municipios/tampicoData"
+import { reynosaFestivalInfo } from "@/constants/Municipios/reynosaData"
+import { nuevoLaredoFestivalInfo } from "@/constants/Municipios/nvData"
 
 export default function Fastival() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -41,6 +47,23 @@ export default function Fastival() {
     nationalArtists[4]   // Grupo Tayer
   ]
 
+  // Mapeo de información de municipios (4 elementos para que quepa "Ver Todas")
+  const municipalFestivals = [
+    victoriaFestivalInfo,
+    matamorosFestivalInfo,
+    tampicoFestivalInfo,
+    reynosaFestivalInfo
+  ]
+
+  // Mapeo de imágenes para municipios (usando imágenes genéricas por ahora)
+  const municipalImages: { [key: string]: string } = {
+    "Festival del Municipio Victoria": "/images/victoria-festival.jpg",
+    "Festival del Municipio Matamoros": "/images/matamoros-festival.jpg", 
+    "Festival del Municipio Tampico": "/images/tampico-festival.jpg",
+    "Festival del Municipio Reynosa": "/images/reynosa-festival.jpg",
+    "Festival del Municipio Nuevo Laredo": "/images/nuevo-laredo-festival.jpg"
+  }
+
   // Detectar el tamaño de pantalla
   useEffect(() => {
     const checkScreenSize = () => {
@@ -73,7 +96,9 @@ export default function Fastival() {
   }, [])
 
   return (
-         <div className="min-h-screen bg-black text-white w-full">
+    <>
+      <FestivalBackground />
+      <div className="min-h-screen text-white w-full relative z-10">
       {/* Status Bar - Solo visible en móvil */}
       <div className="flex items-center justify-between px-4 py-2 text-xs md:hidden">
         <span className="font-medium">9:41</span>
@@ -155,7 +180,7 @@ export default function Fastival() {
         <section>
           <div className="flex items-center justify-between mb-4 md:mb-6">
             <h2 className="text-lg font-semibold text-white md:text-xl">Artistas Nacionales</h2>
-            <Link href="/national-artists" className="text-yellow-500 text-sm hover:underline md:text-base">
+            <Link href="/national-artists" className="text-[#864e94] text-sm hover:underline md:text-base">
               Ver todo
             </Link>
           </div>
@@ -181,7 +206,7 @@ export default function Fastival() {
             ))}
             <div className="flex-shrink-0 w-40 md:w-full">
               <Link href="/national-artists" className="block h-full">
-                <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-lg overflow-hidden md:rounded-xl h-full flex flex-col items-center justify-center p-4 border-2 border-blue-400 border-opacity-50 hover:from-green-500 hover:to-green-700 transition-all duration-300">
+                <div className="rounded-lg overflow-hidden md:rounded-xl h-full flex flex-col items-center justify-center p-4" style={{ background: 'linear-gradient(to bottom, #864e94, #6a3d7a)' }} onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(to bottom, #7a457a, #5d3568)'} onMouseLeave={(e) => e.currentTarget.style.background = 'linear-gradient(to bottom, #864e94, #6a3d7a)'}>
                   <div className="text-white text-center">
                     <div className="mb-2">
                       <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -200,7 +225,7 @@ export default function Fastival() {
         <section className="pb-6 md:pb-8">
           <div className="flex items-center justify-between mb-4 md:mb-6">
             <h2 className="text-lg font-semibold text-white md:text-xl">Artistas Tamaulipecos</h2>
-            <Link href="/artists-tamaulipecos" className="text-yellow-500 text-sm hover:underline md:text-base">
+            <Link href="/artists-tamaulipecos" className="text-[#864e94] text-sm hover:underline md:text-base">
               Ver todo
             </Link>
           </div>
@@ -282,7 +307,7 @@ export default function Fastival() {
             </div>
             <div className="flex-shrink-0 w-40 md:w-full">
               <Link href="/artists-tamaulipecos" className="block h-full">
-                <div className="bg-gradient-to-b from-green-400 to-green-600 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 flex flex-col items-center justify-center p-4 border-2 border-blue-400 border-opacity-50 hover:from-green-500 hover:to-green-700 transition-all duration-300">
+                <div className="rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 flex flex-col items-center justify-center p-" style={{ background: 'linear-gradient(to bottom, #864e94, #6a3d7a)' }} onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(to bottom, #7a457a, #5d3568)'} onMouseLeave={(e) => e.currentTarget.style.background = 'linear-gradient(to bottom, #864e94, #6a3d7a)'}>
                   <div className="text-white text-center">
                     <div className="mb-2">
                       <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -296,7 +321,54 @@ export default function Fastival() {
             </div>
           </div>
         </section>
+
+        {/* Carteleras de Municipios */}
+        <section className="pb-6 md:pb-8">
+          <div className="flex items-center justify-between mb-4 md:mb-6">
+            <h2 className="text-lg font-semibold text-white md:text-xl">Carteleras de Municipios</h2>
+            <Link href="/municipal-billboards" className="text-[#864e94] text-sm hover:underline md:text-base">
+              Ver todo
+            </Link>
+          </div>
+          <div className="flex gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-5 md:gap-4 md:overflow-visible">
+            {municipalFestivals.map((municipality, index) => (
+              <div key={index} className="flex-shrink-0 w-40 md:w-full">
+                <Link href={`/municipio/${municipality.name.toLowerCase().replace(/\s+/g, '-').replace('festival-del-municipio-', '')}`} className="block h-full">
+                  <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
+                    <img
+                      src={municipalImages[municipality.name] || "/images/municipal-festival-placeholder.jpg"}
+                      alt={municipality.name}
+                      className="w-full h-full object-cover"
+                    />
+                    
+                    {/* Label en la parte inferior */}
+                    <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-2">
+                      <h3 className="font-semibold text-white text-sm leading-tight">{municipality.name.replace('Festival del Municipio ', '')}</h3>
+                      <p className="text-gray-300 text-xs">{municipality.totalEvents} eventos</p>
+                      <p className="text-gray-300 text-xs">{municipality.startDate} - {municipality.endDate}</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
+            <div className="flex-shrink-0 w-40 md:w-full">
+              <Link href="/municipal-billboards" className="block h-full">
+                <div className="rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 flex flex-col items-center justify-center p-4" style={{ background: 'linear-gradient(to bottom, #864e94, #6a3d7a)' }} onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(to bottom, #7a457a, #5d3568)'} onMouseLeave={(e) => e.currentTarget.style.background = 'linear-gradient(to bottom, #864e94, #6a3d7a)'}>
+                  <div className="text-white text-center">
+                    <div className="mb-2">
+                      <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                      </svg>
+                    </div>
+                    <h3 className="font-bold text-lg md:text-xl uppercase tracking-wide">Ver Todas</h3>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
