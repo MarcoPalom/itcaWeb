@@ -7,6 +7,7 @@ import { ReactNode, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion"
 import useJellyScroll from '../hooks/useJellyScroll';
 import { ScrollLockProvider } from '../hooks/ScrollLockContext';
+import { ThemeProvider } from '../contexts/ThemeContext';
 import { usePathname } from "next/navigation";
 
 function JellyScrollEffect() {
@@ -24,8 +25,8 @@ export default function RootLayout({
   const lastScroll = useRef(0);
   const ticking = useRef(false);
 
-  // Check if we're on the festival page
-  const isFestivalPage = pathname === '/festival';
+  // Check if we're on pages that shouldn't show TopNav
+  const hideTopNav = pathname === '/festival' || pathname === '/national-artists' || pathname === '/municipal-billboards' || pathname === '/artists-tamaulipecos' || pathname.startsWith('/artist/');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,19 +73,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ScrollLockProvider>
-          <JellyScrollEffect />
-          <motion.div
-            initial={{ scaleY: 1 }}
-            animate={controls}
-            style={{ minHeight: "100vh", width: "100vw", position: "fixed", top: 0, left: 0, zIndex: -1, background: "#f8fafc" }}
-          />
-          <div style={{ position: "relative", zIndex: 1 }}>
-            {!isFestivalPage && <TopNav />}
-            {children}
-            <Footer />
-          </div>
-        </ScrollLockProvider>
+        <ThemeProvider>
+          <ScrollLockProvider>
+            <JellyScrollEffect />
+            <motion.div
+              initial={{ scaleY: 1 }}
+              animate={controls}
+              style={{ minHeight: "100vh", width: "100vw", position: "fixed", top: 0, left: 0, zIndex: -1, background: "#f8fafc" }}
+            />
+            <div style={{ position: "relative", zIndex: 1 }}>
+              {!hideTopNav && <TopNav />}
+              {children}
+              <Footer />
+            </div>
+          </ScrollLockProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

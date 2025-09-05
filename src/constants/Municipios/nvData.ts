@@ -1,5 +1,5 @@
 // Data del Festival de Nuevo Laredo
-import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition } from '../types';
 
 // Data del Festival de Nuevo Laredo
 export const nuevoLaredoFestival: FestivalEvent[] = [
@@ -166,7 +166,7 @@ export const nuevoLaredoExhibition: FestivalExhibition = {
 
 // Información general del festival
 export const nuevoLaredoFestivalInfo = {
-  name: "Festival de Nuevo Laredo",
+  name: "Nuevo Laredo",
   location: "Nuevo Laredo, Tamaulipas",
   startDate: "3 de Octubre, 2025",
   endDate: "12 de Octubre, 2025",

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 interface IconPosition {
   id: string;
@@ -40,6 +41,7 @@ const colors = [
 ];
 
 export default function FestivalBackground() {
+  const { isDark } = useTheme();
   const [icons, setIcons] = useState<IconPosition[]>([]);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
@@ -88,7 +90,9 @@ export default function FestivalBackground() {
     <div 
       className="fixed inset-0 pointer-events-none overflow-hidden"
       style={{ 
-        background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
+        background: isDark 
+          ? 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)'
+          : 'linear-gradient(135deg, #ffd940 0%, #ffed4e 100%)',
         zIndex: -1 
       }}
     >
@@ -101,7 +105,9 @@ export default function FestivalBackground() {
             top: `${icon.y}px`,
             transform: `rotate(${icon.rotation}deg) scale(${icon.scale})`,
             opacity: icon.opacity,
-            filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))',
+            filter: isDark 
+              ? 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
+              : 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
             width: '24px',
             height: '24px',
           }}
@@ -125,7 +131,9 @@ export default function FestivalBackground() {
              alt="Festival Logo"
              className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 object-contain "
              style={{
-               filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.5))',
+               filter: isDark 
+                 ? 'drop-shadow(0 4px 8px rgba(0,0,0,0.5))'
+                 : 'drop-shadow(0 4px 8px rgba(0,0,0,0.2))',
              }}
            />
          </div>
@@ -137,19 +145,25 @@ export default function FestivalBackground() {
          <div 
            className="absolute inset-0 opacity-20"
            style={{
-             background: 'radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.3) 0%, transparent 50%)'
+             background: isDark
+               ? 'radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.3) 0%, transparent 50%)'
+               : 'radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.1) 0%, transparent 50%)'
            }}
          />
          <div 
            className="absolute inset-0 opacity-15"
            style={{
-             background: 'radial-gradient(circle at 80% 20%, rgba(155, 89, 182, 0.3) 0%, transparent 50%)'
+             background: isDark
+               ? 'radial-gradient(circle at 80% 20%, rgba(155, 89, 182, 0.3) 0%, transparent 50%)'
+               : 'radial-gradient(circle at 80% 20%, rgba(155, 89, 182, 0.1) 0%, transparent 50%)'
            }}
          />
          <div 
            className="absolute inset-0 opacity-10"
            style={{
-             background: 'radial-gradient(circle at 40% 40%, rgba(46, 204, 113, 0.3) 0%, transparent 50%)'
+             background: isDark
+               ? 'radial-gradient(circle at 40% 40%, rgba(46, 204, 113, 0.3) 0%, transparent 50%)'
+               : 'radial-gradient(circle at 40% 40%, rgba(46, 204, 113, 0.1) 0%, transparent 50%)'
            }}
          />
        </div>

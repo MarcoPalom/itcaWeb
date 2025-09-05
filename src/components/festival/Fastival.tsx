@@ -5,7 +5,10 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { internationalArtists } from "@/constants/internationalArtistData"
 import { nationalArtists } from "@/constants/nationalArtistData"
+import { tamaulipecosArtists } from "@/constants/tamaulipecosArtistData"
 import FestivalBackground from "./FestivalBackground"
+import ThemeToggle from "../ThemeToggle"
+import { useTheme } from "@/contexts/ThemeContext"
 import { victoriaFestivalInfo } from "@/constants/Municipios/victoriaData"
 import { matamorosFestivalInfo } from "@/constants/Municipios/matamorosData"
 import { tampicoFestivalInfo } from "@/constants/Municipios/tampicoData"
@@ -13,6 +16,7 @@ import { reynosaFestivalInfo } from "@/constants/Municipios/reynosaData"
 import { nuevoLaredoFestivalInfo } from "@/constants/Municipios/nvData"
 
 export default function Fastival() {
+  const { isDark } = useTheme()
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -38,6 +42,19 @@ export default function Fastival() {
     "Grupo Tayer": "/images/national_artists/grupo_tayer.jpg" // Imagen genérica para teatro
   }
 
+  // Mapeo de imágenes para artistas tamaulipecos
+  const tamaulipecoArtistImages: { [key: string]: string } = {
+    "Polvo Enamorado": "/images/estatal_artists/polvo.jpg",
+    "Afrodescendencia Matamoros": "/images/estatal_artists/afro.jpg",
+    "DOSCE La Compañía": "/images/estatal_artists/dosce.jpg",
+    "En Boca Ensamble": "/images/estatal_artists/ensamble.JPG",
+    "Colectivo teatro de bolsillo": "/images/estatal_artists/bolsillo.JPG",
+    "Warislov": "/images/estatal_artists/warislov.jpg",
+    "Los Valdés Ska": "/images/estatal_artists/valdes.jpg",
+    "Kani Ensamble Coral": "/images/estatal_artists/camereta.jpg",
+    "Ensamble de Mujeres \"María Bonita\"": "/images/estatal_artists/ensamble.JPG"
+  }
+
   // Seleccionar 5 artistas nacionales al azar
   const selectedNationalArtists = [
     nationalArtists[0],  // María Katzarava
@@ -45,6 +62,15 @@ export default function Fastival() {
     nationalArtists[9],  // la percha teatro
     nationalArtists[3],  // Grupo La Trenza
     nationalArtists[4]   // Grupo Tayer
+  ]
+
+  // Seleccionar 5 artistas tamaulipecos específicos
+  const selectedTamaulipecoArtists = [
+    tamaulipecosArtists.find(a => a.name === "Polvo Enamorado")!,
+    tamaulipecosArtists.find(a => a.name === "Afrodescendencia Matamoros")!,
+    tamaulipecosArtists.find(a => a.name === "DOSCE La Compañía")!,
+    tamaulipecosArtists.find(a => a.name === "En Boca Ensamble")!,
+    tamaulipecosArtists.find(a => a.name === "Colectivo teatro de bolsillo")!
   ]
 
   // Mapeo de información de municipios (4 elementos para que quepa "Ver Todas")
@@ -55,13 +81,13 @@ export default function Fastival() {
     reynosaFestivalInfo
   ]
 
-  // Mapeo de imágenes para municipios (usando imágenes genéricas por ahora)
+  // Mapeo de imágenes para municipios
   const municipalImages: { [key: string]: string } = {
-    "Festival del Municipio Victoria": "/images/victoria-festival.jpg",
-    "Festival del Municipio Matamoros": "/images/matamoros-festival.jpg", 
-    "Festival del Municipio Tampico": "/images/tampico-festival.jpg",
-    "Festival del Municipio Reynosa": "/images/reynosa-festival.jpg",
-    "Festival del Municipio Nuevo Laredo": "/images/nuevo-laredo-festival.jpg"
+    "Festival del Municipio Victoria": "/images/municipios/victoria.jpeg",
+    "Festival del Municipio Matamoros": "/images/municipios/matamoros.jpg", 
+    "Festival del Municipio Tampico": "/images/municipios/tampico.jpeg",
+    "Festival del Municipio Reynosa": "/images/municipios/reynosa.jpg",
+    "Festival del Municipio Nuevo Laredo": "/images/municipios/nuevo-laredo.jpg"
   }
 
   // Detectar el tamaño de pantalla
@@ -98,7 +124,7 @@ export default function Fastival() {
   return (
     <>
       <FestivalBackground />
-      <div className="min-h-screen text-white w-full relative z-10">
+      <div className={`min-h-screen w-full relative z-10 ${isDark ? 'text-white' : 'text-gray-800'}`}>
       {/* Status Bar - Solo visible en móvil */}
       <div className="flex items-center justify-between px-4 py-2 text-xs md:hidden">
         <span className="font-medium">9:41</span>
@@ -116,9 +142,9 @@ export default function Fastival() {
           <span className="text-sm font-medium md:text-lg">Bienvenido al FICSM</span>
         </div>
         <div className="flex gap-1 md:hidden">
-          <div className="w-1 h-1 bg-white rounded-full"></div>
-          <div className="w-1 h-1 bg-white rounded-full"></div>
-          <div className="w-1 h-1 bg-white rounded-full"></div>
+          <div className={`w-1 h-1 rounded-full ${isDark ? 'bg-white' : 'bg-gray-600'}`}></div>
+          <div className={`w-1 h-1 rounded-full ${isDark ? 'bg-white' : 'bg-gray-600'}`}></div>
+          <div className={`w-1 h-1 rounded-full ${isDark ? 'bg-white' : 'bg-gray-600'}`}></div>
         </div>
       </div>
 
@@ -126,7 +152,7 @@ export default function Fastival() {
       <div className="px-4 space-y-6 md:px-6 md:space-y-8">
         {/* Artistas Internacionales - Carrusel con Animaciones */}
         <section>
-          <h2 className="text-lg font-semibold text-white mb-4 md:text-xl md:mb-6">Artistas Internacionales</h2>
+          <h2 className={`text-lg font-semibold mb-4 md:text-xl md:mb-6 ${isDark ? 'text-white' : 'text-gray-800'}`}>Artistas Internacionales</h2>
           
           {/* Carrusel Container */}
           <div className="relative overflow-hidden">
@@ -150,7 +176,7 @@ export default function Fastival() {
                   >
                      <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
                        <motion.div 
-                         className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-full relative"
+                         className={`rounded-lg overflow-hidden md:rounded-xl h-full relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}
                          whileHover={{ 
                            scale: 1.02,
                            transition: { duration: 0.2 }
@@ -163,9 +189,9 @@ export default function Fastival() {
                          />
                          
                          {/* Label en la parte inferior */}
-                         <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
-                           <h3 className="font-semibold text-white text-sm">{artist.name}</h3>
-                           <p className="text-gray-300 text-xs">{artist.category}</p>
+                         <div className={`absolute bottom-0 left-0 right-0 z-10 backdrop-blur-sm p-1 ${isDark ? 'bg-black/70' : 'bg-white/80'}`}>
+                           <h3 className={`font-semibold text-sm ${isDark ? 'text-white' : 'text-gray-800'}`}>{artist.name}</h3>
+                           <p className={`text-xs ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{artist.category}</p>
                          </div>
                        </motion.div>
                      </Link>
@@ -179,7 +205,7 @@ export default function Fastival() {
         {/* Artistas Nacionales */}
         <section>
           <div className="flex items-center justify-between mb-4 md:mb-6">
-            <h2 className="text-lg font-semibold text-white md:text-xl">Artistas Nacionales</h2>
+            <h2 className={`text-lg font-semibold md:text-xl ${isDark ? 'text-white' : 'text-gray-800'}`}>Artistas Nacionales</h2>
             <Link href="/national-artists" className="text-[#864e94] text-sm hover:underline md:text-base">
               Ver todo
             </Link>
@@ -188,7 +214,7 @@ export default function Fastival() {
             {selectedNationalArtists.map((artist, index) => (
               <div key={index} className="flex-shrink-0 w-40 md:w-full">
                 <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
-                  <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
+                  <div className={`rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}>
                     <img
                       src={nationalArtistImages[artist.name] || "/elegant-female-opera-singer-performing-on-stage.png"}
                       alt={artist.name}
@@ -196,9 +222,9 @@ export default function Fastival() {
                     />
                     
                     {/* Label en la parte inferior */}
-                    <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
-                      <h3 className="font-semibold text-white text-sm">{artist.name}</h3>
-                      <p className="text-gray-300 text-xs">{artist.category}</p>
+                    <div className={`absolute bottom-0 left-0 right-0 z-10 backdrop-blur-sm p-1 ${isDark ? 'bg-black/70' : 'bg-white/90'}`}>
+                      <h3 className={`font-semibold text-sm ${isDark ? 'text-white' : 'text-gray-800'}`}>{artist.name}</h3>
+                      <p className={`text-xs ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{artist.category}</p>
                     </div>
                   </div>
                 </Link>
@@ -224,87 +250,31 @@ export default function Fastival() {
         {/* Artistas Tamaulipecos */}
         <section className="pb-6 md:pb-8">
           <div className="flex items-center justify-between mb-4 md:mb-6">
-            <h2 className="text-lg font-semibold text-white md:text-xl">Artistas Tamaulipecos</h2>
+            <h2 className={`text-lg font-semibold md:text-xl ${isDark ? 'text-white' : 'text-gray-800'}`}>Artistas Tamaulipecos</h2>
             <Link href="/artists-tamaulipecos" className="text-[#864e94] text-sm hover:underline md:text-base">
               Ver todo
             </Link>
           </div>
           <div className="flex gap-3 overflow-x-auto pb-2 md:grid md:grid-cols-6 md:gap-4 md:overflow-visible">
-            <div className="flex-shrink-0 w-40 md:w-full">
-              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
-                <img
-                  src="/tamaulipas-regional-artist-performing-traditional-.png"
-                  alt="Artist"
-                  className="w-full h-full object-cover"
-                />
-                
-                {/* Label en la parte inferior */}
-                <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
-                  <h3 className="font-semibold text-white text-sm">Lorem Ipsum Dolor</h3>
-                  <p className="text-gray-300 text-xs">Teatro Regional</p>
-                </div>
+            {selectedTamaulipecoArtists.map((artist, index) => (
+              <div key={index} className="flex-shrink-0 w-40 md:w-full">
+                <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
+                  <div className={`rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}>
+                    <img
+                      src={tamaulipecoArtistImages[artist.name] || "/images/img_0.png"}
+                      alt={artist.name}
+                      className="w-full h-full object-cover"
+                    />
+                    
+                    {/* Label en la parte inferior */}
+                    <div className={`absolute bottom-0 left-0 right-0 z-10 backdrop-blur-sm p-1 ${isDark ? 'bg-black/70' : 'bg-white/90'}`}>
+                      <h3 className={`font-semibold text-sm ${isDark ? 'text-white' : 'text-gray-800'}`}>{artist.name}</h3>
+                      <p className={`text-xs ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{artist.category}</p>
+                    </div>
+                  </div>
+                </Link>
               </div>
-            </div>
-            <div className="flex-shrink-0 w-40 md:w-full">
-              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
-                <img
-                  src="/tamaulipas-traditional-music-group-with-regional-i.png"
-                  alt="Artist"
-                  className="w-full h-full object-cover"
-                />
-                
-                {/* Label en la parte inferior */}
-                <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
-                  <h3 className="font-semibold text-white text-sm">Sit Amet Consectetur</h3>
-                  <p className="text-gray-300 text-xs">Música Tradicional</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex-shrink-0 w-40 md:w-full">
-              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
-                <img
-                  src="/tamaulipas-regional-artist-performing-traditional-.png"
-                  alt="Artist"
-                  className="w-full h-full object-cover"
-                />
-                
-                {/* Label en la parte inferior */}
-                <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
-                  <h3 className="font-semibold text-white text-sm">Adipiscing Elit Sed</h3>
-                  <p className="text-gray-300 text-xs">Danza Folklórica</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex-shrink-0 w-40 md:w-full">
-              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
-                <img
-                  src="/tamaulipas-traditional-music-group-with-regional-i.png"
-                  alt="Artist"
-                  className="w-full h-full object-cover"
-                />
-                
-                {/* Label en la parte inferior */}
-                <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
-                  <h3 className="font-semibold text-white text-sm">Do Eiusmod Tempor</h3>
-                  <p className="text-gray-300 text-xs">Artes Plásticas</p>
-                </div>
-              </div>
-            </div>
-            <div className="flex-shrink-0 w-40 md:w-full">
-              <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
-                <img
-                  src="/tamaulipas-regional-artist-performing-traditional-.png"
-                  alt="Artist"
-                  className="w-full h-full object-cover"
-                />
-                
-                {/* Label en la parte inferior */}
-                <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-1">
-                  <h3 className="font-semibold text-white text-sm">Incididunt Ut Labore</h3>
-                  <p className="text-gray-300 text-xs">Literatura</p>
-                </div>
-              </div>
-            </div>
+            ))}
             <div className="flex-shrink-0 w-40 md:w-full">
               <Link href="/artists-tamaulipecos" className="block h-full">
                 <div className="rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 flex flex-col items-center justify-center p-" style={{ background: 'linear-gradient(to bottom, #864e94, #6a3d7a)' }} onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(to bottom, #7a457a, #5d3568)'} onMouseLeave={(e) => e.currentTarget.style.background = 'linear-gradient(to bottom, #864e94, #6a3d7a)'}>
@@ -325,7 +295,7 @@ export default function Fastival() {
         {/* Carteleras de Municipios */}
         <section className="pb-6 md:pb-8">
           <div className="flex items-center justify-between mb-4 md:mb-6">
-            <h2 className="text-lg font-semibold text-white md:text-xl">Carteleras de Municipios</h2>
+            <h2 className={`text-lg font-semibold md:text-xl ${isDark ? 'text-white' : 'text-gray-800'}`}>Carteleras de Municipios</h2>
             <Link href="/municipal-billboards" className="text-[#864e94] text-sm hover:underline md:text-base">
               Ver todo
             </Link>
@@ -334,7 +304,7 @@ export default function Fastival() {
             {municipalFestivals.map((municipality, index) => (
               <div key={index} className="flex-shrink-0 w-40 md:w-full">
                 <Link href={`/municipio/${municipality.name.toLowerCase().replace(/\s+/g, '-').replace('festival-del-municipio-', '')}`} className="block h-full">
-                  <div className="bg-gray-800 rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative">
+                  <div className={`rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}>
                     <img
                       src={municipalImages[municipality.name] || "/images/municipal-festival-placeholder.jpg"}
                       alt={municipality.name}
@@ -342,10 +312,10 @@ export default function Fastival() {
                     />
                     
                     {/* Label en la parte inferior */}
-                    <div className="absolute bottom-0 left-0 right-0 z-10 bg-black/70 backdrop-blur-sm p-2">
-                      <h3 className="font-semibold text-white text-sm leading-tight">{municipality.name.replace('Festival del Municipio ', '')}</h3>
-                      <p className="text-gray-300 text-xs">{municipality.totalEvents} eventos</p>
-                      <p className="text-gray-300 text-xs">{municipality.startDate} - {municipality.endDate}</p>
+                    <div className={`absolute bottom-0 left-0 right-0 z-10 backdrop-blur-sm p-2 ${isDark ? 'bg-black/70' : 'bg-white/90'}`}>
+                      <h3 className={`font-semibold text-sm leading-tight ${isDark ? 'text-white' : 'text-gray-800'}`}>{municipality.name.replace('Festival del Municipio ', '')}</h3>
+                      <p className={`text-xs ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{municipality.totalEvents} eventos</p>
+                      <p className={`text-xs ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{municipality.startDate} - {municipality.endDate}</p>
                     </div>
                   </div>
                 </Link>
@@ -369,6 +339,9 @@ export default function Fastival() {
         </section>
       </div>
       </div>
+      
+      {/* Theme Toggle Button */}
+      <ThemeToggle />
     </>
   )
 }
