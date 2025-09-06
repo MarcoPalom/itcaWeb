@@ -1,7 +1,8 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import { ArrowLeft, Signal, Wifi, Battery, MapPin, Calendar, Clock } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
+import Image from "next/image"
 import { FestivalEvent, FestivalInfo } from "@/constants/types"
 import { victoriaFestivalInfo, victoriaFestival } from "@/constants/Municipios/victoriaData"
 import { matamorosFestivalInfo, matamorosFestival } from "@/constants/Municipios/matamorosData"
@@ -54,7 +55,7 @@ export default function MunicipalityPage() {
   const [loading, setLoading] = useState(true)
 
   // Mapeo de todos los municipios
-  const municipalitiesData = {
+  const municipalitiesData = useMemo(() => ({
     "victoria": { info: victoriaFestivalInfo, events: victoriaFestival },
     "matamoros": { info: matamorosFestivalInfo, events: matamorosFestival },
     "tampico": { info: tampicoFestivalInfo, events: tampicoFestival },
@@ -97,7 +98,7 @@ export default function MunicipalityPage() {
     "aldama": { info: aldamaFestivalInfo, events: aldamaFestival },
     "burgos": { info: burgosFestivalInfo, events: burgosFestival },
     "gustavo-diaz-ordaz": { info: gustavoDiazOrdazFestivalInfo, events: gustavoDiazOrdazFestival }
-  }
+  }), [])
 
   // Mapeo de imágenes para municipios
   const municipalImages: { [key: string]: string } = {
@@ -207,10 +208,11 @@ export default function MunicipalityPage() {
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src={municipalityImage}
           alt="Background"
-          className="w-full h-full object-cover filter grayscale blur-sm opacity-30"
+          fill
+          className="object-cover filter grayscale blur-sm opacity-30"
         />
       </div>
 
@@ -231,11 +233,12 @@ export default function MunicipalityPage() {
         <div className="px-4 md:px-6 pb-6">
           {/* Municipality Image */}
           <div className="flex justify-center mb-6">
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-yellow-400 border-opacity-50 shadow-2xl">
-              <img
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-yellow-400 border-opacity-50 shadow-2xl relative">
+              <Image
                 src={municipalityImage}
                 alt={municipality.name}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
             </div>
           </div>
@@ -267,11 +270,12 @@ export default function MunicipalityPage() {
               <div key={event.id} className="bg-gray-900/80 backdrop-blur-sm rounded-lg p-4 border border-gray-700">
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
                   {/* Event Image */}
-                  <div className="w-full md:w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden">
-                    <img
+                  <div className="w-full md:w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden relative">
+                    <Image
                       src={municipalityImage}
                       alt={event.title}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
 

@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import React from "react";
 
 interface HeroImageProps {
@@ -6,7 +6,7 @@ interface HeroImageProps {
   alt: string;
   imageIndex: number;
   pushDirection: "up" | "down";
-  imageVariants: Record<string, any>;
+  imageVariants: Record<string, Variants>;
 }
 
 const HeroImage: React.FC<HeroImageProps> = ({ src, alt, imageIndex, pushDirection, imageVariants }) => (

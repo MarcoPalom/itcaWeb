@@ -1,5 +1,5 @@
 // Data del Festival del Municipio Valle Hermoso
-import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Valle Hermoso
 export const valleHermosoFestival: FestivalEvent[] = [

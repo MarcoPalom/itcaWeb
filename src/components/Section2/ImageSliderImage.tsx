@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import React from "react";
 
 interface ImageSliderImageProps {
@@ -6,7 +6,7 @@ interface ImageSliderImageProps {
   alt: string;
   imageIndex: number;
   pushDirection: "up" | "down";
-  imageVariants: Record<string, any>;
+  imageVariants: Record<string, Variants>;
 }
 
 const ImageSliderImage: React.FC<ImageSliderImageProps> = ({ src, alt, pushDirection, imageVariants }) => (

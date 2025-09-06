@@ -4,9 +4,9 @@ import Player from "lottie-react";
 import butterflyData from "@/animations/butterfly.json";
 
 interface ButterfliesProps {
-  butterflyRef1: RefObject<any>;
-  butterflyRef2: RefObject<any>;
-  butterflyRef3: RefObject<any>;
+  butterflyRef1: RefObject<HTMLDivElement>;
+  butterflyRef2: RefObject<HTMLDivElement>;
+  butterflyRef3: RefObject<HTMLDivElement>;
 }
 
 const Butterflies: React.FC<ButterfliesProps> = ({ butterflyRef1, butterflyRef2, butterflyRef3 }) => (

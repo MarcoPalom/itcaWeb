@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import { ArrowLeft, Signal, Wifi, Battery } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
+import Image from "next/image"
 import { internationalArtists, InternationalArtist } from "@/constants/internationalArtistData"
 import { nationalArtists, NationalArtist } from "@/constants/nationalArtistData"
 import { tamaulipecosArtists, TamaulipecoArtist } from "@/constants/tamaulipecosArtistData"
@@ -92,10 +93,11 @@ export default function ArtistPage() {
       </div>
 
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src={artistImage}
           alt="Background"
-          className="w-full h-full object-cover filter grayscale blur-sm opacity-30"
+          fill
+          className="object-cover filter grayscale blur-sm opacity-30"
         />
       </div>
 
@@ -112,11 +114,12 @@ export default function ArtistPage() {
 
         <div className="px-4 md:px-6 pb-6">
           <div className="flex justify-center mb-6">
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#864e94] border-opacity-50 shadow-2xl">
-              <img
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#864e94] border-opacity-50 shadow-2xl relative">
+              <Image
                 src={artistImage}
                 alt={artist.name}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
             </div>
           </div>

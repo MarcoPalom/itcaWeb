@@ -3,6 +3,7 @@ import { useState } from "react"
 import { ArrowLeft, Signal, Wifi, Battery, Search, ChevronDown, Check } from "lucide-react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
+import Image from "next/image"
 import { tamaulipecosArtists } from "@/constants/tamaulipecosArtistData"
 import { getArtistImage } from "@/constants/artistImages"
 import FestivalBackground from "@/components/festival/FestivalBackground"
@@ -246,11 +247,12 @@ export default function ArtistsTamaulipecosPage() {
                     className="block h-full"
                   >
                     <div className={`flex items-center gap-4 p-4 min-h-[120px] md:min-h-[150px] transition-colors ${isDark ? 'hover:bg-gray-800/50' : 'hover:bg-gray-100/50'}`}>
-                      <div className="w-20 h-28 md:w-24 md:h-36 flex-shrink-0 rounded-lg overflow-hidden">
-                        <img
+                      <div className="w-20 h-28 md:w-24 md:h-36 flex-shrink-0 rounded-lg overflow-hidden relative">
+                        <Image
                           src={getArtistImageForTamaulipecos(artist.name)}
                           alt={artist.name}
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                       </div>
 

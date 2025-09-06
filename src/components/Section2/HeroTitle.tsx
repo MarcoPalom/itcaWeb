@@ -1,11 +1,11 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import React from "react";
 
 interface HeroTitleProps {
   title: string;
   imageIndex: number;
   pushDirection: "up" | "down";
-  imageVariants: Record<string, any>;
+  imageVariants: Record<string, Variants>;
 }
 
 const HeroTitle: React.FC<HeroTitleProps> = ({ title, imageIndex, pushDirection, imageVariants }) => (

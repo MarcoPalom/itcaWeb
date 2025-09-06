@@ -2,8 +2,8 @@
 
 import { ArrowLeft, Signal, Wifi, Battery, Search, ChevronDown, Check } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import FestivalBackground from "../festival/FestivalBackground";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useMobileScrollFix } from "@/hooks/useMobileScrollFix";
@@ -55,7 +55,6 @@ import { gustavoDiazOrdazFestivalInfo } from "@/constants/Municipios/gustavoDiaz
 export default function MunicipalBillboards() {
   const { isDark } = useTheme();
   useMobileScrollFix();
-  const [isMobile, setIsMobile] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
   const [sortBy, setSortBy] = useState("name");
@@ -204,16 +203,6 @@ export default function MunicipalBillboards() {
   const selectedRegionOption = regionOptions.find(option => option.id === selectedRegion) || regionOptions[0];
   const selectedSortOption = sortOptions.find(option => option.id === sortBy) || sortOptions[0];
 
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkScreenSize();
-    window.addEventListener("resize", checkScreenSize);
-
-    return () => window.removeEventListener("resize", checkScreenSize);
-  }, []);
 
   return (
     <>
@@ -380,13 +369,14 @@ export default function MunicipalBillboards() {
                 >
                   <div className={`flex items-center gap-4 p-4 min-h-[120px] md:min-h-[150px] transition-colors ${isDark ? 'hover:bg-gray-800/50' : 'hover:bg-gray-100/50'}`}>
                     <div className="w-20 h-28 md:w-24 md:h-36 flex-shrink-0 rounded-lg overflow-hidden relative">
-                      <img
+                      <Image
                         src={
                           municipalImages[municipality.name] ||
                           "/images/municipal-festival-placeholder.jpg"
                         }
                         alt={municipality.name}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                       />
                     </div>
 
