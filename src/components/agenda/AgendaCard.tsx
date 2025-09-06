@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface AgendaCardProps {
   item: {
@@ -32,10 +33,11 @@ export default function AgendaCard({ item, type = 'current', onClick }: AgendaCa
       {type === 'current' && (
         <>
           <div className="absolute inset-0 bg-gradient-to-t from-neutral-100/80 to-transparent z-10"></div>
-          <img
+          <Image
             src={item.image || "/placeholder.svg"}
             alt={item.name}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute bottom-4 left-4 z-20">
             <span className="bg-amber-400 text-black px-3 py-1 rounded-full text-sm font-medium">

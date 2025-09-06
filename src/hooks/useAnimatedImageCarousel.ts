@@ -10,7 +10,6 @@ export default function useAnimatedImageCarousel({ imagesLength }: UseAnimatedIm
   const [pushDirection, setPushDirection] = useState<'up' | 'down'>('down');
   const lastScrollY = useRef(0);
   const sectionStartY = useRef(0);
-  const isTransitioning = useRef(false);
 
   const { ref: sectionRef, inView, entry } = useInView({
     threshold: 0.5,

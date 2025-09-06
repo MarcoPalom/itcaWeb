@@ -22,7 +22,7 @@ import Section3 from './Section3/Section3';
 import FestivalInspiration from "./Section4/FestivalInspiration"
 
 
-interface MainPageProps {}
+type MainPageProps = Record<string, never>
 
 const MainPage: React.FC<MainPageProps> = () => {
   // Hero scroll y refs principales
@@ -41,7 +41,7 @@ const MainPage: React.FC<MainPageProps> = () => {
   const centerHeight = getCenterHeight(scrollProgress, initialCenterHeight, windowSize.height);
 
   // Animaciones de columnas
-  const { leftControls, centerControls, rightControls } = useColumnAnimations(split, expanded);
+  const { leftControls, rightControls } = useColumnAnimations(split, expanded);
 
   // Panorámico interactivo
   const controls = useAnimation();
@@ -52,9 +52,9 @@ const MainPage: React.FC<MainPageProps> = () => {
   useJellyEffect(mainRef, jellyControls);
 
   // Refs y velocidad de mariposas
-  const butterflyRef1 = useRef<any>(null);
-  const butterflyRef2 = useRef<any>(null);
-  const butterflyRef3 = useRef<any>(null);
+  const butterflyRef1 = useRef<HTMLDivElement>(null);
+  const butterflyRef2 = useRef<HTMLDivElement>(null);
+  const butterflyRef3 = useRef<HTMLDivElement>(null);
   useButterflySpeed(butterflyRef1, butterflyRef2, butterflyRef3);
 
   // Otros cálculos
@@ -71,19 +71,8 @@ const MainPage: React.FC<MainPageProps> = () => {
   const circleProgress = getCircleProgress(scrollProgress);
 
   // Añadir estado para controlar la visibilidad del TopNav
-  const [showTopNav, setShowTopNav] = useState(true);
 
   // Efecto para controlar la visibilidad del TopNav
-  useEffect(() => {
-    const handleScroll = () => {
-      const section1Height = window.innerHeight * 2; // 200vh
-      const currentScroll = window.scrollY;
-      setShowTopNav(currentScroll < section1Height);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Render de la landing con 5 secciones
   return (

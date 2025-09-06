@@ -1,5 +1,5 @@
 // Data del Festival del Municipio Mier
-import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Mier
 export const mierFestival: FestivalEvent[] = [

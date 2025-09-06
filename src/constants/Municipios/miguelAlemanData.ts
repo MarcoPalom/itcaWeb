@@ -1,5 +1,5 @@
 // Data del Festival del Municipio Miguel Alemán
-import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Miguel Alemán
 export const miguelAlemanFestival: FestivalEvent[] = [

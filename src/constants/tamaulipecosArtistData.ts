@@ -1,5 +1,4 @@
 // Data de Artistas Tamaulipecos
-import { FestivalEvent } from './types';
 
 // Interfaz específica para artistas tamaulipecos
 export interface TamaulipecoArtist {

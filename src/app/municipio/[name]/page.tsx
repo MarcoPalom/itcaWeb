@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import { ArrowLeft, Signal, Wifi, Battery, MapPin, Calendar, Clock } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
+import { FestivalEvent, FestivalInfo } from "@/constants/types"
 import { victoriaFestivalInfo, victoriaFestival } from "@/constants/Municipios/victoriaData"
 import { matamorosFestivalInfo, matamorosFestival } from "@/constants/Municipios/matamorosData"
 import { tampicoFestivalInfo, tampicoFestival } from "@/constants/Municipios/tampicoData"
@@ -48,8 +49,8 @@ import { gustavoDiazOrdazFestivalInfo, gustavoDiazOrdazFestival } from "@/consta
 export default function MunicipalityPage() {
   const params = useParams()
   const router = useRouter()
-  const [municipality, setMunicipality] = useState<any>(null)
-  const [municipalityEvents, setMunicipalityEvents] = useState<any[]>([])
+  const [municipality, setMunicipality] = useState<FestivalInfo | null>(null)
+  const [municipalityEvents, setMunicipalityEvents] = useState<FestivalEvent[]>([])
   const [loading, setLoading] = useState(true)
 
   // Mapeo de todos los municipios
@@ -155,7 +156,7 @@ export default function MunicipalityPage() {
       }
       setLoading(false)
     }
-  }, [params.name])
+  }, [params.name, municipalitiesData])
 
   if (loading) {
     return (
@@ -184,10 +185,9 @@ export default function MunicipalityPage() {
   const municipalityImage = municipalImages[municipality.name] || "/images/municipal-festival-placeholder.jpg"
   
   // Obtener categorías únicas
-  const categories = [...new Set(municipalityEvents.map((event: any) => event.category))]
+  const categories = [...new Set(municipalityEvents.map((event: FestivalEvent) => event.category))]
 
-  // Ordenar eventos por fecha
-  const sortedEvents = [...municipalityEvents].sort((a: any, b: any) => {
+  const sortedEvents = [...municipalityEvents].sort((a: FestivalEvent, b: FestivalEvent) => {
     const dateA = parseInt(a.date) || 0
     const dateB = parseInt(b.date) || 0
     return dateA - dateB
@@ -263,7 +263,7 @@ export default function MunicipalityPage() {
               Programación de Eventos
             </h2>
             
-            {sortedEvents.map((event: any, index: number) => (
+            {sortedEvents.map((event: FestivalEvent) => (
               <div key={event.id} className="bg-gray-900/80 backdrop-blur-sm rounded-lg p-4 border border-gray-700">
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
                   {/* Event Image */}

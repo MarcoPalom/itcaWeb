@@ -1,8 +1,9 @@
 "use client"
-import { ArrowLeft, Signal, Wifi, Battery, ChevronLeft, ChevronRight } from "lucide-react"
+import { ArrowLeft, Signal, Wifi, Battery } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import { internationalArtists } from "@/constants/internationalArtistData"
 import { nationalArtists } from "@/constants/nationalArtistData"
 import { tamaulipecosArtists } from "@/constants/tamaulipecosArtistData"
@@ -13,7 +14,6 @@ import { victoriaFestivalInfo } from "@/constants/Municipios/victoriaData"
 import { matamorosFestivalInfo } from "@/constants/Municipios/matamorosData"
 import { tampicoFestivalInfo } from "@/constants/Municipios/tampicoData"
 import { reynosaFestivalInfo } from "@/constants/Municipios/reynosaData"
-import { nuevoLaredoFestivalInfo } from "@/constants/Municipios/nvData"
 
 export default function Fastival() {
   const { isDark } = useTheme()
@@ -106,11 +106,6 @@ export default function Fastival() {
     setCurrentSlide((prev) => (prev + 1) % internationalArtists.length)
   }
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => 
-      prev === 0 ? internationalArtists.length - 1 : prev - 1
-    )
-  }
 
   // Cambio automático del carrusel cada 3 segundos
   useEffect(() => {
@@ -182,10 +177,11 @@ export default function Fastival() {
                            transition: { duration: 0.2 }
                          }}
                        >
-                         <img
+                         <Image
                            src={artistImages[artist.name] || "/elegant-female-opera-singer-performing-on-stage.png"}
                            alt={artist.name}
-                           className="w-full h-full object-cover"
+                           fill
+                           className="object-cover"
                          />
                          
                          {/* Label en la parte inferior */}
@@ -215,10 +211,11 @@ export default function Fastival() {
               <div key={index} className="flex-shrink-0 w-40 md:w-full">
                 <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
                   <div className={`rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}>
-                    <img
+                    <Image
                       src={nationalArtistImages[artist.name] || "/elegant-female-opera-singer-performing-on-stage.png"}
                       alt={artist.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                     
                     {/* Label en la parte inferior */}
@@ -260,10 +257,11 @@ export default function Fastival() {
               <div key={index} className="flex-shrink-0 w-40 md:w-full">
                 <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
                   <div className={`rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}>
-                    <img
+                    <Image
                       src={tamaulipecoArtistImages[artist.name] || "/images/img_0.png"}
                       alt={artist.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                     
                     {/* Label en la parte inferior */}
@@ -305,10 +303,11 @@ export default function Fastival() {
               <div key={index} className="flex-shrink-0 w-40 md:w-full">
                 <Link href={`/municipio/${municipality.name.toLowerCase().replace(/\s+/g, '-').replace('festival-del-municipio-', '')}`} className="block h-full">
                   <div className={`rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}>
-                    <img
+                    <Image
                       src={municipalImages[municipality.name] || "/images/municipal-festival-placeholder.jpg"}
                       alt={municipality.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                     
                     {/* Label en la parte inferior */}

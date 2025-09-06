@@ -2,19 +2,21 @@
 import { useState, useEffect } from "react"
 import { ArrowLeft, Signal, Wifi, Battery } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
-import { internationalArtists } from "@/constants/internationalArtistData"
-import { nationalArtists } from "@/constants/nationalArtistData"
-import { tamaulipecosArtists } from "@/constants/tamaulipecosArtistData"
+import { internationalArtists, InternationalArtist } from "@/constants/internationalArtistData"
+import { nationalArtists, NationalArtist } from "@/constants/nationalArtistData"
+import { tamaulipecosArtists, TamaulipecoArtist } from "@/constants/tamaulipecosArtistData"
 import { getArtistImageUniversal } from "@/constants/artistImages"
 import EventList from "@/components/artist/EventList"
 import FestivalLoading from "@/components/FestivalLoading"
 import { useFestivalLoading } from "@/hooks/useFestivalLoading"
 
+type Artist = InternationalArtist | NationalArtist | TamaulipecoArtist
+type ArtistEvent = InternationalArtist['events'][0] | NationalArtist['events'][0] | TamaulipecoArtist['events'][0]
+
 export default function ArtistPage() {
   const params = useParams()
   const router = useRouter()
-  const [artist, setArtist] = useState<any>(null)
-  const [loading, setLoading] = useState(true)
+  const [artist, setArtist] = useState<Artist | null>(null)
 
 
 
@@ -46,7 +48,6 @@ export default function ArtistPage() {
       if (foundArtist) {
         setArtist(foundArtist)
       }
-      setLoading(false)
     }
   }, [params.name])
 
@@ -77,12 +78,7 @@ export default function ArtistPage() {
   }
 
   const artistImage = getArtistImageUniversal(artist.name)
-  const municipalities = [...new Set(artist.events.map((event: any) => event.municipality))]
-  const sortedEvents = [...artist.events].sort((a: any, b: any) => {
-    const dateA = parseInt(a.date) || 0
-    const dateB = parseInt(b.date) || 0
-    return dateA - dateB
-  })
+  const municipalities = [...new Set(artist.events.map((event: ArtistEvent) => event.municipality))]
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">

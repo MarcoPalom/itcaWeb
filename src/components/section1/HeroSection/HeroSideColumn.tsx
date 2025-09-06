@@ -9,7 +9,7 @@ interface HeroSideColumnProps {
   leftRightY: number;
 }
 
-const HeroSideColumn: React.FC<HeroSideColumnProps> = ({ side, controls, IMAGE, pan, leftRightY }) => {
+const HeroSideColumn: React.FC<HeroSideColumnProps> = ({ side, IMAGE, pan, leftRightY }) => {
   const initial = {
     borderRadius: "0rem",
     opacity: 1,

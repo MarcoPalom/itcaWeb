@@ -1,5 +1,5 @@
 // Data del Festival del Municipio Río Bravo
-import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Río Bravo
 export const rioBravoFestival: FestivalEvent[] = [

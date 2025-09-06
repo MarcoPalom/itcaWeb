@@ -1,5 +1,6 @@
 "use client"
-import { MapPin, Calendar } from "lucide-react"
+import { MapPin } from "lucide-react"
+import Image from "next/image"
 
 interface ArtistListCardProps {
   artist: {
@@ -8,7 +9,15 @@ interface ArtistListCardProps {
     origin: string
     category: string
     subcategory?: string
-    events: any[]
+    events: Array<{
+      id: string
+      title: string
+      date: string
+      day: string
+      venue: string
+      time: string
+      municipality: string
+    }>
   }
   imageSrc: string
   isLast?: boolean
@@ -29,10 +38,11 @@ export default function ArtistListCard({ artist, imageSrc, isLast = false }: Art
         >
           {/* Artist Image - Lado izquierdo */}
           <div className="w-20 h-28 md:w-24 md:h-36 flex-shrink-0 rounded-lg overflow-hidden">
-          <img
+          <Image
             src={imageSrc}
             alt={artist.name}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
         </div>
 

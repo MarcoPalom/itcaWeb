@@ -6,7 +6,7 @@ interface HeroImageProps {
   alt: string;
   imageIndex: number;
   pushDirection: "up" | "down";
-  imageVariants: any;
+  imageVariants: Record<string, any>;
 }
 
 const HeroImage: React.FC<HeroImageProps> = ({ src, alt, imageIndex, pushDirection, imageVariants }) => (

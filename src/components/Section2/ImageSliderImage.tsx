@@ -6,10 +6,10 @@ interface ImageSliderImageProps {
   alt: string;
   imageIndex: number;
   pushDirection: "up" | "down";
-  imageVariants: any;
+  imageVariants: Record<string, any>;
 }
 
-const ImageSliderImage: React.FC<ImageSliderImageProps> = ({ src, alt, imageIndex, pushDirection, imageVariants }) => (
+const ImageSliderImage: React.FC<ImageSliderImageProps> = ({ src, alt, pushDirection, imageVariants }) => (
   <AnimatePresence initial={false} custom={pushDirection}>
     <motion.img
       key={src}

@@ -1,5 +1,5 @@
 // Data del Festival del Municipio Guerrero
-import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
+import { FestivalEvent } from '../types';
 
 // Data del Festival del Municipio Guerrero
 export const guerreroFestival: FestivalEvent[] = [

@@ -5,7 +5,7 @@ interface HeroTitleProps {
   title: string;
   imageIndex: number;
   pushDirection: "up" | "down";
-  imageVariants: any;
+  imageVariants: Record<string, any>;
 }
 
 const HeroTitle: React.FC<HeroTitleProps> = ({ title, imageIndex, pushDirection, imageVariants }) => (

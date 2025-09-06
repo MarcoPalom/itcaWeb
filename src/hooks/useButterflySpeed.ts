@@ -1,9 +1,9 @@
 import { useEffect, RefObject } from "react";
 
 const useButterflySpeed = (
-  butterflyRef1: RefObject<any>,
-  butterflyRef2: RefObject<any>,
-  butterflyRef3: RefObject<any>
+  butterflyRef1: RefObject<HTMLDivElement>,
+  butterflyRef2: RefObject<HTMLDivElement>,
+  butterflyRef3: RefObject<HTMLDivElement>
 ) => {
   useEffect(() => {
     if (butterflyRef1.current) butterflyRef1.current.setSpeed(0.2);

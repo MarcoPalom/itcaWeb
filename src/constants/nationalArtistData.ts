@@ -1,5 +1,4 @@
 // Data de artistas nacionales del Festival
-import { FestivalEvent } from './types';
 
 // Interfaz específica para artistas nacionales
 export interface NationalArtist {

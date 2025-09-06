@@ -9,14 +9,21 @@ interface ArtistCardProps {
     origin: string
     category: string
     subcategory?: string
-    events: any[]
+    events: Array<{
+      id: string
+      title: string
+      date: string
+      day: string
+      venue: string
+      time: string
+      municipality: string
+    }>
   }
   imageSrc: string
-  showEvents?: boolean
   compact?: boolean
 }
 
-export default function ArtistCard({ artist, imageSrc, showEvents = false, compact = false }: ArtistCardProps) {
+export default function ArtistCard({ artist, imageSrc, compact = false }: ArtistCardProps) {
   const navigateToArtist = () => {
     const slug = artist.name.toLowerCase().replace(/\s+/g, '-')
     window.location.href = `/artist/${slug}`

@@ -379,7 +379,7 @@ export default function MunicipalBillboards() {
                   className="block h-full"
                 >
                   <div className={`flex items-center gap-4 p-4 min-h-[120px] md:min-h-[150px] transition-colors ${isDark ? 'hover:bg-gray-800/50' : 'hover:bg-gray-100/50'}`}>
-                    <div className="w-20 h-28 md:w-24 md:h-36 flex-shrink-0 rounded-lg overflow-hidden">
+                    <div className="w-20 h-28 md:w-24 md:h-36 flex-shrink-0 rounded-lg overflow-hidden relative">
                       <img
                         src={
                           municipalImages[municipality.name] ||

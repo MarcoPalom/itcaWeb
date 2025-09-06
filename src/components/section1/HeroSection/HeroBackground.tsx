@@ -9,7 +9,7 @@ interface HeroBackgroundProps {
   split: boolean;
 }
 
-const HeroBackground: React.FC<HeroBackgroundProps> = ({ IMAGE, controls, ZOOM, pan, split }) => (
+const HeroBackground: React.FC<HeroBackgroundProps> = ({ IMAGE, controls, ZOOM, split }) => (
   !split ? (
     <motion.div
       className="absolute inset-0 z-0"

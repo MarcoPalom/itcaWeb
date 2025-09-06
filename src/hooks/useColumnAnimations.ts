@@ -1,4 +1,4 @@
-import { useAnimation, AnimationControls } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
 const useColumnAnimations = (split: boolean, expanded: boolean) => {

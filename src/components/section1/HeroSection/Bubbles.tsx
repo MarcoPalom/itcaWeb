@@ -1,9 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-interface BubblesProps {
-  // Puedes agregar props si necesitas controlar animaciones desde el padre
-}
+type BubblesProps = Record<string, never>
 
 const Bubbles: React.FC<BubblesProps> = () => (
   <>

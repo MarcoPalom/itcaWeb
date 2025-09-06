@@ -1,5 +1,6 @@
 "use client"
 import { MapPin, Calendar, Clock, Users } from "lucide-react"
+import Image from "next/image"
 
 interface Event {
   id: string
@@ -38,11 +39,12 @@ export default function EventList({ events, artistImage, artistName }: EventList
         >
           <div className="flex items-start gap-4">
             {/* Event Image */}
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden flex-shrink-0">
-              <img
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden flex-shrink-0 relative">
+              <Image
                 src={artistImage}
                 alt={event.title || event.municipality}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
               />
             </div>
 
