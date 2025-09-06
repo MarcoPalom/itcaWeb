@@ -1,13 +1,12 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { Bubbles, Butterflies, HeroTextLeft, HeroTextRight, HeroBackground, HeroCenterColumn, HeroColumnsLayout } from './section1/HeroSection';
+import { Bubbles, HeroTextLeft, HeroTextRight, HeroBackground, HeroCenterColumn, HeroColumnsLayout } from './section1/HeroSection';
 import useWindowSize from '../hooks/useWindowSize';
 import useHeroScroll from '../hooks/useHeroScroll';
 import useJellyEffect from '../hooks/useJellyEffect';
 import usePanoramicPan from '../hooks/usePanoramicPan';
 import useColumnAnimations from '../hooks/useColumnAnimations';
-import useButterflySpeed from '../hooks/useButterflySpeed';
 import {
   getInitialCenterWidth,
   getInitialCenterHeight,
@@ -20,7 +19,6 @@ import { ZOOM, PAN_RANGE, IMAGE } from './section1/HeroSection/heroConfig';
 import { Section2 } from './Section2';
 import Section3 from './Section3/Section3';
 import FestivalInspiration from "./Section4/FestivalInspiration"
-
 
 type MainPageProps = Record<string, never>
 
@@ -51,11 +49,6 @@ const MainPage: React.FC<MainPageProps> = () => {
   const jellyControls = useAnimation();
   useJellyEffect(mainRef, jellyControls);
 
-  // Refs y velocidad de mariposas
-  const butterflyRef1 = useRef<any>(null);
-  const butterflyRef2 = useRef<any>(null);
-  const butterflyRef3 = useRef<any>(null);
-  useButterflySpeed(butterflyRef1, butterflyRef2, butterflyRef3);
 
   // Otros cálculos
   const [maxY, setMaxY] = useState(0);
@@ -89,10 +82,9 @@ const MainPage: React.FC<MainPageProps> = () => {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       >
-        {/* Esferas flotantes y mariposas animadas */}
+        {/* Esferas flotantes */}
         <motion.div className="pointer-events-none absolute inset-0" style={{ zIndex: 50 }}>
           <Bubbles />
-          <Butterflies butterflyRef1={butterflyRef1} butterflyRef2={butterflyRef2} butterflyRef3={butterflyRef3} />
         </motion.div>
         <div className="w-full h-screen flex items-center justify-center mx-auto relative">
           <motion.div

@@ -1,5 +1,4 @@
 export { default as Bubbles } from './Bubbles';
-export { default as Butterflies } from './Butterflies';
 export { default as HeroTextLeft } from './HeroTextLeft';
 export { default as HeroTextRight } from './HeroTextRight';
 export { default as HeroBackground } from './HeroBackground';
