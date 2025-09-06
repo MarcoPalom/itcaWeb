@@ -76,13 +76,8 @@ const PanelInverted: React.FC<PanelProps> = ({
   badge,
   items,
   descriptions,
-  title,
   panelIndex = 0,
   defaultDescription,
-  selected,
-  setSelected,
-  hovered,
-  setHovered,
 }) => {
   const isLeft = orientation === "left"
   const { ref, inView, entry } = useInView({
@@ -435,7 +430,7 @@ const PanelInverted: React.FC<PanelProps> = ({
 
         {/* Contenido principal - INVERTIDO */}
         <div className={`flex flex-col items-start justify-center flex-1 ${isLeft ? "ml-16" : "mr-16"} mt-8`}>
-          <h2 className="text-m font-medium mb-42 min-h-[4em] text-white z-20">{selected === null || selected === undefined ? (defaultDescription || "Selecciona un programa para ver la descripción.") : descriptions[selected]}</h2>
+          <h2 className="text-m font-medium mb-42 min-h-[4em] text-white z-20">{defaultDescription || "Selecciona un programa para ver la descripción."}</h2>
           <div className="bg-yellow-300 text-black text-base font-mono font-medium px-1 py-1 rounded mb-8 mt-8 transition-all border border-white z-20">
             PROGRAMAS
           </div>
@@ -453,7 +448,7 @@ const PanelInverted: React.FC<PanelProps> = ({
                 >
                   <span className="inline-block mr-2" style={{ width: "1em" }}>
                     <AnimatePresence mode="wait">
-                      {hovered === idx && (
+                      {false && (
                         <motion.span
                           key={`diamond-${idx}`}
                           initial={{ opacity: 0, y: 10, scale: 0.7 }}
@@ -469,8 +464,8 @@ const PanelInverted: React.FC<PanelProps> = ({
                     </AnimatePresence>
                   </span>
                   <motion.span
-                    className={`z-20 select-text ${hovered === idx ? 'text-orange-400' : 'text-white'}`}
-                    animate={hovered === idx ? { x: "2.5rem", scale: 1.04 } : { x: 0, scale: 1 }}
+                    className="z-20 select-text text-white"
+                    animate={{ x: 0, scale: 1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 12 }}
                   >
                     {item}

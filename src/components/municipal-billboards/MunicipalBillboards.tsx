@@ -3,7 +3,7 @@
 import { ArrowLeft, Signal, Wifi, Battery, Search, ChevronDown, Check } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import FestivalBackground from "../festival/FestivalBackground";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useMobileScrollFix } from "@/hooks/useMobileScrollFix";
