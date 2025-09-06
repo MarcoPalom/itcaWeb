@@ -75,7 +75,6 @@ const PanelInverted: React.FC<PanelProps> = ({
   image,
   badge,
   items,
-  descriptions,
   panelIndex = 0,
   defaultDescription,
 }) => {
