@@ -52,9 +52,9 @@ const MainPage: React.FC<MainPageProps> = () => {
   useJellyEffect(mainRef, jellyControls);
 
   // Refs y velocidad de mariposas
-  const butterflyRef1 = useRef<HTMLDivElement>(null);
-  const butterflyRef2 = useRef<HTMLDivElement>(null);
-  const butterflyRef3 = useRef<HTMLDivElement>(null);
+  const butterflyRef1 = useRef<any>(null);
+  const butterflyRef2 = useRef<any>(null);
+  const butterflyRef3 = useRef<any>(null);
   useButterflySpeed(butterflyRef1, butterflyRef2, butterflyRef3);
 
   // Otros cálculos

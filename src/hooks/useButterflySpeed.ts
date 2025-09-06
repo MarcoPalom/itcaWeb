@@ -1,9 +1,13 @@
 import { useEffect, RefObject } from "react";
 
+interface LottiePlayer {
+  setSpeed: (speed: number) => void;
+}
+
 const useButterflySpeed = (
-  butterflyRef1: RefObject<HTMLDivElement>,
-  butterflyRef2: RefObject<HTMLDivElement>,
-  butterflyRef3: RefObject<HTMLDivElement>
+  butterflyRef1: RefObject<LottiePlayer | null>,
+  butterflyRef2: RefObject<LottiePlayer | null>,
+  butterflyRef3: RefObject<LottiePlayer | null>
 ) => {
   useEffect(() => {
     if (butterflyRef1.current) butterflyRef1.current.setSpeed(0.2);
