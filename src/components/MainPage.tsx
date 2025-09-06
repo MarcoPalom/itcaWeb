@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Bubbles, HeroTextLeft, HeroTextRight, HeroBackground, HeroCenterColumn, HeroColumnsLayout } from './section1/HeroSection';
 import useWindowSize from '../hooks/useWindowSize';
