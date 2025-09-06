@@ -1,9 +1,12 @@
 "use client"
 import { useState, useEffect, useMemo } from "react"
-import { ArrowLeft, Signal, Wifi, Battery, MapPin, Calendar, Clock } from "lucide-react"
+import { ArrowLeft, Signal, Wifi, Battery } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
 import Image from "next/image"
 import { FestivalEvent, FestivalInfo } from "@/constants/types"
+import FestivalLoading from "@/components/FestivalLoading"
+import { useFestivalLoading } from "@/hooks/useFestivalLoading"
+import EventList from "@/components/artist/EventList"
 import { victoriaFestivalInfo, victoriaFestival } from "@/constants/Municipios/victoriaData"
 import { matamorosFestivalInfo, matamorosFestival } from "@/constants/Municipios/matamorosData"
 import { tampicoFestivalInfo, tampicoFestival } from "@/constants/Municipios/tampicoData"
@@ -52,7 +55,11 @@ export default function MunicipalityPage() {
   const router = useRouter()
   const [municipality, setMunicipality] = useState<FestivalInfo | null>(null)
   const [municipalityEvents, setMunicipalityEvents] = useState<FestivalEvent[]>([])
-  const [loading, setLoading] = useState(true)
+
+  const { isLoading, progress, message } = useFestivalLoading({
+    initialDelay: 500,
+    minLoadingTime: 2000,
+  })
 
   // Mapeo de todos los municipios
   const municipalitiesData = useMemo(() => ({
@@ -155,15 +162,16 @@ export default function MunicipalityPage() {
         setMunicipality(municipalityData.info)
         setMunicipalityEvents(municipalityData.events)
       }
-      setLoading(false)
     }
   }, [params.name, municipalitiesData])
 
-  if (loading) {
+  if (isLoading) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
-        <div className="text-xl">Cargando...</div>
-      </div>
+      <FestivalLoading 
+        message={message}
+        showProgress={true}
+        progress={progress}
+      />
     )
   }
 
@@ -174,7 +182,7 @@ export default function MunicipalityPage() {
           <div className="text-xl mb-4">Municipio no encontrado</div>
           <button 
             onClick={() => router.back()}
-            className="text-yellow-500 hover:underline"
+            className="text-[#864e94] hover:underline"
           >
             Volver atrás
           </button>
@@ -188,11 +196,16 @@ export default function MunicipalityPage() {
   // Obtener categorías únicas
   const categories = [...new Set(municipalityEvents.map((event: FestivalEvent) => event.category))]
 
-  const sortedEvents = [...municipalityEvents].sort((a: FestivalEvent, b: FestivalEvent) => {
-    const dateA = parseInt(a.date) || 0
-    const dateB = parseInt(b.date) || 0
-    return dateA - dateB
-  })
+  // Transformar eventos de municipio al formato que espera EventList
+  const transformedEvents = municipalityEvents.map((event: FestivalEvent) => ({
+    id: event.id,
+    title: event.title,
+    date: event.date,
+    day: event.day,
+    venue: event.venue,
+    time: event.time,
+    municipality: municipality.name
+  }))
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -222,7 +235,7 @@ export default function MunicipalityPage() {
         <div className="flex items-center justify-between p-4 md:p-6">
           <button 
             onClick={() => router.back()}
-            className="flex items-center gap-2 text-white hover:text-yellow-500 transition-colors"
+            className="flex items-center gap-2 text-white hover:text-[#864e94] transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
             <span className="text-sm font-medium md:text-lg">Volver</span>
@@ -233,7 +246,7 @@ export default function MunicipalityPage() {
         <div className="px-4 md:px-6 pb-6">
           {/* Municipality Image */}
           <div className="flex justify-center mb-6">
-            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-yellow-400 border-opacity-50 shadow-2xl relative">
+            <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#864e94] border-opacity-50 shadow-2xl relative">
               <Image
                 src={municipalityImage}
                 alt={municipality.name}
@@ -246,7 +259,7 @@ export default function MunicipalityPage() {
           {/* Municipality Details */}
           <div className="text-center mb-8">
             <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">{municipality.name}</h1>
-            <div className="text-yellow-400 mb-2 font-medium">
+            <div className="text-[#864e94] mb-2 font-medium">
               {municipality.location}
             </div>
             <div className="text-gray-300 mb-2">
@@ -261,78 +274,11 @@ export default function MunicipalityPage() {
           </div>
 
           {/* Events List */}
-          <div className="space-y-4 mb-8">
-            <h2 className="text-xl md:text-2xl font-bold text-white text-center mb-6">
-              Programación de Eventos
-            </h2>
-            
-            {sortedEvents.map((event: FestivalEvent) => (
-              <div key={event.id} className="bg-gray-900/80 backdrop-blur-sm rounded-lg p-4 border border-gray-700">
-                <div className="flex flex-col md:flex-row md:items-center gap-4">
-                  {/* Event Image */}
-                  <div className="w-full md:w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden relative">
-                    <Image
-                      src={municipalityImage}
-                      alt={event.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-
-                  {/* Event Info */}
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold text-white mb-2">{event.title}</h3>
-                    <div className="text-yellow-400 font-medium mb-2">{event.artist}</div>
-                    <div className="text-gray-300 text-sm mb-2">
-                      {event.category}
-                      {event.subcategory && (
-                        <span className="block text-xs mt-1 text-gray-400">{event.subcategory}</span>
-                      )}
-                    </div>
-                    
-                    {/* Event Details */}
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        <span>{event.day} {event.date}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{event.time}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        <span>{event.venue}</span>
-                      </div>
-                    </div>
-
-                    {/* Additional Info */}
-                    {event.artisticDirection && (
-                      <div className="text-xs text-gray-500 mt-2">
-                        Dirección artística: {event.artisticDirection}
-                      </div>
-                    )}
-                    {event.choreography && (
-                      <div className="text-xs text-gray-500">
-                        Coreografía: {event.choreography}
-                      </div>
-                    )}
-                    {event.description && (
-                      <div className="text-xs text-gray-500 mt-2">
-                        {event.description}
-                      </div>
-                    )}
-                    {event.cast && (
-                      <div className="text-xs text-gray-500 mt-2">
-                        <div className="font-medium">Elenco:</div>
-                        <div>{event.cast.join(", ")}</div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <EventList 
+            events={transformedEvents}
+            artistImage={municipalityImage}
+            artistName={municipality.name}
+          />
 
           {/* Categories Summary */}
           <div className="mt-8 p-4 bg-gray-900 rounded-lg border border-gray-700">
@@ -343,7 +289,7 @@ export default function MunicipalityPage() {
               {categories.map((category, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 bg-yellow-500 text-black text-sm font-medium rounded-full"
+                  className="px-3 py-1 bg-[#864e94] text-white text-sm font-medium rounded-full"
                 >
                   {category}
                 </span>

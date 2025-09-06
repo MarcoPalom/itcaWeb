@@ -20,7 +20,7 @@ export default function RootLayout({
   const ticking = useRef(false);
 
   // Check if we're on pages that shouldn't show TopNav
-  const hideTopNav = pathname === '/festival' || pathname === '/national-artists' || pathname === '/municipal-billboards' || pathname === '/artists-tamaulipecos' || pathname.startsWith('/artist/');
+  const hideTopNav = pathname === '/festival' || pathname === '/national-artists' || pathname === '/municipal-billboards' || pathname === '/artists-tamaulipecos' || pathname.startsWith('/artist/') || pathname.startsWith('/municipio/');
 
   useEffect(() => {
     const handleScroll = () => {
