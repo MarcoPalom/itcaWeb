@@ -5,6 +5,25 @@
   --foreground: #171717;
 }
 
+/* Fix for mobile scroll issues */
+html, body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Prevent bounce scroll on iOS */
+* {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

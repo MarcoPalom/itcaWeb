@@ -9,7 +9,7 @@ export default function FestivalPage() {
     initialDelay: 500,
     minLoadingTime: 2500,
     onComplete: () => {
-      console.log("Festival cargado")
+      // Loading completed
     }
   });
 

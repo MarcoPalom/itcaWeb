@@ -6,9 +6,9 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import FestivalBackground from "../festival/FestivalBackground";
 import { useTheme } from "@/contexts/ThemeContext";
-import { Listbox, Transition } from "@headlessui/react";
+import { useMobileScrollFix } from "@/hooks/useMobileScrollFix";
+import { Listbox, Transition, ListboxButton, ListboxOptions, ListboxOption } from "@headlessui/react";
 
-// Importar todos los datos de municipios
 import { victoriaFestivalInfo } from "@/constants/Municipios/victoriaData";
 import { matamorosFestivalInfo } from "@/constants/Municipios/matamorosData";
 import { tampicoFestivalInfo } from "@/constants/Municipios/tampicoData";
@@ -54,14 +54,14 @@ import { gustavoDiazOrdazFestivalInfo } from "@/constants/Municipios/gustavoDiaz
 
 export default function MunicipalBillboards() {
   const { isDark } = useTheme();
+  useMobileScrollFix();
   const [isMobile, setIsMobile] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
-  const [sortBy, setSortBy] = useState("name"); // "name" o "events"
+  const [sortBy, setSortBy] = useState("name");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 20;
 
-  // Todos los municipios disponibles
   const allMunicipalFestivals = [
     victoriaFestivalInfo,
     matamorosFestivalInfo,
@@ -107,7 +107,6 @@ export default function MunicipalBillboards() {
     gustavoDiazOrdazFestivalInfo
   ];
 
-  // Mapeo de imágenes para municipios
   const municipalImages: { [key: string]: string } = {
     "Festival del Municipio Victoria": "/images/victoria-festival.jpg",
     "Festival del Municipio Matamoros": "/images/matamoros-festival.jpg",
@@ -153,22 +152,17 @@ export default function MunicipalBillboards() {
     "Festival del Municipio Gustavo Díaz Ordaz": "/images/gustavo-diaz-ordaz-festival.jpg"
   };
 
-  // Opciones de ordenamiento
   const sortOptions = [
     { id: "name", name: "Ordenar A-Z" },
     { id: "events", name: "Más eventos" }
   ];
 
-  // Obtener regiones únicas (simplificado para Tamaulipas)
   const regions = ["Norte", "Centro", "Sur", "Frontera"];
-  
-  // Opciones de regiones para el dropdown
   const regionOptions = [
     { id: "", name: "Todas las regiones" },
     ...regions.map(region => ({ id: region, name: region }))
   ];
 
-  // Funciones de manejo
   const handleSearchChange = (value: string) => {
     setSearchTerm(value);
     setCurrentPage(1);
@@ -184,13 +178,11 @@ export default function MunicipalBillboards() {
     setCurrentPage(1);
   };
 
-  // Filtrar y ordenar municipios
   const filteredMunicipalities = allMunicipalFestivals
     .filter(municipality => {
       const municipalityName = municipality.name.replace("Festival del Municipio ", "");
       const matchesSearch = municipalityName.toLowerCase().includes(searchTerm.toLowerCase());
-      // Por ahora, todos los municipios están en Tamaulipas, pero podríamos expandir esto
-      const matchesRegion = !selectedRegion || true; // Simplificado
+      const matchesRegion = !selectedRegion || true;
       return matchesSearch && matchesRegion;
     })
     .sort((a, b) => {
@@ -204,17 +196,14 @@ export default function MunicipalBillboards() {
       return 0;
     });
 
-  // Calcular paginación
   const totalPages = Math.ceil(filteredMunicipalities.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentMunicipalities = filteredMunicipalities.slice(startIndex, endIndex);
 
-  // Obtener opciones seleccionadas
   const selectedRegionOption = regionOptions.find(option => option.id === selectedRegion) || regionOptions[0];
   const selectedSortOption = sortOptions.find(option => option.id === sortBy) || sortOptions[0];
 
-  // Detectar el tamaño de pantalla
   useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -229,8 +218,10 @@ export default function MunicipalBillboards() {
   return (
     <>
       <FestivalBackground />
-      <div className={`min-h-screen w-full relative z-10 ${isDark ? 'text-white' : 'text-gray-800'}`}>
-        {/* Status Bar - Solo visible en móvil */}
+      <div 
+        className={`min-h-screen w-full relative z-10 overflow-x-hidden ${isDark ? 'text-white' : 'text-gray-800'}`}
+        style={{ WebkitOverflowScrolling: 'touch' }}
+      >
         <div className="flex items-center justify-between px-4 py-2 text-xs md:hidden">
           <span className="font-medium">9:41</span>
           <div className="flex items-center gap-1">
@@ -240,9 +231,10 @@ export default function MunicipalBillboards() {
           </div>
         </div>
 
-        {/* Content */}
-        <div className="relative z-10">
-        {/* Header */}
+        <div 
+          className="relative z-10"
+          style={{ minHeight: '100vh', overflowY: 'auto' }}
+        >
         <div className="flex items-center justify-between p-4 md:p-6">
           <Link 
             href="/festival"
@@ -253,7 +245,6 @@ export default function MunicipalBillboards() {
           </Link>
         </div>
 
-        {/* Title */}
         <div className="px-4 md:px-6 mb-6">
           <h1 className={`text-3xl md:text-5xl font-bold text-center mb-2 ${isDark ? 'text-white' : 'text-gray-800'}`}>
             Carteleras de Municipios
@@ -263,10 +254,8 @@ export default function MunicipalBillboards() {
           </p>
         </div>
 
-        {/* Search and Filters */}
         <div className="px-4 md:px-6 mb-6">
           <div className="flex flex-col md:flex-row gap-4">
-            {/* Search Bar */}
             <div className="relative flex-1">
               <Search className={`absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} />
               <input
@@ -278,15 +267,14 @@ export default function MunicipalBillboards() {
               />
             </div>
 
-            {/* Region Filter */}
             <Listbox value={selectedRegion} onChange={handleRegionChange}>
               <div className="relative min-w-[200px] md:min-w-[220px]">
-                <Listbox.Button className={`relative w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-[#864e94] text-left ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white/90 border-gray-300 text-gray-800'}`}>
+                <ListboxButton className={`relative w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-[#864e94] text-left ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white/90 border-gray-300 text-gray-800'}`}>
                   <span className="block truncate">{selectedRegionOption.name}</span>
                   <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                     <ChevronDown className={`w-5 h-5 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} aria-hidden="true" />
                   </span>
-                </Listbox.Button>
+                </ListboxButton>
                 <Transition
                   as="div"
                   leave="transition ease-in duration-100"
@@ -296,11 +284,11 @@ export default function MunicipalBillboards() {
                   enterFrom="opacity-0"
                   enterTo="opacity-100"
                 >
-                  <Listbox.Options
+                  <ListboxOptions
                     className={`absolute z-10 mt-1 w-full border rounded-lg shadow-lg ${isDark ? 'bg-gray-800 border-gray-600' : 'bg-white border-gray-300'}`}
                   >
                     {regionOptions.map((option) => (
-                      <Listbox.Option
+                      <ListboxOption
                         key={option.id}
                         value={option.id}
                         className={({ active }) =>
@@ -321,22 +309,21 @@ export default function MunicipalBillboards() {
                             ) : null}
                           </>
                         )}
-                      </Listbox.Option>
+                      </ListboxOption>
                     ))}
-                  </Listbox.Options>
+                  </ListboxOptions>
                 </Transition>
               </div>
             </Listbox>
 
-            {/* Sort Filter */}
             <Listbox value={sortBy} onChange={handleSortChange}>
               <div className="relative min-w-[200px] md:min-w-[220px]">
-                <Listbox.Button className={`relative w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-[#864e94] text-left ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white/90 border-gray-300 text-gray-800'}`}>
+                <ListboxButton className={`relative w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-[#864e94] text-left ${isDark ? 'bg-gray-800 border-gray-600 text-white' : 'bg-white/90 border-gray-300 text-gray-800'}`}>
                   <span className="block truncate">{selectedSortOption.name}</span>
                   <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                     <ChevronDown className={`w-5 h-5 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} aria-hidden="true" />
                   </span>
-                </Listbox.Button>
+                </ListboxButton>
                 <Transition
                   as="div"
                   leave="transition ease-in duration-100"
@@ -346,11 +333,11 @@ export default function MunicipalBillboards() {
                   enterFrom="opacity-0"
                   enterTo="opacity-100"
                 >
-                  <Listbox.Options
+                  <ListboxOptions
                     className={`absolute z-10 mt-1 w-full border rounded-lg shadow-lg ${isDark ? 'bg-gray-800 border-gray-600' : 'bg-white border-gray-300'}`}
                   >
                     {sortOptions.map((option) => (
-                      <Listbox.Option
+                      <ListboxOption
                         key={option.id}
                         value={option.id}
                         className={({ active }) =>
@@ -371,16 +358,15 @@ export default function MunicipalBillboards() {
                             ) : null}
                           </>
                         )}
-                      </Listbox.Option>
+                      </ListboxOption>
                     ))}
-                  </Listbox.Options>
+                  </ListboxOptions>
                 </Transition>
               </div>
             </Listbox>
           </div>
         </div>
 
-        {/* Municipal Billboards List */}
         <div className="px-4 md:px-6 pb-6">
           <div className={`backdrop-blur-sm rounded-lg mx-2 overflow-hidden ${isDark ? 'bg-gray-900/80' : 'bg-white/90'}`}>
             {currentMunicipalities.map((municipality, index) => (
@@ -393,7 +379,6 @@ export default function MunicipalBillboards() {
                   className="block h-full"
                 >
                   <div className={`flex items-center gap-4 p-4 min-h-[120px] md:min-h-[150px] transition-colors ${isDark ? 'hover:bg-gray-800/50' : 'hover:bg-gray-100/50'}`}>
-                    {/* Municipality Image - Lado izquierdo */}
                     <div className="w-20 h-28 md:w-24 md:h-36 flex-shrink-0 rounded-lg overflow-hidden">
                       <img
                         src={
@@ -405,7 +390,6 @@ export default function MunicipalBillboards() {
                       />
                     </div>
 
-                    {/* Municipality Info - Lado derecho */}
                     <div className="flex-1 min-w-0 flex flex-col justify-center">
                       <h3 className={`font-bold text-lg md:text-xl mb-3 truncate ${isDark ? 'text-white' : 'text-gray-800'}`}>
                         {municipality.name.replace("Festival del Municipio ", "")}
@@ -420,7 +404,6 @@ export default function MunicipalBillboards() {
                           Festival Municipal
                         </div>
 
-                        {/* Events Summary */}
                         <div className="flex items-center justify-between mt-3">
                           <span className="text-[#864e94] text-sm font-medium">
                             {municipality.totalEvents} evento{municipality.totalEvents !== 1 ? 's' : ''}
@@ -435,7 +418,6 @@ export default function MunicipalBillboards() {
                     </div>
                   </div>
                 </Link>
-                {/* Separador entre municipios */}
                 {index < currentMunicipalities.length - 1 && (
                   <div className={`w-full h-px mx-4 ${isDark ? 'bg-gray-700/50' : 'bg-gray-300/50'}`}></div>
                 )}
@@ -460,7 +442,6 @@ export default function MunicipalBillboards() {
             </div>
           )}
 
-          {/* Paginación */}
           {totalPages > 1 && (
             <div className="flex justify-center items-center gap-2 mt-6">
               <button
@@ -503,7 +484,6 @@ export default function MunicipalBillboards() {
             </div>
           )}
 
-          {/* Información de paginación */}
           {filteredMunicipalities.length > 0 && (
             <div className={`text-center mt-4 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               Mostrando {startIndex + 1}-{Math.min(endIndex, filteredMunicipalities.length)} de {filteredMunicipalities.length} municipios

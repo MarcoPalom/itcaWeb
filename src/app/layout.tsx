@@ -5,15 +5,9 @@ import TopNav from "../components/TopNav";
 import Footer from "../components/Footer";
 import { ReactNode, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion"
-import useJellyScroll from '../hooks/useJellyScroll';
 import { ScrollLockProvider } from '../hooks/ScrollLockContext';
 import { ThemeProvider } from '../contexts/ThemeContext';
 import { usePathname } from "next/navigation";
-
-function JellyScrollEffect() {
-  useJellyScroll();
-  return null;
-}
 
 export default function RootLayout({
   children,
@@ -75,7 +69,6 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <ScrollLockProvider>
-            <JellyScrollEffect />
             <motion.div
               initial={{ scaleY: 1 }}
               animate={controls}

@@ -9,7 +9,7 @@ export default function MunicipalBillboardsPage() {
     initialDelay: 500,
     minLoadingTime: 2000,
     onComplete: () => {
-      console.log("Carteleras Municipales cargadas")
+      // Loading completed
     }
   });
 

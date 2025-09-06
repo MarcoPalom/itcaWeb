@@ -30,7 +30,7 @@ export const mariaKatzarava: NationalArtist = {
   origin: "CDMX",
   category: "Música",
   subcategory: "Cabaret, jazz",
-  description: "Artista musical de la Ciudad de México especializada en cabaret y jazz",
+  description: "Un recorrido por los grandes temas del Gorrión de París, interpretados de manera magistral por María Katzarava. Una evocación profunda, casi mística, a la reencarnación de Edith Piaf, donde la voz poderosa y conmovedora de Katzarava se convierte en el vehículo perfecto para revivir la pasión, la melancolía y la fuerza que definieron a la icónica cantante francesa. Este espectáculo es más que un concierto: es un viaje en el tiempo. Un paseo sensorial por la Europa de los años 40 y 50, donde el cabaret vibraba con historias de amor y desamor, donde el jazz se entrelazaba con la chanson française, y donde cada melodía era una confesión íntima. María Katzarava no sólo interpreta, sino que habita cada canción, aportando su sensibilidad operística y su entrega escénica para dar nueva vida a clásicos como La Vie en Rose, Non, je ne regrette rien y Hymne à l'amour. Su presencia en el escenario transforma cada nota en un susurro del alma, un puente entre generaciones y geografías.",
   events: [
     {
       id: "nl-5",
@@ -96,7 +96,7 @@ export const ceprodac: NationalArtist = {
   origin: "CDMX",
   category: "Danza",
   subcategory: "Danza Contemporánea",
-  description: "Compañía de danza contemporánea de la Ciudad de México con dirección artística de Cecilia Lugo y coreografía de Francisco Córdova",
+  description: "El Centro de Producción de Danza Contemporánea (CEPRODAC) fomenta, estimula y divulga la creación coreográfica en México y el extranjero a partir de la infraestructura necesaria para la producción de obras dancísticas profesionales, privilegiando la libertad creativa. Iniciada en 2011, actualmente su ensamble que pertenece al Instituto Nacional de Bellas Artes y Literatura, cuenta con 20 bailarines profesionales, quienes participan en \"Se nos quedaron ellos\", bajo la dirección artística de Cecilia Lugo, con la coreografía y dirección de escena de Francisco Córdova. El espectáculo es un proceso escénico que teje un mosaico de narrativas fragmentadas que exploran la esencia de la vida a través de sus vacíos y plenitudes; las ausencias insalvables, los amores efímeros, los abandonos inevitables, la presencia de la muerte y la pobreza espiritual.",
   events: [
     {
       id: "nl-9",
@@ -381,7 +381,7 @@ export const proteac: NationalArtist = {
   name: "PROTEAC",
   origin: "Nuevo León",
   category: "Teatro",
-  description: "Compañía teatral de Nuevo León con dirección artística de Luis Martín",
+  description: "La llegada de Adela despierta a la familia a nuevas verdades. Nicolás florece en su despertar, mientras Gaviota encuentra su voz en el silencio. En el otro extremo, Dolores, la abuela, teje hilos de vida y muerte, enfrentando el miedo y la trascendencia. Juntos, se embarcan en un viaje de autodescubrimiento y transformación, donde la familia se reescribe a sí misma, entre la fragilidad y la resiliencia, en un baile eterno entre la vida y la muerte.",
   events: [
     {
       id: "mt-9",
@@ -603,7 +603,7 @@ export const orquestaSinfonicaGuardiaNacional: NationalArtist = {
   origin: "CDMX",
   category: "Música",
   subcategory: "Sinfónica",
-  description: "Orquesta sinfónica de la Ciudad de México especializada en música sinfónica",
+  description: "La Orquesta Sinfónica de Alientos de la Guardia Nacional se ha distinguido por ser una de las mejores Bandas de Música en el país y presentará dentro del FICSM 2025 el programa denominado \"Un paseo por México\", una compilación de diferentes melodías que son representativas de algunos estados de la república, desde el norte hasta el sur. Contará con la participación especial de la Orquesta Sinfónica de la Universidad Autónoma de Tamaulipas y la Banda de Guerra Monumental de la Coordinación Territorial Regional GOLFO. Con su repertorio clásico, infantil y de música ligera, la Orquesta ha realizado también colaboraciones con la Banda de Guerra tocando marchas, himnos, entre otras, presentándose en recintos abiertos y cerrados. Cuenta con presentaciones en diferentes estados de la República Mexicana como son: Guanajuato, Michoacán, Querétaro, Tlaxcala, Puebla, Morelos, Veracruz, Aguascalientes, Zacatecas, Colima, Mérida, Oaxaca y Ciudad de México.",
   events: [
     {
       id: "vc-8",

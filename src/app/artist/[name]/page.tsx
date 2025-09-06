@@ -1,10 +1,11 @@
 "use client"
 import { useState, useEffect } from "react"
-import { ArrowLeft, Signal, Wifi, Battery, MapPin, Calendar, Clock } from "lucide-react"
+import { ArrowLeft, Signal, Wifi, Battery } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
 import { internationalArtists } from "@/constants/internationalArtistData"
 import { nationalArtists } from "@/constants/nationalArtistData"
 import { tamaulipecosArtists } from "@/constants/tamaulipecosArtistData"
+import { getArtistImageUniversal } from "@/constants/artistImages"
 import EventList from "@/components/artist/EventList"
 import FestivalLoading from "@/components/FestivalLoading"
 import { useFestivalLoading } from "@/hooks/useFestivalLoading"
@@ -15,32 +16,27 @@ export default function ArtistPage() {
   const [artist, setArtist] = useState<any>(null)
   const [loading, setLoading] = useState(true)
 
-  // Festival Loading
+
+
   const { isLoading, progress, message } = useFestivalLoading({
     initialDelay: 500,
     minLoadingTime: 2000,
-    onComplete: () => {
-      console.log("Artista cargado")
-    }
   })
 
   useEffect(() => {
     if (params.name) {
       const artistName = decodeURIComponent(params.name as string)
       
-      // Buscar en artistas internacionales
       let foundArtist = internationalArtists.find(a => 
         a.name.toLowerCase().replace(/\s+/g, '-') === artistName
       )
       
-      // Si no se encuentra, buscar en artistas nacionales
       if (!foundArtist) {
         foundArtist = nationalArtists.find(a => 
           a.name.toLowerCase().replace(/\s+/g, '-') === artistName
         )
       }
       
-      // Si no se encuentra, buscar en artistas tamaulipecos
       if (!foundArtist) {
         foundArtist = tamaulipecosArtists.find(a => 
           a.name.toLowerCase().replace(/\s+/g, '-') === artistName
@@ -80,31 +76,8 @@ export default function ArtistPage() {
     )
   }
 
-  // Mapeo de imágenes para artistas
-  const artistImages: { [key: string]: string } = {
-    "Bianca Marroquín": "/images/bianca_marroquin.jpg",
-    "Argelia Fragoso": "/images/argelia_fragoso.jpg",
-    "Hands Percussion of Malaysia": "/images/hand_percusion.jpg",
-    "Charlotte Pescayre": "/images/charlotte.jpeg",
-    "Sabor Life is Rhythm": "/images/sabor_life.jpg", 
-    "Ballet Nepantla": "/images/ballet_nepantla.jpg",
-    "Matías Aguayo": "/images/matias_aguayo.jpg",
-    "Del Vali": "/images/del_vali.png",
-    "Wero Hernández": "/images/el_wero.jpg",
-    "María Katzarava": "/images/national_artists/maria_katza.jpg",
-    "Centro de Producción de Danza Contemporánea (CEPRODAC)": "/images/national_artists/ceprodac1.jpg",
-    "Patricia Guerrero": "/images/national_artists/la_percha.jpg",
-    "Grupo La Trenza": "/images/national_artists/latrenza.jpg",
-    "Grupo Tayer": "/images/national_artists/grupo_tayer.jpg",
-    "La Percha Teatro": "/images/national_artists/la_percha.jpg"
-  }
-
-  const artistImage = artistImages[artist.name] || "/images/img_0.png"
-  
-  // Obtener municipios únicos
+  const artistImage = getArtistImageUniversal(artist.name)
   const municipalities = [...new Set(artist.events.map((event: any) => event.municipality))]
-
-  // Ordenar eventos por fecha
   const sortedEvents = [...artist.events].sort((a: any, b: any) => {
     const dateA = parseInt(a.date) || 0
     const dateB = parseInt(b.date) || 0
@@ -113,7 +86,6 @@ export default function ArtistPage() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Status Bar - Solo visible en móvil */}
       <div className="flex items-center justify-between px-4 py-2 text-xs md:hidden">
         <span className="font-medium">9:41</span>
         <div className="flex items-center gap-1">
@@ -123,7 +95,6 @@ export default function ArtistPage() {
         </div>
       </div>
 
-      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src={artistImage}
@@ -132,9 +103,7 @@ export default function ArtistPage() {
         />
       </div>
 
-      {/* Content */}
       <div className="relative z-10">
-        {/* Header */}
         <div className="flex items-center justify-between p-4 md:p-6">
           <button 
             onClick={() => router.back()}
@@ -145,9 +114,7 @@ export default function ArtistPage() {
           </button>
         </div>
 
-        {/* Artist Info */}
         <div className="px-4 md:px-6 pb-6">
-          {/* Artist Image */}
           <div className="flex justify-center mb-6">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#864e94] border-opacity-50 shadow-2xl">
               <img
@@ -158,7 +125,6 @@ export default function ArtistPage() {
             </div>
           </div>
 
-          {/* Artist Details */}
           <div className="text-center mb-8">
             <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">{artist.name}</h1>
             <div className="text-[#864e94] mb-2 font-medium">
@@ -180,14 +146,12 @@ export default function ArtistPage() {
             )}
           </div>
 
-          {/* Events */}
           <EventList 
             events={artist.events}
             artistImage={artistImage}
             artistName={artist.name}
           />
 
-          {/* Municipalities Summary */}
           <div className="mt-8 p-4 bg-gray-900 rounded-lg border border-gray-700">
             <h3 className="text-lg font-semibold text-white mb-3 text-center">
               Municipios Visitados
