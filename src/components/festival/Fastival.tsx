@@ -1,8 +1,6 @@
 "use client"
-import { ArrowLeft, Signal, Wifi, Battery } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { internationalArtists } from "@/constants/internationalArtistData"
 import { nationalArtists } from "@/constants/nationalArtistData"
@@ -22,7 +20,6 @@ import Autoplay from "embla-carousel-autoplay"
 
 export default function Fastival() {
   const { isDark } = useTheme()
-  const [isMobile, setIsMobile] = useState(false)
 
   // Mapeo de imágenes para cada artista
   const artistImages: { [key: string]: string } = {
@@ -94,17 +91,6 @@ export default function Fastival() {
     "Festival del Municipio Nuevo Laredo": "/images/municipios/nuevo-laredo.jpg"
   }
 
-  // Detectar el tamaño de pantalla
-  useEffect(() => {
-    const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    
-    checkScreenSize()
-    window.addEventListener('resize', checkScreenSize)
-    
-    return () => window.removeEventListener('resize', checkScreenSize)
-  }, [])
 
 
   return (
@@ -150,7 +136,7 @@ export default function Fastival() {
             ]}
           >
             <CarouselContent className="-ml-2 md:-ml-4">
-              {internationalArtists.map((artist, index) => (
+              {internationalArtists.map((artist) => (
                 <CarouselItem key={artist.id} className="pl-2 md:pl-4 md:basis-1/3">
                   <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
                     <motion.div 

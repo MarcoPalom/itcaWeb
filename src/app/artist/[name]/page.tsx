@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react"
-import { ArrowLeft, Signal, Wifi, Battery, ChevronDown, ChevronUp } from "lucide-react"
+import { ArrowLeft, Signal, Wifi, Battery, ChevronDown } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useParams, useRouter } from "next/navigation"
 import Image from "next/image"
