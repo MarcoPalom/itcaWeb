@@ -53,7 +53,7 @@ export default function Fastival() {
     "Warislov": "/images/estatal_artists/warislov.jpg",
     "Los Valdés Ska": "/images/estatal_artists/valdes.jpg",
     "Kani Ensamble Coral": "/images/estatal_artists/camereta.jpg",
-    "Ensamble de Mujeres \"María Bonita\"": "/images/estatal_artists/ensamble.JPG"
+    "Ensamble de Mujeres \"María Bonita\"": "/images/estatal_artists/ensamble.JPG",
   }
 
   // Seleccionar 5 artistas nacionales al azar
