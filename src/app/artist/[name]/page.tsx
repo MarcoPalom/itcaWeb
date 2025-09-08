@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
-import { ArrowLeft, Signal, Wifi, Battery } from "lucide-react"
+import { ArrowLeft, Signal, Wifi, Battery, ChevronDown, ChevronUp } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
 import { useParams, useRouter } from "next/navigation"
 import Image from "next/image"
 import { internationalArtists, InternationalArtist } from "@/constants/internationalArtistData"
@@ -18,6 +19,7 @@ export default function ArtistPage() {
   const params = useParams()
   const router = useRouter()
   const [artist, setArtist] = useState<Artist | null>(null)
+  const [showDescription, setShowDescription] = useState(false)
 
 
 
@@ -139,9 +141,48 @@ export default function ArtistPage() {
               Se presentará en {municipalities.length} municipio{municipalities.length !== 1 ? 's' : ''}
             </div>
             {artist.description && (
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-                {artist.description}
-              </p>
+              <div className="max-w-2xl mx-auto flex flex-col items-center">
+                <motion.button
+                  onClick={() => setShowDescription(!showDescription)}
+                  className="flex items-center justify-center gap-2 px-6 py-3 bg-[#864e94] hover:bg-[#a05bb8] text-white rounded-lg transition-all duration-200 mb-4 shadow-lg hover:shadow-xl"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <span className="text-sm font-medium">
+                    {showDescription ? 'Ocultar descripción' : 'Ver descripción'}
+                  </span>
+                  <motion.div
+                    animate={{ rotate: showDescription ? 180 : 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <ChevronDown className="w-4 h-4" />
+                  </motion.div>
+                </motion.button>
+                
+                <AnimatePresence>
+                  {showDescription && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <motion.div
+                        initial={{ y: -10 }}
+                        animate={{ y: 0 }}
+                        exit={{ y: -10 }}
+                        transition={{ duration: 0.3, delay: 0.1 }}
+                        className="p-4 bg-gray-900/50 rounded-lg border border-gray-700/50 backdrop-blur-sm"
+                      >
+                        <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                          {artist.description}
+                        </p>
+                      </motion.div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             )}
           </div>
 

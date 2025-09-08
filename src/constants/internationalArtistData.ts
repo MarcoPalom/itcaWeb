@@ -29,7 +29,7 @@ export const biancaMarroquin: InternationalArtist = {
   origin: "Tamaulipas-México-Estados Unidos",
   category: "Teatro",
   subcategory: "Teatro Musical",
-  description: "Actriz y cantante mexicana-estadounidense, reconocida por su trabajo en Broadway y teatro musical",
+  description: "Reconocida artista mexicana a nivel internacional, Bianca Marroquín es mejor conocida por estelarizar obras musicales en Broadway, incluyendo los dos papeles protagonistas en \"Chicago, The Musical\" en el Teatro Ambassador, por el cual fue galardonada con el Premio Helen Hayes y \"Anita\" en West Side Story para el Carnegie Hall, The Pajama Game, In The Heights y otros. Además de interpretar a Chita Rivero en la serie de televisión Fosse/Verdon para FX, aparece en otros programas y series como Acapulco, de Apple y jueza \"Mira Quién Baila\" o \"Pequeños Gigantes\" para el público latino. Regresa a Tamaulipas, al Festival Internacional en la Costa del Seno Mexicano con \"Broadway Baby\", que narra su propia historia como una niña fronteriza que soñaba con bailar y se catapultó hasta ser la primera mujer mexicana en estelarizar una obra en Broadway. En una experiencia de concierto teatral, Bianca nos brinda un mensaje poderosamente inspirador a través de una mezcla ecléctica de música y danza.",
   events: [
     {
       id: "nl-1",
@@ -86,7 +86,7 @@ export const argeliaFragoso: InternationalArtist = {
   origin: "Cuba",
   category: "Música",
   subcategory: "Boleros",
-  description: "Cantante cubana especializada en boleros, reconocida por su interpretación de 'Mi voz al mundo'",
+  description: "Cuando Argelia Fragoso irrumpió en el ámbito de la popularidad, asistimos sin darnos cuenta, al nacimiento de una de las figuras más importantes que brindaría Cuba al escenario internacional. Nos hallamos, sin duda alguna, ante una de las voces que más da de qué hablar por sus excepcionales dotes y su versatilidad artística, ganando así el calificativo de la prensa especializada, quien la define para siempre como «La voz de Oro de Cuba». Armada de un gran registro de contralto, cálido y profundo, Argelia compendia, además, una impactante musicalidad, una perfecta afinación, y una exquisita dicción, lo que hacen de su canto un regalo para los oídos más exigentes.",
   events: [
     {
       id: "nl-3",
@@ -161,7 +161,7 @@ export const handsPercussionMalaysia: InternationalArtist = {
   origin: "Malasia",
   category: "Interdisciplinario",
   subcategory: "Música, danza",
-  description: "Grupo de percusión malayo que combina música y danza en un espectáculo interdisciplinario",
+  description: "Célebre conjunto de percusión malayo, cuya creación en 1997 supuso todo un acontecimiento en el panorama de las artes escénicas de Kuala Lumpur por lo innovador de sus espectáculos. Las actuaciones de Hands Percussion son muy apreciadas y admiradas por sus esfuerzos por preservar un patrimonio cultural al tiempo que introducen nuevas dimensiones en la percusión teatral, aventurándose en la música de percusión contemporánea y explorando la música y los instrumentos de diferentes culturas. El espectáculo extrae su inspiración y la riqueza de su programa de la increíble diversidad de islas y costumbres que conforman Malasia. Combina la cultura de las tribus de las montañas, que viven en el frondoso bosque donde descansan los espíritus de los muertos, con las danzas y la música de los pueblos que comparten la tierra entre el arroz, el té y el mar.",
   events: [
     {
       id: "nl-4",
@@ -218,7 +218,7 @@ export const charlottePescayre: InternationalArtist = {
   origin: "Francia",
   category: "Interdisciplinario",
   subcategory: "Artes Circenses, pieza de danza en cuerda tensa para una maromera y su saxofón",
-  description: "Artista francesa que combina artes circenses, danza en cuerda tensa y música con saxofón",
+  description: "Descripción pendiente",
   events: [
     {
       id: "g-6",
@@ -266,7 +266,7 @@ export const saborLifeIsRhythm: InternationalArtist = {
   origin: "España, Inglaterra, Francia, Italia y México",
   category: "Interdisciplinario",
   subcategory: "Música, tap, jazz",
-  description: "Grupo internacional que fusiona música, tap y jazz con dirección artística de Ivan Bouchain y Gaëtan Farnier",
+  description: "Cinco instrumentos, cuatro bailarines, tres generaciones, una misión: difundir el \"Sabor\" y el Tap Dance (claqué), a través de un viaje desde sus orígenes hasta la actualidad, pasando por una fusión fresca de estilos y ritmos ejecutados con respeto y pasión. SABOR-Life is Rhythm invita a todo tipo de público a disfrutar de coreografías suculentas y ritmos frescos que sabrán satisfacer el paladar de cada comensal, una delicia para los sentidos. Con algunos de los mejores bailarines de Europa, es un espectáculo electrizante donde el carisma y la música en directo son los ingredientes principales que llegan al Festival Internacional en la Costa del Seno Mexicano. ¡La vida sin sabor no tiene ritmo!",
   events: [
     {
       id: "vc-1",
@@ -305,7 +305,7 @@ export const balletNepantla: InternationalArtist = {
   origin: "Estados Unidos",
   category: "Danza",
   subcategory: "Ballet",
-  description: "Compañía de ballet estadounidense que presenta coreografías clásicas y contemporáneas",
+  description: "Ballet Nepantla es una compañía galardonada que fusiona de manera única el ballet contemporáneo con el folclore mexicano, explorando nuevas formas interpretativas para abordar la \"in-between-ness\", un estado intermedio entre lo cultural e histórico. Fundada en 2017 por Andrea Guajardo (Edinburg, Texas) y Martín Rodríguez Vigíl (Guadalajara, México), la obra \"Mística\" es un viaje escénico dividido en dos actos, un espectáculo que conmueve y celebra, donde cada pieza es un puente entre la herencia cultural y la sensibilidad contemporánea. Inicia en el mundo de los vivos, a través de paisajes, rituales y emociones que evocan el duelo, la memoria y la celebración, mientras que el segundo acto transporta al mundo de los muertos, entre catrinas coquetas, danzas afro-mexicanas, sones jarochos y ceremonias indígenas, la obra celebra el Día de Muertos como un espacio donde la música, la danza y el recuerdo unen a vivos y difuntos.",
   events: [
     {
       id: "r-11",
@@ -326,7 +326,7 @@ export const matiasAguayo: InternationalArtist = {
   origin: "Chile",
   category: "Música",
   subcategory: "DJ",
-  description: "DJ y productor musical chileno reconocido por su innovador estilo de música electrónica",
+  description: "Matías Aguayo, productor, DJ y vocalista chileno-alemán, es una figura esencial de la escena electrónica internacional. Con más de veinte años de trayectoria, ha creado un estilo propio que fusiona house, techno, ritmos latinoamericanos, influencias africanas y voces en vivo. Su propuesta, a la vez experimental y orgánica, lo ha llevado a presentarse en algunos de los clubes y festivales más relevantes del mundo. Como fundador del influyente sello Cómeme, Aguayo propone una visión musical audaz, diversa y profundamente conectada con el cuerpo y la pista de baile. Sus presentaciones destacan por su energía y por la capacidad de cantar, improvisar y manipular loops en vivo, logrando una conexión intensa con el público. Más que poner música, Aguayo la vive y la transmite. Su show promete una experiencia sonora poderosa, emotiva y totalmente fuera de lo habitual.",
   events: [
     {
       id: "mt-4",
@@ -355,7 +355,7 @@ export const delVali: InternationalArtist = {
   name: "Del Vali",
   origin: "Estados Unidos",
   category: "Música",
-  description: "Artista musical estadounidense que forma parte del dúo Del Vali & Wero Hernández",
+  description: "Del Valí es una nueva y electrizante fuerza en el mundo de la música norteña, que combina las ricas tradiciones de la música norteña y la cumbia con un enfoque urbano fresco e innovador, infundiendo su sonido con cautivadores nuevos géneros y melodías.",
   events: [
     {
       id: "mt-1",
@@ -438,7 +438,7 @@ export const weroHernandez: InternationalArtist = {
   name: "Wero Hernández",
   origin: "Estados Unidos",
   category: "Música",
-  description: "Artista musical estadounidense que forma parte del dúo Del Vali & Wero Hernández",
+  description: "\"El Wero\" Hernández es una estrella en ascenso en el mundo de la música norteña-texana. Está listo para inspirar a una nueva generación de seguidores, creando un sonido que es tanto auténtico como innovador.",
   events: [
     {
       id: "mt-1",

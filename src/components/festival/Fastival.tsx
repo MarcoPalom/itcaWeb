@@ -8,16 +8,20 @@ import { internationalArtists } from "@/constants/internationalArtistData"
 import { nationalArtists } from "@/constants/nationalArtistData"
 import { tamaulipecosArtists } from "@/constants/tamaulipecosArtistData"
 import FestivalBackground from "./FestivalBackground"
-import ThemeToggle from "../ThemeToggle"
 import { useTheme } from "@/contexts/ThemeContext"
 import { victoriaFestivalInfo } from "@/constants/Municipios/victoriaData"
 import { matamorosFestivalInfo } from "@/constants/Municipios/matamorosData"
 import { tampicoFestivalInfo } from "@/constants/Municipios/tampicoData"
 import { reynosaFestivalInfo } from "@/constants/Municipios/reynosaData"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 export default function Fastival() {
   const { isDark } = useTheme()
-  const [currentSlide, setCurrentSlide] = useState(0)
   const [isMobile, setIsMobile] = useState(false)
 
   // Mapeo de imágenes para cada artista
@@ -102,38 +106,16 @@ export default function Fastival() {
     return () => window.removeEventListener('resize', checkScreenSize)
   }, [])
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % internationalArtists.length)
-  }
-
-
-  // Cambio automático del carrusel cada 3 segundos
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide()
-    }, 3000)
-
-    return () => clearInterval(interval)
-  }, [])
 
   return (
     <>
       <FestivalBackground />
       <div className={`min-h-screen w-full relative z-10 ${isDark ? 'text-white' : 'text-gray-800'}`}>
-      {/* Status Bar - Solo visible en móvil */}
-      <div className="flex items-center justify-between px-4 py-2 text-xs md:hidden">
-        <span className="font-medium">9:41</span>
-        <div className="flex items-center gap-1">
-          <Signal className="w-4 h-4" />
-          <Wifi className="w-4 h-4" />
-          <Battery className="w-4 h-4" />
-        </div>
-      </div>
+
 
       {/* Header */}
       <div className="flex items-center justify-between p-4 md:p-6">
         <div className="flex items-center gap-2">
-          <ArrowLeft className="w-5 h-5" />
           <span className="text-sm font-medium md:text-lg">Bienvenido al FICSM</span>
         </div>
         <div className="flex gap-1 md:hidden">
@@ -145,57 +127,57 @@ export default function Fastival() {
 
       {/* Artists Sections */}
       <div className="px-4 space-y-6 md:px-6 md:space-y-8">
-        {/* Artistas Internacionales - Carrusel con Animaciones */}
+        {/* Artistas Internacionales - Carrusel con shadcn */}
         <section>
-          <h2 className={`text-lg font-semibold mb-4 md:text-xl md:mb-6 ${isDark ? 'text-white' : 'text-gray-800'}`}>Artistas Internacionales</h2>
-          
-          {/* Carrusel Container */}
-          <div className="relative overflow-hidden">
-            {/* Contenido del carrusel con animaciones */}
-            <div className="relative h-48 md:h-56 overflow-hidden">
-              <motion.div
-                className="flex gap-4 h-full"
-                animate={{ 
-                  x: -currentSlide * (isMobile ? 104 : 34.30) + "%"
-                }}
-                transition={{ 
-                  duration: 0.8, 
-                  ease: "easeInOut"
-                }}
-              >
-                {/* Duplicar los artistas para crear el efecto infinito */}
-                {[...internationalArtists, ...internationalArtists].map((artist, index) => (
-                  <motion.div
-                    key={`${artist.id}-${index}`}
-                    className="flex-shrink-0 w-full md:w-1/3"
-                  >
-                     <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
-                       <motion.div 
-                         className={`rounded-lg overflow-hidden md:rounded-xl h-full relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}
-                         whileHover={{ 
-                           scale: 1.02,
-                           transition: { duration: 0.2 }
-                         }}
-                       >
-                         <Image
-                           src={artistImages[artist.name] || "/elegant-female-opera-singer-performing-on-stage.png"}
-                           alt={artist.name}
-                           fill
-                           className="object-cover"
-                         />
-                         
-                         {/* Label en la parte inferior */}
-                         <div className={`absolute bottom-0 left-0 right-0 z-10 backdrop-blur-sm p-1 ${isDark ? 'bg-black/70' : 'bg-white/80'}`}>
-                           <h3 className={`font-semibold text-sm ${isDark ? 'text-white' : 'text-gray-800'}`}>{artist.name}</h3>
-                           <p className={`text-xs ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{artist.category}</p>
-                         </div>
-                       </motion.div>
-                     </Link>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </div>
+          <div className="flex items-center justify-between mb-4 md:mb-6">
+            <h2 className={`text-lg font-semibold md:text-xl ${isDark ? 'text-white' : 'text-gray-800'}`}>Artistas Internacionales</h2>
+            <Link href="/international-artists" className="text-[#864e94] text-sm hover:underline md:text-base">
+              Ver todo
+            </Link>
           </div>
+          
+          <Carousel
+            className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnInteraction: false,
+              }),
+            ]}
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {internationalArtists.map((artist, index) => (
+                <CarouselItem key={artist.id} className="pl-2 md:pl-4 md:basis-1/3">
+                  <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
+                    <motion.div 
+                      className={`rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}
+                      whileHover={{ 
+                        scale: 1.02,
+                        transition: { duration: 0.2 }
+                      }}
+                    >
+                      <Image
+                        src={artistImages[artist.name] || "/elegant-female-opera-singer-performing-on-stage.png"}
+                        alt={artist.name}
+                        fill
+                        className="object-cover"
+                      />
+                      
+                      {/* Label en la parte inferior */}
+                      <div className={`absolute bottom-0 left-0 right-0 z-10 backdrop-blur-sm p-1 ${isDark ? 'bg-black/70' : 'bg-white/80'}`}>
+                        <h3 className={`font-semibold text-sm ${isDark ? 'text-white' : 'text-gray-800'}`}>{artist.name}</h3>
+                        <p className={`text-xs ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{artist.category}</p>
+                      </div>
+                    </motion.div>
+                  </Link>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </section>
 
         {/* Artistas Nacionales */}
@@ -338,9 +320,6 @@ export default function Fastival() {
         </section>
       </div>
       </div>
-      
-      {/* Theme Toggle Button */}
-      <ThemeToggle />
     </>
   )
 }

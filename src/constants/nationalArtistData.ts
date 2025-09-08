@@ -142,7 +142,7 @@ export const patriciaGuerrero: NationalArtist = {
   name: "Patricia Guerrero",
   origin: "Nuevo León",
   category: "Música",
-  description: "Artista musical de Nuevo León que presenta un repertorio variado de música mexicana",
+  description: "Patricia Guerrero es cantante, maestra y narradora oral escénica con más de 40 años de experiencia, su trabajo ha recorrido plazas, museos, escuelas, teatros, iglesias, bibliotecas etc. siempre cerca de los niños y todo aquel que desee compartir, historias, música y arte.",
   events: [
     {
       id: "g-5",
@@ -163,7 +163,7 @@ export const grupoLaTrenza: NationalArtist = {
   origin: "Nuevo León",
   category: "Música",
   subcategory: "Música Folklórica Latinoamericana",
-  description: "Grupo musical de Nuevo León especializado en música folklórica latinoamericana",
+  description: "Integrado por tres multi instrumentistas, este conjunto hace gala de versatilidad de géneros y de un conocimiento musical muy amplio. Su repertorio abarca la totalidad de los países iberoamericanos. Desde carnavalitos y sones hasta joropos y huapangos, Maico, Richie y Ezaú nos llevan por un divertido viaje acompañando el recorrido con charangos, quenas, bombos y zampoñas.",
   events: [
     {
       id: "g-1",
@@ -220,7 +220,7 @@ export const grupoTayer: NationalArtist = {
   origin: "Nuevo León",
   category: "Música",
   subcategory: "rancheras, corridos, polkas, redovas, mazurkas y huapangos",
-  description: "Grupo musical de Nuevo León especializado en música norteña tradicional",
+  description: "Con tres décadas de trayectoria, el grupo Tayer es un cronista musical, buscador gambusino y divulgador de la memoria musical popular norestense. Con dos generaciones de músicos, dedicados a la recopilación, documentación y difusión de la tradición oral, Tayer es un reconocido exponente, creador de festivales y espectáculos interdisciplinarios, que reflejan nuestra cultura regional. Con varios fonogramas y reconocimientos en su alforja, Tayer ha llevado la música de raíz norestense con conciertos y talleres didácticos por muchos lares, realizando giras y presentaciones en foros y festivales por todo el estado de nuevo león y la frontera norestense, en nuestro país y fuera de México.",
   events: [
     {
       id: "c-2",
@@ -312,7 +312,7 @@ export const mardonioCarballoJuanPabloVilla: NationalArtist = {
   name: "Mardonio Carballo y Juan Pablo Villa",
   origin: "Veracruz-CDMX",
   category: "Música",
-  description: "Dúo musical de Veracruz y CDMX que presenta un repertorio variado de música mexicana",
+  description: "Este show, integrado por el músico vocal Juan Pablo Villa y el poeta náhuatl Mardonio Carballo, nos lleva a recorrer el libro Xolo, con autoría del poeta. Poesía y música en náhuatl y castellano. Aquí está la voz, íntima y profunda, pero también exaltada o teatral del poeta, recitando, cantando, sonando en castilla y en náhuatl. Aquí está la música. Están los gemidos, las respiraciones, los ritmos, los silencios, los juegos sonoros, las repeticiones, los aullidos, los murmullos que han construido entre los dos. Y que nos ponen la piel chinita. Hablemos de poesía, pues. De poesía, de memoria, de cuerpo, de ritmo. De la vida y de la muerte. Ni más ni menos. Luego vendrá lo demás.",
   events: [
     {
       id: "mt-8",
@@ -342,7 +342,7 @@ export const lasPlastiqueTeatro: NationalArtist = {
   origin: "Nuevo León",
   category: "Teatro",
   subcategory: "Teatro de calle para infancias",
-  description: "Compañía teatral de Nuevo León especializada en teatro de calle para infancias",
+  description: "Descripción pendiente",
   events: [
     {
       id: "md-4",
@@ -410,7 +410,7 @@ export const grupoElZar: NationalArtist = {
   origin: "Nuevo León",
   category: "Música",
   subcategory: "Norteño",
-  description: "Grupo musical de Nuevo León especializado en música norteña",
+  description: "Descripción pendiente",
   events: [
     {
       id: "gf-1",
@@ -449,7 +449,7 @@ export const laPerchaTeatro: NationalArtist = {
   origin: "Nuevo León",
   category: "Teatro",
   subcategory: "Teatro de calle",
-  description: "Compañía teatral de Nuevo León especializada en teatro de calle",
+  description: "Percha Teatro nace en 1984 en Monterrey, desde su origen explora el trabajo corporal del actor: la mima corpórea, el clown y la carpa son parte de su genética. Procura un arte comprometido y la comicidad permea sus trabajos, desembocando en un estilo propio. A lo largo de sus 40 años se ha presentado en teatros, plazas, escuelas, ferias del libro y festivales nacionales e internacionales en diversos estados y fuera del país en Chile, Finlandia, Francia, El Salvador, Perú, EEUU. Ha participado en el Programa Nacional de Teatro Escolar en 7 ediciones como actores, productores, y como directores en: El patio de Monipodio, de Cervantes y Álvaro Custodio, Fray Servando de Fugas y Prisiones de Gerardo Dávila y \"Bajo tierra\" de David Olguín; bajo la dirección Pablo Luna Álvarez. En 2020 ganó el Premio a las Artes de la UANL 2020 por la destacada trayectoria en las Artes Escénicas y en 2024 presento su libro Percha Teatro Apuntes de un viaje de la UANL con el apoyo del Sistema Nuevo León para el impulso artístico y la creación de CONARTE.",
   events: [
     {
       id: "ab-3",
@@ -563,7 +563,7 @@ export const lasHermanasGarcia: NationalArtist = {
   origin: "Guerrero",
   category: "Música",
   subcategory: "Boleros Costeños",
-  description: "Dúo musical de Guerrero especializado en boleros costeños",
+  description: "Celia y Laura, Las Hermanas García, es un dueto de jóvenes cantantes de la Costa Chica de Guerrero. Con voces aterciopeladas, con gran naturalidad, cantan los boleros costeños—los conocidos y los no tanto—en el estilo de los mejores duetos del pasado, aunque con un sabor y frescura propias de los jóvenes de hoy. En sus múltiples conciertos, que incluyen el Festival de Jazz de Nueva Orleans en 2025 y el Palacio de Bellas Artes en 2024, interpretan un programa muy alegre que incluye las chilenas y sones cubanos de las fiestas costeñas de México y el mundo. Actualmente, Laura y Celia tienen 23 y 22 años; empezaron a cantar en público desde los 10 años, ganando todos los concursos de chilenas en su región. En 2016, conocieron a los dos productores de Discos Corason durante uno de los viajes de investigación. Este sello mexicano grabó un disco de ellas acompañadas por su padre, el gran requintista Mariano García, mismo que fue lanzado en el Festival Internacional Cervantino a finales de ese mismo año. Desde su precoz lanzamiento, las dos chicas— con raíces indígenas y afromestizas-- recibieron muchísima atención, con invitaciones a participar en los programas de televisión de Cristina Pacheco y Armando Manzanero y ofreciendo conciertos en la UNAM, en los festivales del Tajín, Aguascalientes, la Nao de China, entre muchos más. En los últimos años se han presentado muchas veces en el Zócalo, en el Palacio de Bellas Artes y en el Museo de Culturas Populares, entre muchos otros importantes foros de la capital. Sus giras internacionales incluyen Inglaterra, España, Cuba y los EE. UU., en donde ofrecieron cuatro conciertos en los escenarios principales del legendario Festival de Jazz de Nueva Orleans. Actualmente, el dueto está acompañado por compañeros músicos de enorme calidad: el virtuoso del requinto se llama José María \"Chema\" Ángeles, que proviene del mismo pueblo amuzgo que el padre de las chicas. En el contrabajo está el renombrado músico Mario Cortés. Juntos, los cuatro han hecho arreglos novedosos de la música que Celia y Laura escucharon desde bebés, en su casa familiar. Los conciertos hoy día de este cuarteto, acompañados por la premiada bailadora Laura Maya, son muy movidos, siempre defendiendo la calidad musical al mismo tiempo de encantar al público que baila y todos los que quieren recordar los boleros de ayer con el sabor de hoy. El dueto ha ganado premios en Inglaterra y España y su versión de \"Que sepan todos\" tiene más de ocho millones de escuchas en Spotify.",
   events: [
     {
       id: "at-4",
@@ -623,7 +623,7 @@ export const rondaMachetera: NationalArtist = {
   origin: "Nuevo León",
   category: "Música",
   subcategory: "Fusión de cumbia y hip-hop",
-  description: "Dúo musical de Nuevo León que fusiona cumbia y hip-hop",
+  description: "Ronda Machetera es el proyecto musical que une los talentos de Ronda Bogotá y Pato Machete, dos figuras destacadas en la escena musical. Con una fusión de Cumbia y Hip-Hop ha logrado combinar lo mejor ambos géneros.",
   events: [
     {
       id: "md-2",
@@ -662,7 +662,7 @@ export const balletFolkloricoGuardiaNacional: NationalArtist = {
   origin: "CDMX",
   category: "Danza",
   subcategory: "Folklórica",
-  description: "Compañía de danza folklórica de la Ciudad de México",
+  description: "Con la finalidad de intensificar la Proximidad Social; la Guardia Nacional, trabaja en el desarrollo de estrategias para fortalecer la vinculación con la sociedad; fomentando la cultura de la participación ciudadana en la prevención del delito y el bien ciudadano. Se han creado espacios de cercanía entre la ciudadanía y la Institución a través de la música, la cultura, el arte, que han permitido generar mayor confianza y cercanía con la sociedad; proyectando la imagen de la Guardia Nacional. El objetivo es difundir la imagen de la Institución, mediante la danza folclórica; promoviendo y rescatando la cultura, valores, tradiciones y costumbres de México. El Ballet Folclórico de la Guardia Nacional ha participado en eventos del Casino de la Dirección General de Educación Militar, de la Alcaldía Xochimilco, del Centro Asturiano de Polanco, del Lienzo Charro de Constituyentes, se ha presentado en la explanada del Estadio Azteca, en la Alameda Central de la CDMX, en la Casa de Cultura de Siete Barrios de la Alcaldía Iztacalco, en la Feria Aero-Espacial de Santa Lucía, durante el Desfile del 16 de Septiembre en el Ángel de la Independencia, realizaron una gira de proximidad social en el Estado de Guanajuato y de Morelos, además de participaciones en eventos institucionales en la Comandancia de la Guardia Nacional y diversas sedes de la institución.",
   events: [
     {
       id: "vc-11",
@@ -683,7 +683,7 @@ export const companiaClaunodromo: NationalArtist = {
   origin: "Jalisco",
   category: "Teatro",
   subcategory: "Teatro Comedia",
-  description: "Compañía teatral de Jalisco especializada en teatro comedia",
+  description: "Descripción pendiente",
   events: [
     {
       id: "mq-2",
@@ -722,7 +722,7 @@ export const losBernalDeLinares: NationalArtist = {
   origin: "Nuevo León",
   category: "Música",
   subcategory: "Norteño",
-  description: "Grupo musical de Nuevo León especializado en música norteña",
+  description: "Descripción pendiente",
   events: [
     {
       id: "bs-2",
@@ -761,7 +761,7 @@ export const rafagaTeatro: NationalArtist = {
   origin: "CDMX-Estado de México",
   category: "Teatro",
   subcategory: "Teatro de calle",
-  description: "Compañía teatral de CDMX-Estado de México especializada en teatro de calle",
+  description: "Fundada en 2015, esta compañía mexicana se ha consolidado como una agrupación con un enfoque en el teatro físico y gestual, la danza y el teatro de calle. Su repertorio actual incluye nueve obras, entre ellas Los olvidados, Las futbolistas y El perdido de sí mismo, con una línea artística especialmente dirigida a las jóvenes audiencias. Ha participado en programas como Teatro Escolar (2018-2020), así como en la programación del Centro Cultural del Bosque y el Festival Infantil del Centro Histórico de la CDMX. Su obra Los olvidados fue parte de los festejos por los 25 años del CENART. La compañía ha recibido apoyos de instituciones como FONCA, IBERESCENA, INBAL, UNAM y diversas secretarías de cultura estatales. Sus trabajos han sido reconocidos internacionalmente, destacando premios en Egipto, el Festival Carlos Olvera y los premios METRO 2021. Desde 2019, colabora en el proyecto Los sueños de Manuel y en las brigadas de información a migrantes coordinadas por ACNUR y La Casa del Teatro.",
   events: [
     {
       id: "bs-5",
@@ -827,7 +827,7 @@ export const ciaALaDerivaTeatro: NationalArtist = {
   origin: "Jalisco",
   category: "Teatro",
   subcategory: "Teatro para primera infancia",
-  description: "Compañía teatral de Jalisco especializada en teatro para primera infancia",
+  description: "A la Deriva Teatro S.C. dirigida por Susana Romo y Fausto Ramírez es una compañía especializada en audiencias jóvenes nacida en Guadalajara México en el año 2008. En su búsqueda por acercar el teatro contemporáneo a nuevos públicos cuenta con veinte producciones a nivel profesional de las cuales siete se encuentran en repertorio atendiendo a bebés, niños y jóvenes. Sus puestas en escena se han presentado en más de 25 estados de la república mexicana. A nivel internacional se ha presentado en Festivales en Francia, Italia, Alemania, Finlandia, USA, Venezuela y Argentina.",
   events: [
     {
       id: "al-4",
@@ -865,7 +865,7 @@ export const violaTrigo: NationalArtist = {
   name: "Viola Trigo",
   origin: "CDMX",
   category: "Literatura",
-  description: "Artista literaria de la Ciudad de México especializada en poesía",
+  description: "La Mtra. Viola Trigo inició su carrera con el grupo Los Tres con Ella y ha participado en proyectos emblemáticos como el doblaje de Julie Andrews en Mary Poppins y la interpretación de la Virgen de Guadalupe en la película homónima. Integrante del grupo del compositor yucateco Guadalupe Trigo, asumió desde su fallecimiento el compromiso de difundir su herencia musical y la de los grandes autores de México y Latinoamérica. Con más de diez años llevando poesía a diversos estados del país a través del programa Leo, luego existo del INBAL, ha compartido escenario con figuras como Mercedes Sosa, Chabuca Granda y Silvio Rodríguez. En esta ocasión, llega a Tamaulipas con el espectáculo Poetas y Lugares, acompañada por la guitarra del Mtro. Bernardo Lozano.",
   events: [
     {
       id: "at-3",

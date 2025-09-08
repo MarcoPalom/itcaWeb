@@ -2,6 +2,7 @@
 
 import "./globals.css";
 import TopNav from "../components/TopNav";
+import FestivalTopNav from "../components/FestivalTopNav";
 import Footer from "../components/Footer";
 import { ReactNode, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion"
@@ -19,8 +20,11 @@ export default function RootLayout({
   const lastScroll = useRef(0);
   const ticking = useRef(false);
 
-  // Check if we're on pages that shouldn't show TopNav
-  const hideTopNav = pathname === '/festival' || pathname === '/national-artists' || pathname === '/municipal-billboards' || pathname === '/artists-tamaulipecos' || pathname.startsWith('/artist/') || pathname.startsWith('/municipio/');
+  // Check if we're on pages that should show FestivalTopNav
+  const showFestivalTopNav = pathname === '/festival' || pathname === '/national-artists' || pathname === '/international-artists' || pathname === '/municipal-billboards' || pathname === '/artists-tamaulipecos' || pathname.startsWith('/artist/') || pathname.startsWith('/municipio/');
+  
+  // Check if we're on pages that shouldn't show any TopNav
+  const hideTopNav = showFestivalTopNav;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,6 +80,8 @@ export default function RootLayout({
             />
             <div style={{ position: "relative", zIndex: 1 }}>
               {!hideTopNav && <TopNav />}
+              {showFestivalTopNav && <FestivalTopNav />}
+              {showFestivalTopNav && <div className="h-16" />} {/* Spacer for fixed nav */}
               {children}
               <Footer />
             </div>

@@ -4,7 +4,7 @@ import { ArrowLeft, Signal, Wifi, Battery, Search, ChevronDown, Check } from "lu
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
-import { tamaulipecosArtists } from "@/constants/tamaulipecosArtistData"
+import { internationalArtists } from "@/constants/internationalArtistData"
 import { getArtistImage } from "@/constants/artistImages"
 import FestivalBackground from "@/components/festival/FestivalBackground"
 import FestivalLoading from "@/components/FestivalLoading"
@@ -14,7 +14,7 @@ import { useTheme } from "@/contexts/ThemeContext"
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption, Transition } from "@headlessui/react"
 import Pagination from "@/components/Pagination"
 
-export default function ArtistsTamaulipecosPage() {
+export default function InternationalArtistsPage() {
   const { isDark } = useTheme()
   const router = useRouter()
   const [searchTerm, setSearchTerm] = useState("")
@@ -35,14 +35,14 @@ export default function ArtistsTamaulipecosPage() {
     { id: "shows", name: "Más espectáculos" }
   ]
 
-  const categories = [...new Set(tamaulipecosArtists.map(artist => artist.category))]
-  
+  const categories = [...new Set(internationalArtists.map(artist => artist.category))]
+
   const categoryOptions = [
     { id: "", name: "Todas las categorías" },
     ...categories.map(category => ({ id: category, name: category }))
   ]
 
-  const filteredArtists = tamaulipecosArtists
+  const filteredArtists = internationalArtists
     .filter(artist => {
       const matchesSearch = artist.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            artist.origin.toLowerCase().includes(searchTerm.toLowerCase())
@@ -81,8 +81,8 @@ export default function ArtistsTamaulipecosPage() {
   const selectedSortOption = sortOptions.find(option => option.id === sortBy) || sortOptions[0]
   const selectedCategoryOption = categoryOptions.find(option => option.id === selectedCategory) || categoryOptions[0]
 
-  const getArtistImageForTamaulipecos = (artistName: string) => {
-    return getArtistImage(artistName, 'tamaulipecos')
+  const getArtistImageForInternational = (artistName: string) => {
+    return getArtistImage(artistName, 'international')
   }
 
   if (isLoading) {
@@ -121,10 +121,10 @@ export default function ArtistsTamaulipecosPage() {
 
           <div className="px-4 md:px-6 mb-6">
             <h1 className={`text-3xl md:text-5xl font-bold text-center mb-2 ${isDark ? 'text-white' : 'text-gray-800'}`}>
-              Artistas Tamaulipecos
+              Artistas Internacionales
             </h1>
             <p className={`text-center text-sm md:text-base ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-              Descubre el talento tamaulipeco en el Festival
+              Descubre el talento mundial en el Festival
             </p>
           </div>
 
@@ -250,7 +250,7 @@ export default function ArtistsTamaulipecosPage() {
                     <div className={`flex items-center gap-4 p-4 min-h-[120px] md:min-h-[150px] transition-colors ${isDark ? 'hover:bg-gray-800/50' : 'hover:bg-gray-100/50'}`}>
                       <div className="w-20 h-28 md:w-24 md:h-36 flex-shrink-0 rounded-lg overflow-hidden relative">
                         <Image
-                          src={getArtistImageForTamaulipecos(artist.name)}
+                          src={getArtistImageForInternational(artist.name)}
                           alt={artist.name}
                           fill
                           className="object-cover"

@@ -12,6 +12,7 @@ import { useFestivalLoading } from "@/hooks/useFestivalLoading"
 import { useMobileScrollFix } from "@/hooks/useMobileScrollFix"
 import { useTheme } from "@/contexts/ThemeContext"
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption, Transition } from "@headlessui/react"
+import Pagination from "@/components/Pagination"
 
 export default function NationalArtistsPage() {
   const { isDark } = useTheme()
@@ -20,7 +21,7 @@ export default function NationalArtistsPage() {
   const [selectedCategory, setSelectedCategory] = useState("")
   const [sortBy, setSortBy] = useState("name")
   const [currentPage, setCurrentPage] = useState(1)
-  const itemsPerPage = 20
+  const itemsPerPage = 10
 
 
   const { isLoading, progress, message } = useFestivalLoading({
@@ -315,41 +316,11 @@ export default function NationalArtistsPage() {
               </div>
             )}
 
-            {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-2 mt-6">
-                <button
-                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                  disabled={currentPage === 1}
-                  className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  Anterior
-                </button>
-                
-                <div className="flex gap-1">
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                    <button
-                      key={page}
-                      onClick={() => setCurrentPage(page)}
-                      className={`px-3 py-2 rounded-lg transition-colors ${
-                        currentPage === page
-                          ? 'bg-[#864e94] text-white'
-                          : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                      }`}
-                    >
-                      {page}
-                    </button>
-                  ))}
-                </div>
-                
-                <button
-                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                  disabled={currentPage === totalPages}
-                  className="px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                >
-                  Siguiente
-                </button>
-              </div>
-            )}
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={setCurrentPage}
+            />
 
             {filteredArtists.length > 0 && (
               <div className={`text-center mt-4 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>

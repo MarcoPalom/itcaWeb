@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import FestivalBackground from "../festival/FestivalBackground";
 import { useTheme } from "@/contexts/ThemeContext";
+import Pagination from "@/components/Pagination";
 import { useMobileScrollFix } from "@/hooks/useMobileScrollFix";
 import { Listbox, Transition, ListboxButton, ListboxOptions, ListboxOption } from "@headlessui/react";
 
@@ -59,7 +60,7 @@ export default function MunicipalBillboards() {
   const [selectedRegion, setSelectedRegion] = useState("");
   const [sortBy, setSortBy] = useState("name");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 20;
+  const itemsPerPage = 10;
 
   const allMunicipalFestivals = [
     victoriaFestivalInfo,
@@ -432,47 +433,11 @@ export default function MunicipalBillboards() {
             </div>
           )}
 
-          {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-2 mt-6">
-              <button
-                onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
-                disabled={currentPage === 1}
-                className={`px-3 py-2 rounded-lg transition-colors ${
-                  currentPage === 1
-                    ? 'opacity-50 cursor-not-allowed'
-                    : (isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-white/90 text-gray-700 hover:bg-gray-100')
-                }`}
-              >
-                Anterior
-              </button>
-              
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                <button
-                  key={page}
-                  onClick={() => setCurrentPage(page)}
-                  className={`px-3 py-2 rounded-lg transition-colors ${
-                    currentPage === page
-                      ? 'bg-[#864e94] text-white'
-                      : (isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-white/90 text-gray-700 hover:bg-gray-100')
-                  }`}
-                >
-                  {page}
-                </button>
-              ))}
-              
-              <button
-                onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
-                disabled={currentPage === totalPages}
-                className={`px-3 py-2 rounded-lg transition-colors ${
-                  currentPage === totalPages
-                    ? 'opacity-50 cursor-not-allowed'
-                    : (isDark ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' : 'bg-white/90 text-gray-700 hover:bg-gray-100')
-                }`}
-              >
-                Siguiente
-              </button>
-            </div>
-          )}
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+          />
 
           {filteredMunicipalities.length > 0 && (
             <div className={`text-center mt-4 text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
