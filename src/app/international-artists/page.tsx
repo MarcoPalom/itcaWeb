@@ -4,6 +4,7 @@ import { ArrowLeft, Search, ChevronDown, Check } from "lucide-react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import Image from "next/image"
+import OptimizedImage from "@/components/ui/OptimizedImage"
 import { internationalArtists } from "@/constants/internationalArtistData"
 import { getArtistImage } from "@/constants/artistImages"
 import FestivalBackground from "@/components/festival/FestivalBackground"
@@ -242,11 +243,15 @@ export default function InternationalArtistsPage() {
                   >
                     <div className={`flex items-center gap-4 p-4 min-h-[120px] md:min-h-[150px] transition-colors ${isDark ? 'hover:bg-gray-800/50' : 'hover:bg-gray-100/50'}`}>
                       <div className="w-20 h-28 md:w-24 md:h-36 flex-shrink-0 rounded-lg overflow-hidden relative">
-                        <Image
+                        <OptimizedImage
                           src={getArtistImageForInternational(artist.name)}
                           alt={artist.name}
                           fill
                           className="object-cover"
+                          priority={index < 5} // Priorizar las primeras 5 imágenes visibles
+                          sizes="(max-width: 768px) 80px, 96px"
+                          quality={85}
+                          placeholder="blur"
                         />
                       </div>
 

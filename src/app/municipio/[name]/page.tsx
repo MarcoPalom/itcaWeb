@@ -3,6 +3,7 @@ import { useState, useEffect, useMemo } from "react"
 import { ArrowLeft} from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
 import Image from "next/image"
+import OptimizedImage from "@/components/ui/OptimizedImage"
 import { FestivalEvent, FestivalInfo } from "@/constants/types"
 import FestivalLoading from "@/components/FestivalLoading"
 import { useFestivalLoading } from "@/hooks/useFestivalLoading"
@@ -179,11 +180,15 @@ export default function MunicipalityPage() {
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image
+        <OptimizedImage
           src={municipalityImage}
           alt="Background"
           fill
           className="object-cover filter grayscale blur-sm opacity-30"
+          priority={true}
+          sizes="100vw"
+          quality={60}
+          placeholder="blur"
         />
       </div>
 
@@ -205,11 +210,15 @@ export default function MunicipalityPage() {
           {/* Municipality Image */}
           <div className="flex justify-center mb-6">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#864e94] border-opacity-50 shadow-2xl relative">
-              <Image
+              <OptimizedImage
                 src={municipalityImage}
                 alt={municipality.name}
                 fill
                 className="object-cover"
+                priority={true}
+                sizes="(max-width: 768px) 192px, 256px"
+                quality={90}
+                placeholder="blur"
               />
             </div>
           </div>

@@ -4,6 +4,7 @@ import { ArrowLeft, ChevronDown } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useParams, useRouter } from "next/navigation"
 import Image from "next/image"
+import OptimizedImage from "@/components/ui/OptimizedImage"
 import { internationalArtists, InternationalArtist } from "@/constants/internationalArtistData"
 import { nationalArtists, NationalArtist } from "@/constants/nationalArtistData"
 import { tamaulipecosArtists, TamaulipecoArtist } from "@/constants/tamaulipecosArtistData"
@@ -88,11 +89,15 @@ export default function ArtistPage() {
 
 
       <div className="absolute inset-0 z-0">
-        <Image
+        <OptimizedImage
           src={artistImage}
           alt="Background"
           fill
           className="object-cover filter grayscale blur-sm opacity-30"
+          priority={true}
+          sizes="100vw"
+          quality={60}
+          placeholder="blur"
         />
       </div>
 
@@ -110,11 +115,15 @@ export default function ArtistPage() {
         <div className="px-4 md:px-6 pb-6">
           <div className="flex justify-center mb-6">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#864e94] border-opacity-50 shadow-2xl relative">
-              <Image
+              <OptimizedImage
                 src={artistImage}
                 alt={artist.name}
                 fill
                 className="object-cover"
+                priority={true}
+                sizes="(max-width: 768px) 192px, 256px"
+                quality={90}
+                placeholder="blur"
               />
             </div>
           </div>

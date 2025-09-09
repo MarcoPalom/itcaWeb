@@ -12,6 +12,7 @@ import { matamorosFestivalInfo } from "@/constants/Municipios/matamorosData"
 import { tampicoFestivalInfo } from "@/constants/Municipios/tampicoData"
 import { reynosaFestivalInfo } from "@/constants/Municipios/reynosaData"
 import { getMunicipalImage } from "@/constants/municipalImages"
+import OptimizedImage from "@/components/ui/OptimizedImage"
 import {
   Carousel,
   CarouselContent,
@@ -139,11 +140,15 @@ export default function Fastival() {
                         transition: { duration: 0.2 }
                       }}
                     >
-                      <Image
+                      <OptimizedImage
                         src={artistImages[artist.name] || "/elegant-female-opera-singer-performing-on-stage.png"}
                         alt={artist.name}
                         fill
                         className="object-cover"
+                        priority={true} // Priorizar todas las imágenes del carrusel
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+                        quality={90}
+                        placeholder="blur"
                       />
                       
                       {/* Label en la parte inferior */}
@@ -172,11 +177,15 @@ export default function Fastival() {
               <div key={index} className="flex-shrink-0 w-40 md:w-full">
                 <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
                   <div className={`rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}>
-                    <Image
+                    <OptimizedImage
                       src={nationalArtistImages[artist.name] || "/elegant-female-opera-singer-performing-on-stage.png"}
                       alt={artist.name}
                       fill
                       className="object-cover"
+                      priority={index < 2} // Priorizar las primeras 2 imágenes
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 16vw, 12vw"
+                      quality={85}
+                      placeholder="blur"
                     />
                     
                     {/* Label en la parte inferior */}
@@ -218,11 +227,15 @@ export default function Fastival() {
               <div key={index} className="flex-shrink-0 w-40 md:w-full">
                 <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
                   <div className={`rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}>
-                    <Image
+                    <OptimizedImage
                       src={tamaulipecoArtistImages[artist.name] || "/images/img_0.png"}
                       alt={artist.name}
                       fill
                       className="object-cover"
+                      priority={index < 2} // Priorizar las primeras 2 imágenes
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 16vw, 12vw"
+                      quality={85}
+                      placeholder="blur"
                     />
                     
                     {/* Label en la parte inferior */}
@@ -264,11 +277,15 @@ export default function Fastival() {
               <div key={index} className="flex-shrink-0 w-40 md:w-full">
                 <Link href={`/municipio/${municipality.name.toLowerCase().replace(/\s+/g, '-').replace('festival-del-municipio-', '')}`} className="block h-full">
                   <div className={`rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}>
-                    <Image
+                    <OptimizedImage
                       src={getMunicipalImage(municipality.name.replace('Festival del Municipio ', ''))}
                       alt={municipality.name}
                       fill
                       className="object-cover"
+                      priority={index < 2} // Priorizar las primeras 2 imágenes
+                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 20vw, 15vw"
+                      quality={85}
+                      placeholder="blur"
                     />
                     
                     {/* Label en la parte inferior */}
