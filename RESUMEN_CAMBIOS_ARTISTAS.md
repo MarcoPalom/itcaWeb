@@ -1,7 +1,8 @@
 # Resumen de Cambios para tamaulipecosArtistData.ts
 
 ## Artistas Actualizados (con horarios y lugares correctos)
-
+  aaa
+  
 ### 1. Polvo Enamorado ✅
 - **Eventos actualizados:**
   - Nuevo Laredo: Miércoles 8, 19:00 hrs. - Teatro Principal del Centro Cultural Nuevo Laredo
