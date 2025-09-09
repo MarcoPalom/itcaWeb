@@ -17,7 +17,7 @@ const FestivalTopNav = () => {
     { href: "/festival", label: "Festival" },
     { href: "/national-artists", label: "Artistas Nacionales" },
     { href: "/international-artists", label: "Artistas Internacionales" },
-    { href: "/tamaulipecos-artists", label: "Artistas Tamaulipecos" },
+    { href: "/artists-tamaulipecos", label: "Artistas Tamaulipecos" },
     { href: "/municipal-billboards", label: "Municipios" },
   ];
 

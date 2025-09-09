@@ -125,10 +125,10 @@ export const getArtistImage = (artistName: string, artistType: 'international' |
       imageMap = tamaulipecosArtistImages
       break
     default:
-      return "/images/img_0.png"
+      return "/images/miss.png"
   }
   
-  return imageMap[artistName] || "/images/img_0.png"
+  return imageMap[artistName] || "/images/miss.png"
 }
 
 // Función helper para obtener imagen de artista sin especificar tipo (busca en todos)
