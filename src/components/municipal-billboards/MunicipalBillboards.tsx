@@ -2,9 +2,6 @@
 
 import {
   ArrowLeft,
-  Signal,
-  Wifi,
-  Battery,
   Search,
   ChevronDown,
   Check,
