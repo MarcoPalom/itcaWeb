@@ -9,7 +9,6 @@ interface ImagePreloaderProps {
 
 export default function ImagePreloader({ images, onLoad, onError }: ImagePreloaderProps) {
   useEffect(() => {
-    let loadedCount = 0
     const totalImages = images.length
 
     if (totalImages === 0) {

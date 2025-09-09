@@ -2,7 +2,6 @@
 import { useState, useEffect, useMemo } from "react"
 import { ArrowLeft} from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
-import Image from "next/image"
 import OptimizedImage from "@/components/ui/OptimizedImage"
 import { FestivalEvent, FestivalInfo } from "@/constants/types"
 import FestivalLoading from "@/components/FestivalLoading"
