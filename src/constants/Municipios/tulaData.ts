@@ -1,135 +1,131 @@
 // Data del Festival del Municipio Tula
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Tula
 export const tulaFestival: FestivalEvent[] = [
   {
-    id: "tl-1",
-    date: "3",
-    day: "Viernes",
-    title: "Majestuosa Camada San Simón Cerro",
-    artist: "Majestuosa Camada San Simón Cerro",
-    origin: "Tlaxcala",
-    category: "Danza",
-    subcategory: "Tradicional del Estado de Tlaxcala",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "tl-2",
-    date: "3",
-    day: "Viernes",
-    title: "Concierto musical \"Un atardecer con la Internacional Orquesta Tampico de Claudio Rosas\"",
-    artist: "Internacional Orquesta Tampico de Claudio Rosas",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Versátil",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    director: "LCP. Juan Carlos Rosas Esqueda"
-  },
-  {
-    id: "tl-3",
-    date: "4",
-    day: "Sábado",
-    title: "Marimba Perpetua",
-    artist: "Percutam Dúo",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Marimba",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "tl-4",
-    date: "5",
-    day: "Domingo",
-    title: "Primera Cita",
-    artist: "Los Bernal de Linares",
-    origin: "Nuevo León",
-    category: "Música",
-    subcategory: "Norteño",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "tl-5",
-    date: "6",
-    day: "Lunes",
-    title: "Me importas tu, boleros para abrazar",
-    artist: "CIA. A la Deriva Teatro",
-    origin: "Jalisco",
-    category: "Teatro",
-    subcategory: "Teatro para primera infancia",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "tl-6",
-    date: "7",
-    day: "Martes",
-    title: "La tienda de Don Verdi",
-    artist: "José Palacios",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    director: "José Palacios"
-  },
-  {
-    id: "tl-7",
+    id: "tu-1",
     date: "8",
-    day: "Miércoles",
+    day: "miércoles",
     title: "Mi voz al mundo",
     artist: "Argelia Fragoso",
-    origin: "Cuba",
-    category: "Música",
-    subcategory: "Boleros",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    origin: "Internacional",
+    category: "Interdisciplinario",
+    venue: "Explanda de la Presidencia Municipal",
+    time: "18:30 hrs."
   },
   {
-    id: "tl-8",
+    id: "tu-2",
     date: "10",
-    day: "Viernes",
-    title: "Ronda Machetera",
+    day: "viernes",
+    title: "Cumbia por el Mundo",
     artist: "Ronda Machetera (Ronda Bogotá + Pato Machete)",
-    origin: "Nuevo León",
-    category: "Música",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Lugar por definir",
+    time: "Horario por definir"
   },
   {
-    id: "tl-9",
+    id: "tu-3",
+    date: "5",
+    day: "domingo",
+    title: "Primera Cita",
+    artist: "Los Bernal de Linares",
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Explanda de la Presidencia Municipal",
+    time: "18:30 hrs."
+  },
+  {
+    id: "tu-4",
+    date: "6",
+    day: "lunes",
+    title: "Me importas tú, boleros para abrazar",
+    artist: "CIA. A la Deriva Teatro",
+    origin: "Nacional",
+    category: "Teatro",
+    venue: "Lugar por definir",
+    time: "Horario por definir"
+  },
+  {
+    id: "tu-5",
+    date: "3",
+    day: "viernes",
+    title: "Majestuosa Camada",
+    artist: "Majestuosa Camada",
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Calles Principales",
+    time: "18:00 hrs."
+  },
+  {
+    id: "tu-6",
     date: "11",
-    day: "Sábado",
-    title: "Trío UATsteco",
+    day: "sábado",
+    title: "Concierto Trío UATsteco",
     artist: "Trío UATsteco",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    venue: "Explanda de la Presidencia Municipal",
+    time: "18:30 hrs."
   },
   {
-    id: "tl-10",
+    id: "tu-7",
+    date: "7",
+    day: "martes",
+    title: "La tienda de Don Verdi",
+    artist: "José Palacios",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Escuela Primaria",
+    time: "10:30 hrs."
+  },
+  {
+    id: "tu-8",
     date: "12",
-    day: "Domingo",
+    day: "domingo",
     title: "En tierras Tamaulipecas",
     artist: "Norteños de Río Bravo",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Norteña",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Explanda de la Presidencia Municipal",
+    time: "18:30 hrs."
+  },
+  {
+    id: "tu-9",
+    date: "4",
+    day: "sábado",
+    title: "Marimba perpetua",
+    artist: "Percutam Dúo",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Explanda de la Presidencia Municipal",
+    time: "18:30 hrs."
+  },
+  {
+    id: "tu-10",
+    date: "3",
+    day: "viernes",
+    title: "",
+    artist: "La Orquesta Tampico de Claudio Rosas",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Plaza Principal de Tula",
+    time: "20:00 hrs."
   }
 ];
 
-// Información general del festival de Tula
+// Información del Festival del Municipio Tula
 export const tulaFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Tula",
-  location: "Municipio Tula, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
+  name: "Tula",
+  location: "Tula",
   totalEvents: 10,
-  categories: ["Música", "Danza", "Teatro"]
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario","Teatro","Música"]
 };
+
+// Exposiciones del Festival del Municipio Tula
+export const tulaFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

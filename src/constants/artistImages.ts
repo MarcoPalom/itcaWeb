@@ -149,5 +149,5 @@ export const getArtistImageUniversal = (artistName: string): string => {
   }
   
   // Imagen por defecto
-  return "/images/img_0.png"
+  return "/images/miss.png"
 }

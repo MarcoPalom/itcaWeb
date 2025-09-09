@@ -2,92 +2,75 @@
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Gómez Farías
-export const gomezFariasFestival: FestivalEvent[] = [
+export const gomezfariasFestival: FestivalEvent[] = [
   {
-    id: "gf-1",
+    id: "gó-1",
     date: "3",
-    day: "Viernes",
-    title: "Grupo \"El Zar\"",
-    artist: "Grupo \"El Zar\"",
-    origin: "Nuevo León",
-    category: "Música",
-    subcategory: "Norteño",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    day: "viernes",
+    title: "El Zar de Monterrey",
+    artist: "Grupo El Zar",
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Lugar por definir",
+    time: "Horario por definir"
   },
   {
-    id: "gf-2",
-    date: "4",
-    day: "Sábado",
-    title: "Si la brisa se vuelve canción, marejada musical por \"La espuma del mar\"",
-    artist: "Tamaulipas",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Fusión",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "gf-3",
-    date: "5",
-    day: "Domingo",
-    title: "Animación con zanqueros y mimo",
-    artist: "Colectivo Trueque",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Animación",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "gf-4",
-    date: "7",
-    day: "Martes",
-    title: "Organillermo",
-    artist: "Jalisco",
-    origin: "Jalisco",
-    category: "Teatro",
-    subcategory: "Teatro de calle",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    artisticDirection: "Guillermo Méndez"
-  },
-  {
-    id: "gf-5",
+    id: "gó-2",
     date: "11",
-    day: "Sábado",
+    day: "sábado",
     title: "Afro-ecos: raíces que susurran en el canto",
     artist: "Kani Ensamble Coral",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Fusión",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Foro de la Iglesia del Poblado",
+    time: "18:00 hrs."
   },
   {
-    id: "gf-6",
-    date: "12",
-    day: "Domingo",
-    title: "Huapangos tamaulipecos, la raíz de mi tierra",
-    artist: "Grupo Honda Nor-t",
+    id: "gó-3",
+    date: "5",
+    day: "domingo",
+    title: "Animación con zanqueros y mimo",
+    artist: "Colectivo Trueque",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Huapango",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Lugar por definir",
+    time: "Horario por definir"
+  },
+  {
+    id: "gó-4",
+    date: "4",
+    day: "sábado",
+    title: "Si la brisa se vuelve canción, marejada musical por",
+    artist: "La Espuma del Mar",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Lugar por definir",
+    time: "Horario por definir"
+  },
+  {
+    id: "gó-5",
+    date: "12",
+    day: "domingo",
+    title: "Huapangos tamaulipecos, la raíz de mi tierra",
+    artist: "Grupo Honda Nor-T",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Plaza Principal de Gómez Farías",
+    time: "20:00 hrs."
   }
 ];
 
-// Exposiciones del Festival de Gómez Farías (por ahora vacío, se puede agregar después)
-export const gomezFariasExhibitions: FestivalExhibition[] = [];
-
-// Información general del festival de Gómez Farías
+// Información del Festival del Municipio Gómez Farías
 export const gomezFariasFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Gómez Farías",
-  location: "Municipio Gómez Farías, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
-  mainVenue: "Por confirmar",
-  totalEvents: 6,
-  categories: ["Música", "Teatro"]
+  name: "Gómez Farías",
+  location: "Gómez Farías",
+  totalEvents: 0,
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario"]
 };
+
+// Exposiciones del Festival del Municipio Gómez Farías
+export const gomezfariasFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

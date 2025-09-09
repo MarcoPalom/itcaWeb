@@ -1,99 +1,120 @@
 // Data del Festival del Municipio San Fernando
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio San Fernando
-export const sanFernandoFestival: FestivalEvent[] = [
+export const sanfernandoFestival: FestivalEvent[] = [
   {
-    id: "sf-1",
-    date: "3",
-    day: "Viernes",
-    title: "Concierto Fara Fara",
-    artist: "Las Jaras",
-    origin: "Nuevo León",
-    category: "Música",
-    subcategory: "Tradicional, polka, chotis",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    id: "sa-1",
+    date: "9",
+    day: "jueves",
+    title: "Del Vali",
+    artist: "Del Vali",
+    origin: "Internacional",
+    category: "Interdisciplinario",
+    venue: "Plaza Principal",
+    time: "20:00 hrs."
   },
   {
-    id: "sf-2",
-    date: "4",
-    day: "Sábado",
-    title: "Popteño, Que no muera la música norteña",
-    artist: "El Contrato",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Norteña",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    id: "sa-2",
+    date: "9",
+    day: "jueves",
+    title: "Wero Hernández",
+    artist: "Wero Hernández",
+    origin: "Internacional",
+    category: "Interdisciplinario",
+    venue: "Plaza Principal",
+    time: "20:00 hrs."
   },
   {
-    id: "sf-3",
-    date: "5",
-    day: "Domingo",
-    title: "Danzas de fuegos",
-    artist: "Cirque erös",
-    origin: "Tamaulipas",
-    category: "Arte de la representación",
-    subcategory: "Circense",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "sf-4",
+    id: "sa-3",
     date: "8",
-    day: "Miércoles",
+    day: "miércoles",
     title: "Cazando Estrellas en Bicicleta",
     artist: "Las Plastiqué Teatro",
-    origin: "Nuevo León",
+    origin: "Nacional",
     category: "Teatro",
-    subcategory: "Teatro de calle para infancias",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    venue: "Escuela Primaria",
+    time: "10:00 hrs."
   },
   {
-    id: "sf-5",
-    date: "9",
-    day: "Jueves",
-    title: "Del Vali & Wero Hernández",
-    artist: "Del Vali & Wero Hernández",
-    origin: "Estados Unidos",
+    id: "sa-4",
+    date: "3",
+    day: "viernes",
+    title: "Concierto Fara Fara",
+    artist: "Las Jaras",
+    origin: "Nacional",
     category: "Música",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    venue: "Plaza Principal",
+    time: "20:00 hrs."
   },
   {
-    id: "sf-6",
+    id: "sa-5",
     date: "11",
-    day: "Sábado",
+    day: "sábado",
     title: "Hermanos del equilibrio",
     artist: "Cirko Frontera",
     origin: "Tamaulipas",
-    category: "Arte de la representación",
-    subcategory: "Circense",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Plaza Principal",
+    time: "20:00 hrs."
   },
   {
-    id: "sf-7",
+    id: "sa-6",
+    date: "4",
+    day: "sábado",
+    title: "Popteño,",
+    artist: "El Contrato",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Plaza Principal",
+    time: "20:00 hrs."
+  },
+  {
+    id: "sa-7",
     date: "12",
-    day: "Domingo",
+    day: "domingo",
     title: "Mosaico Musical",
-    artist: "Banda Sinfónica Municipal de Reynosa Mtro. Elías Valenzuela",
+    artist: "Banda Sinfónica Municipal de Reynosa",
     origin: "Tamaulipas",
     category: "Música",
-    subcategory: "Sinfónica",
-    venue: "Por confirmar",
-    time: "Por confirmar (programar temprano para regreso a Reynosa)"
+    venue: "Plaza Principal",
+    time: "20:00 hrs."
+  },
+  {
+    id: "sa-8",
+    date: "4",
+    day: "sábado",
+    title: "concierto-baile acá por el norte",
+    artist: "Amenaza Norteña",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Plaza Principal",
+    time: "20:00 hrs."
+  },
+  {
+    id: "sa-9",
+    date: "5",
+    day: "domingo",
+    title: "Danzas de fuegos",
+    artist: "Cirque erös",
+    origin: "Tamaulipas",
+    category: "Danza",
+    venue: "Plaza Principal",
+    time: "20:00 hrs."
   }
 ];
 
-// Información general del festival de San Fernando
+// Información del Festival del Municipio San Fernando
 export const sanFernandoFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio San Fernando",
-  location: "Municipio San Fernando, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
-  totalEvents: 7,
-  categories: ["Música", "Teatro", "Arte de la representación"]
+  name: "San Fernando",
+  location: "San Fernando",
+  totalEvents: 9,
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario","Teatro","Música","Danza"]
 };
+
+// Exposiciones del Festival del Municipio San Fernando
+export const sanfernandoFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

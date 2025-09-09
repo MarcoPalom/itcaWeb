@@ -1,65 +1,54 @@
 // Data del Festival del Municipio Villagrán
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Villagrán
 export const villagranFestival: FestivalEvent[] = [
   {
-    id: "vg-1",
+    id: "vi-1",
+    date: "7",
+    day: "martes",
+    title: "El Lobo",
+    artist: "La Percha Teatro",
+    origin: "Nacional",
+    category: "Teatro",
+    venue: "Plaza Juárez",
+    time: "19:00 hrs."
+  },
+  {
+    id: "vi-2",
     date: "3",
-    day: "Viernes",
+    day: "viernes",
     title: "Danzas de fuegos",
     artist: "Cirque erös",
     origin: "Tamaulipas",
-    category: "Arte de la representación",
-    subcategory: "Circense",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Danza",
+    venue: "Plaza Juárez",
+    time: "19:00 hrs."
   },
   {
-    id: "vg-2",
-    date: "4",
-    day: "Sábado",
-    title: "Con las manos entre los pies",
-    artist: "Grupo Espejos taller de teatro y pantomima",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Pantomima",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "vg-3",
-    date: "7",
-    day: "Martes",
-    title: "La Percha Teatro",
-    artist: "La Percha Teatro",
-    origin: "Nuevo León",
-    category: "Teatro",
-    subcategory: "Teatro de calle",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "vg-4",
+    id: "vi-3",
     date: "11",
-    day: "Sábado",
+    day: "sábado",
     title: "Aristótefes y Sócrafes y el Misterio del Movimiento",
     artist: "Érase una vez dos veces",
     origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Cuentacuentos teatralizado",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    artisticDirection: "Alberto Dávila y Josué Castillo"
+    category: "Interdisciplinario",
+    venue: "Plaza Juárez",
+    time: "19:00 hrs."
   }
 ];
 
-// Información general del festival de Villagrán
+// Información del Festival del Municipio Villagrán
 export const villagranFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Villagrán",
-  location: "Municipio Villagrán, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "11 de Octubre, 2025",
-  totalEvents: 4,
-  categories: ["Teatro", "Arte de la representación"]
+  name: "Villagrán",
+  location: "Villagrán",
+  totalEvents: 3,
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Teatro","Danza","Interdisciplinario"]
 };
+
+// Exposiciones del Festival del Municipio Villagrán
+export const villagranFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

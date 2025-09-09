@@ -1,88 +1,87 @@
 // Data del Festival del Municipio San Nicolás
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio San Nicolás
-export const sanNicolasFestival: FestivalEvent[] = [
+export const sannicolasFestival: FestivalEvent[] = [
   {
-    id: "sn-1",
-    date: "3",
-    day: "Viernes",
-    title: "Trío UATsteco",
-    artist: "Trío UATsteco",
-    origin: "Tamaulipas",
-    category: "Música",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "sn-2",
+    id: "sa-1",
     date: "4",
-    day: "Sábado",
-    title: "Grupo El Zar",
+    day: "sábado",
+    title: "El Zar de Monterrey",
     artist: "Grupo El Zar",
-    origin: "Nuevo León",
-    category: "Música",
-    subcategory: "Norteño",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Plaza Principal de la Cabecera Municipal",
+    time: "19:00 hrs."
   },
   {
-    id: "sn-3",
+    id: "sa-2",
+    date: "10",
+    day: "viernes",
+    title: "El Lobo",
+    artist: "La Percha Teatro",
+    origin: "Nacional",
+    category: "Teatro",
+    venue: "Ejido",
+    time: "15:00 hrs."
+  },
+  {
+    id: "sa-3",
     date: "6",
-    day: "Lunes",
+    day: "lunes",
     title: "Hermanos del equilibrio",
     artist: "Cirko Frontera",
     origin: "Tamaulipas",
-    category: "Arte de la representación",
-    subcategory: "Circense",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Techumbre del Ejido las Vírgenes",
+    time: "16:00 hrs."
   },
   {
-    id: "sn-4",
+    id: "sa-4",
     date: "9",
-    day: "Jueves",
+    day: "jueves",
     title: "Con las manos entre los pies",
-    artist: "Grupo Espejos taller de teatro y pantomima",
+    artist: "Grupo Espejos",
     origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Pantomima",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    artisticDirection: "Rafael Perera"
+    category: "Interdisciplinario",
+    venue: "Ejido",
+    time: "15:00 hrs."
   },
   {
-    id: "sn-5",
-    date: "10",
-    day: "Viernes",
-    title: "La Percha Teatro",
-    artist: "La Percha Teatro",
-    origin: "Nuevo León",
-    category: "Teatro",
-    subcategory: "Teatro de calle",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "sn-6",
+    id: "sa-5",
     date: "12",
-    day: "Domingo",
+    day: "domingo",
     title: "Cuentos del mundo",
     artist: "Roberto Cuentacuentos",
     origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Cuentacuentos",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Literatura",
+    venue: "Auditorio Rodolfo Torre Cantú",
+    time: "14:00 hrs."
+  },
+  {
+    id: "sa-6",
+    date: "3",
+    day: "viernes",
+    title: "Concierto Trío UATsteco",
+    artist: "Trío UATsteco",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Auditorio Rodolfo Torre Cantú",
+    time: "16:00 hrs."
   }
 ];
 
-// Información general del festival de San Nicolás
+// Información del Festival del Municipio San Nicolás
 export const sanNicolasFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio San Nicolás",
-  location: "Municipio San Nicolás, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
+  name: "San Nicolás",
+  location: "San Nicolás",
   totalEvents: 6,
-  categories: ["Música", "Teatro", "Arte de la representación"]
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario","Teatro","Literatura","Música"]
 };
+
+// Exposiciones del Festival del Municipio San Nicolás
+export const sannicolasFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

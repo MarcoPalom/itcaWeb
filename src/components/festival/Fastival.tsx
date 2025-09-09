@@ -11,6 +11,7 @@ import { victoriaFestivalInfo } from "@/constants/Municipios/victoriaData"
 import { matamorosFestivalInfo } from "@/constants/Municipios/matamorosData"
 import { tampicoFestivalInfo } from "@/constants/Municipios/tampicoData"
 import { reynosaFestivalInfo } from "@/constants/Municipios/reynosaData"
+import { getMunicipalImage } from "@/constants/municipalImages"
 import {
   Carousel,
   CarouselContent,
@@ -82,14 +83,6 @@ export default function Fastival() {
     reynosaFestivalInfo
   ]
 
-  // Mapeo de imágenes para municipios
-  const municipalImages: { [key: string]: string } = {
-    "Festival del Municipio Victoria": "/images/municipios/victoria.jpeg",
-    "Festival del Municipio Matamoros": "/images/municipios/matamoros.jpg", 
-    "Festival del Municipio Tampico": "/images/municipios/tampico.jpeg",
-    "Festival del Municipio Reynosa": "/images/municipios/reynosa.jpg",
-    "Festival del Municipio Nuevo Laredo": "/images/municipios/nuevo-laredo.jpg"
-  }
 
 
 
@@ -272,7 +265,7 @@ export default function Fastival() {
                 <Link href={`/municipio/${municipality.name.toLowerCase().replace(/\s+/g, '-').replace('festival-del-municipio-', '')}`} className="block h-full">
                   <div className={`rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}>
                     <Image
-                      src={municipalImages[municipality.name] || "/images/municipal-festival-placeholder.jpg"}
+                      src={getMunicipalImage(municipality.name.replace('Festival del Municipio ', ''))}
                       alt={municipality.name}
                       fill
                       className="object-cover"

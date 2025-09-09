@@ -1,103 +1,98 @@
 // Data del Festival del Municipio Mier
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Mier
 export const mierFestival: FestivalEvent[] = [
   {
-    id: "m-1",
+    id: "mi-1",
     date: "3",
-    day: "Viernes",
+    day: "viernes",
     title: "Mi voz al mundo",
     artist: "Argelia Fragoso",
-    origin: "Cuba",
-    category: "Música",
-    subcategory: "Boleros",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    origin: "Internacional",
+    category: "Interdisciplinario",
+    venue: "Atrio de la Parroquia",
+    time: "19:30 hrs."
   },
   {
-    id: "m-2",
+    id: "mi-2",
     date: "4",
-    day: "Sábado",
+    day: "sábado",
     title: "América grande otra vez - Cancionero popular de las Américas",
     artist: "Grupo La Trenza",
-    origin: "Nuevo León",
-    category: "Música",
-    subcategory: "Música Folklórica Latinoamericana",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Plaza Principal",
+    time: "19:30 hrs."
   },
   {
-    id: "m-3",
-    date: "5",
-    day: "Domingo",
-    title: "Huasteca viva: 'Sonidos y raíces en el corazón tamaulipeco'",
-    artist: "3 décadas de tradición con Soraima y sus Huastecos",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Huasteca",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "m-4",
-    date: "7",
-    day: "Martes",
-    title: "Llamando a base",
-    artist: "Colectivo Teatro de Bolsillo",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Infantil",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "m-5",
+    id: "mi-3",
     date: "10",
-    day: "Viernes",
-    title: "Tamaulipas Galante",
-    artist: "Camerata del Colegio 'San Juan Siglo XXI'",
+    day: "viernes",
+    title: "Tamaulipas galante",
+    artist: "Camerata del Colegio",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Orquestal",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Plaza Principal",
+    time: "19:30 hrs."
   },
   {
-    id: "m-6",
+    id: "mi-4",
+    date: "12",
+    day: "domingo",
+    title: "MIJKAILJUITL",
+    artist: "Raíces Huastecas",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Plaza Principal",
+    time: "19:30 hrs."
+  },
+  {
+    id: "mi-5",
     date: "11",
-    day: "Sábado",
+    day: "sábado",
     title: "De chile, mole y pozole",
     artist: "En Boca Ensamble",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Latinoamericana",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    artisticDirection: "Tenor Nils Gustavo Becerra"
+    category: "Interdisciplinario",
+    venue: "Plaza Principal",
+    time: "19:30 hrs."
   },
   {
-    id: "m-7",
-    date: "12",
-    day: "Domingo",
-    title: "MIJKAILJUITL 'Leyendas, Mitos y Raíces, que se cuentan y bailan con Huapango'",
-    artist: "Raíces Huastecas",
+    id: "mi-6",
+    date: "5",
+    day: "domingo",
+    title: "Huasteca viva:",
+    artist: "Soraima y sus Huastecos",
     origin: "Tamaulipas",
-    category: "Danza",
-    subcategory: "Danza Folclórica",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    artisticDirection: "Dietrich Canizalez",
-    description: "Agrupación interdisciplinaria de danza, música indumentaria y tradición"
+    category: "Interdisciplinario",
+    venue: "Plaza Principal",
+    time: "19:30 hrs."
+  },
+  {
+    id: "mi-7",
+    date: "7",
+    day: "martes",
+    title: "Llamando a base",
+    artist: "Colectivo teatro de bolsillo",
+    origin: "Tamaulipas",
+    category: "Teatro",
+    venue: "Casino Argüelles",
+    time: "11:00 hrs."
   }
 ];
 
-// Información general del festival de Mier
+// Información del Festival del Municipio Mier
 export const mierFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Mier",
-  location: "Municipio Mier, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
+  name: "Mier",
+  location: "Mier",
   totalEvents: 7,
-  categories: ["Música", "Teatro", "Danza"]
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario","Teatro"]
 };
+
+// Exposiciones del Festival del Municipio Mier
+export const mierFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

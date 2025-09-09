@@ -1,176 +1,142 @@
-// Data del Festival de Nuevo Laredo
-import { FestivalEvent, FestivalExhibition } from '../types';
+// Data del Festival del Municipio Nuevo Laredo
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival de Nuevo Laredo
-export const nuevoLaredoFestival: FestivalEvent[] = [
+// Data del Festival del Municipio Nuevo Laredo
+export const nuevolaredoFestival: FestivalEvent[] = [
   {
-    id: "nl-1",
+    id: "nu-1",
     date: "3",
-    day: "Viernes",
+    day: "viernes",
     title: "Broadway Baby",
     artist: "Bianca Marroquín",
-    origin: "Tamaulipas-México-Estados Unidos",
-    category: "Teatro",
-    subcategory: "Teatro Musical",
+    origin: "Internacional",
+    category: "Interdisciplinario",
     venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
-    time: "Por confirmar"
+    time: "19:00 hrs."
   },
   {
-    id: "nl-2",
-    date: "4",
-    day: "Sábado",
-    title: "De Miles y Manzanero, ecos de dos orillas",
-    artist: "Last Word Trío",
-    origin: "Nuevo León",
-    category: "Música",
-    venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
-    time: "Por confirmar"
-  },
-  {
-    id: "nl-3",
+    id: "nu-2",
     date: "5",
-    day: "Domingo",
+    day: "domingo",
     title: "Mi voz al mundo",
     artist: "Argelia Fragoso",
-    origin: "Cuba",
-    category: "Música",
-    subcategory: "Boleros",
+    origin: "Internacional",
+    category: "Interdisciplinario",
     venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
-    time: "Por confirmar"
+    time: "19:00 hrs."
   },
   {
-    id: "nl-4",
+    id: "nu-3",
     date: "6",
-    day: "Lunes",
+    day: "lunes",
     title: "Diálogo en piel",
     artist: "Hands Percussion of Malaysia",
-    origin: "Malasia",
+    origin: "Internacional",
     category: "Interdisciplinario",
-    subcategory: "Música, danza",
     venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
-    time: "Por confirmar"
+    time: "19:00 hrs."
   },
   {
-    id: "nl-5",
+    id: "nu-4",
     date: "7",
-    day: "Martes",
-    title: "Piaf de Bolsillo",
+    day: "martes",
+    title: "Piaf de bolsillo",
     artist: "María Katzarava",
-    origin: "CDMX",
-    category: "Música",
-    subcategory: "Cabaret, jazz",
-    venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
-    time: "Por confirmar"
-  },
-  {
-    id: "nl-6",
-    date: "8",
-    day: "Miércoles",
-    title: "Polvo Enamorado",
-    artist: "Producción escénica",
-    origin: "Tamaulipas",
+    origin: "Nacional",
     category: "Interdisciplinario",
-    subcategory: "Teatro y música homenaje a compositores tamaulipecos",
     venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
-    time: "Por confirmar",
-    cast: [
-      "Pepe Navarrete",
-      "Polo Rojas", 
-      "Cynthia Sánchez",
-      "Héctor Gamaliel",
-      "Júpiter Bautista",
-      "Isabelle Govea",
-      "Carmen Sarahí"
-    ]
+    time: "19:00 hrs."
   },
   {
-    id: "nl-7",
-    date: "9",
-    day: "Jueves",
-    title: "Tamaulipas galante",
-    artist: "Camerata del Colegio 'San Juan Siglo XXI'",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Orquesta",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "nl-8",
-    date: "10",
-    day: "Viernes",
-    title: "Afrodescendencia Matamoros #Porquelollevamosenlasangre",
-    artist: "Afrodescendencia Matamoros",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Tradicional y popular latinoamericana",
-    venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
-    time: "Por confirmar"
-  },
-  {
-    id: "nl-9",
+    id: "nu-5",
     date: "11",
-    day: "Sábado",
+    day: "sábado",
     title: "Se nos quedaron ellos",
     artist: "Centro de Producción de Danza Contemporánea (CEPRODAC)",
-    origin: "CDMX",
+    origin: "Nacional",
     category: "Danza",
-    subcategory: "Danza Contemporánea",
     venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
-    time: "Por confirmar",
-    artisticDirection: "Cecilia Lugo",
-    choreography: "Francisco Córdova"
+    time: "19:00 hrs."
   },
   {
-    id: "nl-10",
-    date: "11",
-    day: "Sábado",
-    title: "MIJKAILJUITL 'Leyendas, Mitos y Raíces, que se cuentan y bailan con Huapango'",
-    artist: "Raíces Huastecas",
+    id: "nu-6",
+    date: "4",
+    day: "sábado",
+    title: "De Miles y Manzanero, ecos de dos orillas",
+    artist: "Last Word Trío",
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Foro Cultural del Parque Viveros",
+    time: "20:00 hrs."
+  },
+  {
+    id: "nu-7",
+    date: "8",
+    day: "miércoles",
+    title: "Polvo Enamorado",
+    artist: "Polvo Enamorado",
     origin: "Tamaulipas",
-    category: "Danza",
-    subcategory: "Danza Folclórica",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    artisticDirection: "Dietrich Canizalez",
-    description: "Agrupación interdisciplinaria de danza, música indumentaria y tradición"
+    category: "Interdisciplinario",
+    venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
+    time: "19:00 hrs."
   },
   {
-    id: "nl-11",
+    id: "nu-8",
+    date: "9",
+    day: "jueves",
+    title: "Tamaulipas galante",
+    artist: "Camerata del Colegio",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Foro Cultural del Parque Viveros",
+    time: "20:00 hrs."
+  },
+  {
+    id: "nu-9",
+    date: "10",
+    day: "viernes",
+    title: "#porquelollevamosenlasangre",
+    artist: "Afrodescendencia Matamoros",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
+    time: "19:00 hrs."
+  },
+  {
+    id: "nu-10",
     date: "12",
-    day: "Domingo",
+    day: "domingo",
     title: "Orinoco",
     artist: "DOSCE La Compañía",
     origin: "Tamaulipas",
-    category: "Teatro",
+    category: "Interdisciplinario",
     venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
-    time: "Por confirmar",
-    artisticDirection: "Sandra Muñoz",
-    description: "En el marco del Centenario del nacimiento de Emilio Carballido (1925-2008)"
+    time: "19:00 hrs."
+  },
+  {
+    id: "nu-11",
+    date: "11",
+    day: "sábado",
+    title: "MIJKAILJUITL",
+    artist: "Raíces Huastecas",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Centro Cívico Nuevo Laredo",
+    time: "19:00 hrs."
   }
 ];
 
-// Exposición del Festival
-export const nuevoLaredoExhibition: FestivalExhibition = {
-  id: "nl-expo-1",
-  title: "Memorias",
-  artist: "Agnes Druenne",
-  origin: "Bélgica",
-  category: "Exposición",
-  subcategory: "Escultura y óleos",
-  venue: "Estación Palabra, Nuevo Laredo, Tamaulipas",
-  startDate: "3 Octubre del 2025",
-  endDate: "11 de Enero del 2026",
-  description: "Colección del Artista"
+// Información del Festival del Municipio Nuevo Laredo
+export const nvFestivalInfo: FestivalInfo = {
+  name: "Nuevo Laredo",
+  location: "Nuevo Laredo",
+  totalEvents: 11,
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario","Danza"]
 };
 
-// Información general del festival
-export const nuevoLaredoFestivalInfo = {
-  name: "Nuevo Laredo",
-  location: "Nuevo Laredo, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
-  mainVenue: "Teatro Principal del Centro Cultural Nuevo Laredo",
-  totalEvents: 11,
-  categories: ["Teatro", "Música", "Danza", "Interdisciplinario", "Exposición"]
-};
+// Exposiciones del Festival del Municipio Nuevo Laredo
+export const nuevolaredoFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

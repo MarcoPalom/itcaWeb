@@ -2,55 +2,42 @@
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Antiguo Morelos
-export const antiguoMorelosFestival: FestivalEvent[] = [
+export const antiguomorelosFestival: FestivalEvent[] = [
   {
-    id: "am-1",
-    date: "3",
-    day: "Viernes",
-    title: "Animación con zanqueros y mimo",
-    artist: "Colectivo Trueque",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Animación",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "am-2",
+    id: "an-1",
     date: "7",
-    day: "Martes",
+    day: "martes",
     title: "Las futbolistas",
     artist: "Ráfaga Teatro",
-    origin: "CDMX-Estado de México",
+    origin: "Nacional",
     category: "Teatro",
-    subcategory: "Teatro de calle",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    venue: "Lugar por definir",
+    time: "Horario por definir"
   },
   {
-    id: "am-3",
+    id: "an-2",
     date: "12",
-    day: "Domingo",
-    title: "Quinteto de Alientos",
-    artist: "Tamaulipas",
+    day: "domingo",
+    title: "México y sus canciones",
+    artist: "Andrés Gea y su guitarra mexicana",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Alientos",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Lugar por definir",
+    time: "Horario por definir"
   }
 ];
 
-// Exposiciones del Festival de Antiguo Morelos (por ahora vacío, se puede agregar después)
-export const antiguoMorelosExhibitions: FestivalExhibition[] = [];
-
-// Información general del festival de Antiguo Morelos
+// Información del Festival del Municipio Antiguo Morelos
 export const antiguoMorelosFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Antiguo Morelos",
-  location: "Municipio Antiguo Morelos, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
-  mainVenue: "Por confirmar",
-  totalEvents: 3,
-  categories: ["Música", "Teatro"]
+  name: "Antiguo Morelos",
+  location: "Antiguo Morelos",
+  totalEvents: 2,
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Teatro","Interdisciplinario"]
 };
+
+// Exposiciones del Festival del Municipio Antiguo Morelos
+export const antiguomorelosFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

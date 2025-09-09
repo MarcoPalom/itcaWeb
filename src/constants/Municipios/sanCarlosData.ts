@@ -1,88 +1,76 @@
 // Data del Festival del Municipio San Carlos
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio San Carlos
-export const sanCarlosFestival: FestivalEvent[] = [
+export const sancarlosFestival: FestivalEvent[] = [
   {
-    id: "sc-1",
-    date: "3",
-    day: "Viernes",
-    title: "De amores, polka y huapango",
-    artist: "La Nota Alegre",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Norteño",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "sc-2",
-    date: "4",
-    day: "Sábado",
-    title: "Danzas de fuego",
-    artist: "Cirque erös",
-    origin: "Tamaulipas",
-    category: "Arte de la representación",
-    subcategory: "Circense",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "sc-3",
-    date: "9",
-    day: "Jueves",
-    title: "La Percha Teatro",
-    artist: "La Percha Teatro",
-    origin: "Nuevo León",
-    category: "Teatro",
-    subcategory: "Teatro de calle",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "sc-4",
+    id: "sa-1",
     date: "10",
-    day: "Viernes",
+    day: "viernes",
     title: "¡Ajua Raza! Homenaje a Piporro",
     artist: "Grupo Tayer",
-    origin: "Nuevo León",
-    category: "Música",
-    subcategory: "rancheras, corridos, polkas, redovas, mazurkas y huapangos",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Plaza Principal",
+    time: "19:00 hrs."
   },
   {
-    id: "sc-5",
+    id: "sa-2",
+    date: "9",
+    day: "jueves",
+    title: "El Lobo",
+    artist: "La Percha Teatro",
+    origin: "Nacional",
+    category: "Teatro",
+    venue: "Escuela Primaria",
+    time: "9:00 hrs."
+  },
+  {
+    id: "sa-3",
+    date: "4",
+    day: "sábado",
+    title: "Danzas de fuegos",
+    artist: "Cirque erös",
+    origin: "Tamaulipas",
+    category: "Danza",
+    venue: "Plaza Principal",
+    time: "19:00 hrs."
+  },
+  {
+    id: "sa-4",
     date: "11",
-    day: "Sábado",
+    day: "sábado",
     title: "Cuentos del mundo",
     artist: "Roberto Cuentacuentos",
     origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Cuentacuentos",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Literatura",
+    venue: "Plaza Juárez, Zona Centro",
+    time: "10:00 hrs."
   },
   {
-    id: "sc-6",
+    id: "sa-5",
     date: "12",
-    day: "Domingo",
+    day: "domingo",
     title: "Herencia Norteña",
     artist: "Grupo Pendiente",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Norteño",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Plaza Principal",
+    time: "19:00 hrs."
   }
 ];
 
-// Información general del festival de San Carlos
+// Información del Festival del Municipio San Carlos
 export const sanCarlosFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio San Carlos",
-  location: "Municipio San Carlos, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
-  totalEvents: 6,
-  categories: ["Música", "Teatro", "Arte de la representación"]
+  name: "San Carlos",
+  location: "San Carlos",
+  totalEvents: 5,
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario","Teatro","Danza","Literatura"]
 };
+
+// Exposiciones del Festival del Municipio San Carlos
+export const sancarlosFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

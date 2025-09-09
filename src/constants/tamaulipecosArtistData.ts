@@ -36,17 +36,17 @@ export const polvoEnamorado: TamaulipecoArtist = {
       title: "Polvo Enamorado",
       date: "8",
       day: "miércoles",
-      venue: "Teatro Principal del Espacio Cultural Nuevo Laredo",
-      time: "Por confirmar",
+      venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
+      time: "19:00 hrs.",
       municipality: "Nuevo Laredo"
     },
     {
-      id: "r-6",
+      id: "r-7",
       title: "Polvo Enamorado",
-      date: "6",
-      day: "lunes",
+      date: "7",
+      day: "martes",
       venue: "Teatro Principal del Parque Cultural Reynosa",
-      time: "Por confirmar",
+      time: "19:00 hrs.",
       municipality: "Reynosa"
     },
     {
@@ -55,35 +55,8 @@ export const polvoEnamorado: TamaulipecoArtist = {
       date: "6",
       day: "lunes",
       venue: "Teatro de la Reforma",
-      time: "Por confirmar",
+      time: "20:00 hrs.",
       municipality: "Matamoros"
-    },
-    {
-      id: "cs-9",
-      title: "Polvo Enamorado",
-      date: "9",
-      day: "jueves",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Casas"
-    },
-    {
-      id: "vc-3",
-      title: "Polvo Enamorado",
-      date: "3",
-      day: "viernes",
-      venue: "Teatro \"Amalia G. de Castillo Ledón del Centro Cultural Tamaulipas",
-      time: "Por confirmar",
-      municipality: "Victoria"
-    },
-    {
-      id: "tp-3",
-      title: "Polvo Enamorado",
-      date: "3",
-      day: "viernes",
-      venue: "Teatro Principal del Espacio Cultural Metropolitano",
-      time: "Por confirmar",
-      municipality: "Tampico"
     }
   ]
 };
@@ -102,8 +75,8 @@ export const camerataSanJuan: TamaulipecoArtist = {
       title: "Tamaulipas galante",
       date: "9",
       day: "jueves",
-      venue: "Teatro Principal del Espacio Cultural Nuevo Laredo",
-      time: "Por confirmar",
+      venue: "Foro Cultural del Parque Viveros",
+      time: "20:00 hrs.",
       municipality: "Nuevo Laredo"
     },
     {
@@ -111,8 +84,8 @@ export const camerataSanJuan: TamaulipecoArtist = {
       title: "Tamaulipas galante",
       date: "10",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "19:30 hrs.",
       municipality: "Mier"
     }
   ]
@@ -132,8 +105,8 @@ export const afrodescendenciaMatamoros: TamaulipecoArtist = {
       title: "#porquelollevamosenlasangre",
       date: "10",
       day: "viernes",
-      venue: "Teatro Principal del Espacio Cultural Nuevo Laredo",
-      time: "Por confirmar",
+      venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
+      time: "19:00 hrs.",
       municipality: "Nuevo Laredo"
     },
     {
@@ -142,7 +115,7 @@ export const afrodescendenciaMatamoros: TamaulipecoArtist = {
       date: "12",
       day: "domingo",
       venue: "Teatro Principal del Parque Cultural Reynosa",
-      time: "Por confirmar",
+      time: "19:00 hrs.",
       municipality: "Reynosa"
     }
   ]
@@ -162,8 +135,8 @@ export const dosceLaCompania: TamaulipecoArtist = {
       title: "Orinoco",
       date: "12",
       day: "domingo",
-      venue: "Teatro Principal del Espacio Cultural Nuevo Laredo",
-      time: "Por confirmar",
+      venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
+      time: "19:00 hrs.",
       municipality: "Nuevo Laredo"
     },
     {
@@ -172,7 +145,7 @@ export const dosceLaCompania: TamaulipecoArtist = {
       date: "6",
       day: "lunes",
       venue: "Teatro Principal del Parque Cultural Reynosa",
-      time: "Por confirmar",
+      time: "19:00 hrs.",
       municipality: "Reynosa"
     }
   ]
@@ -192,26 +165,17 @@ export const raicesHuastecas: TamaulipecoArtist = {
       title: "MIJKAILJUITL \"Leyendas, Mitos y Raíces\", que se cuentan y bailan con Huapango\"",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Centro Cívico Nuevo Laredo",
+      time: "19:00 hrs.",
       municipality: "Nuevo Laredo"
-    },
-    {
-      id: "g-5",
-      title: "MIJKAILJUITL \"Leyendas, Mitos y Raíces\", que se cuentan y bailan con Huapango\"",
-      date: "5",
-      day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Guerrero"
     },
     {
       id: "g-10",
       title: "MIJKAILJUITL \"Leyendas, Mitos y Raíces\", que se cuentan y bailan con Huapango\"",
       date: "10",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Ruinas de Viejo Guerrero o Explanada de Palacio Municipal",
+      time: "19:00 hrs.",
       municipality: "Guerrero"
     },
     {
@@ -219,8 +183,8 @@ export const raicesHuastecas: TamaulipecoArtist = {
       title: "MIJKAILJUITL \"Leyendas, Mitos y Raíces\", que se cuentan y bailan con Huapango\"",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "19:30 hrs.",
       municipality: "Mier"
     }
   ]
@@ -240,8 +204,17 @@ export const enBocaEnsamble: TamaulipecoArtist = {
       title: "De chile, mole y pozole",
       date: "5",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Centro Cívico Municipal",
+      time: "19:00 hrs.",
+      municipality: "Guerrero"
+    },
+    {
+      id: "g-10",
+      title: "De chile, mole y pozole",
+      date: "10",
+      day: "viernes",
+      venue: "Ruinas de Viejo Guerrero o Explanada de Palacio Municipal",
+      time: "19:00 hrs.",
       municipality: "Guerrero"
     },
     {
@@ -249,8 +222,8 @@ export const enBocaEnsamble: TamaulipecoArtist = {
       title: "De chile, mole y pozole",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "19:30 hrs.",
       municipality: "Mier"
     },
     {
@@ -258,8 +231,8 @@ export const enBocaEnsamble: TamaulipecoArtist = {
       title: "De chile, mole y pozole",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "MAHM Camargo Museo y Archivo Histórico (Patio)",
+      time: "18:30 hrs.",
       municipality: "Camargo"
     }
   ]
@@ -279,17 +252,17 @@ export const soraimaYSusHuastecos: TamaulipecoArtist = {
       title: "Huasteca viva: \"Sonidos y raíces en el corazón tamaulipeco\" 3 décadas de tradición con Soraima y sus huastecos",
       date: "5",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "19:30 hrs.",
       municipality: "Mier"
     },
     {
-      id: "gdo-3",
+      id: "gdo-4",
       title: "Huasteca viva: \"Sonidos y raíces en el corazón tamaulipeco\" 3 décadas de tradición con Soraima y sus huastecos",
-      date: "3",
-      day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      date: "4",
+      day: "sábado",
+      venue: "Plaza \"Damas Leonas\"",
+      time: "19:00 hrs.",
       municipality: "Gustavo Díaz Ordaz"
     },
     {
@@ -297,8 +270,8 @@ export const soraimaYSusHuastecos: TamaulipecoArtist = {
       title: "Huasteca viva: \"Sonidos y raíces en el corazón tamaulipeco\" 3 décadas de tradición con Soraima y sus huastecos",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Foro al Aire Libre de la Plaza Principal",
+      time: "19:30 hrs.",
       municipality: "Valle Hermoso"
     }
   ]
@@ -318,8 +291,8 @@ export const colectivoTeatroDeBolsillo: TamaulipecoArtist = {
       title: "Llamando a base",
       date: "7",
       day: "martes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Casino Argüelles",
+      time: "11:00 hrs.",
       municipality: "Mier"
     },
     {
@@ -327,8 +300,8 @@ export const colectivoTeatroDeBolsillo: TamaulipecoArtist = {
       title: "Llamando a base",
       date: "10",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Escuela Primaria Nissan",
+      time: "10:30 hrs.",
       municipality: "Río Bravo"
     },
     {
@@ -336,8 +309,8 @@ export const colectivoTeatroDeBolsillo: TamaulipecoArtist = {
       title: "Llamando a base",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza \"Hidalgo\"",
+      time: "18:00 hrs.",
       municipality: "Abasolo"
     }
   ]
@@ -357,8 +330,8 @@ export const warislov: TamaulipecoArtist = {
       title: "Warislov Concierto Rockteño",
       date: "4",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de Miguel Alemán",
+      time: "20:00 hrs.",
       municipality: "Miguel Alemán"
     },
     {
@@ -366,8 +339,8 @@ export const warislov: TamaulipecoArtist = {
       title: "Warislov Concierto Rockteño",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de Gustavo Díaz Ordaz",
+      time: "20:00 hrs.",
       municipality: "Gustavo Díaz Ordaz"
     }
   ]
@@ -388,7 +361,7 @@ export const aglaeSalinas: TamaulipecoArtist = {
       date: "12",
       day: "domingo",
       venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "Camargo"
     },
     {
@@ -397,7 +370,7 @@ export const aglaeSalinas: TamaulipecoArtist = {
       date: "11",
       day: "sábado",
       venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "Gustavo Díaz Ordaz"
     }
   ]
@@ -417,8 +390,8 @@ export const cirkoFrontera: TamaulipecoArtist = {
       title: "Hermanos del equilibrio",
       date: "7",
       day: "martes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Escuela Secundaria Técnica #48 (Cong. Valadeces)",
+      time: "11:00 hrs.",
       municipality: "Gustavo Díaz Ordaz"
     },
     {
@@ -426,8 +399,8 @@ export const cirkoFrontera: TamaulipecoArtist = {
       title: "Hermanos del equilibrio",
       date: "8",
       day: "miércoles",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Centro de Asistencia Infantil Comunitario (CAIC)",
+      time: "10:00 hrs.",
       municipality: "Río Bravo"
     },
     {
@@ -435,17 +408,17 @@ export const cirkoFrontera: TamaulipecoArtist = {
       title: "Hermanos del equilibrio",
       date: "9",
       day: "jueves",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Escuela Secundaria General #2 Profr. \"Antonio Torres\"",
+      time: "11:00 hrs.",
       municipality: "Valle Hermoso"
     },
     {
-      id: "sf-5",
+      id: "sf-11",
       title: "Hermanos del equilibrio",
-      date: "5",
-      day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      date: "11",
+      day: "sábado",
+      venue: "Plaza Principal",
+      time: "20:00 hrs.",
       municipality: "San Fernando"
     },
     {
@@ -453,8 +426,8 @@ export const cirkoFrontera: TamaulipecoArtist = {
       title: "Hermanos del equilibrio",
       date: "5",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "18:00 hrs.",
       municipality: "Burgos"
     },
     {
@@ -462,8 +435,8 @@ export const cirkoFrontera: TamaulipecoArtist = {
       title: "Hermanos del equilibrio",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "19:00 hrs.",
       municipality: "Cruillas"
     },
     {
@@ -471,17 +444,17 @@ export const cirkoFrontera: TamaulipecoArtist = {
       title: "Hermanos del equilibrio",
       date: "6",
       day: "lunes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Techumbre del Ejido las Vírgenes",
+      time: "16:00 hrs.",
       municipality: "San Nicolás"
     },
     {
-      id: "md-7",
+      id: "md-10",
       title: "Hermanos del equilibrio",
-      date: "7",
-      day: "martes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      date: "10",
+      day: "viernes",
+      venue: "Auditorio \"Rodolfo Torre Cantú\", Cabecera Municipal",
+      time: "16:00 hrs.",
       municipality: "Méndez"
     }
   ]
@@ -497,22 +470,13 @@ export const losValdesSka: TamaulipecoArtist = {
   description: "Los Valdés SKA nace en 2019 como una propuesta musical fresca y versátil, ofreciendo a sus integrantes una descarga de energía y creatividad. Desde sus primeros conciertos, han participado en plazas públicas, eventos privados, festivales y actividades gubernamentales. Su estilo principal es el ska, acompañado de ritmos latinos como salsa, cumbia, batucada y rock, en una combinación que contagia alegría y movimiento. Inspirados en exponentes como Panteón Rococó, La Maldita Vecindad e Inspector, la banda busca generar experiencias donde la música sea un espacio de diversión, baile y unión entre los asistentes. En esta edición presentan \"Nación SKA\", un espectáculo donde ocho músicos en escena celebran la vida al ritmo del ska y los sonidos latinos. Con su propuesta, invitan al público a dejarse llevar por la música, sentir la unidad y disfrutar de la fiesta en cada acorde y tambor.",
   events: [
     {
-      id: "nl-11",
+      id: "r-11",
       title: "Nación SKA",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Nuevo Laredo"
-    },
-    {
-      id: "al-9",
-      title: "Nación SKA",
-      date: "9",
-      day: "jueves",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Aldama"
+      venue: "Explanada del Parque Cultural Reynosa",
+      time: "19:00 hrs.",
+      municipality: "Reynosa"
     }
   ]
 };
@@ -531,8 +495,8 @@ export const elContrato: TamaulipecoArtist = {
       title: "Popteño, \"Que no muera la música norteña\"",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Casa de Ladrillo Ex Hacienda \"La Sauteña\"",
+      time: "20:00 hrs.",
       municipality: "Río Bravo"
     },
     {
@@ -540,8 +504,8 @@ export const elContrato: TamaulipecoArtist = {
       title: "Popteño, \"Que no muera la música norteña\"",
       date: "4",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "20:00 hrs.",
       municipality: "San Fernando"
     }
   ]
@@ -561,8 +525,8 @@ export const bandaSinfonicaReynosa: TamaulipecoArtist = {
       title: "Mosaico Musical",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Gimnasio \"Las Liebres\"",
+      time: "18:00 hrs.",
       municipality: "Río Bravo"
     },
     {
@@ -570,8 +534,8 @@ export const bandaSinfonicaReynosa: TamaulipecoArtist = {
       title: "Mosaico Musical",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "20:00 hrs.",
       municipality: "San Fernando"
     }
   ]
@@ -591,8 +555,8 @@ export const laNotaAlegre: TamaulipecoArtist = {
       title: "De amores, polka y huapango",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Casa del Arte de Río Bravo",
+      time: "19:00 hrs.",
       municipality: "Río Bravo"
     },
     {
@@ -600,17 +564,17 @@ export const laNotaAlegre: TamaulipecoArtist = {
       title: "De amores, polka y huapango",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Foro al Aire Libre de la Plaza Principal",
+      time: "19:30 hrs.",
       municipality: "Valle Hermoso"
     },
     {
-      id: "slm-4",
+      id: "slm-5",
       title: "De amores, polka y huapango",
-      date: "4",
-      day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      date: "5",
+      day: "domingo",
+      venue: "Explanada Municipal",
+      time: "19:00 hrs.",
       municipality: "Soto la Marina"
     },
     {
@@ -619,7 +583,7 @@ export const laNotaAlegre: TamaulipecoArtist = {
       date: "3",
       day: "viernes",
       venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "Hidalgo"
     }
   ]
@@ -639,35 +603,35 @@ export const losDelPueblo: TamaulipecoArtist = {
       title: "Raíces del pueblo: música del norte tamaulipeco",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Foro al Aire Libre de la Plaza Principal",
+      time: "19:30 hrs.",
       municipality: "Valle Hermoso"
     },
     {
-      id: "ll-12",
+      id: "h-11",
       title: "Raíces del pueblo: música del norte tamaulipeco",
-      date: "12",
-      day: "domingo",
+      date: "11",
+      day: "sábado",
       venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Llera"
+      time: "Horario por definir",
+      municipality: "Hidalgo"
     },
     {
-      id: "j-3",
+      id: "j-5",
       title: "Raíces del pueblo: música del norte tamaulipeco",
-      date: "3",
-      day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      date: "5",
+      day: "domingo",
+      venue: "Museo \"Casa Conde de Sierra Gorda\"",
+      time: "19:00 hrs.",
       municipality: "Jiménez"
     },
     {
-      id: "p-3",
+      id: "p-4",
       title: "Raíces del pueblo: música del norte tamaulipeco",
-      date: "3",
-      day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      date: "4",
+      day: "sábado",
+      venue: "Teatro del Pueblo",
+      time: "17:30 hrs.",
       municipality: "Padilla"
     }
   ]
@@ -688,16 +652,25 @@ export const amenazaNortena: TamaulipecoArtist = {
       date: "3",
       day: "viernes",
       venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "Méndez"
+    },
+    {
+      id: "sf-4",
+      title: "concierto-baile acá por el norte",
+      date: "4",
+      day: "sábado",
+      venue: "Plaza Principal",
+      time: "20:00 hrs.",
+      municipality: "San Fernando"
     },
     {
       id: "bg-4",
       title: "concierto-baile acá por el norte",
       date: "4",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "18:00 hrs.",
       municipality: "Burgos"
     },
     {
@@ -705,8 +678,8 @@ export const amenazaNortena: TamaulipecoArtist = {
       title: "concierto-baile acá por el norte",
       date: "10",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "20:00 hrs.",
       municipality: "Llera"
     },
     {
@@ -714,8 +687,8 @@ export const amenazaNortena: TamaulipecoArtist = {
       title: "concierto-baile acá por el norte",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Hidalgo",
+      time: "20:00 hrs.",
       municipality: "Jaumave"
     },
     {
@@ -723,8 +696,8 @@ export const amenazaNortena: TamaulipecoArtist = {
       title: "concierto-baile acá por el norte",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza \"20 de Noviembre\"",
+      time: "20:00 hrs.",
       municipality: "Bustamante"
     }
   ]
@@ -745,7 +718,7 @@ export const kaniEnsambleCoral: TamaulipecoArtist = {
       date: "4",
       day: "sábado",
       venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "Méndez"
     },
     {
@@ -753,8 +726,8 @@ export const kaniEnsambleCoral: TamaulipecoArtist = {
       title: "Afro-ecos: raíces que susurran en el canto",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Museo \"Casa Conde de Sierra Gorda\"",
+      time: "18:00 hrs.",
       municipality: "Jiménez"
     },
     {
@@ -762,18 +735,9 @@ export const kaniEnsambleCoral: TamaulipecoArtist = {
       title: "Afro-ecos: raíces que susurran en el canto",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Foro de la Iglesia del Poblado \"Loma Alta\"",
+      time: "18:00 hrs.",
       municipality: "Gómez Farías"
-    },
-    {
-      id: "at-12",
-      title: "Afro-ecos: raíces que susurran en el canto",
-      date: "12",
-      day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Altamira"
     }
   ]
 };
@@ -822,8 +786,8 @@ export const cirqueEros: TamaulipecoArtist = {
       title: "Danzas de fuegos",
       date: "5",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "20:00 hrs.",
       municipality: "San Fernando"
     },
     {
@@ -831,17 +795,26 @@ export const cirqueEros: TamaulipecoArtist = {
       title: "Danzas de fuegos",
       date: "4",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "19:00 hrs.",
       municipality: "San Carlos"
+    },
+    {
+      id: "vg-3",
+      title: "Danzas de fuegos",
+      date: "3",
+      day: "viernes",
+      venue: "Plaza Juárez",
+      time: "19:00 hrs.",
+      municipality: "Villagrán"
     },
     {
       id: "cr-6",
       title: "Del Circo a la Calle",
       date: "6",
       day: "lunes",
-      venue: "Lugar por definir (escuelas)",
-      time: "Por confirmar",
+      venue: "Centro Cívico Municipal",
+      time: "11:00 hrs.",
       municipality: "Cruillas"
     },
     {
@@ -849,8 +822,8 @@ export const cirqueEros: TamaulipecoArtist = {
       title: "Del Circo a la Calle",
       date: "7",
       day: "martes",
-      venue: "Lugar por definir (escuelas)",
-      time: "Por confirmar",
+      venue: "Plaza \"Hidalgo\"",
+      time: "18:00 hrs.",
       municipality: "Abasolo"
     },
     {
@@ -858,36 +831,9 @@ export const cirqueEros: TamaulipecoArtist = {
       title: "Del Circo a la Calle",
       date: "8",
       day: "miércoles",
-      venue: "Lugar por definir (escuelas)",
-      time: "Por confirmar",
+      venue: "Explanada Municipal",
+      time: "19:00 hrs.",
       municipality: "Soto la Marina"
-    },
-    {
-      id: "al-9",
-      title: "Del Circo a la Calle",
-      date: "9",
-      day: "jueves",
-      venue: "Lugar por definir (escuelas)",
-      time: "Por confirmar",
-      municipality: "Aldama"
-    },
-    {
-      id: "at-10",
-      title: "Del Circo a la Calle",
-      date: "10",
-      day: "viernes",
-      venue: "Lugar por definir (escuelas)",
-      time: "Por confirmar",
-      municipality: "Altamira"
-    },
-    {
-      id: "vg-3",
-      title: "Danzas de fuegos",
-      date: "3",
-      day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Villagrán"
     }
   ]
 };
@@ -906,8 +852,8 @@ export const grupoEspejos: TamaulipecoArtist = {
       title: "Con las manos entre los pies",
       date: "7",
       day: "martes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Escuela Primaria \"Mártires de la Revolución\"",
+      time: "11:00 hrs.",
       municipality: "Burgos"
     },
     {
@@ -915,8 +861,8 @@ export const grupoEspejos: TamaulipecoArtist = {
       title: "Con las manos entre los pies",
       date: "8",
       day: "miércoles",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Centro Cívico Municipal",
+      time: "11:00 hrs.",
       municipality: "Cruillas"
     },
     {
@@ -924,35 +870,26 @@ export const grupoEspejos: TamaulipecoArtist = {
       title: "Con las manos entre los pies",
       date: "9",
       day: "jueves",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Ejido \"El Palmar\"",
+      time: "15:00 hrs.",
       municipality: "San Nicolás"
     },
     {
-      id: "mn-3",
+      id: "j-5",
       title: "Con las manos entre los pies",
-      date: "3",
-      day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Mainero"
-    },
-    {
-      id: "vg-4",
-      title: "Con las manos entre los pies",
-      date: "4",
-      day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Villagrán"
+      date: "5",
+      day: "domingo",
+      venue: "Museo \"Casa Conde de Sierra Gorda\"",
+      time: "18:00 hrs.",
+      municipality: "Jiménez"
     },
     {
       id: "nm-12",
       title: "Con las manos entre los pies",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Explanada Ejidal, Ejido \"Ampliación de la Reforma\"",
+      time: "17:30 hrs.",
       municipality: "Nuevo Morelos"
     }
   ]
@@ -972,8 +909,8 @@ export const tradicionGenuina: TamaulipecoArtist = {
       title: "Paseando con huapangos y tradición",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "18:00 hrs.",
       municipality: "Burgos"
     },
     {
@@ -981,8 +918,8 @@ export const tradicionGenuina: TamaulipecoArtist = {
       title: "Paseando con huapangos y tradición",
       date: "4",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "19:00 hrs.",
       municipality: "Cruillas"
     },
     {
@@ -990,27 +927,27 @@ export const tradicionGenuina: TamaulipecoArtist = {
       title: "Paseando con huapangos y tradición",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Kiosko de la Plaza Principal \"Plaza Hidalgo\"",
+      time: "18:00 hrs.",
       municipality: "Jiménez"
-    },
-    {
-      id: "slm-10",
-      title: "Paseando con huapangos y tradición",
-      date: "10",
-      day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Soto la Marina"
     },
     {
       id: "p-11",
       title: "Paseando con huapangos y tradición",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Teatro del Pueblo",
+      time: "17:30 hrs.",
       municipality: "Padilla"
+    },
+    {
+      id: "slm-10",
+      title: "Paseando con huapangos y tradición",
+      date: "10",
+      day: "viernes",
+      venue: "Explanada Municipal",
+      time: "19:00 hrs.",
+      municipality: "Soto la Marina"
     }
   ]
 };
@@ -1029,63 +966,54 @@ export const robertoCuentacuentos: TamaulipecoArtist = {
       title: "Cuentos del mundo",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Auditorio Rodolfo Torre Cantú",
+      time: "14:00 hrs.",
       municipality: "San Nicolás"
+    },
+    {
+      id: "j-6",
+      title: "Cuentos del mundo",
+      date: "6",
+      day: "lunes",
+      venue: "Teatro del Pueblo",
+      time: "9:00 hrs.",
+      municipality: "Jaumave"
+    },
+    {
+      id: "bu-5",
+      title: "Cuentos del mundo",
+      date: "5",
+      day: "domingo",
+      venue: "Plaza \"20 de Noviembre\"",
+      time: "17:00 hrs.",
+      municipality: "Bustamante"
     },
     {
       id: "sc-11",
       title: "Cuentos del mundo",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Juárez, Zona Centro",
+      time: "10:00 hrs.",
       municipality: "San Carlos"
     },
     {
-      id: "p-8",
+      id: "p-9",
       title: "Cuentos del mundo",
-      date: "8",
-      day: "miércoles",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      date: "9",
+      day: "jueves",
+      venue: "Escuela Primaria \"Josefa Ortíz de Dominguez\"",
+      time: "9:00 hrs.",
       municipality: "Padilla"
     },
     {
-      id: "jv-6",
+      id: "g-10",
       title: "Cuentos del mundo",
-      date: "6",
-      day: "lunes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Jaumave"
-    },
-    {
-      id: "bs-5",
-      title: "Cuentos del mundo",
-      date: "5",
-      day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Bustamante"
-    },
-    {
-      id: "pl-4",
-      title: "Cuentos del mundo",
-      date: "4",
-      day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Palmillas"
-    },
-    {
-      id: "mq-3",
-      title: "Cuentos del mundo",
-      date: "3",
+      date: "10",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Miquihuana"
+      venue: "Foro de la Escuela Secundaria Técnica #43",
+      time: "11:00 hrs.",
+      municipality: "Güémez"
     }
   ]
 };
@@ -1104,8 +1032,8 @@ export const grupoPendiente: TamaulipecoArtist = {
       title: "Herencia Norteña",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal",
+      time: "19:00 hrs.",
       municipality: "San Carlos"
     },
     {
@@ -1113,8 +1041,8 @@ export const grupoPendiente: TamaulipecoArtist = {
       title: "Herencia Norteña",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza \"Hidalgo\"",
+      time: "18:00 hrs.",
       municipality: "Abasolo"
     },
     {
@@ -1123,7 +1051,7 @@ export const grupoPendiente: TamaulipecoArtist = {
       date: "10",
       day: "viernes",
       venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "Hidalgo"
     },
     {
@@ -1131,9 +1059,18 @@ export const grupoPendiente: TamaulipecoArtist = {
       title: "Herencia Norteña",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de Estación Manuel",
+      time: "19:00 hrs.",
       municipality: "González"
+    },
+    {
+      id: "m-11",
+      title: "Herencia Norteña",
+      date: "11",
+      day: "sábado",
+      venue: "Plaza Principal \"Plutarco Elías Calles\"",
+      time: "19:00 hrs.",
+      municipality: "Mante"
     },
     {
       id: "al-5",
@@ -1175,21 +1112,12 @@ export const eraseUnaVezDosVeces: TamaulipecoArtist = {
   description: "Fundado en 2024, Érase una vez dos veces es un grupo de cuentacuentos que promueve la lectura en la infancia y resalta el valor de las historias como herramienta de imaginación y aprendizaje. Su propuesta integra narración oral, lectura en voz alta, dramatización y juego escénico, generando experiencias cercanas y significativas para niñas y niños. En poco tiempo, la agrupación ha formado parte de actividades culturales y educativas como el Festival Internacional en la Costa del Seno Mexicano 2024, los festivales Maquinitas Creativas de Estación Palabra, así como funciones escolares y municipales. Su trabajo está respaldado por procesos de formación teatral, como el taller \"Herramientas teatrales para contar historias\" impartido por Pablo Luna de Percha Teatro. Este 2025 regresan al Festival con un cuentacuentos teatralizado que combina narración, comedia y teatro físico. A través de personajes curiosos y divertidos, niñas y niños exploran temas como la creatividad, la felicidad y el sentido de la vida en una experiencia participativa que invita a descubrir el mundo con curiosidad y libertad.",
   events: [
     {
-      id: "mn-12",
-      title: "Aristótefes y Sócrafes y el Misterio del Movimiento",
-      date: "12",
-      day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Mainero"
-    },
-    {
       id: "vg-11",
       title: "Aristótefes y Sócrafes y el Misterio del Movimiento",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Juárez",
+      time: "19:00 hrs.",
       municipality: "Villagrán"
     },
     {
@@ -1198,17 +1126,17 @@ export const eraseUnaVezDosVeces: TamaulipecoArtist = {
       date: "10",
       day: "viernes",
       venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "Hidalgo"
     },
     {
-      id: "gm-9",
+      id: "m-12",
       title: "Aristótefes y Sócrafes y el Misterio del Movimiento",
-      date: "9",
-      day: "jueves",
+      date: "12",
+      day: "domingo",
       venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Güémez"
+      time: "Horario por definir",
+      municipality: "Mainero"
     }
   ]
 };
@@ -1227,8 +1155,8 @@ export const trioUATsteco: TamaulipecoArtist = {
       title: "Concierto Trío UATsteco",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Auditorio Rodolfo Torre Cantú",
+      time: "16:00 hrs.",
       municipality: "San Nicolás"
     },
     {
@@ -1236,8 +1164,8 @@ export const trioUATsteco: TamaulipecoArtist = {
       title: "Concierto Trío UATsteco",
       date: "4",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Kiosko de la Plaza Principal \"Plaza Hidalgo\"",
+      time: "18:00 hrs.",
       municipality: "Jiménez"
     },
     {
@@ -1246,25 +1174,16 @@ export const trioUATsteco: TamaulipecoArtist = {
       date: "5",
       day: "domingo",
       venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "Güémez"
-    },
-    {
-      id: "pl-12",
-      title: "Concierto Trío UATsteco",
-      date: "12",
-      day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Palmillas"
     },
     {
       id: "t-11",
       title: "Concierto Trío UATsteco",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Explanda de la Presidencia Municipal",
+      time: "18:30 hrs.",
       municipality: "Tula"
     }
   ]
@@ -1284,8 +1203,8 @@ export const quintetoAlientosUAT: TamaulipecoArtist = {
       title: "Concierto Quinteto de Alientos UAT",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Presidencia Municipal",
+      time: "19:00 hrs.",
       municipality: "Ocampo"
     },
     {
@@ -1293,8 +1212,8 @@ export const quintetoAlientosUAT: TamaulipecoArtist = {
       title: "Concierto Quinteto de Alientos UAT",
       date: "10",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Cultura",
+      time: "19:30 hrs.",
       municipality: "Xicoténcatl"
     },
     {
@@ -1303,25 +1222,16 @@ export const quintetoAlientosUAT: TamaulipecoArtist = {
       date: "3",
       day: "viernes",
       venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "Nuevo Morelos"
-    },
-    {
-      id: "am-12",
-      title: "Concierto Quinteto de Alientos UAT",
-      date: "12",
-      day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Antiguo Morelos"
     },
     {
       id: "g-4",
       title: "Concierto Quinteto de Alientos UAT",
       date: "4",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de González",
+      time: "19:00 hrs.",
       municipality: "González"
     }
   ]
@@ -1341,18 +1251,9 @@ export const trioBohemiaUAT: TamaulipecoArtist = {
       title: "Concierto Trío Bohemia UAT",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Cultura",
+      time: "19:30 hrs.",
       municipality: "Xicoténcatl"
-    },
-    {
-      id: "al-11",
-      title: "Concierto Trío Bohemia UAT",
-      date: "11",
-      day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Aldama"
     }
   ]
 };
@@ -1371,8 +1272,8 @@ export const teatroGuarapo: TamaulipecoArtist = {
       title: "Canasta de cuentos de la zona donde vivimos",
       date: "7",
       day: "martes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Escuela Primaria \"Lic. Benito Juárez\"",
+      time: "9:00 hrs.",
       municipality: "Jiménez"
     },
     {
@@ -1380,8 +1281,8 @@ export const teatroGuarapo: TamaulipecoArtist = {
       title: "Canasta de cuentos de la zona donde vivimos",
       date: "6",
       day: "lunes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza \"Hidalgo\"",
+      time: "18:00 hrs.",
       municipality: "Abasolo"
     },
     {
@@ -1389,17 +1290,17 @@ export const teatroGuarapo: TamaulipecoArtist = {
       title: "Canasta de cuentos de la zona donde vivimos",
       date: "8",
       day: "miércoles",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Escuela Primaria \"Conrado Castillo\"",
+      time: "9:00 hrs.",
       municipality: "Padilla"
     },
     {
-      id: "gm-10",
+      id: "g-10",
       title: "Canasta de cuentos de la zona donde vivimos",
       date: "10",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Foro de la Escuela Secundaria Técnica #43",
+      time: "11:00 hrs.",
       municipality: "Güémez"
     },
     {
@@ -1407,8 +1308,8 @@ export const teatroGuarapo: TamaulipecoArtist = {
       title: "Canasta de cuentos de la zona donde vivimos",
       date: "9",
       day: "jueves",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Ejido \"Lázaro Cárdenas del Río\"",
+      time: "10:00 hrs.",
       municipality: "Casas"
     }
   ]
@@ -1428,8 +1329,8 @@ export const josePalacios: TamaulipecoArtist = {
       title: "La tienda de Don Verdi",
       date: "9",
       day: "jueves",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Teatro del Pueblo",
+      time: "10:00 hrs.",
       municipality: "Jaumave"
     },
     {
@@ -1437,17 +1338,17 @@ export const josePalacios: TamaulipecoArtist = {
       title: "La tienda de Don Verdi",
       date: "10",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza \"20 de Noviembre\"",
+      time: "17:00 hrs.",
       municipality: "Bustamante"
     },
     {
-      id: "pl-8",
+      id: "p-8",
       title: "La tienda de Don Verdi",
       date: "8",
       day: "miércoles",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Escuela Primaria Lauro Aguirre",
+      time: "9:00 hrs.",
       municipality: "Palmillas"
     },
     {
@@ -1455,8 +1356,8 @@ export const josePalacios: TamaulipecoArtist = {
       title: "La tienda de Don Verdi",
       date: "7",
       day: "martes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Escuela Primaria \"Benito Juárez\"",
+      time: "10:30 hrs.",
       municipality: "Tula"
     },
     {
@@ -1464,8 +1365,8 @@ export const josePalacios: TamaulipecoArtist = {
       title: "La tienda de Don Verdi",
       date: "6",
       day: "lunes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Escuela Miguel Hidalgo",
+      time: "11:30 hrs.",
       municipality: "Nuevo Morelos"
     }
   ]
@@ -1485,8 +1386,8 @@ export const mfoxLaPuertaDelTalento: TamaulipecoArtist = {
       title: "Urban revolution",
       date: "4",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza \"Hidalgo\"",
+      time: "18:00 hrs.",
       municipality: "Abasolo"
     },
     {
@@ -1494,8 +1395,8 @@ export const mfoxLaPuertaDelTalento: TamaulipecoArtist = {
       title: "Urban revolution",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Explanada de la Presidencia Municipal",
+      time: "19:00 hrs.",
       municipality: "Llera"
     }
   ]
@@ -1515,8 +1416,8 @@ export const rockpango: TamaulipecoArtist = {
       title: "Huasteco hasta los huesos",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Explanada Municipal",
+      time: "19:00 hrs.",
       municipality: "Soto la Marina"
     }
   ]
@@ -1536,8 +1437,8 @@ export const nortenosDeRioBravo: TamaulipecoArtist = {
       title: "En tierras Tamaulipecas",
       date: "4",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Explanada Municipal",
+      time: "19:00 hrs.",
       municipality: "Soto la Marina"
     },
     {
@@ -1545,8 +1446,8 @@ export const nortenosDeRioBravo: TamaulipecoArtist = {
       title: "En tierras Tamaulipecas",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Explanda de la Presidencia Municipal",
+      time: "18:30 hrs.",
       municipality: "Tula"
     },
     {
@@ -1554,17 +1455,17 @@ export const nortenosDeRioBravo: TamaulipecoArtist = {
       title: "En tierras Tamaulipecas",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Cultura",
+      time: "19:30 hrs.",
       municipality: "Xicoténcatl"
     },
     {
-      id: "al-3",
+      id: "a-3",
       title: "En tierras Tamaulipecas",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza \"Hidalgo\"",
+      time: "19:00 hrs.",
       municipality: "Aldama"
     }
   ]
@@ -1584,8 +1485,8 @@ export const grupoDanzaAnacahuitas: TamaulipecoArtist = {
       title: "Sones de mi México",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza \"Hidalgo\"",
+      time: "18:00 hrs.",
       municipality: "Abasolo"
     },
     {
@@ -1593,17 +1494,17 @@ export const grupoDanzaAnacahuitas: TamaulipecoArtist = {
       title: "Sones de mi México",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Explanada Municipal",
+      time: "19:00 hrs.",
       municipality: "Soto la Marina"
     },
     {
-      id: "gm-3",
+      id: "g-3",
       title: "Sones de mi México",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Auditorio del Ayuntamiento en la Cabecera Municipal",
+      time: "19:00 hrs.",
       municipality: "Güémez"
     }
   ]
@@ -1623,8 +1524,8 @@ export const grupoRelativo: TamaulipecoArtist = {
       title: "Las favoritas con Grupo Relativo",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Teatro del Pueblo",
+      time: "17:30 hrs.",
       municipality: "Padilla"
     },
     {
@@ -1632,8 +1533,8 @@ export const grupoRelativo: TamaulipecoArtist = {
       title: "Las favoritas con Grupo Relativo",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de la Cabecera Municipal",
+      time: "19:00 hrs.",
       municipality: "Güémez"
     }
   ]
@@ -1653,8 +1554,8 @@ export const bocatomaJazz: TamaulipecoArtist = {
       title: "El arte de la expresión musical",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Teatro del Pueblo",
+      time: "17:30 hrs.",
       municipality: "Padilla"
     }
   ]
@@ -1674,8 +1575,8 @@ export const grupoFolkloricoKauyumarie: TamaulipecoArtist = {
       title: "De costa a costa",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal Cabecera Municipal",
+      time: "16:00 hrs.",
       municipality: "Casas"
     },
     {
@@ -1683,8 +1584,8 @@ export const grupoFolkloricoKauyumarie: TamaulipecoArtist = {
       title: "De costa a costa",
       date: "4",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Escenario \"Plaza Juárez\"",
+      time: "20:00 hrs.",
       municipality: "Victoria"
     }
   ]
@@ -1704,18 +1605,9 @@ export const brassasMexicanBeat: TamaulipecoArtist = {
       title: "Música de banda del planeta tierra",
       date: "11",
       day: "sábado",
-      venue: "Teatro \"Amalia G. de Castillo Ledón del Centro Cultural Tamaulipas",
-      time: "Por confirmar",
+      venue: "Plaza \"Benito Juárez\"",
+      time: "19:00 hrs.",
       municipality: "Victoria"
-    },
-    {
-      id: "md-10",
-      title: "Música de banda del planeta tierra",
-      date: "10",
-      day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Madero"
     }
   ]
 };
@@ -1751,12 +1643,12 @@ export const apapachoTeatro: TamaulipecoArtist = {
   description: "¿Qué le preguntarías a tu \"yo\" del futuro o qué le dirías a tu niña de hace 25 años? El vuelo de la luciérnaga es una obra de teatro sensible para las jóvenes audiencias a partir de los 7 años. La obra aborda el tema del divorcio desde la mirada de Luz, una niña de 11 años, que explora su identidad en un relato profundo y lleno de ternura. Apapacho Arte y Diversidad es una agrupación sin fines de lucro que, desde 2015, trabaja por la inclusión artística y cultural. Desde su centro cultural independiente en Reynosa, han impulsado la formación artística en niñas, niños y jóvenes, así como la producción y promoción del teatro. La agrupación ha representado a Tamaulipas en importantes festivales como \"Chicos y chicas a escena\" en Xalapa, la Feria del Libro del Zócalo en CDMX, el Encuentro Nacional de los Amantes del Teatro y la Feria Internacional del Libro de la Habana, Cuba.",
   events: [
     {
-      id: "v-5",
+      id: "v-4",
       title: "El vuelo de la Luciérnaga",
-      date: "5",
-      day: "domingo",
-      venue: "Auditorio Alberto López del CCT",
-      time: "Por confirmar",
+      date: "4",
+      day: "sábado",
+      venue: "Escenario \"Plaza Juárez\"",
+      time: "20:00 hrs.",
       municipality: "Victoria"
     },
     {
@@ -1764,8 +1656,8 @@ export const apapachoTeatro: TamaulipecoArtist = {
       title: "El vuelo de la Luciérnaga",
       date: "6",
       day: "lunes",
-      venue: "Teatro del IMSS",
-      time: "Por confirmar",
+      venue: "Esc. \"Héctor Pérez Martínez\"",
+      time: "10:00 hrs.",
       municipality: "Mante"
     }
   ]
@@ -1785,8 +1677,8 @@ export const colectivoTrueque: TamaulipecoArtist = {
       title: "Animación con zanqueros y mimo",
       date: "8",
       day: "miércoles",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Primaria \"Leyes de Reforma\"",
+      time: "11:00 hrs.",
       municipality: "Llera"
     },
     {
@@ -1794,8 +1686,8 @@ export const colectivoTrueque: TamaulipecoArtist = {
       title: "Animación con zanqueros y mimo",
       date: "7",
       day: "martes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Techumbre de Plaza del Poblado Adolfo López Mateos",
+      time: "18:00 hrs.",
       municipality: "Ocampo"
     },
     {
@@ -1803,8 +1695,8 @@ export const colectivoTrueque: TamaulipecoArtist = {
       title: "Animación con zanqueros y mimo",
       date: "6",
       day: "lunes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Escuela Secundaria General",
+      time: "10:00 hrs.",
       municipality: "Xicoténcatl"
     },
     {
@@ -1813,35 +1705,26 @@ export const colectivoTrueque: TamaulipecoArtist = {
       date: "5",
       day: "domingo",
       venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "Gómez Farías"
+    },
+    {
+      id: "nm-12",
+      title: "Animación con zanqueros y mimo",
+      date: "12",
+      day: "domingo",
+      venue: "Explanada Ejidal, Ejido \"Ampliación de la Reforma\"",
+      time: "17:30 hrs.",
+      municipality: "Nuevo Morelos"
     },
     {
       id: "g-9",
       title: "Animación con zanqueros y mimo",
       date: "9",
       day: "jueves",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de Estación Manuel",
+      time: "19:00 hrs.",
       municipality: "González"
-    },
-    {
-      id: "nm-4",
-      title: "Animación con zanqueros y mimo",
-      date: "4",
-      day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Nuevo Morelos"
-    },
-    {
-      id: "am-3",
-      title: "Animación con zanqueros y mimo",
-      date: "3",
-      day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Antiguo Morelos"
     }
   ]
 };
@@ -1860,8 +1743,8 @@ export const percutamDuo: TamaulipecoArtist = {
       title: "Marimba perpetua",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de Jaumave",
+      time: "19:00 hrs.",
       municipality: "Jaumave"
     },
     {
@@ -1869,17 +1752,8 @@ export const percutamDuo: TamaulipecoArtist = {
       title: "Marimba perpetua",
       date: "11",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Palmillas"
-    },
-    {
-      id: "pl-12",
-      title: "Marimba perpetua",
-      date: "12",
-      day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de Palmillas",
+      time: "19:00 hrs.",
       municipality: "Palmillas"
     },
     {
@@ -1887,8 +1761,8 @@ export const percutamDuo: TamaulipecoArtist = {
       title: "Marimba perpetua",
       date: "4",
       day: "sábado",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Explanda de la Presidencia Municipal",
+      time: "18:30 hrs.",
       municipality: "Tula"
     },
     {
@@ -1896,8 +1770,8 @@ export const percutamDuo: TamaulipecoArtist = {
       title: "Marimba perpetua",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Presidencia Municipal",
+      time: "19:00 hrs.",
       municipality: "Ocampo"
     },
     {
@@ -1905,8 +1779,8 @@ export const percutamDuo: TamaulipecoArtist = {
       title: "Marimba perpetua",
       date: "5",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Cultura",
+      time: "19:30 hrs.",
       municipality: "Xicoténcatl"
     }
   ]
@@ -1926,8 +1800,8 @@ export const rondallaMagisterialTamaulipas: TamaulipecoArtist = {
       title: "Tributo al príncipe de la canción \"José José\"",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de Palmillas",
+      time: "19:00 hrs.",
       municipality: "Palmillas"
     },
     {
@@ -1935,8 +1809,8 @@ export const rondallaMagisterialTamaulipas: TamaulipecoArtist = {
       title: "Tributo al príncipe de la canción \"José José\"",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Techumbre de Plaza del Poblado Adolfo López Mateos",
+      time: "19:00 hrs.",
       municipality: "Ocampo"
     }
   ]
@@ -1965,8 +1839,8 @@ export const araelErihkaPena: TamaulipecoArtist = {
       title: "Tamaulipas es mi Tierra",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de González",
+      time: "20:00 hrs.",
       municipality: "González"
     }
   ]
@@ -1987,16 +1861,7 @@ export const laEspumaDeMar: TamaulipecoArtist = {
       date: "4",
       day: "sábado",
       venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Gómez Farías"
-    },
-    {
-      id: "gf-12",
-      title: "Si la brisa se vuelve canción, marejada musical por \"La espuma del mar\"",
-      date: "12",
-      day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "Gómez Farías"
     },
     {
@@ -2004,8 +1869,8 @@ export const laEspumaDeMar: TamaulipecoArtist = {
       title: "Si la brisa se vuelve canción, marejada musical por \"La espuma del mar\"",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal \"Plutarco Elías Calles\"",
+      time: "19:00 hrs.",
       municipality: "Mante"
     },
     {
@@ -2013,8 +1878,8 @@ export const laEspumaDeMar: TamaulipecoArtist = {
       title: "Si la brisa se vuelve canción, marejada musical por \"La espuma del mar\"",
       date: "5",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de González",
+      time: "20:00 hrs.",
       municipality: "González"
     }
   ]
@@ -2035,7 +1900,7 @@ export const elgarDisenoMusical: TamaulipecoArtist = {
       date: "4",
       day: "sábado",
       venue: "Castillo de la Nueva Apolonia",
-      time: "Por confirmar",
+      time: "19:00 hrs.",
       municipality: "Mante"
     }
   ]
@@ -2056,7 +1921,7 @@ export const teatroIngenioCreacion: TamaulipecoArtist = {
       date: "5",
       day: "domingo",
       venue: "Teatro del IMSS",
-      time: "Por confirmar",
+      time: "18:00 hrs.",
       municipality: "Mante"
     }
   ]
@@ -2077,7 +1942,7 @@ export const gatoNegro: TamaulipecoArtist = {
       date: "8",
       day: "miércoles",
       venue: "Teatro del IMSS",
-      time: "Por confirmar",
+      time: "18:00 hrs.",
       municipality: "Mante"
     },
     {
@@ -2086,7 +1951,7 @@ export const gatoNegro: TamaulipecoArtist = {
       date: "7",
       day: "martes",
       venue: "Teatro Principal del Espacio Cultural Metropolitano",
-      time: "Por confirmar",
+      time: "19:00 hrs.",
       municipality: "Tampico"
     }
   ]
@@ -2107,7 +1972,7 @@ export const teatromorfosis: TamaulipecoArtist = {
       date: "10",
       day: "viernes",
       venue: "Teatro del IMSS",
-      time: "Por confirmar",
+      time: "18:00 hrs.",
       municipality: "Mante"
     }
   ]
@@ -2128,7 +1993,7 @@ export const melissaCastellanos: TamaulipecoArtist = {
       date: "12",
       day: "domingo",
       venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "Mante"
     },
     {
@@ -2137,7 +2002,7 @@ export const melissaCastellanos: TamaulipecoArtist = {
       date: "11",
       day: "sábado",
       venue: "Lugar por definir",
-      time: "Por confirmar",
+      time: "Horario por definir",
       municipality: "González"
     }
   ]
@@ -2246,13 +2111,13 @@ export const adicto5: TamaulipecoArtist = {
   description: "Originaria de Ciudad Victoria, Adicto5 es una banda versátil de Pop-Rock con más de 20 años de trayectoria. Fundada en 2002 bajo el nombre \"Adicción\", se ha consolidado como uno de los grupos con mayor poder de convocatoria en la capital tamaulipeca, destacándose por sus presentaciones en vivo y su cercanía con el público. Los integrantes Kankel, Alicia, Walo, Meche y Fabián aportan experiencia en producción, giras, tours de medios y shows de televisión, sumando un sello único a cada interpretación. A lo largo de su carrera, Adicto5 ha participado en giras por el estado y el país, incluyendo ediciones anteriores del FICSM y festivales internacionales, además de colaborar con reconocidos artistas como Piso 21, RBD, Belinda, Moderatto, Maria José y Yuridia. La banda también ha apoyado diversas causas benéficas, demostrando su compromiso social y cultural desde la música. En esta edición del Festival Internacional en la Costa del Seno Mexicano 2025, Adicto5 llega con el espectáculo \"Noches Adictiva5\", un recorrido musical que va desde los clásicos de los 80 hasta hits actuales, siempre con el toque rock-pop que caracteriza a la banda, respetando la esencia de cada canción y ofreciendo al público una velada cargada de energía y nostalgia.",
   events: [
     {
-      id: "md-12",
+      id: "ma-4",
       title: "Noches Adictiva5",
-      date: "12",
-      day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
-      municipality: "Madero"
+      date: "4",
+      day: "sábado",
+      venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
+      time: "19:20 hrs.",
+      municipality: "Miguel Alemán"
     }
   ]
 };
@@ -2481,8 +2346,8 @@ export const festivalDeHuapango: TamaulipecoArtist = {
       title: "Se realiza inauguración del Festival con su Festival de Huapango",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de Llera",
+      time: "20:00 hrs.",
       municipality: "Llera"
     }
   ]
@@ -2502,8 +2367,8 @@ export const internacionalOrquestaTampico: TamaulipecoArtist = {
       title: "\"Un atardecer con la Internacional Orquesta Tampico de Claudio Rosas\"",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de Tula",
+      time: "20:00 hrs.",
       municipality: "Tula"
     }
   ]
@@ -2523,8 +2388,8 @@ export const aldebaranAcustico: TamaulipecoArtist = {
       title: "Acusticumbias",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de Bustamante",
+      time: "20:00 hrs.",
       municipality: "Bustamante"
     }
   ]
@@ -2544,8 +2409,8 @@ export const grupoHondaNorT: TamaulipecoArtist = {
       title: "Huapangos tamaulipecos, la raíz de mi tierra",
       date: "3",
       day: "viernes",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de Hidalgo",
+      time: "20:00 hrs.",
       municipality: "Hidalgo"
     },
     {
@@ -2553,9 +2418,31 @@ export const grupoHondaNorT: TamaulipecoArtist = {
       title: "Huapangos tamaulipecos, la raíz de mi tierra",
       date: "12",
       day: "domingo",
-      venue: "Lugar por definir",
-      time: "Por confirmar",
+      venue: "Plaza Principal de Gómez Farías",
+      time: "20:00 hrs.",
       municipality: "Gómez Farías"
+    }
+  ]
+};
+
+
+// Data de Andrés Gea y su guitarra mexicana
+export const andresGea: TamaulipecoArtist = {
+  id: "ag-001",
+  name: "Andrés Gea y su guitarra mexicana",
+  origin: "Tamaulipas",
+  category: "Música",
+  subcategory: "Música mexicana",
+  description: "Descripción no disponible",
+  events: [
+    {
+      id: "am-12",
+      title: "México y sus canciones",
+      date: "12",
+      day: "domingo",
+      venue: "Lugar por definir",
+      time: "Horario por definir",
+      municipality: "Antiguo Morelos"
     }
   ]
 };
@@ -2630,7 +2517,8 @@ export const tamaulipecosArtists: TamaulipecoArtist[] = [
   festivalDeHuapango,
   internacionalOrquestaTampico,
   aldebaranAcustico,
-  grupoHondaNorT
+  grupoHondaNorT,
+  andresGea
 ];
 
 // Función para obtener todos los eventos de un artista específico

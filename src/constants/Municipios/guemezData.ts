@@ -1,88 +1,87 @@
 // Data del Festival del Municipio Güémez
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Güémez
 export const guemezFestival: FestivalEvent[] = [
   {
-    id: "gm-1",
-    date: "3",
-    day: "Viernes",
-    title: "Sones de mi México",
-    artist: "Grupo de Danza Anacahuitas",
-    origin: "Tamaulipas",
-    category: "Danza",
-    subcategory: "Danza folclórica",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    id: "gü-1",
+    date: "8",
+    day: "miércoles",
+    title: "Organillermo",
+    artist: "Guillermo Méndez",
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Lugar por definir",
+    time: "Horario por definir"
   },
   {
-    id: "gm-2",
+    id: "gü-2",
+    date: "10",
+    day: "viernes",
+    title: "Cuentos del mundo",
+    artist: "Roberto Cuentacuentos",
+    origin: "Tamaulipas",
+    category: "Literatura",
+    venue: "Foro de la Escuela Secundaria Técnica #43",
+    time: "11:00 hrs."
+  },
+  {
+    id: "gü-3",
     date: "5",
-    day: "Domingo",
-    title: "Trío UATsteco",
+    day: "domingo",
+    title: "Concierto Trío UATsteco",
     artist: "Trío UATsteco",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    venue: "Lugar por definir",
+    time: "Horario por definir"
   },
   {
-    id: "gm-3",
-    date: "8",
-    day: "Miércoles",
-    title: "Organillermo",
-    artist: "Organillermo",
-    origin: "Jalisco",
-    category: "Teatro",
-    subcategory: "Teatro de calle",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    director: "Guillermo Méndez"
-  },
-  {
-    id: "gm-4",
-    date: "9",
-    day: "Jueves",
-    title: "Aristótefes y Sócrafes y el Misterio del Movimiento",
-    artist: "Érase una vez dos veces",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Cuentacuentos teatralizado",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    artisticDirection: "Alberto Dávila y Josué Castillo"
-  },
-  {
-    id: "gm-5",
+    id: "gü-4",
     date: "10",
-    day: "Viernes",
+    day: "viernes",
     title: "Canasta de cuentos de la zona donde vivimos",
-    artist: "Grupo de Teatro Guarapo",
+    artist: "Grupo de teatro Guarapo",
     origin: "Tamaulipas",
     category: "Teatro",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    venue: "Foro de la Escuela Secundaria Técnica #43",
+    time: "11:00 hrs."
   },
   {
-    id: "gm-6",
+    id: "gü-5",
+    date: "3",
+    day: "viernes",
+    title: "Sones de mi México",
+    artist: "Grupo de danza Anacahuitas",
+    origin: "Tamaulipas",
+    category: "Danza",
+    venue: "Auditorio del Ayuntamiento en la Cabecera Municipal",
+    time: "19:00 hrs."
+  },
+  {
+    id: "gü-6",
     date: "12",
-    day: "Domingo",
+    day: "domingo",
     title: "Las favoritas con Grupo Relativo",
     artist: "Grupo Relativo",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Norteño",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Plaza Principal de la Cabecera Municipal",
+    time: "19:00 hrs."
   }
 ];
 
-// Información general del festival de Güémez
+// Información del Festival del Municipio Güémez
 export const guemezFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Güémez",
-  location: "Municipio Güémez, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
-  totalEvents: 6,
-  categories: ["Danza", "Música", "Teatro"]
+  name: "Güémez",
+  location: "Güémez",
+  totalEvents: 0,
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario","Literatura","Música","Teatro","Danza"]
 };
+
+// Exposiciones del Festival del Municipio Güémez
+export const guemezFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

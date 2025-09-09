@@ -99,14 +99,7 @@ export default function InternationalArtistsPage() {
     <>
       <FestivalBackground />
       <div className={`min-h-screen w-full relative z-10 overflow-x-hidden ${isDark ? 'text-white' : 'text-gray-800'}`} style={{ WebkitOverflowScrolling: 'touch' }}>
-        <div className="flex items-center justify-between px-4 py-2 text-xs md:hidden">
-          <span className="font-medium">9:41</span>
-          <div className="flex items-center gap-1">
-            <Signal className="w-4 h-4" />
-            <Wifi className="w-4 h-4" />
-            <Battery className="w-4 h-4" />
-          </div>
-        </div>
+ 
 
         <div className="relative z-10" style={{ minHeight: '100vh', overflowY: 'auto' }}>
           <div className="flex items-center justify-between p-4 md:p-6">

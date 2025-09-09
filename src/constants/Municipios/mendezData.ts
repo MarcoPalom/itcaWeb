@@ -1,93 +1,87 @@
 // Data del Festival del Municipio Méndez
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Méndez
 export const mendezFestival: FestivalEvent[] = [
   {
-    id: "md-1",
-    date: "3",
-    day: "Viernes",
-    title: "Concierto - baile acá por el norte",
-    artist: "Amenaza Norteña",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Norteña",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    description: "Sector carretero"
-  },
-  {
-    id: "md-2",
-    date: "4",
-    day: "Sábado",
-    title: "Afro-ecos: raíces que susurran en el canto",
-    artist: "Kani Ensamble Coral",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Coral",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    description: "Sector carretero"
-  },
-  {
-    id: "md-3",
+    id: "mé-1",
     date: "7",
-    day: "Martes",
+    day: "martes",
     title: "¡Ajua Raza! Homenaje a Piporro",
     artist: "Grupo Tayer",
-    origin: "Nuevo León",
-    category: "Música",
-    subcategory: "rancheras, corridos, polkas, redovas, mazurkas y huapangos",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    description: "Escuelas"
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Auditorio",
+    time: "16:00 hrs."
   },
   {
-    id: "md-4",
+    id: "mé-2",
     date: "9",
-    day: "Jueves",
+    day: "jueves",
     title: "Cazando Estrellas en Bicicleta",
     artist: "Las Plastiqué Teatro",
-    origin: "Nuevo León",
+    origin: "Nacional",
     category: "Teatro",
-    subcategory: "Teatro de calle para infancias",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    description: "Escuelas"
+    venue: "Escuela Primaria",
+    time: "15:00 hrs."
   },
   {
-    id: "md-5",
+    id: "mé-3",
     date: "10",
-    day: "Viernes",
+    day: "viernes",
     title: "Hermanos del equilibrio",
     artist: "Cirko Frontera",
     origin: "Tamaulipas",
-    category: "Arte de la representación",
-    subcategory: "Circense",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    description: "Cabecera municipal"
+    category: "Interdisciplinario",
+    venue: "Auditorio",
+    time: "16:00 hrs."
   },
   {
-    id: "md-6",
+    id: "mé-4",
+    date: "3",
+    day: "viernes",
+    title: "Concierto-baile acá por el norte",
+    artist: "Amenaza Norteña",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Lugar por definir",
+    time: "Horario por definir"
+  },
+  {
+    id: "mé-5",
+    date: "4",
+    day: "sábado",
+    title: "Afro-ecos: raíces que susurran en el canto",
+    artist: "Kani Ensamble Coral",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Lugar por definir",
+    time: "Horario por definir"
+  },
+  {
+    id: "mé-6",
     date: "12",
-    day: "Domingo",
+    day: "domingo",
     title: "Espectáculo musical",
     artist: "Son Kndla",
     origin: "Tamaulipas",
-    category: "Música",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    description: "Cabecera municipal"
+    category: "Interdisciplinario",
+    venue: "Lugar por definir",
+    time: "Por confirmar"
   }
 ];
 
-// Información general del festival de Méndez
+// Información del Festival del Municipio Méndez
 export const mendezFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Méndez",
-  location: "Municipio Méndez, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
-  totalEvents: 6,
-  categories: ["Música", "Teatro", "Arte de la representación"]
+  name: "Méndez",
+  location: "Méndez",
+  totalEvents: 0,
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario","Teatro","Música"]
 };
+
+// Exposiciones del Festival del Municipio Méndez
+export const mendezFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

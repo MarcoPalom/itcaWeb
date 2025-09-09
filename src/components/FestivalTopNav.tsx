@@ -17,6 +17,7 @@ const FestivalTopNav = () => {
     { href: "/festival", label: "Festival" },
     { href: "/national-artists", label: "Artistas Nacionales" },
     { href: "/international-artists", label: "Artistas Internacionales" },
+    { href: "/tamaulipecos-artists", label: "Artistas Tamaulipecos" },
     { href: "/municipal-billboards", label: "Municipios" },
   ];
 
@@ -28,7 +29,7 @@ const FestivalTopNav = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-gray-800/50 shadow-lg"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center h-16 space-x-8">
+        <div className="flex items-center justify-between md:justify-center h-16 space-x-8">
           {/* Logo */}
           <Link href="/festival" className="flex items-center">
             <motion.div
@@ -46,12 +47,13 @@ const FestivalTopNav = () => {
             </motion.div>
           </Link>
 
-          {/* Navigation Links */}
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => {
               const isActive = pathname === item.href || 
                 (item.href === "/festival" && pathname === "/") ||
                 (item.href === "/national-artists" && pathname.startsWith("/artist/")) ||
+                (item.href === "/tamaulipecos-artists" && pathname.startsWith("/tamaulipeco/")) ||
                 (item.href === "/municipal-billboards" && pathname.startsWith("/municipio/"));
               
               return (
@@ -70,26 +72,28 @@ const FestivalTopNav = () => {
             })}
           </div>
 
-          {/* Theme Toggle Switch */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={toggleTheme}
-            className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-black"
-          >
-            <span
-              className={`${
-                isDark ? 'translate-x-6' : 'translate-x-1'
-              } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              {isDark ? (
-                <Moon className="h-3 w-3 text-gray-300 ml-1" />
-              ) : (
-                <Sun className="h-3 w-3 text-yellow-400 mr-1" />
-              )}
-            </div>
-          </motion.button>
+          {/* Desktop Theme Toggle Switch */}
+          <div className="hidden md:block">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={toggleTheme}
+              className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-black"
+            >
+              <span
+                className={`${
+                  isDark ? 'translate-x-6' : 'translate-x-1'
+                } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                {isDark ? (
+                  <Moon className="h-3 w-3 text-gray-300 ml-1" />
+                ) : (
+                  <Sun className="h-3 w-3 text-yellow-400 mr-1" />
+                )}
+              </div>
+            </motion.button>
+          </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -121,6 +125,7 @@ const FestivalTopNav = () => {
                   const isActive = pathname === item.href || 
                     (item.href === "/festival" && pathname === "/") ||
                     (item.href === "/national-artists" && pathname.startsWith("/artist/")) ||
+                    (item.href === "/tamaulipecos-artists" && pathname.startsWith("/tamaulipeco/")) ||
                     (item.href === "/municipal-billboards" && pathname.startsWith("/municipio/"));
                   
                   return (
@@ -140,7 +145,27 @@ const FestivalTopNav = () => {
                 })}
                 
                 {/* Theme Toggle in Mobile Menu */}
-        
+                <div className="px-3 py-2">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={toggleTheme}
+                    className="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-black"
+                  >
+                    <span
+                      className={`${
+                        isDark ? 'translate-x-6' : 'translate-x-1'
+                      } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      {isDark ? (
+                        <Moon className="h-3 w-3 text-gray-300 ml-1" />
+                      ) : (
+                        <Sun className="h-3 w-3 text-yellow-400 mr-1" />
+                      )}
+                    </div>
+                  </motion.button>
+                </div>
               </div>
             </motion.div>
           )}

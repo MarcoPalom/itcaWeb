@@ -1,0 +1,51 @@
+// Constantes de imágenes para municipios
+export const municipalImages: { [key: string]: string } = {
+  "Victoria": "/images/municipios/victoria.jpeg",
+  "Matamoros": "/images/municipios/matamoros.jpg",
+  "Tampico": "/images/municipios/tampico.jpeg",
+  "Reynosa": "/images/municipios/reynosa.jpg",
+  "Nuevo Laredo": "/images/municipios/nuevolaredo.jpg",
+  "Altamira": "/images/municipios/altamira.jpg",
+  "Camargo": "/images/municipios/camargo.jpg",
+  "Mante": "/images/municipios/mante.jpg",
+  "San Fernando": "/images/municipios/sanfernando.jpg",
+  "Valle Hermoso": "/images/municipios/vallehermoso.jpg",
+  "Río Bravo": "/images/municipios/riobravo.jpg",
+  "Miguel Alemán": "/images/municipios/miguelaleman.jpg",
+  "González": "/images/municipios/gonzales.jpg",
+  "Xicoténcatl": "/images/municipios/xicotencalth.jpeg",
+  "Llera": "/images/municipios/llera.jpg",
+  "Jaumave": "/images/municipios/jaumave.jpg",
+  "Palmillas": "/images/municipios/palmillas.jpg",
+  "Mainero": "/images/municipios/mainero.jpg",
+  "Villagrán": "/images/municipios/villagran.jpg",
+  "Bustamante": "/images/municipios/bustamante.jpg",
+  "Miquihuana": "/images/municipios/miquihuana.jpg",
+  "Tula": "/images/municipios/tula.jpg",
+  "Ocampo": "/images/municipios/ocampo.jpg",
+  "Nuevo Morelos": "/images/municipios/nuevomorelos.jpg",
+  "Antiguo Morelos": "/images/municipios/antiguomorelo.jpg",
+  "Casas": "/images/municipios/casas.jpg",
+  "Gómez Farías": "/images/municipios/gomezfarias.jpg",
+  "Guerrero": "/images/municipios/guerrero.jpg",
+  "Güémez": "/images/municipios/guemez.jpg",
+  "Hidalgo": "/images/municipios/hidalgo.jpg",
+  "Jiménez": "/images/municipios/jimenez.jpg",
+  "Madero": "/images/municipios/madero.jpg",
+  "Méndez": "/images/municipios/mendez.jpg",
+  "Mier": "/images/municipios/mier.jpg",
+  "Padilla": "/images/municipios/padilla.jpg",
+  "San Carlos": "/images/municipios/sancarlos.jpg",
+  "San Nicolás": "/images/municipios/sannicolas.jpg",
+  "Soto la Marina": "/images/municipios/sotolamarina.jpg",
+  "Abasolo": "/images/municipios/abasolo.jpg",
+  "Aldama": "/images/municipios/aldama.jpg",
+  "Burgos": "/images/municipios/burgos.jpg",
+  "Gustavo Díaz Ordaz": "/images/municipios/gustavo.jpg",
+  "Cruillas": "/images/municipios/cruillas.jpg"
+};
+
+// Función helper para obtener imagen de municipio por nombre
+export const getMunicipalImage = (municipalityName: string): string => {
+  return municipalImages[municipalityName] || "/images/municipal-festival-placeholder.jpg";
+};

@@ -1,111 +1,120 @@
 // Data del Festival del Municipio Soto la Marina
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Soto la Marina
-export const sotoLaMarinaFestival: FestivalEvent[] = [
+export const sotolamarinaFestival: FestivalEvent[] = [
   {
-    id: "slm-1",
-    date: "3",
-    day: "Viernes",
-    title: "Huasteco hasta los huesos",
-    artist: "Rockpango",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Fusión",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    id: "so-1",
+    date: "11",
+    day: "sábado",
+    title: "Del Vali",
+    artist: "Del Vali",
+    origin: "Internacional",
+    category: "Interdisciplinario",
+    venue: "Explanada Municipal",
+    time: "19:00 hrs."
   },
   {
-    id: "slm-2",
-    date: "4",
-    day: "Sábado",
-    title: "En tierras Tamaulipecas",
-    artist: "Los norteños de Río Bravo",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Norteño",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    id: "so-2",
+    date: "11",
+    day: "sábado",
+    title: "Wero Hernández",
+    artist: "Wero Hernández",
+    origin: "Internacional",
+    category: "Interdisciplinario",
+    venue: "Explanada Municipal",
+    time: "19:00 hrs."
   },
   {
-    id: "slm-3",
+    id: "so-3",
+    date: "9",
+    day: "jueves",
+    title: "Seguiré mi viaje",
+    artist: "Las Hermanas García",
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Explanada Municipal",
+    time: "19:00 hrs."
+  },
+  {
+    id: "so-4",
     date: "5",
-    day: "Domingo",
+    day: "domingo",
     title: "De amores, polka y huapango",
     artist: "La Nota Alegre",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Norteño",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Explanada Municipal",
+    time: "19:00 hrs."
   },
   {
-    id: "slm-4",
+    id: "so-5",
     date: "8",
-    day: "Miércoles",
+    day: "miércoles",
     title: "Del Circo a la Calle",
     artist: "Cirque erös",
     origin: "Tamaulipas",
-    category: "Arte de la representación",
-    subcategory: "Circense",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Explanada Municipal",
+    time: "19:00 hrs."
   },
   {
-    id: "slm-5",
-    date: "9",
-    day: "Jueves",
-    title: "Seguiré mi viaje",
-    artist: "Las Hermanas García",
-    origin: "Guerrero",
-    category: "Música",
-    subcategory: "Boleros Costeños",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "slm-6",
+    id: "so-6",
     date: "10",
-    day: "Viernes",
+    day: "viernes",
     title: "Paseando con huapangos y tradición",
     artist: "Tradición Genuina",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Huasteca",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Explanada Municipal",
+    time: "19:00 hrs."
   },
   {
-    id: "slm-7",
-    date: "11",
-    day: "Sábado",
-    title: "Del Vali & Wero Hernández",
-    artist: "Del Vali & Wero Hernández",
-    origin: "Estados Unidos",
-    category: "Música",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    id: "so-7",
+    date: "3",
+    day: "viernes",
+    title: "Huasteco hasta los huesos",
+    artist: "Rockpango",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Explanada Municipal",
+    time: "19:00 hrs."
   },
   {
-    id: "slm-8",
+    id: "so-8",
+    date: "4",
+    day: "sábado",
+    title: "En tierras Tamaulipecas",
+    artist: "Norteños de Río Bravo",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Explanada Municipal",
+    time: "19:00 hrs."
+  },
+  {
+    id: "so-9",
     date: "12",
-    day: "Domingo",
+    day: "domingo",
     title: "Sones de mi México",
-    artist: "Grupo de Danza Anacahuitas",
+    artist: "Grupo de danza Anacahuitas",
     origin: "Tamaulipas",
     category: "Danza",
-    subcategory: "Danza folclórica",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    venue: "Explanada Municipal",
+    time: "19:00 hrs."
   }
 ];
 
-// Información general del festival de Soto la Marina
+// Información del Festival del Municipio Soto la Marina
 export const sotoLaMarinaFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Soto la Marina",
-  location: "Municipio Soto la Marina, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
-  totalEvents: 8,
-  categories: ["Música", "Danza", "Arte de la representación"]
+  name: "Soto la Marina",
+  location: "Soto la Marina",
+  totalEvents: 9,
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario","Danza"]
 };
+
+// Exposiciones del Festival del Municipio Soto la Marina
+export const sotolamarinaFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

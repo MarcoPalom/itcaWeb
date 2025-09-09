@@ -10,6 +10,7 @@ interface Event {
   venue?: string
   time?: string
   municipality: string
+  artistImage?: string
 }
 
 interface EventListProps {
@@ -41,7 +42,7 @@ export default function EventList({ events, artistImage, artistName }: EventList
             {/* Event Image */}
             <div className="w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden flex-shrink-0 relative">
               <Image
-                src={artistImage}
+                src={event.artistImage || artistImage}
                 alt={event.title || event.municipality}
                 fill
                 className="object-cover"

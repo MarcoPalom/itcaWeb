@@ -1,99 +1,109 @@
 // Data del Festival del Municipio Valle Hermoso
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Valle Hermoso
-export const valleHermosoFestival: FestivalEvent[] = [
+export const vallehermosoFestival: FestivalEvent[] = [
   {
-    id: "vh-1",
-    date: "3",
-    day: "Viernes",
-    title: "Huasteca viva: 'Sonidos y raíces en el corazón tamaulipeco'",
-    artist: "3 décadas de tradición con Soraima y sus Huastecos",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Huasteca",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    id: "va-1",
+    date: "5",
+    day: "domingo",
+    title: "Del Vali",
+    artist: "Del Vali",
+    origin: "Internacional",
+    category: "Interdisciplinario",
+    venue: "Foro al Aire Libre de la Plaza Principal",
+    time: "19:30 hrs."
   },
   {
-    id: "vh-2",
+    id: "va-2",
+    date: "5",
+    day: "domingo",
+    title: "Wero Hernández",
+    artist: "Wero Hernández",
+    origin: "Internacional",
+    category: "Interdisciplinario",
+    venue: "Foro al Aire Libre de la Plaza Principal",
+    time: "19:30 hrs."
+  },
+  {
+    id: "va-3",
+    date: "10",
+    day: "viernes",
+    title: "Cazando Estrellas en Bicicleta",
+    artist: "Las Plastiqué Teatro",
+    origin: "Nacional",
+    category: "Teatro",
+    venue: "Escuela Secundaria General #1 Lic.",
+    time: "11:00 hrs."
+  },
+  {
+    id: "va-4",
     date: "4",
-    day: "Sábado",
+    day: "sábado",
     title: "Concierto Fara Fara",
     artist: "Las Jaras",
-    origin: "Nuevo León",
+    origin: "Nacional",
     category: "Música",
-    subcategory: "Tradicional, polka, chotis",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    venue: "Foro al Aire Libre de la Plaza Principal",
+    time: "19:30 hrs."
   },
   {
-    id: "vh-3",
-    date: "5",
-    day: "Domingo",
-    title: "Del Vali & Wero Hernández",
-    artist: "Del Vali & Wero Hernández",
-    origin: "Estados Unidos",
-    category: "Música",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    id: "va-5",
+    date: "3",
+    day: "viernes",
+    title: "Huasteca viva:",
+    artist: "Soraima y sus Huastecos",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Foro al Aire Libre de la Plaza Principal",
+    time: "19:30 hrs."
   },
   {
-    id: "vh-4",
+    id: "va-6",
     date: "9",
-    day: "Jueves",
+    day: "jueves",
     title: "Hermanos del equilibrio",
     artist: "Cirko Frontera",
     origin: "Tamaulipas",
-    category: "Arte de la representación",
-    subcategory: "Circense",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Escuela Secundaria General #2 Profr.",
+    time: "11:00 hrs."
   },
   {
-    id: "vh-5",
-    date: "10",
-    day: "Viernes",
-    title: "Cazando Estrellas en Bicicleta",
-    artist: "Las Plastiqué Teatro",
-    origin: "Nuevo León",
-    category: "Teatro",
-    subcategory: "Teatro de calle para infancias",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "vh-6",
+    id: "va-7",
     date: "11",
-    day: "Sábado",
+    day: "sábado",
     title: "De amores, polka y huapango",
     artist: "La Nota Alegre",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Norteña",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Foro al Aire Libre de la Plaza Principal",
+    time: "19:30 hrs."
   },
   {
-    id: "vh-7",
+    id: "va-8",
     date: "12",
-    day: "Domingo",
+    day: "domingo",
     title: "Raíces del pueblo: música del norte tamaulipeco",
-    artist: "Los del Pueblo",
+    artist: "Los Del Pueblo",
     origin: "Tamaulipas",
     category: "Música",
-    subcategory: "Fusión",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    venue: "Foro al Aire Libre de la Plaza Principal",
+    time: "19:30 hrs."
   }
 ];
 
-// Información general del festival de Valle Hermoso
+// Información del Festival del Municipio Valle Hermoso
 export const valleHermosoFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Valle Hermoso",
-  location: "Municipio Valle Hermoso, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
-  totalEvents: 7,
-  categories: ["Música", "Teatro", "Arte de la representación"]
+  name: "Valle Hermoso",
+  location: "Valle Hermoso",
+  totalEvents: 8,
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario","Teatro","Música"]
 };
+
+// Exposiciones del Festival del Municipio Valle Hermoso
+export const vallehermosoFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

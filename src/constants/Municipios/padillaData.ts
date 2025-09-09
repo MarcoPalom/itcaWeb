@@ -1,100 +1,98 @@
 // Data del Festival del Municipio Padilla
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Padilla
 export const padillaFestival: FestivalEvent[] = [
   {
-    id: "pd-1",
-    date: "3",
-    day: "Viernes",
-    title: "Las favoritas con Grupo Relativo",
-    artist: "Grupo Relativo",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Norteño",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "pd-2",
-    date: "4",
-    day: "Sábado",
-    title: "Raíces del pueblo: música del norte tamaulipeco",
-    artist: "Los del Pueblo",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Fusión",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "pd-3",
+    id: "pa-1",
     date: "5",
-    day: "Domingo",
+    day: "domingo",
     title: "Organillermo",
-    artist: "Organillermo",
-    origin: "Jalisco",
-    category: "Teatro",
-    subcategory: "Teatro de calle",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    director: "Guillermo Méndez"
+    artist: "Guillermo Méndez",
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Teatro del Pueblo",
+    time: "17:30 hrs."
   },
   {
-    id: "pd-4",
-    date: "8",
-    day: "Miércoles",
-    title: "Canasta de cuentos de la zona donde vivimos",
-    artist: "Grupo de Teatro Guarapo",
+    id: "pa-2",
+    date: "4",
+    day: "sábado",
+    title: "Raíces del pueblo: música del norte tamaulipeco",
+    artist: "Los Del Pueblo",
     origin: "Tamaulipas",
-    category: "Teatro",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Música",
+    venue: "Teatro del Pueblo",
+    time: "17:30 hrs."
   },
   {
-    id: "pd-5",
-    date: "10",
-    day: "Jueves",
-    title: "Cuentos del mundo",
-    artist: "Roberto Cuentacuentos",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Cuentacuentos",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "pd-6",
+    id: "pa-3",
     date: "11",
-    day: "Sábado",
+    day: "sábado",
     title: "Paseando con huapangos y tradición",
     artist: "Tradición Genuina",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Huasteca",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Teatro del Pueblo",
+    time: "17:30 hrs."
   },
   {
-    id: "pd-7",
+    id: "pa-4",
+    date: "9",
+    day: "jueves",
+    title: "Cuentos del mundo",
+    artist: "Roberto Cuentacuentos",
+    origin: "Tamaulipas",
+    category: "Literatura",
+    venue: "Escuela Primaria",
+    time: "9:00 hrs."
+  },
+  {
+    id: "pa-5",
+    date: "8",
+    day: "miércoles",
+    title: "Canasta de cuentos de la zona donde vivimos",
+    artist: "Grupo de teatro Guarapo",
+    origin: "Tamaulipas",
+    category: "Teatro",
+    venue: "Escuela Primaria",
+    time: "9:00 hrs."
+  },
+  {
+    id: "pa-6",
+    date: "3",
+    day: "viernes",
+    title: "Las favoritas con Grupo Relativo",
+    artist: "Grupo Relativo",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Teatro del Pueblo",
+    time: "17:30 hrs."
+  },
+  {
+    id: "pa-7",
     date: "12",
-    day: "Domingo",
+    day: "domingo",
     title: "El arte de la expresión musical",
     artist: "Bocatoma Jazz",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Fusión",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Teatro del Pueblo",
+    time: "17:30 hrs."
   }
 ];
 
-// Información general del festival de Padilla
+// Información del Festival del Municipio Padilla
 export const padillaFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Padilla",
-  location: "Municipio Padilla, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
+  name: "Padilla",
+  location: "Padilla",
   totalEvents: 7,
-  categories: ["Música", "Teatro"]
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario","Música","Literatura","Teatro"]
 };
+
+// Exposiciones del Festival del Municipio Padilla
+export const padillaFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

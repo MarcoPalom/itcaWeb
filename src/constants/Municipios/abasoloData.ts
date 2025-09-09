@@ -1,100 +1,98 @@
 // Data del Festival del Municipio Abasolo
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Abasolo
 export const abasoloFestival: FestivalEvent[] = [
   {
     id: "ab-1",
-    date: "3",
-    day: "Viernes",
-    title: "Herencia Norteña",
-    artist: "Grupo Pendiente",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Norteño",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    date: "5",
+    day: "domingo",
+    title: "El Lobo",
+    artist: "La Percha Teatro",
+    origin: "Nacional",
+    category: "Teatro",
+    venue: "Plaza",
+    time: "18:00 hrs."
   },
   {
     id: "ab-2",
-    date: "4",
-    day: "Sábado",
-    title: "Urban revolution",
-    artist: "MFOX La Puerta del Talento",
+    date: "12",
+    day: "domingo",
+    title: "Llamando a base",
+    artist: "Colectivo teatro de bolsillo",
     origin: "Tamaulipas",
-    category: "Danza",
-    subcategory: "Urbana y Hip Hop",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Teatro",
+    venue: "Plaza",
+    time: "18:00 hrs."
   },
   {
     id: "ab-3",
-    date: "5",
-    day: "Domingo",
-    title: "La Percha Teatro",
-    artist: "La Percha Teatro",
-    origin: "Nuevo León",
-    category: "Teatro",
-    subcategory: "Teatro de calle",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "ab-4",
-    date: "6",
-    day: "Lunes",
-    title: "Canasta de cuentos de la zona donde vivimos",
-    artist: "Grupo de Teatro Guarapo",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "ab-5",
     date: "7",
-    day: "Martes",
+    day: "martes",
     title: "Del Circo a la Calle",
     artist: "Cirque erös",
     origin: "Tamaulipas",
-    category: "Arte de la representación",
-    subcategory: "Circense",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Plaza",
+    time: "18:00 hrs."
+  },
+  {
+    id: "ab-4",
+    date: "3",
+    day: "viernes",
+    title: "Herencia Norteña",
+    artist: "Grupo Pendiente",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Plaza",
+    time: "18:00 hrs."
+  },
+  {
+    id: "ab-5",
+    date: "6",
+    day: "lunes",
+    title: "Canasta de cuentos de la zona donde vivimos",
+    artist: "Grupo de teatro Guarapo",
+    origin: "Tamaulipas",
+    category: "Teatro",
+    venue: "Plaza",
+    time: "18:00 hrs."
   },
   {
     id: "ab-6",
+    date: "4",
+    day: "sábado",
+    title: "Urban revolution",
+    artist: "MFOX La Puerta del Talento",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Plaza",
+    time: "18:00 hrs."
+  },
+  {
+    id: "ab-7",
     date: "11",
-    day: "Sábado",
+    day: "sábado",
     title: "Sones de mi México",
     artist: "Grupo de danza Anacahuitas",
     origin: "Tamaulipas",
     category: "Danza",
-    subcategory: "Danza folclórica",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "ab-7",
-    date: "12",
-    day: "Domingo",
-    title: "Llamando a base",
-    artist: "Teatro de bolsillo",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Infantil",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    director: "Armando Mancilla"
+    venue: "Plaza",
+    time: "18:00 hrs."
   }
 ];
 
-// Información general del festival de Abasolo
+// Información del Festival del Municipio Abasolo
 export const abasoloFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Abasolo",
-  location: "Municipio Abasolo, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
+  name: "Abasolo",
+  location: "Abasolo",
   totalEvents: 7,
-  categories: ["Música", "Danza", "Teatro", "Arte de la representación"]
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Teatro","Interdisciplinario","Danza"]
 };
+
+// Exposiciones del Festival del Municipio Abasolo
+export const abasoloFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

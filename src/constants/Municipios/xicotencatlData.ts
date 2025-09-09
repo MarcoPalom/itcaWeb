@@ -5,100 +5,94 @@ import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 export const xicotencatlFestival: FestivalEvent[] = [
   {
     id: "xi-1",
-    date: "3",
-    day: "Viernes",
-    title: "Tamaulipas es mi Tierra",
-    artist: "Arael & Erihka Peña",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Regional",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    date: "4",
+    day: "sábado",
+    title: "¡Llévame!",
+    artist: "Compañía Claunodromo",
+    origin: "Nacional",
+    category: "Interdisciplinario",
+    venue: "Plaza Cultura",
+    time: "19:30 hrs."
   },
   {
     id: "xi-2",
-    date: "4",
-    day: "Sábado",
-    title: "¡Llévame!",
-    artist: "Compañía Claunódromo",
-    origin: "Jalisco",
-    category: "Teatro",
-    subcategory: "Teatro Comedia",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    date: "10",
+    day: "viernes",
+    title: "Concierto Quinteto de Alientos UAT",
+    artist: "Quinteto de Alientos UAT",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Plaza Cultura",
+    time: "19:30 hrs."
   },
   {
     id: "xi-3",
-    date: "5",
-    day: "Domingo",
-    title: "Marimba Perpetua",
-    artist: "Percutam Dúo",
+    date: "12",
+    day: "domingo",
+    title: "Concierto Trío Bohemia UAT",
+    artist: "Trío Bohemia UAT",
     origin: "Tamaulipas",
     category: "Música",
-    subcategory: "Marimba",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    venue: "Plaza Cultura",
+    time: "19:30 hrs."
   },
   {
     id: "xi-4",
-    date: "6",
-    day: "Lunes",
-    title: "Animación con zanqueros y mimo",
-    artist: "Colectivo Trueque",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Animación",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "xi-5",
-    date: "10",
-    day: "Viernes",
-    title: "Quinteto de Alientos",
-    artist: "UAT",
-    origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Alientos",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "xi-6",
     date: "11",
-    day: "Sábado",
+    day: "sábado",
     title: "En tierras Tamaulipecas",
     artist: "Norteños de Río Bravo",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Norteño",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    category: "Interdisciplinario",
+    venue: "Plaza Cultura",
+    time: "19:30 hrs."
+  },
+  {
+    id: "xi-5",
+    date: "6",
+    day: "lunes",
+    title: "Animación con zanqueros y mimo",
+    artist: "Colectivo Trueque",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Escuela Secundaria General",
+    time: "10:00 hrs."
+  },
+  {
+    id: "xi-6",
+    date: "5",
+    day: "domingo",
+    title: "Marimba perpetua",
+    artist: "Percutam Dúo",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Plaza Cultura",
+    time: "19:30 hrs."
   },
   {
     id: "xi-7",
-    date: "12",
-    day: "Domingo",
-    title: "Trío Bohemia",
-    artist: "UAT",
+    date: "3",
+    day: "viernes",
+    title: "Tamaulipas es mi Tierra",
+    artist: "Arael & Erihka Peña",
     origin: "Tamaulipas",
-    category: "Música",
-    subcategory: "Trío",
-    venue: "Por confirmar",
+    category: "Interdisciplinario",
+    venue: "Lugar por definir",
     time: "Por confirmar"
   }
 ];
 
-// Exposiciones del Festival de Xicoténcatl (por ahora vacío, se puede agregar después)
-export const xicotencatlExhibitions: FestivalExhibition[] = [];
-
-// Información general del festival de Xicoténcatl
+// Información del Festival del Municipio Xicoténcatl
 export const xicotencatlFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Xicoténcatl",
-  location: "Municipio Xicoténcatl, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
-  mainVenue: "Por confirmar",
+  name: "Xicoténcatl",
+  location: "Xicoténcatl",
   totalEvents: 7,
-  categories: ["Música", "Teatro"]
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario","Música"]
 };
+
+// Exposiciones del Festival del Municipio Xicoténcatl
+export const xicotencatlFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];

@@ -1,54 +1,32 @@
 // Data del Festival del Municipio Mainero
-import { FestivalEvent, FestivalInfo } from '../types';
+import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
 // Data del Festival del Municipio Mainero
 export const maineroFestival: FestivalEvent[] = [
   {
-    id: "mn-1",
-    date: "3",
-    day: "Viernes",
-    title: "Con las manos entre los pies",
-    artist: "Grupo Espejos taller de teatro y pantomima",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Pantomima",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    artisticDirection: "Rafael Perera"
-  },
-  {
-    id: "mn-2",
-    date: "8",
-    day: "Miércoles",
-    title: "La Percha Teatro",
-    artist: "La Percha Teatro",
-    origin: "Nuevo León",
-    category: "Teatro",
-    subcategory: "Teatro de calle",
-    venue: "Por confirmar",
-    time: "Por confirmar"
-  },
-  {
-    id: "mn-3",
+    id: "ma-1",
     date: "12",
-    day: "Domingo",
+    day: "domingo",
     title: "Aristótefes y Sócrafes y el Misterio del Movimiento",
     artist: "Érase una vez dos veces",
     origin: "Tamaulipas",
-    category: "Teatro",
-    subcategory: "Cuentacuentos teatralizado",
-    venue: "Por confirmar",
-    time: "Por confirmar",
-    artisticDirection: "Alberto Dávila y Josué Castillo"
+    category: "Interdisciplinario",
+    venue: "Lugar por definir",
+    time: "Horario por definir"
   }
 ];
 
-// Información general del festival de Mainero
+// Información del Festival del Municipio Mainero
 export const maineroFestivalInfo: FestivalInfo = {
-  name: "Festival del Municipio Mainero",
-  location: "Municipio Mainero, Tamaulipas",
-  startDate: "3 de Octubre, 2025",
-  endDate: "12 de Octubre, 2025",
-  totalEvents: 3,
-  categories: ["Teatro"]
+  name: "Mainero",
+  location: "Mainero",
+  totalEvents: 1,
+  startDate: "3 de enero de 2025",
+  endDate: "12 de enero de 2025",
+  categories: ["Interdisciplinario"]
 };
+
+// Exposiciones del Festival del Municipio Mainero
+export const maineroFestivalExhibitions: FestivalExhibition[] = [
+  // Agregar exposiciones si las hay
+];
