@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react"
-import { ArrowLeft, Signal, Wifi, Battery, ChevronDown } from "lucide-react"
+import { ArrowLeft, ChevronDown } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useParams, useRouter } from "next/navigation"
 import Image from "next/image"
@@ -85,14 +85,7 @@ export default function ArtistPage() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-2 text-xs md:hidden">
-        <span className="font-medium">9:41</span>
-        <div className="flex items-center gap-1">
-          <Signal className="w-4 h-4" />
-          <Wifi className="w-4 h-4" />
-          <Battery className="w-4 h-4" />
-        </div>
-      </div>
+
 
       <div className="absolute inset-0 z-0">
         <Image

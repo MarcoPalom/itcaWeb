@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect, useMemo } from "react"
-import { ArrowLeft, Signal, Wifi, Battery } from "lucide-react"
+import { ArrowLeft} from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
 import Image from "next/image"
 import { FestivalEvent, FestivalInfo } from "@/constants/types"
@@ -175,14 +175,7 @@ export default function MunicipalityPage() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Status Bar - Solo visible en móvil */}
-      <div className="flex items-center justify-between px-4 py-2 text-xs md:hidden">
-        <span className="font-medium">9:41</span>
-        <div className="flex items-center gap-1">
-          <Signal className="w-4 h-4" />
-          <Wifi className="w-4 h-4" />
-          <Battery className="w-4 h-4" />
-        </div>
-      </div>
+
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
