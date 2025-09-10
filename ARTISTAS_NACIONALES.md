@@ -1,196 +1,450 @@
-# Páginas de Artistas Nacionales
+# Cronograma de Artistas Nacionales - Festival Internacional de las Artes
 
-## Descripción
-Se han creado páginas para mostrar los artistas nacionales del Festival Internacional en la Costa del Seno Mexicano, respetando el diseño tanto en mobile como en web. **El diseño respeta exactamente la imagen de referencia con cards verticales, imagen a la izquierda y datos a la derecha en formato de lista.**
+## Información General
+- **Color del evento**: #f1ceee
+- **Período**: Del 3 al 12 de marzo (aproximadamente)
 
-## Estructura de Archivos
+---
 
-### Páginas
-- `/national-artists` - Página principal que lista todos los artistas nacionales
-- `/artists-tamaulipecos` - Página específica con diseño de lista vertical como en la imagen
-- `/artist/[name]` - Página individual de cada artista
+## Programación por Artista Nacional
 
-### Componentes
-- `ArtistCard` - Tarjeta reutilizable para mostrar información del artista (diseño compacto)
-- `ArtistListCard` - **NUEVO: Tarjeta vertical con imagen a la izquierda y datos a la derecha**
-- `EventList` - Lista de eventos del artista
-- `FestivalNavigation` - Navegación específica para el festival
+### 1. María Katzarava (CDMX)
+**Obra**: "Piaf de bolsillo"
 
-## Características
+- **Martes 7 de Marzo - 19:00 hrs.**
+  - Nuevo Laredo - Teatro Principal del Centro Cultural Nuevo Laredo
 
-### Página Principal de Artistas Nacionales (`/national-artists`)
-- ✅ Lista todos los artistas nacionales
-- ✅ Búsqueda por nombre o origen
-- ✅ Filtro por categoría
-- ✅ Diseño responsive (mobile y web)
-- ✅ **Diseño de lista vertical con separadores azules**
-- ✅ Navegación a páginas individuales
+- **Miércoles 8 de Marzo - 19:00 hrs.**
+  - Reynosa - Teatro Principal del Parque Cultural Reynosa
 
-### Página de Artistas Tamaulipecos (`/artists-tamaulipecos`) - **NUEVA**
-- ✅ **Diseño exacto como en la imagen de referencia**
-- ✅ **Título "Artistas Tamaulipecos" alineado a la izquierda**
-- ✅ **Cards verticales con imagen a la izquierda y datos a la derecha**
-- ✅ **Separadores azules entre cada artista**
-- ✅ Búsqueda y filtros
-- ✅ Layout de lista vertical
+- **Jueves 9 de Marzo - 20:00 hrs.**
+  - Matamoros - Teatro de la Reforma
 
-### Página Individual del Artista (`/artist/[name]`)
-- ✅ Información detallada del artista
-- ✅ Lista de eventos ordenados por fecha
-- ✅ Imagen del artista
-- ✅ Detalles de origen y categoría
-- ✅ Resumen de municipios visitados
-- ✅ Diseño similar al de la imagen de referencia
+- **Viernes 10 de Marzo - 19:00 hrs.**
+  - Victoria - Teatro "Amalia G. de Castillo Ledón del Centro Cultural Tamaulipas
 
-### Componentes Reutilizables
-- ✅ `ArtistCard` - Versión compacta para grids
-- ✅ `ArtistListCard` - **NUEVO: Versión vertical para listas como en la imagen**
-- ✅ `EventList` - Lista de eventos con diseño consistente
-- ✅ Navegación integrada
+- **Sábado 11 de Marzo - 18:00 hrs.**
+  - Mante - Teatro del IMSS
 
-## Diseño Vertical (Como en la Imagen)
+---
 
-### Características del Diseño
-- **Layout**: Lista vertical con separadores azules
-- **Imagen**: **Estructura de poster vertical**, lado izquierdo, tamaño fijo (20x28 en mobile, 24x36 en desktop)
-- **Datos**: Lado derecho, organizados verticalmente y centrados
-- **Separadores**: Líneas azules entre cada artista
-- **Responsive**: Adaptado tanto para mobile como web
+### 2. Centro de Producción de Danza Contemporánea (CEPRODAC) (Tamaulipas-CDMX)
+**Obra**: "Se nos quedaron ellos"
 
-### Estructura de la Card
-```
-┌─────────────────────────────────────┐
-│ [Poster] │ Nombre del Artista      │
-│ 20x28    │ Origen                  │
-│ 24x36    │ Categoría               │
-│          │ Eventos + Municipios    │
-└─────────────────────────────────────┘
-```
+- **Sábado 11 de Marzo - 19:00 hrs.**
+  - Nuevo Laredo - Teatro Principal del Centro Cultural Nuevo Laredo
 
-## Navegación
+- **Jueves 9 de Marzo - 19:00 hrs.**
+  - Reynosa - Teatro Principal del Parque Cultural Reynosa
 
-### Desde la Página Principal
-- Botón "Artistas Nacionales" en la sección del festival
-- Enlace directo a `/national-artists`
+- **Martes 7 de Marzo - 19:00 hrs.**
+  - Victoria - Teatro "Amalia G. de Castillo Ledón del Centro Cultural Tamaulipas
 
-### Desde el Festival
-- Enlace "Ver todo" en la sección de artistas nacionales → `/national-artists`
-- Enlace "Ver todo" en la sección de artistas tamaulipecos → `/artists-tamaulipecos`
-- Navegación entre páginas del festival
+---
 
-## Diseño Responsive
+### 3. Last Word Trío (Nuevo León)
+**Obra**: "De Miles y Manzanero, ecos de dos orillas"
 
-### Mobile
-- Status bar con hora y iconos (9:41, señal, wifi, batería)
-- Layout de una columna
-- Navegación táctil optimizada
-- Imágenes adaptadas al tamaño de pantalla
-- **Cards verticales con imagen 20x28 (estructura de poster)**
+- **Sábado 4 de Marzo - 20:00 hrs.**
+  - Nuevo Laredo - Foro Cultural del Parque Viveros
 
-### Web
-- Layout de lista vertical
-- Navegación con hover effects
-- Información expandida
-- **Cards verticales con imagen 24x36 (estructura de poster)**
-- **Separadores azules entre artistas**
+---
 
-## Datos de Artistas
+### 4. Grupo La Trenza (Nuevo León)
+**Obra**: "América grande otra vez - Cancionero popular de las Américas"
 
-Los artistas se obtienen del archivo `src/constants/nationalArtistData.ts` que incluye:
-- Información personal del artista
-- Lista de eventos programados
-- Categorías y subcategorías
-- Origen geográfico
+- **Viernes 3 de Marzo - 19:00 hrs.**
+  - Guerrero - Explanda de Palacio Municipal
 
-## Uso
+- **Sábado 4 de Marzo - 19:30 hrs.**
+  - Mier - Plaza Principal
 
-### Navegar a Artistas Nacionales
-```tsx
-import Link from 'next/link'
+- **Domingo 5 de Marzo - 19:25 hrs.**
+  - Miguel Alemán - Foro Eleazar García "Chelelo" de la Plaza Principal "Miguel Hidalgo"
 
-<Link href="/national-artists">
-  <button>Ver Artistas Nacionales</button>
-</Link>
-```
+- **Sábado 11 de Marzo - 18:30 hrs.**
+  - Camargo - Foro Plaza Principal "Miguel Hidalgo"
 
-### Navegar a Artistas Tamaulipecos
-```tsx
-import Link from 'next/link'
+- **Domingo 12 de Marzo - 19:00 hrs.**
+  - Gustavo Díaz Ordaz - Casa de Cultura (Calle segunda esq. con Adolfo López)
 
-<Link href="/artists-tamaulipecos">
-  <button>Ver Artistas Tamaulipecos</button>
-</Link>
-```
+---
 
-### Usar Componente ArtistListCard (Diseño Vertical)
-```tsx
-import { ArtistListCard } from '@/components/artist'
+### 5. Patricia y sus Guerreros (Nuevo León)
+**Obra**: "Cuentos, música y arte para mi ciudad, Guerrero"
 
-<ArtistListCard
-  artist={artistData}
-  imageSrc="/path/to/image.jpg"
-  isLast={false}
-/>
-```
+- **Sábado 11 de Marzo - 19:00 hrs.**
+  - Guerrero - Casa de la Cultura Municipal
 
-### Usar Componente ArtistCard (Diseño Compacto)
-```tsx
-import { ArtistCard } from '@/components/artist'
+---
 
-<ArtistCard
-  artist={artistData}
-  imageSrc="/path/to/image.jpg"
-  compact={true}
-/>
-```
+### 6. Grupo Tayer (Nuevo León)
+**Obra**: "¡Ajua Raza! Homenaje a Piporro"
 
-### Usar Componente EventList
-```tsx
-import { EventList } from '@/components/artist'
+- **Viernes 3 de Marzo - 19:25 hrs.**
+  - Miguel Alemán - Foro Eleazar García "Chelelo" de la Plaza Principal "Miguel Hidalgo"
 
-<EventList
-  events={artistEvents}
-  artistImage="/path/to/artist.jpg"
-  artistName="Nombre del Artista"
-/>
-```
+- **Sábado 4 de Marzo - 18:30 hrs.**
+  - Camargo - Kiosko Plaza Principal "Miguel Hidalgo"
 
-## Estilos
+- **Domingo 5 de Marzo - 17:00 hrs.**
+  - Gustavo Díaz Ordaz - Casa de Cultura (Calle segunda esq. con Adolfo López)
 
-- **Colores principales**: Negro, gris oscuro, amarillo
-- **Separadores**: Azul (#3B82F6) con opacidad 60%
-- **Tipografía**: Inter, Arial, Helvetica
-- **Iconos**: Lucide React
-- **Animaciones**: Framer Motion para transiciones suaves
+- **Lunes 6 de Marzo - 20:00 hrs.**
+  - Río Bravo - Plaza Principal de Villa de Nuevo Progreso
 
-## Accesibilidad
+- **Martes 7 de Marzo - 16:00 hrs.**
+  - Méndez - Auditorio "Rodolfo Torre Cantú", Cabecera Municipal
 
-- ✅ Navegación por teclado
-- ✅ Textos alternativos para imágenes
-- ✅ Contraste adecuado
-- ✅ Estructura semántica HTML
-- ✅ Responsive design
-- ✅ **Separadores visuales claros entre elementos**
+- **Miércoles 8 de Marzo - 18:00 hrs.**
+  - Burgos - Plaza Principal
 
-## Compatibilidad
+- **Jueves 9 de Marzo - 11:00 hrs.**
+  - Cruillas - Centro Cívico Municipal
 
-- ✅ Next.js 14+
-- ✅ React 18+
-- ✅ TypeScript
-- ✅ Tailwind CSS
-- ✅ Framer Motion
+- **Viernes 10 de Marzo - 19:00 hrs.**
+  - San Carlos - Plaza Principal
 
-## Cambios Recientes
+- **Lunes 6 de Marzo - 18:00 hrs.**
+  - Jiménez - Kiosko de la Plaza Principal "Plaza Hidalgo"
 
-### ✅ Implementado Diseño Vertical
-- Cards con **imagen de poster vertical** a la izquierda y datos a la derecha
-- Separadores azules entre artistas
-- Layout de lista vertical como en la imagen
-- Componente `ArtistListCard` específico para este diseño
-- **Estructura de poster: 20x28 (mobile) y 24x36 (desktop)**
+- **Sábado 11 de Marzo - 18:00 hrs.**
+  - Jiménez - Kiosko de la Plaza Principal "Plaza Hidalgo"
 
-### ✅ Nueva Página de Artistas Tamaulipecos
-- Ruta `/artists-tamaulipecos`
-- Diseño exacto como en la imagen de referencia
-- Título alineado a la izquierda
-- Separadores azules entre elementos
+- **Domingo 12 de Marzo - Horario por definir**
+  - Hidalgo - Lugar por definir
+
+---
+
+### 7. Mardonio Carballo y Juan Pablo Villa (Veracrúz-CDMX)
+**Obra**: "Xolo"
+
+- **Jueves 9 de Marzo - 17:00 hrs.**
+  - Reynosa - Instalaciones de la Universidad Tenológica de Tamaulipas Norte
+
+- **Viernes 10 de Marzo - 20:00 hrs.**
+  - Matamoros - Concha Acústica del Museo de Arte Contemporáneo de Tamaulipas (MACT)
+
+---
+
+### 8. Las Plastiqué Teatro (Nuevo León)
+**Obra**: "Cazando Estrellas en Bicicleta"
+
+- **Viernes 10 de Marzo - 11:00 hrs.**
+  - Valle Hermoso - Escuela Secundaria General #1 Lic. "Adolfo López Mateos"
+
+- **Jueves 9 de Marzo - 15:00 hrs.**
+  - Méndez - Escuela Primaria "Justo Sierra Méndez" Col. San Lorenzo, Sector Carretera
+
+- **Miércoles 8 de Marzo - 10:00 hrs.**
+  - San Fernando - Escuela Primaria "Juana de Asbaje y Ramírez"
+
+---
+
+### 9. PROTEAC (Nuevo León)
+**Obra**: "Escrito en el cuerpo de la noche"
+
+- **Sábado 11 de Marzo - 20:00 hrs.**
+  - Matamoros - Teatro de la Reforma
+
+---
+
+### 10. El Zar de Monterrey (Nuevo León)
+
+- **Sábado 4 de Marzo - 19:00 hrs.**
+  - San Nicolás - Plaza Principal de la Cabecera Municipal
+
+- **Domingo 5 de Marzo - Horario por definir**
+  - Hidalgo - Lugar por definir
+
+- **Viernes 3 de Marzo - por definir**
+  - Gómez Farías - Lugar por definir
+
+---
+
+### 11. La Percha Teatro (Nuevo León)
+**Obra**: "El Lobo"
+
+- **Viernes 10 de Marzo - 15:00 hrs.**
+  - San Nicolás - Ejido "Flechadores"
+
+- **Jueves 9 de Marzo - 9:00 hrs.**
+  - San Carlos - Escuela Primaria "Lauro Aguirre"
+
+- **Martes 7 de Marzo - 19:00 hrs.**
+  - Villagrán - Plaza Juárez
+
+- **Domingo 5 de Marzo - 18:00 hrs.**
+  - Abasolo - Plaza "Hidalgo"
+
+- **Lunes 6 de Marzo - 10:00 hrs.**
+  - Casas - Escuela Primaria "Amado Nervo" en Ej. "La Lajilla"
+
+---
+
+### 12. Organillermo (Jalisco)
+**Director**: Guillermo Méndez
+
+- **Lunes 6 de Marzo - 18:00 hrs.**
+  - Jiménez - Kiosko de la Plaza Principal "Plaza Hidalgo"
+
+- **Domingo 5 de Marzo - 17:30 hrs.**
+  - Padilla - Teatro del Pueblo
+
+- **Miércoles 8 de Marzo - Horario por definir**
+  - Güémez - Lugar por definir
+
+---
+
+### 13. Las Hermanas García (Guerrero)
+**Obra**: "Seguiré mi viaje"
+
+- **Jueves 9 de Marzo - 19:00 hrs.**
+  - Soto la Marina - Explanada Municipal
+
+---
+
+### 14. Orquesta Sinfónica de Alientos de la Guardia Nacional (CDMX)
+**Obra**: "Un Paseo por México"
+
+- **Domingo 5 de Marzo - 19:00 hrs.**
+  - Victoria - Teatro "Amalia G. de Castillo Ledón del Centro Cultural Tamaulipas
+
+---
+
+### 15. Ballet Folklórico de la Guardia Nacional (CDMX)
+**Obra**: "Al Son de mi Tierra"
+
+- **Domingo 5 de Marzo - 18:00 hrs.**
+  - Victoria - Escenario "Plaza Juárez"
+
+---
+
+### 16. Ronda Machetera (Nuevo León)
+**Obra**: "Cumbia por el Mundo"
+**Integrantes**: Ronda Bogotá + Pato Machete
+
+- **Domingo 12 de Marzo - 20:00 hrs.**
+  - Victoria - Escenario "Plaza Juárez"
+
+- **Viernes 10 de Marzo - Horario por definir**
+  - Tula - Lugar por definir
+
+---
+
+### 17. Compañía Claunodromo (Jalisco)
+**Obra**: "¡Llévame!"
+
+- **Domingo 5 de Marzo - 18:00 hrs.**
+  - Llera - Explanada de la Presidencia Municipal
+
+- **Sábado 4 de Marzo - 19:30 hrs.**
+  - Xicoténcatl - Plaza Cultura
+
+---
+
+### 18. Los Bernal de Linares (Nuevo León)
+**Obra**: "Primera Cita"
+
+- **Sábado 4 de Marzo - 20:00 hrs.**
+  - Bustamante - Plaza "20 de Noviembre"
+
+- **Domingo 5 de Marzo - 18:30 hrs.**
+  - Tula - Explanda de la Presidencia Municipal
+
+- **Viernes 3 de Marzo - 19:00 hrs.**
+  - González - Plaza Principal de González
+
+---
+
+### 19. Ráfaga Teatro (CDMX-Estado de México)
+**Obra**: "Las futbolistas"
+
+- **Sábado 11 de Marzo - 17:00 hrs.**
+  - Bustamante - Plaza "20 de Noviembre"
+
+- **Viernes 10 de Marzo - 9:00 hrs.**
+  - Palmillas - Escuela Telesecundaria "Miguel Hidalgo"
+
+- **Jueves 9 de Marzo - 18:00 hrs.**
+  - Ocampo - Techumbre de Plaza del Poblado Adolfo López Mateos (Chamal Nuevo)
+
+- **Miércoles 8 de Marzo - 10:00 hrs.**
+  - Nuevo Morelos - Secundaria General "Juan Martínez García"
+
+---
+
+### 20. Compañía Nacional de Teatro (CDMX)
+**Obra**: "Los Empeños de una Casa" de Sor Juana Inéz de la Cruz
+**Dirección**: Aurora Cano
+
+- **Domingo 12 de Marzo - 19:00 hrs.**
+  - Victoria - Teatro "Amalia G. de Castillo Ledón del Centro Cultural Tamaulipas
+
+---
+
+### 21. CIA. A la Deriva Teatro (Jalisco)
+**Obra**: "Me importas tú, boleros para abrazar"
+
+- **Lunes 6 de Marzo - 10:30 hrs.**
+  - Tula - Escuela Primaria "Miguel Hidalgo Centro"
+
+- **Martes 7 de Marzo - 10:00 hrs.**
+  - Mante - Guardería "Tres Palacios"
+
+---
+
+## Resumen de Artistas Nacionales
+
+### María Katzarava
+- **País**: CDMX
+- **Obra**: "Piaf de bolsillo"
+- **Total de presentaciones**: 5
+
+### Centro de Producción de Danza Contemporánea (CEPRODAC)
+- **País**: Tamaulipas-CDMX
+- **Obra**: "Se nos quedaron ellos"
+- **Total de presentaciones**: 3
+
+### Last Word Trío
+- **País**: Nuevo León
+- **Obra**: "De Miles y Manzanero, ecos de dos orillas"
+- **Total de presentaciones**: 1
+
+### Grupo La Trenza
+- **País**: Nuevo León
+- **Obra**: "América grande otra vez - Cancionero popular de las Américas"
+- **Total de presentaciones**: 5
+
+### Patricia y sus Guerreros
+- **País**: Nuevo León
+- **Obra**: "Cuentos, música y arte para mi ciudad, Guerrero"
+- **Total de presentaciones**: 1
+
+### Grupo Tayer
+- **País**: Nuevo León
+- **Obra**: "¡Ajua Raza! Homenaje a Piporro"
+- **Total de presentaciones**: 11
+
+### Mardonio Carballo y Juan Pablo Villa
+- **País**: Veracrúz-CDMX
+- **Obra**: "Xolo"
+- **Total de presentaciones**: 2
+
+### Las Plastiqué Teatro
+- **País**: Nuevo León
+- **Obra**: "Cazando Estrellas en Bicicleta"
+- **Total de presentaciones**: 3
+
+### PROTEAC
+- **País**: Nuevo León
+- **Obra**: "Escrito en el cuerpo de la noche"
+- **Total de presentaciones**: 1
+
+### El Zar de Monterrey
+- **País**: Nuevo León
+- **Total de presentaciones**: 3
+
+### La Percha Teatro
+- **País**: Nuevo León
+- **Obra**: "El Lobo"
+- **Total de presentaciones**: 5
+
+### Organillermo
+- **País**: Jalisco
+- **Director**: Guillermo Méndez
+- **Total de presentaciones**: 3
+
+### Las Hermanas García
+- **País**: Guerrero
+- **Obra**: "Seguiré mi viaje"
+- **Total de presentaciones**: 1
+
+### Orquesta Sinfónica de Alientos de la Guardia Nacional
+- **País**: CDMX
+- **Obra**: "Un Paseo por México"
+- **Total de presentaciones**: 1
+
+### Ballet Folklórico de la Guardia Nacional
+- **País**: CDMX
+- **Obra**: "Al Son de mi Tierra"
+- **Total de presentaciones**: 1
+
+### Ronda Machetera
+- **País**: Nuevo León
+- **Obra**: "Cumbia por el Mundo"
+- **Integrantes**: Ronda Bogotá + Pato Machete
+- **Total de presentaciones**: 2
+
+### Compañía Claunodromo
+- **País**: Jalisco
+- **Obra**: "¡Llévame!"
+- **Total de presentaciones**: 2
+
+### Los Bernal de Linares
+- **País**: Nuevo León
+- **Obra**: "Primera Cita"
+- **Total de presentaciones**: 3
+
+### Ráfaga Teatro
+- **País**: CDMX-Estado de México
+- **Obra**: "Las futbolistas"
+- **Total de presentaciones**: 4
+
+### Compañía Nacional de Teatro
+- **País**: CDMX
+- **Obra**: "Los Empeños de una Casa" de Sor Juana Inéz de la Cruz
+- **Dirección**: Aurora Cano
+- **Total de presentaciones**: 1
+
+### CIA. A la Deriva Teatro
+- **País**: Jalisco
+- **Obra**: "Me importas tú, boleros para abrazar"
+- **Total de presentaciones**: 2
+
+---
+
+## Lugares de Presentación
+
+- Teatro Principal del Centro Cultural Nuevo Laredo
+- Teatro Principal del Parque Cultural Reynosa
+- Foro Cultural del Parque Viveros (Nuevo Laredo)
+- Explanda de Palacio Municipal (Guerrero)
+- Casa de la Cultura Municipal (Guerrero)
+- Plaza Principal (Mier)
+- Foro Eleazar García "Chelelo" de la Plaza Principal "Miguel Hidalgo" (Miguel Alemán)
+- Kiosko Plaza Principal "Miguel Hidalgo" (Camargo)
+- Foro Plaza Principal "Miguel Hidalgo" (Camargo)
+- Casa de Cultura (Gustavo Díaz Ordaz)
+- Instalaciones de la Universidad Tenológica de Tamaulipas Norte (Reynosa)
+- Plaza Principal de Villa de Nuevo Progreso (Río Bravo)
+- Escuela Secundaria General #1 Lic. "Adolfo López Mateos" (Valle Hermoso)
+- Teatro de la Reforma (Matamoros)
+- Concha Acústica del Museo de Arte Contemporáneo de Tamaulipas (MACT) (Matamoros)
+- Auditorio "Rodolfo Torre Cantú", Cabecera Municipal (Méndez)
+- Escuela Primaria "Justo Sierra Méndez" (Méndez)
+- Escuela Primaria "Juana de Asbaje y Ramírez" (San Fernando)
+- Centro Cívico Municipal (Cruillas)
+- Plaza Principal de la Cabecera Municipal (San Nicolás)
+- Ejido "Flechadores" (San Nicolás)
+- Escuela Primaria "Lauro Aguirre" (San Carlos)
+- Plaza Principal (San Carlos)
+- Plaza Juárez (Villagrán)
+- Kiosko de la Plaza Principal "Plaza Hidalgo" (Jiménez)
+- Plaza "Hidalgo" (Abasolo)
+- Explanada Municipal (Soto la Marina)
+- Teatro del Pueblo (Padilla)
+- Escuela Primaria "Amado Nervo" (Casas)
+- Teatro "Amalia G. de Castillo Ledón del Centro Cultural Tamaulipas (Victoria)
+- Escenario "Plaza Juárez" (Victoria)
+- Explanada de la Presidencia Municipal (Llera)
+- Plaza "20 de Noviembre" (Bustamante)
+- Escuela Telesecundaria "Miguel Hidalgo" (Palmillas)
+- Explanda de la Presidencia Municipal (Tula)
+- Escuela Primaria "Miguel Hidalgo Centro" (Tula)
+- Techumbre de Plaza del Poblado Adolfo López Mateos (Ocampo)
+- Plaza Cultura (Xicoténcatl)
+- Guardería "Tres Palacios" (Mante)
+- Teatro del IMSS (Mante)
+- Secundaria General "Juan Martínez García" (Nuevo Morelos)
+- Plaza Principal de González (González)
