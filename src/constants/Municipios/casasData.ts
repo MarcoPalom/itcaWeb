@@ -43,8 +43,8 @@ export const casasFestivalInfo: FestivalInfo = {
   name: "Casas",
   location: "Casas",
   totalEvents: 3,
-  startDate: "3 de enero de 2025",
-  endDate: "12 de enero de 2025",
+  startDate: "3 de octubre de 2025",
+  endDate: "12 de octubre de 2025",
   categories: ["Teatro","Interdisciplinario"]
 };
 

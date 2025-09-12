@@ -98,8 +98,8 @@ export const valleHermosoFestivalInfo: FestivalInfo = {
   name: "Valle Hermoso",
   location: "Valle Hermoso",
   totalEvents: 8,
-  startDate: "3 de enero de 2025",
-  endDate: "12 de enero de 2025",
+  startDate: "3 de octubre de 2025",
+  endDate: "12 de octubre de 2025",
   categories: ["Interdisciplinario","Teatro","Música"]
 };
 

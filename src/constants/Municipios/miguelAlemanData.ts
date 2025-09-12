@@ -54,8 +54,8 @@ export const miguelAlemanFestivalInfo: FestivalInfo = {
   name: "Miguel Alemán",
   location: "Miguel Alemán",
   totalEvents: 4,
-  startDate: "3 de enero de 2025",
-  endDate: "12 de enero de 2025",
+  startDate: "3 de octubre de 2025",
+  endDate: "12 de octubre de 2025",
   categories: ["Interdisciplinario","Música"]
 };
 

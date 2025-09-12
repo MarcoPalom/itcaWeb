@@ -76,8 +76,8 @@ export const mendezFestivalInfo: FestivalInfo = {
   name: "Méndez",
   location: "Méndez",
   totalEvents: 0,
-  startDate: "3 de enero de 2025",
-  endDate: "12 de enero de 2025",
+  startDate: "3 de octubre de 2025",
+  endDate: "12 de octubre de 2025",
   categories: ["Interdisciplinario","Teatro","Música"]
 };
 
