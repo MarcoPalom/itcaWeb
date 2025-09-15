@@ -5,25 +5,25 @@ import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 export const nuevomorelosFestival: FestivalEvent[] = [
   {
     id: "nu-1",
-    date: "12",
-    day: "domingo",
-    title: "Con las manos entre los pies",
-    artist: "Grupo Espejos",
+    date: "3",
+    day: "viernes",
+    title: "Canasta de cuentos de la zona donde vivimos",
+    artist: "Teatro Guarapo",
     origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Explanada Ejidal, Ejido",
-    time: "17:30 hrs."
+    category: "Teatro",
+    venue: "Cancha del Ejido de Nuevo Morelos (A un costado del Lienzo Charro)",
+    time: "18:30 hrs."
   },
   {
     id: "nu-2",
-    date: "3",
-    day: "viernes",
-    title: "Concierto Quinteto de Alientos UAT",
-    artist: "Quinteto de Alientos UAT",
-    origin: "Tamaulipas",
-    category: "Música",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    date: "4",
+    day: "sábado",
+    title: "Animación con zanqueros y mimo",
+    artist: "Colectivo Trueque",
+    origin: "Tamaulipas-PROFEST",
+    category: "Interdisciplinario",
+    venue: "Auditorio Municipal (Calle Independencia s/n Col. Centro)",
+    time: "18:30 hrs."
   },
   {
     id: "nu-3",
@@ -33,18 +33,29 @@ export const nuevomorelosFestival: FestivalEvent[] = [
     artist: "José Palacios",
     origin: "Tamaulipas",
     category: "Interdisciplinario",
-    venue: "Escuela Miguel Hidalgo",
+    venue: "Escuela Miguel Hidalgo (Calle Miguel Negrete s/n, Col. Zona Centro)",
     time: "11:30 hrs."
   },
   {
     id: "nu-4",
+    date: "8",
+    day: "miércoles",
+    title: "Las futbolistas",
+    artist: "Ráfaga Teatro",
+    origin: "CDMX-Estado de México",
+    category: "Teatro",
+    venue: "Secundaria General \"Juan Martínez García\" (Carretera Barra de Navidad s/n, Col. Zona Centro)",
+    time: "10:00 hrs."
+  },
+  {
+    id: "nu-5",
     date: "12",
     day: "domingo",
-    title: "Animación con zanqueros y mimo",
-    artist: "Colectivo Trueque",
+    title: "Con las manos entre los pies",
+    artist: "Grupo espejos taller de teatro y pantomima",
     origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Explanada Ejidal, Ejido",
+    category: "Teatro",
+    venue: "Explanada Ejidal, Ejido \"Ampliación de la Reforma\"",
     time: "17:30 hrs."
   }
 ];
@@ -53,10 +64,10 @@ export const nuevomorelosFestival: FestivalEvent[] = [
 export const nuevoMorelosFestivalInfo: FestivalInfo = {
   name: "Nuevo Morelos",
   location: "Nuevo Morelos",
-  totalEvents: 4,
+  totalEvents: 5,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Interdisciplinario","Música"]
+  categories: ["Teatro", "Interdisciplinario"]
 };
 
 // Exposiciones del Festival del Municipio Nuevo Morelos

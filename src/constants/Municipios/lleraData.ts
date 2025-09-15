@@ -9,13 +9,24 @@ export const lleraFestival: FestivalEvent[] = [
     day: "domingo",
     title: "¡Llévame!",
     artist: "Compañía Claunodromo",
-    origin: "Nacional",
+    origin: "Jalisco",
     category: "Interdisciplinario",
-    venue: "Explanada de la Presidencia Municipal",
-    time: "18:00 hrs."
+    venue: "Frente a la Parroquia de Nuestra Señora del Rosario",
+    time: "20:00 hrs."
   },
   {
     id: "ll-2",
+    date: "8",
+    day: "miércoles",
+    title: "Animación con zanqueros y mimo",
+    artist: "Colectivo Trueque",
+    origin: "Tamaulipas-PROFEST",
+    category: "Interdisciplinario",
+    venue: "Primaria \"Leyes de Reforma\"",
+    time: "11:00 hrs."
+  },
+  {
+    id: "ll-3",
     date: "10",
     day: "viernes",
     title: "concierto-baile acá por el norte",
@@ -26,37 +37,15 @@ export const lleraFestival: FestivalEvent[] = [
     time: "20:00 hrs."
   },
   {
-    id: "ll-3",
+    id: "ll-4",
     date: "12",
     day: "domingo",
     title: "Urban revolution",
     artist: "MFOX La Puerta del Talento",
     origin: "Tamaulipas",
-    category: "Interdisciplinario",
+    category: "Música",
     venue: "Explanada de la Presidencia Municipal",
     time: "19:00 hrs."
-  },
-  {
-    id: "ll-4",
-    date: "8",
-    day: "miércoles",
-    title: "Animación con zanqueros y mimo",
-    artist: "Colectivo Trueque",
-    origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Primaria",
-    time: "11:00 hrs."
-  },
-  {
-    id: "ll-5",
-    date: "3",
-    day: "viernes",
-    title: "Se realiza inauguración del Festival con su Festival de Huapango",
-    artist: "Festival de Huapango",
-    origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Plaza Principal de Llera",
-    time: "20:00 hrs."
   }
 ];
 
@@ -64,10 +53,10 @@ export const lleraFestival: FestivalEvent[] = [
 export const lleraFestivalInfo: FestivalInfo = {
   name: "Llera",
   location: "Llera",
-  totalEvents: 5,
-  startDate: "3 de octubre de 2025",
+  totalEvents: 4,
+  startDate: "5 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Interdisciplinario","Música"]
+  categories: ["Interdisciplinario", "Música"]
 };
 
 // Exposiciones del Festival del Municipio Llera

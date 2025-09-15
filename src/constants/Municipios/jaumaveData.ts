@@ -5,23 +5,23 @@ import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 export const jaumaveFestival: FestivalEvent[] = [
   {
     id: "ja-1",
-    date: "4",
-    day: "sábado",
-    title: "Majestuosa Camada",
-    artist: "Majestuosa Camada",
-    origin: "Nacional",
-    category: "Interdisciplinario",
+    date: "3",
+    day: "viernes",
+    title: "Raíces del pueblo: música del norte tamaulipeco",
+    artist: "Los del Pueblo",
+    origin: "Tamaulipas",
+    category: "Música",
     venue: "Plaza Hidalgo",
     time: "20:00 hrs."
   },
   {
     id: "ja-2",
-    date: "11",
+    date: "4",
     day: "sábado",
-    title: "concierto-baile acá por el norte",
-    artist: "Amenaza Norteña",
-    origin: "Tamaulipas",
-    category: "Música",
+    title: "Majestuosa Camada \"San Simón Cerro\"",
+    artist: "Majestuosa Camada",
+    origin: "Guerrero",
+    category: "Interdisciplinario",
     venue: "Plaza Hidalgo",
     time: "20:00 hrs."
   },
@@ -49,13 +49,24 @@ export const jaumaveFestival: FestivalEvent[] = [
   },
   {
     id: "ja-5",
+    date: "11",
+    day: "sábado",
+    title: "concierto-baile acá por el norte",
+    artist: "Amenaza Norteña",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Plaza Hidalgo",
+    time: "20:00 hrs."
+  },
+  {
+    id: "ja-6",
     date: "12",
     day: "domingo",
     title: "Marimba perpetua",
     artist: "Percutam Dúo",
     origin: "Tamaulipas",
     category: "Interdisciplinario",
-    venue: "Plaza Principal de Jaumave",
+    venue: "Teatro del Pueblo",
     time: "19:00 hrs."
   }
 ];
@@ -64,10 +75,10 @@ export const jaumaveFestival: FestivalEvent[] = [
 export const jaumaveFestivalInfo: FestivalInfo = {
   name: "Jaumave",
   location: "Jaumave",
-  totalEvents: 5,
+  totalEvents: 6,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Interdisciplinario","Música","Literatura"]
+  categories: ["Música", "Interdisciplinario", "Literatura"]
 };
 
 // Exposiciones del Festival del Municipio Jaumave

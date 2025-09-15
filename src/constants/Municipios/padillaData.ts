@@ -5,12 +5,12 @@ import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 export const padillaFestival: FestivalEvent[] = [
   {
     id: "pa-1",
-    date: "5",
-    day: "domingo",
-    title: "Organillermo",
-    artist: "Guillermo Méndez",
-    origin: "Nacional",
-    category: "Interdisciplinario",
+    date: "3",
+    day: "viernes",
+    title: "Las favoritas con Grupo Relativo",
+    artist: "Grupo Relativo",
+    origin: "Tamaulipas",
+    category: "Música",
     venue: "Teatro del Pueblo",
     time: "17:30 hrs."
   },
@@ -19,7 +19,7 @@ export const padillaFestival: FestivalEvent[] = [
     date: "4",
     day: "sábado",
     title: "Raíces del pueblo: música del norte tamaulipeco",
-    artist: "Los Del Pueblo",
+    artist: "Los del Pueblo",
     origin: "Tamaulipas",
     category: "Música",
     venue: "Teatro del Pueblo",
@@ -27,45 +27,45 @@ export const padillaFestival: FestivalEvent[] = [
   },
   {
     id: "pa-3",
-    date: "11",
-    day: "sábado",
-    title: "Paseando con huapangos y tradición",
-    artist: "Tradición Genuina",
-    origin: "Tamaulipas",
-    category: "Interdisciplinario",
+    date: "5",
+    day: "domingo",
+    title: "Organillermo",
+    artist: "Director: Guillermo Méndez",
+    origin: "Jalisco",
+    category: "Música",
     venue: "Teatro del Pueblo",
     time: "17:30 hrs."
   },
   {
     id: "pa-4",
+    date: "8",
+    day: "miércoles",
+    title: "Canasta de cuentos de la zona donde vivimos",
+    artist: "Teatro Guarapo",
+    origin: "Tamaulipas",
+    category: "Teatro",
+    venue: "Escuela Primaria \"Conrado Castillo\"",
+    time: "9:00 hrs."
+  },
+  {
+    id: "pa-5",
     date: "9",
     day: "jueves",
     title: "Cuentos del mundo",
     artist: "Roberto Cuentacuentos",
     origin: "Tamaulipas",
-    category: "Literatura",
-    venue: "Escuela Primaria",
-    time: "9:00 hrs."
-  },
-  {
-    id: "pa-5",
-    date: "8",
-    day: "miércoles",
-    title: "Canasta de cuentos de la zona donde vivimos",
-    artist: "Grupo de teatro Guarapo",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    venue: "Escuela Primaria",
+    category: "Interdisciplinario",
+    venue: "Escuela Primaria \"Josefa Ortíz de Dominguez\" Col. Vicente Guerrero",
     time: "9:00 hrs."
   },
   {
     id: "pa-6",
-    date: "3",
-    day: "viernes",
-    title: "Las favoritas con Grupo Relativo",
-    artist: "Grupo Relativo",
+    date: "11",
+    day: "sábado",
+    title: "Paseando con huapangos y tradición",
+    artist: "Tradición Genuina",
     origin: "Tamaulipas",
-    category: "Interdisciplinario",
+    category: "Música",
     venue: "Teatro del Pueblo",
     time: "17:30 hrs."
   },
@@ -76,7 +76,7 @@ export const padillaFestival: FestivalEvent[] = [
     title: "El arte de la expresión musical",
     artist: "Bocatoma Jazz",
     origin: "Tamaulipas",
-    category: "Interdisciplinario",
+    category: "Música",
     venue: "Teatro del Pueblo",
     time: "17:30 hrs."
   }
@@ -89,10 +89,10 @@ export const padillaFestivalInfo: FestivalInfo = {
   totalEvents: 7,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Interdisciplinario","Música","Literatura","Teatro"]
+  categories: ["Interdisciplinario", "Música", "Teatro"]
 };
 
 // Exposiciones del Festival del Municipio Padilla
 export const padillaFestivalExhibitions: FestivalExhibition[] = [
-  // Agregar exposiciones si las hay
+  // No hay exposiciones para Padilla en los datos proporcionados
 ];

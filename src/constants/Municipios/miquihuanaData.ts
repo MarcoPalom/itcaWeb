@@ -5,11 +5,33 @@ import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 export const miquihuanaFestival: FestivalEvent[] = [
   {
     id: "mi-1",
+    date: "3",
+    day: "viernes",
+    title: "Cuentos del mundo",
+    artist: "Roberto Cuentacuentos",
+    origin: "Tamaulipas",
+    category: "Literatura",
+    venue: "Lugar por definir",
+    time: "Horario por definir"
+  },
+  {
+    id: "mi-2",
+    date: "6",
+    day: "lunes",
+    title: "¡Llévame!",
+    artist: "Compañía Claunodromo",
+    origin: "Jalisco",
+    category: "Interdisciplinario",
+    venue: "Lugar por definir",
+    time: "Horario por definir"
+  },
+  {
+    id: "mi-3",
     date: "12",
     day: "domingo",
     title: "Las futbolistas",
     artist: "Ráfaga Teatro",
-    origin: "Nacional",
+    origin: "CDMX-Estado de México",
     category: "Teatro",
     venue: "Lugar por definir",
     time: "Horario por definir"
@@ -20,10 +42,10 @@ export const miquihuanaFestival: FestivalEvent[] = [
 export const miquihuanaFestivalInfo: FestivalInfo = {
   name: "Miquihuana",
   location: "Miquihuana",
-  totalEvents: 1,
+  totalEvents: 3,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Teatro"]
+  categories: ["Literatura", "Interdisciplinario", "Teatro"]
 };
 
 // Exposiciones del Festival del Municipio Miquihuana

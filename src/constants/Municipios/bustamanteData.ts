@@ -5,68 +5,68 @@ import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 export const bustamanteFestival: FestivalEvent[] = [
   {
     id: "bu-1",
+    date: "3",
+    day: "viernes",
+    title: "Acusticumbias",
+    artist: "Aldebarán Acústico",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Plaza \"20 de Noviembre\"",
+    time: "17:00 hrs."
+  },
+  {
+    id: "bu-2",
     date: "4",
     day: "sábado",
     title: "Primera Cita",
     artist: "Los Bernal de Linares",
-    origin: "Nacional",
-    category: "Interdisciplinario",
-    venue: "Plaza",
+    origin: "Nuevo León",
+    category: "Música",
+    venue: "Plaza \"20 de Noviembre\"",
     time: "20:00 hrs."
-  },
-  {
-    id: "bu-2",
-    date: "11",
-    day: "sábado",
-    title: "Las futbolistas",
-    artist: "Ráfaga Teatro",
-    origin: "Nacional",
-    category: "Teatro",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
   },
   {
     id: "bu-3",
-    date: "12",
-    day: "domingo",
-    title: "concierto-baile acá por el norte",
-    artist: "Amenaza Norteña",
-    origin: "Tamaulipas",
-    category: "Música",
-    venue: "Plaza",
-    time: "20:00 hrs."
-  },
-  {
-    id: "bu-4",
     date: "5",
     day: "domingo",
     title: "Cuentos del mundo",
     artist: "Roberto Cuentacuentos",
     origin: "Tamaulipas",
     category: "Literatura",
-    venue: "Plaza",
+    venue: "Plaza \"20 de Noviembre\"",
     time: "17:00 hrs."
   },
   {
-    id: "bu-5",
+    id: "bu-4",
     date: "10",
     day: "viernes",
     title: "La tienda de Don Verdi",
     artist: "José Palacios",
     origin: "Tamaulipas",
     category: "Interdisciplinario",
-    venue: "Plaza",
+    venue: "Plaza \"20 de Noviembre\"",
+    time: "17:00 hrs."
+  },
+  {
+    id: "bu-5",
+    date: "11",
+    day: "sábado",
+    title: "Las futbolistas",
+    artist: "Ráfaga Teatro",
+    origin: "CDMX-Estado de México",
+    category: "Teatro",
+    venue: "Plaza \"20 de Noviembre\"",
     time: "17:00 hrs."
   },
   {
     id: "bu-6",
-    date: "3",
-    day: "viernes",
-    title: "Acusticumbias",
-    artist: "Aldebarán Acústico",
+    date: "12",
+    day: "domingo",
+    title: "concierto-baile acá por el norte",
+    artist: "Amenaza Norteña",
     origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Plaza Principal de Bustamante",
+    category: "Música",
+    venue: "Plaza \"20 de Noviembre\"",
     time: "20:00 hrs."
   }
 ];
@@ -78,7 +78,7 @@ export const bustamanteFestivalInfo: FestivalInfo = {
   totalEvents: 6,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Interdisciplinario","Teatro","Música","Literatura"]
+  categories: ["Música", "Literatura", "Interdisciplinario", "Teatro"]
 };
 
 // Exposiciones del Festival del Municipio Bustamante

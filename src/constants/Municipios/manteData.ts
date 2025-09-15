@@ -5,146 +5,113 @@ import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 export const manteFestival: FestivalEvent[] = [
   {
     id: "ma-1",
-    date: "9",
-    day: "jueves",
-    title: "Mi voz al mundo",
-    artist: "Argelia Fragoso",
-    origin: "Internacional",
-    category: "Interdisciplinario",
-    venue: "Teatro del IMSS",
+    date: "3",
+    day: "viernes",
+    title: "Si la brisa se vuelve canción, marejada musical por \"La espuma del mar\"",
+    artist: "La Espuma de Mar",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Plaza Principal \"Plutarco Elías Calles\"",
     time: "19:00 hrs."
   },
   {
     id: "ma-2",
-    date: "11",
+    date: "4",
     day: "sábado",
-    title: "Piaf de bolsillo",
-    artist: "María Katzarava",
-    origin: "Nacional",
-    category: "Interdisciplinario",
+    title: "Tamaulipas a la cámara \"Voces y cuerdas de nuestra tierra\"",
+    artist: "Elgar, Diseño Musical",
+    origin: "Tamaulipas",
+    category: "Música",
     venue: "Teatro del IMSS",
-    time: "18:00 hrs."
+    time: "19:00 hrs."
   },
   {
     id: "ma-3",
-    date: "7",
-    day: "martes",
-    title: "Me importas tú, boleros para abrazar",
-    artist: "CIA. A la Deriva Teatro",
-    origin: "Nacional",
-    category: "Teatro",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
-  },
-  {
-    id: "ma-4",
-    date: "10",
-    day: "viernes",
-    title: "Cuatete a la carta",
-    artist: "Cuatete Sound",
-    origin: "Nacional",
-    category: "Interdisciplinario",
-    venue: "Plaza Principal",
-    time: "19:00 hrs."
-  },
-  {
-    id: "ma-5",
-    date: "11",
-    day: "sábado",
-    title: "Herencia Norteña",
-    artist: "Grupo Pendiente",
-    origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Plaza Principal",
-    time: "19:00 hrs."
-  },
-  {
-    id: "ma-6",
-    date: "11",
-    day: "sábado",
-    title: "Herencia Norteña",
-    artist: "Grupo Pendiente",
-    origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Lugar por definir",
-    time: "Por confirmar"
-  },
-  {
-    id: "ma-7",
     date: "6",
     day: "lunes",
     title: "El vuelo de la Luciérnaga",
     artist: "Apapacho Teatro, arte y diversidad",
     origin: "Tamaulipas",
     category: "Teatro",
-    venue: "Esc.",
+    venue: "Esc. \"Héctor Pérez Martínez\"",
     time: "10:00 hrs."
   },
   {
-    id: "ma-8",
-    date: "3",
-    day: "viernes",
-    title: "Si la brisa se vuelve canción, marejada musical por",
-    artist: "La Espuma del Mar",
-    origin: "Tamaulipas",
+    id: "ma-4",
+    date: "7",
+    day: "martes",
+    title: "Me importas tú, boleros para abrazar",
+    artist: "CIA. A la Deriva Teatro",
+    origin: "Jalisco",
+    category: "Teatro",
+    venue: "Guardería \"Tres Palacios\"",
+    time: "10:00 hrs."
+  },
+  {
+    id: "ma-5",
+    date: "9",
+    day: "jueves",
+    title: "Mi voz al mundo",
+    artist: "Argelia Fragoso",
+    origin: "Cuba",
     category: "Interdisciplinario",
-    venue: "Plaza Principal",
+    venue: "Teatro del IMSS",
     time: "19:00 hrs."
   },
   {
-    id: "ma-9",
-    date: "4",
-    day: "sábado",
-    title: "Tamaulipas a la cámara",
-    artist: "Elgar, Diseño Musical",
-    origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Castillo de la Nueva Apolonia",
-    time: "19:00 hrs."
-  },
-  {
-    id: "ma-10",
-    date: "5",
-    day: "domingo",
-    title: "El barco papel",
-    artist: "Teatro Ingenio - Creación",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    venue: "Teatro del IMSS",
-    time: "18:00 hrs."
-  },
-  {
-    id: "ma-11",
-    date: "8",
-    day: "miércoles",
-    title: "Kayu",
-    artist: "Gato Negro Teatro",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    venue: "Teatro del IMSS",
-    time: "18:00 hrs."
-  },
-  {
-    id: "ma-12",
+    id: "ma-6",
     date: "10",
     day: "viernes",
     title: "El día que la gente pez salió del mar",
     artist: "Teatromorfosis",
     origin: "Tamaulipas",
     category: "Teatro",
+    venue: "Escuela J.B. Tijerina",
+    time: "10:00 hrs."
+  },
+  {
+    id: "ma-7",
+    date: "10",
+    day: "viernes",
+    title: "Cuatete a la carta",
+    artist: "Cuatete Sound",
+    origin: "Guerrero",
+    category: "Música",
+    venue: "Plaza Principal \"Plutarco Elías Calles\"",
+    time: "19:00 hrs."
+  },
+  {
+    id: "ma-8",
+    date: "11",
+    day: "sábado",
+    title: "Piaf de bolsillo",
+    artist: "María Katzarava",
+    origin: "CDMX",
+    category: "Interdisciplinario",
     venue: "Teatro del IMSS",
     time: "18:00 hrs."
   },
   {
-    id: "ma-13",
+    id: "ma-9",
+    date: "11",
+    day: "sábado",
+    title: "Herencia Norteña",
+    artist: "Grupo Pendiente",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Plaza Principal \"Plutarco Elías Calles\"",
+    time: "19:00 hrs."
+  },
+  {
+    id: "ma-10",
     date: "12",
     day: "domingo",
     title: "Solata - Un concierto sobre duelo, distancia y raíz",
     artist: "Melissa Castellanos",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Plaza Principal \"Plutarco Elías Calles\"",
+    time: "19:00 hrs."
   }
 ];
 
@@ -152,10 +119,10 @@ export const manteFestival: FestivalEvent[] = [
 export const manteFestivalInfo: FestivalInfo = {
   name: "Mante",
   location: "Mante",
-  totalEvents: 13,
+  totalEvents: 10,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Interdisciplinario","Teatro","Música"]
+  categories: ["Música", "Teatro", "Interdisciplinario"]
 };
 
 // Exposiciones del Festival del Municipio Mante

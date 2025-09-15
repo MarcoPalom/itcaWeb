@@ -5,58 +5,80 @@ import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 export const maderoFestival: FestivalEvent[] = [
   {
     id: "ma-1",
-    date: "5",
-    day: "Domingo",
-    title: "Poetas y Lugares con Viola Trigo",
-    artist: "Viola Trigo",
-    origin: "Nacional",
-    category: "Interdisciplinario",
-    venue: "Por confirmar",
-    time: "Por confirmar"
+    date: "3",
+    day: "viernes",
+    title: "Esther Tovar \"La dama del bolero Jazz\"",
+    artist: "Esther Tovar",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Plaza \"Isauro Alfaro Otero\"",
+    time: "19:00 hrs."
   },
   {
     id: "ma-2",
-    date: "3",
-    day: "viernes",
-    title: "Esther Tovar",
-    artist: "Esther Tovar",
-    origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Lugar por definir",
-    time: "Por confirmar"
+    date: "4",
+    day: "sábado",
+    title: "Cumbia por el Mundo",
+    artist: "Ronda Machetera (Ronda Bogotá + Pato Machete)",
+    origin: "Nuevo León",
+    category: "Música",
+    venue: "Plaza \"Isauro Alfaro Otero\"",
+    time: "19:00 hrs."
   },
   {
     id: "ma-3",
-    date: "11",
-    day: "sábado",
-    title: "ROCK",
-    artist: "Punto Exacto",
-    origin: "Tamaulipas",
+    date: "5",
+    day: "domingo",
+    title: "Poetas y lugares",
+    artist: "Viola Trigo",
+    origin: "CDMX",
     category: "Interdisciplinario",
-    venue: "Lugar por definir",
-    time: "Por confirmar"
+    venue: "Plaza \"Isauro Alfaro Otero\"",
+    time: "19:00 hrs."
   },
   {
     id: "ma-4",
-    date: "11",
-    day: "sábado",
-    title: "ROCK",
-    artist: "El Cuervo",
-    origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Lugar por definir",
-    time: "Por confirmar"
+    date: "7",
+    day: "martes",
+    title: "Seguiré mi viaje",
+    artist: "Las Hermanas García",
+    origin: "Guerrero",
+    category: "Música",
+    venue: "Centro Cultural Bicentenario",
+    time: "19:00 hrs."
   },
   {
     id: "ma-5",
+    date: "10",
+    day: "viernes",
+    title: "Música de banda del planeta tierra",
+    artist: "Brassas Mexican Beat",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Plaza de Arte, Escolleras",
+    time: "19:00 hrs."
+  },
+  {
+    id: "ma-6",
     date: "11",
     day: "sábado",
     title: "ROCK",
-    artist: "Mr. Trash",
+    artist: "Punto Exacto, El cuervo y Mr. Trash",
     origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Lugar por definir",
-    time: "Por confirmar"
+    category: "Música",
+    venue: "Plaza de Arte, Escolleras",
+    time: "19:00 hrs."
+  },
+  {
+    id: "ma-7",
+    date: "12",
+    day: "domingo",
+    title: "Noches Adictiva5",
+    artist: "Adicto5",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Plaza de Arte, Escolleras",
+    time: "19:00 hrs."
   }
 ];
 
@@ -64,10 +86,10 @@ export const maderoFestival: FestivalEvent[] = [
 export const maderoFestivalInfo: FestivalInfo = {
   name: "Madero",
   location: "Madero",
-  totalEvents: 5,
+  totalEvents: 7,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Interdisciplinario"]
+  categories: ["Música", "Interdisciplinario"]
 };
 
 // Exposiciones del Festival del Municipio Madero

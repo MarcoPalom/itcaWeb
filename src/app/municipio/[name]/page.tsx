@@ -17,8 +17,8 @@ import { camargoFestivalInfo, camargoFestival } from "@/constants/Municipios/cam
 import { manteFestivalInfo, manteFestival } from "@/constants/Municipios/manteData"
 import { sanFernandoFestivalInfo, sanfernandoFestival } from "@/constants/Municipios/sanFernandoData"
 import { valleHermosoFestivalInfo, vallehermosoFestival } from "@/constants/Municipios/valleHermosoData"
-import { rioBravoFestivalInfo, riobravoFestival } from "@/constants/Municipios/rioBravoData"
-import { miguelAlemanFestivalInfo, miguelalemanFestival } from "@/constants/Municipios/miguelAlemanData"
+import { rioBravoFestivalInfo, rioBravoFestival } from "@/constants/Municipios/rioBravoData"
+import { miguelAlemanFestivalInfo, miguelAlemanFestival } from "@/constants/Municipios/miguelAlemanData"
 import { gonzalezFestivalInfo, gonzalezFestival } from "@/constants/Municipios/gonzalezData"
 import { xicotencatlFestivalInfo, xicotencatlFestival } from "@/constants/Municipios/xicotencatlData"
 import { lleraFestivalInfo, lleraFestival } from "@/constants/Municipios/lleraData"
@@ -48,7 +48,7 @@ import { sotoLaMarinaFestivalInfo, sotolamarinaFestival } from "@/constants/Muni
 import { abasoloFestivalInfo, abasoloFestival } from "@/constants/Municipios/abasoloData"
 import { aldamaFestivalInfo, aldamaFestival } from "@/constants/Municipios/aldamaData"
 import { burgosFestivalInfo, burgosFestival } from "@/constants/Municipios/burgosData"
-import { gustavoDiazOrdazFestivalInfo, gustavodiazordazFestival } from "@/constants/Municipios/gustavoDiazOrdazData"
+import { gustavoDiazOrdazFestivalInfo, gustavoDiazOrdazFestival } from "@/constants/Municipios/gustavoDiazOrdazData"
 import { cruillasFestivalInfo, cruillasFestival } from "@/constants/Municipios/cruillasData"
 import { getArtistImageUniversal } from "@/constants/artistImages"
 import { municipalImages } from "@/constants/municipalImages"
@@ -76,8 +76,8 @@ export default function MunicipalityPage() {
     "mante": { info: manteFestivalInfo, events: manteFestival },
     "san-fernando": { info: sanFernandoFestivalInfo, events: sanfernandoFestival },
     "valle-hermoso": { info: valleHermosoFestivalInfo, events: vallehermosoFestival },
-    "rio-bravo": { info: rioBravoFestivalInfo, events: riobravoFestival },
-    "miguel-aleman": { info: miguelAlemanFestivalInfo, events: miguelalemanFestival },
+    "rio-bravo": { info: rioBravoFestivalInfo, events: rioBravoFestival },
+    "miguel-aleman": { info: miguelAlemanFestivalInfo, events: miguelAlemanFestival },
     "gonzalez": { info: gonzalezFestivalInfo, events: gonzalezFestival },
     "xicotencatl": { info: xicotencatlFestivalInfo, events: xicotencatlFestival },
     "llera": { info: lleraFestivalInfo, events: lleraFestival },
@@ -107,7 +107,7 @@ export default function MunicipalityPage() {
     "abasolo": { info: abasoloFestivalInfo, events: abasoloFestival },
     "aldama": { info: aldamaFestivalInfo, events: aldamaFestival },
     "burgos": { info: burgosFestivalInfo, events: burgosFestival },
-    "gustavo-diaz-ordaz": { info: gustavoDiazOrdazFestivalInfo, events: gustavodiazordazFestival },
+    "gustavo-diaz-ordaz": { info: gustavoDiazOrdazFestivalInfo, events: gustavoDiazOrdazFestival },
     "cruillas": { info: cruillasFestivalInfo, events: cruillasFestival }
   }), [])
 

@@ -5,36 +5,36 @@ import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 export const casasFestival: FestivalEvent[] = [
   {
     id: "ca-1",
+    date: "3",
+    day: "viernes",
+    title: "De costa a costa",
+    artist: "Grupo Folklórico Kauyumarie",
+    origin: "Tamaulipas",
+    category: "Danza",
+    venue: "Plaza Principal Cabecera Municipal",
+    time: "16:00 hrs."
+  },
+  {
+    id: "ca-2",
     date: "6",
     day: "lunes",
     title: "El Lobo",
     artist: "La Percha Teatro",
-    origin: "Nacional",
+    origin: "Nuevo León",
     category: "Teatro",
-    venue: "Escuela Primaria",
-    time: "10:00 hrs."
-  },
-  {
-    id: "ca-2",
-    date: "9",
-    day: "jueves",
-    title: "Canasta de cuentos de la zona donde vivimos",
-    artist: "Grupo de teatro Guarapo",
-    origin: "Tamaulipas",
-    category: "Teatro",
-    venue: "Ejido",
+    venue: "Escuela Primaria \"Amado Nervo\" en Ej. \"La Lajilla\"",
     time: "10:00 hrs."
   },
   {
     id: "ca-3",
-    date: "3",
-    day: "viernes",
-    title: "De costa a costa",
-    artist: "Grupo Folclórico Kauyumarie",
+    date: "9",
+    day: "jueves",
+    title: "Canasta de cuentos de la zona donde vivimos",
+    artist: "Teatro Guarapo",
     origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Plaza Principal Cabecera Municipal",
-    time: "16:00 hrs."
+    category: "Teatro",
+    venue: "Ejido \"Lázaro Cárdenas del Río\"",
+    time: "10:00 hrs."
   }
 ];
 
@@ -44,11 +44,11 @@ export const casasFestivalInfo: FestivalInfo = {
   location: "Casas",
   totalEvents: 3,
   startDate: "3 de octubre de 2025",
-  endDate: "12 de octubre de 2025",
-  categories: ["Teatro","Interdisciplinario"]
+  endDate: "9 de octubre de 2025",
+  categories: ["Danza", "Teatro"]
 };
 
 // Exposiciones del Festival del Municipio Casas
 export const casasFestivalExhibitions: FestivalExhibition[] = [
-  // Agregar exposiciones si las hay
+  // No hay exposiciones para Casas en los datos proporcionados
 ];
