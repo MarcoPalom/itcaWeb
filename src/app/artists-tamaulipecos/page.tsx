@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import { ArrowLeft, Search, ChevronDown, Check } from "lucide-react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-import { tamaulipecosArtists } from "@/constants/tamaulipecosArtistData"
+import { tamaulipecosArtists, TamaulipecoArtist } from "@/constants/tamaulipecosArtistData"
 import { getArtistImage } from "@/constants/artistImages"
 import { getArtistEventsFromAllMunicipalities } from "@/utils/artistEvents"
 import FestivalBackground from "@/components/festival/FestivalBackground"
@@ -109,7 +109,7 @@ export default function ArtistsTamaulipecosPage() {
     return getArtistImage(artistName, 'tamaulipecos')
   }
 
-  const handleArtistClick = (artist: any) => {
+  const handleArtistClick = (artist: TamaulipecoArtist) => {
     // Generar array temporal con todos los eventos del artista desde todos los municipios
     const allArtistEvents = getArtistEventsFromAllMunicipalities(artist.name)
     

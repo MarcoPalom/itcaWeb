@@ -23,6 +23,11 @@ type Artist = {
   description?: string
 }
 
+// Tipo para artista combinado (datos estáticos + eventos dinámicos)
+type CombinedArtist = Artist & {
+  municipalities: string[]
+}
+
 type ArtistEvent = ArtistEventWithMunicipality
 
 export default function ArtistPage() {
@@ -75,7 +80,7 @@ export default function ArtistPage() {
           municipalities: artistStats.municipalityNames
         }
         
-        setArtist(combinedArtist as any)
+        setArtist(combinedArtist as CombinedArtist)
       }
     }
   }, [params.name])
@@ -109,7 +114,7 @@ export default function ArtistPage() {
 
   const artistImage = getArtistImageUniversal(artist.name)
   // Usar municipalities del objeto si está disponible (datos completos), sino calcular desde events
-  const municipalities = (artist as any).municipalities || [...new Set(artist.events.map((event: ArtistEvent) => event.municipality))]
+  const municipalities = artist.municipalities || [...new Set(artist.events.map((event: ArtistEvent) => event.municipality))]
 
 
   return (
