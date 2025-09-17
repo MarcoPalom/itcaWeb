@@ -13,7 +13,7 @@ const FestivalTopNav = () => {
   const { toggleTheme, isDark } = useTheme();
 
   const navItems = [
-    { href: "/festival", label: "Festival" },
+    { href: "/", label: "Festival" },
     { href: "/national-artists", label: "Artistas Nacionales" },
     { href: "/international-artists", label: "Artistas Internacionales" },
     { href: "/artists-tamaulipecos", label: "Artistas Tamaulipecos" },
@@ -30,7 +30,7 @@ const FestivalTopNav = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between md:justify-center h-16 space-x-8">
           {/* Logo */}
-          <Link href="/festival" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -48,7 +48,7 @@ const FestivalTopNav = () => {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => {
               const isActive = pathname === item.href || 
-                (item.href === "/festival" && pathname === "/") ||
+                (item.href === "/" && pathname === "/") ||
                 (item.href === "/national-artists" && pathname.startsWith("/artist/")) ||
                 (item.href === "/tamaulipecos-artists" && pathname.startsWith("/tamaulipeco/")) ||
                 (item.href === "/municipal-billboards" && pathname.startsWith("/municipio/"));
@@ -120,7 +120,7 @@ const FestivalTopNav = () => {
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {navItems.map((item) => {
                   const isActive = pathname === item.href || 
-                    (item.href === "/festival" && pathname === "/") ||
+                    (item.href === "/" && pathname === "/") ||
                     (item.href === "/national-artists" && pathname.startsWith("/artist/")) ||
                     (item.href === "/tamaulipecos-artists" && pathname.startsWith("/tamaulipeco/")) ||
                     (item.href === "/municipal-billboards" && pathname.startsWith("/municipio/"));

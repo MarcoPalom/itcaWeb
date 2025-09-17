@@ -97,11 +97,6 @@ export default function Fastival() {
         <div className="flex items-center gap-2">
           <span className="text-sm font-medium md:text-lg">Bienvenido al FICSM</span>
         </div>
-        <div className="flex gap-1 md:hidden">
-          <div className={`w-1 h-1 rounded-full ${isDark ? 'bg-white' : 'bg-gray-600'}`}></div>
-          <div className={`w-1 h-1 rounded-full ${isDark ? 'bg-white' : 'bg-gray-600'}`}></div>
-          <div className={`w-1 h-1 rounded-full ${isDark ? 'bg-white' : 'bg-gray-600'}`}></div>
-        </div>
       </div>
 
       {/* Artists Sections */}

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Fastival from "../../components/festival/Fastival";
 import FestivalLoading from "../../components/FestivalLoading";
 import FestivalWelcome from "../../components/FestivalWelcome";
+import FestivalWarningLabel from "../../components/FestivalWarningLabel";
 import { useFestivalLoading } from "../../hooks/useFestivalLoading";
 
 export default function FestivalPage() {
@@ -31,6 +32,7 @@ export default function FestivalPage() {
 
   return (
     <>
+      <FestivalWarningLabel />
       {showWelcome && <FestivalWelcome onComplete={handleWelcomeComplete} />}
       <Fastival />
     </>

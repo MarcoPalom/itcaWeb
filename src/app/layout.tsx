@@ -3,6 +3,7 @@
 import "./globals.css";
 import TopNav from "../components/TopNav";
 import FestivalTopNav from "../components/FestivalTopNav";
+import FestivalWarningLabel from "../components/FestivalWarningLabel";
 import Footer from "../components/Footer";
 import { ReactNode, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion"
@@ -21,7 +22,7 @@ export default function RootLayout({
   const ticking = useRef(false);
 
   // Check if we're on pages that should show FestivalTopNav
-  const showFestivalTopNav = pathname === '/festival' || pathname === '/national-artists' || pathname === '/international-artists' || pathname === '/municipal-billboards' || pathname === '/artists-tamaulipecos' || pathname.startsWith('/artist/') || pathname.startsWith('/municipio/');
+  const showFestivalTopNav = pathname === '/' || pathname === '/national-artists' || pathname === '/international-artists' || pathname === '/municipal-billboards' || pathname === '/artists-tamaulipecos' || pathname.startsWith('/artist/') || pathname.startsWith('/municipio/');
   
   // Check if we're on pages that shouldn't show any TopNav
   const hideTopNav = showFestivalTopNav;
@@ -81,6 +82,7 @@ export default function RootLayout({
             <div style={{ position: "relative", zIndex: 1 }}>
               {!hideTopNav && <TopNav />}
               {showFestivalTopNav && <FestivalTopNav />}
+              {showFestivalTopNav && <FestivalWarningLabel />}
               {showFestivalTopNav && <div className="h-16" />} {/* Spacer for fixed nav */}
               {children}
               <Footer />
