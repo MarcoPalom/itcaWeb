@@ -4,13 +4,12 @@ import { ArrowLeft, Search, ChevronDown, Check } from "lucide-react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 // Usando img nativo de HTML en lugar de Image de Next.js
-import { nationalArtists } from "@/constants/nationalArtistData"
+import { nationalArtists, NationalArtist } from "@/constants/nationalArtistData"
 import { getArtistImage } from "@/constants/artistImages"
 import { getArtistEventsFromAllMunicipalities } from "@/utils/artistEvents"
 import FestivalBackground from "@/components/festival/FestivalBackground"
 import FestivalLoading from "@/components/FestivalLoading"
 import { useFestivalLoading } from "@/hooks/useFestivalLoading"
-import { useMobileScrollFix } from "@/hooks/useMobileScrollFix"
 import { useTheme } from "@/contexts/ThemeContext"
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption, Transition } from "@headlessui/react"
 import Pagination from "@/components/Pagination"
@@ -31,7 +30,6 @@ export default function NationalArtistsPage() {
     minLoadingTime: 2000
   })
 
-  useMobileScrollFix()
 
   // Función para precargar todas las imágenes de artistas
   const preloadImages = async () => {
@@ -113,7 +111,7 @@ export default function NationalArtistsPage() {
     return getArtistImage(artistName, 'national')
   }
 
-  const handleArtistClick = (artist: any) => {
+  const handleArtistClick = (artist: NationalArtist) => {
     // Generar array temporal con todos los eventos del artista desde todos los municipios
     const allArtistEvents = getArtistEventsFromAllMunicipalities(artist.name)
     
@@ -129,12 +127,12 @@ export default function NationalArtistsPage() {
     sessionStorage.setItem('selectedArtist', JSON.stringify(artistWithAllEvents))
   }
 
-  if (isLoading) {
+  if (isLoading || !imagesPreloaded) {
     return (
       <FestivalLoading 
-        message={message}
+        message={imagesPreloaded ? message : "Precargando imágenes..."}
         showProgress={true}
-        progress={progress}
+        progress={imagesPreloaded ? progress : 50}
       />
     )
   }
@@ -290,7 +288,8 @@ export default function NationalArtistsPage() {
                         <img
                           src={getArtistImageForNational(artist.name)}
                           alt={artist.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover transition-opacity duration-300"
+                          style={{ opacity: imagesPreloaded ? 1 : 0.3 }}
                         />
                       </div>
 

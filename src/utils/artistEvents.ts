@@ -106,7 +106,7 @@ export function getArtistEventsFromAllMunicipalities(
   const results: ArtistEventWithMunicipality[] = [];
 
 
-  allMunicipalFestivals.forEach(({ name: municipality, events }, index) => {
+  allMunicipalFestivals.forEach(({ name: municipality, events }) => {
     
     events.forEach((event: FestivalEvent, eventIndex) => {
       const isMatch = exactMatch 

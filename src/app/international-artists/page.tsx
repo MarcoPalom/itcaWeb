@@ -1,16 +1,15 @@
 "use client"
-import { useState } from "react"
+import { useState , useEffect } from "react"
 import { ArrowLeft, Search, ChevronDown, Check } from "lucide-react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 // Usando img nativo de HTML en lugar de Image de Next.js
-import { internationalArtists } from "@/constants/internationalArtistData"
+import { internationalArtists, InternationalArtist } from "@/constants/internationalArtistData"
 import { getArtistImage } from "@/constants/artistImages"
 import { getArtistEventsFromAllMunicipalities } from "@/utils/artistEvents"
 import FestivalBackground from "@/components/festival/FestivalBackground"
 import FestivalLoading from "@/components/FestivalLoading"
 import { useFestivalLoading } from "@/hooks/useFestivalLoading"
-import { useMobileScrollFix } from "@/hooks/useMobileScrollFix"
 import { useTheme } from "@/contexts/ThemeContext"
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption, Transition } from "@headlessui/react"
 import Pagination from "@/components/Pagination"
@@ -22,6 +21,7 @@ export default function InternationalArtistsPage() {
   const [selectedCategory, setSelectedCategory] = useState("")
   const [sortBy, setSortBy] = useState("name")
   const [currentPage, setCurrentPage] = useState(1)
+  const [imagesPreloaded, setImagesPreloaded] = useState(false)
   const itemsPerPage = 10
 
   const { isLoading, progress, message } = useFestivalLoading({
@@ -29,7 +29,31 @@ export default function InternationalArtistsPage() {
     minLoadingTime: 2000
   })
 
-  useMobileScrollFix()
+
+  // Función para precargar todas las imágenes de artistas
+  const preloadImages = async () => {
+    const imagePromises = internationalArtists.map(artist => {
+      return new Promise((resolve, reject) => {
+        const img = new Image()
+        img.onload = () => resolve(img)
+        img.onerror = () => reject(new Error(`Failed to load image for ${artist.name}`))
+        img.src = getArtistImage(artist.name, 'international')
+      })
+    })
+
+    try {
+      await Promise.all(imagePromises)
+      setImagesPreloaded(true)
+    } catch (error) {
+      console.warn('Some images failed to preload:', error)
+      setImagesPreloaded(true) // Continuar aunque algunas imágenes fallen
+    }
+  }
+
+  // Precargar imágenes al montar el componente
+  useEffect(() => {
+    preloadImages()
+  }, [])
 
   const sortOptions = [
     { id: "name", name: "Ordenar A-Z" },
@@ -86,7 +110,7 @@ export default function InternationalArtistsPage() {
     return getArtistImage(artistName, 'international')
   }
 
-  const handleArtistClick = (artist: any) => {
+  const handleArtistClick = (artist: InternationalArtist) => {
     // Generar array temporal con todos los eventos del artista desde todos los municipios
     const allArtistEvents = getArtistEventsFromAllMunicipalities(artist.name)
     
@@ -102,12 +126,12 @@ export default function InternationalArtistsPage() {
     sessionStorage.setItem('selectedArtist', JSON.stringify(artistWithAllEvents))
   }
 
-  if (isLoading) {
+  if (isLoading || !imagesPreloaded) {
     return (
       <FestivalLoading 
-        message={message}
+        message={imagesPreloaded ? message : "Precargando imágenes..."}
         showProgress={true}
-        progress={progress}
+        progress={imagesPreloaded ? progress : 50}
       />
     )
   }
@@ -263,7 +287,8 @@ export default function InternationalArtistsPage() {
                         <img
                           src={getArtistImageForInternational(artist.name)}
                           alt={artist.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover transition-opacity duration-300"
+                          style={{ opacity: imagesPreloaded ? 1 : 0.3 }}
                         />
                       </div>
 
