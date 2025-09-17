@@ -1,6 +1,5 @@
 "use client"
 import { useState, useEffect } from "react"
-import Image from "next/image"
 
 interface FestivalLoadingProps {
   message?: string
@@ -47,11 +46,9 @@ export default function FestivalLoading({
           
           {/* Center Logo */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image
+            <img
               src="/images/logos/logo.png"
               alt="Festival Logo"
-              width={40}
-              height={40}
               className="w-10 h-10 md:w-12 md:h-12 animate-pulse"
             />
           </div>

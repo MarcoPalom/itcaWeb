@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -37,12 +36,10 @@ const FestivalTopNav = () => {
               whileTap={{ scale: 0.95 }}
               className="relative w-8 h-8"
             >
-              <Image
+              <img
                 src="/images/logos/logo.png"
                 alt="FICSM 2025"
-                fill
-                className="object-contain filter brightness-0 invert"
-                priority
+                className="absolute inset-0 w-full h-full object-contain filter brightness-0 invert"
               />
             </motion.div>
           </Link>

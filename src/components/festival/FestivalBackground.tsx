@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import { useTheme } from "@/contexts/ThemeContext";
 
 interface IconPosition {
@@ -97,11 +96,10 @@ export default function FestivalBackground() {
             height: '24px',
           }}
         >
-          <Image
+          <img
             src={icon.src}
             alt=""
-            fill
-            className="object-contain"
+            className="absolute inset-0 w-full h-full object-contain"
           />
         </div>
       ))}
@@ -109,11 +107,9 @@ export default function FestivalBackground() {
       {/* Center Logo */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative">
-          <Image
+          <img
             src="/images/logos/logo.png"
             alt="Festival Logo"
-            width={256}
-            height={256}
             className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 object-contain"
             style={{
               filter: isDark 

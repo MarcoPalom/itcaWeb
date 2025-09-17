@@ -2,7 +2,7 @@
 import { useState, useEffect, useMemo } from "react"
 import { ArrowLeft} from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
-import OptimizedImage from "@/components/ui/OptimizedImage"
+// Usando img nativo de HTML en lugar de Image de Next.js
 import { FestivalEvent, FestivalInfo } from "@/constants/types"
 import FestivalLoading from "@/components/FestivalLoading"
 import { useFestivalLoading } from "@/hooks/useFestivalLoading"
@@ -15,7 +15,7 @@ import { nvFestivalInfo, nuevolaredoFestival } from "@/constants/Municipios/nvDa
 import { altamiraFestivalInfo, altamiraFestival } from "@/constants/Municipios/altamiraData"
 import { camargoFestivalInfo, camargoFestival } from "@/constants/Municipios/camargoData"
 import { manteFestivalInfo, manteFestival } from "@/constants/Municipios/manteData"
-import { sanFernandoFestivalInfo, sanfernandoFestival } from "@/constants/Municipios/sanFernandoData"
+import { sanFernandoFestivalInfo, sanFernandoFestival } from "@/constants/Municipios/sanFernandoData"
 import { valleHermosoFestivalInfo, vallehermosoFestival } from "@/constants/Municipios/valleHermosoData"
 import { rioBravoFestivalInfo, rioBravoFestival } from "@/constants/Municipios/rioBravoData"
 import { miguelAlemanFestivalInfo, miguelAlemanFestival } from "@/constants/Municipios/miguelAlemanData"
@@ -31,9 +31,9 @@ import { miquihuanaFestivalInfo, miquihuanaFestival } from "@/constants/Municipi
 import { tulaFestivalInfo, tulaFestival } from "@/constants/Municipios/tulaData"
 import { ocampoFestivalInfo, ocampoFestival } from "@/constants/Municipios/ocampoData"
 import { nuevoMorelosFestivalInfo, nuevomorelosFestival } from "@/constants/Municipios/nuevoMorelosData"
-import { antiguoMorelosFestivalInfo, antiguomorelosFestival } from "@/constants/Municipios/antiguoMorelosData"
+import { antiguoMorelosFestivalInfo, antiguoMorelosFestival } from "@/constants/Municipios/antiguoMorelosData"
 import { casasFestivalInfo, casasFestival } from "@/constants/Municipios/casasData"
-import { gomezFariasFestivalInfo, gomezfariasFestival } from "@/constants/Municipios/gomezFariasData"
+import { gomezFariasFestivalInfo, gomezFariasFestival } from "@/constants/Municipios/gomezFariasData"
 import { guerreroFestivalInfo, guerreroFestival } from "@/constants/Municipios/guerreroData"
 import { guemezFestivalInfo, guemezFestival } from "@/constants/Municipios/guemezData"
 import { hidalgoFestivalInfo, hidalgoFestival } from "@/constants/Municipios/hidalgoData"
@@ -42,9 +42,9 @@ import { maderoFestivalInfo, maderoFestival } from "@/constants/Municipios/mader
 import { mendezFestivalInfo, mendezFestival } from "@/constants/Municipios/mendezData"
 import { mierFestivalInfo, mierFestival } from "@/constants/Municipios/mierData"
 import { padillaFestivalInfo, padillaFestival } from "@/constants/Municipios/padillaData"
-import { sanCarlosFestivalInfo, sancarlosFestival } from "@/constants/Municipios/sanCarlosData"
-import { sanNicolasFestivalInfo, sannicolasFestival } from "@/constants/Municipios/sanNicolasData"
-import { sotoLaMarinaFestivalInfo, sotolamarinaFestival } from "@/constants/Municipios/sotoLaMarinaData"
+import { sanCarlosFestivalInfo, sanCarlosFestival } from "@/constants/Municipios/sanCarlosData"
+import { sanNicolasFestivalInfo, sanNicolasFestival } from "@/constants/Municipios/sanNicolasData"
+import { sotoLaMarinaFestivalInfo, sotoLaMarinaFestival } from "@/constants/Municipios/sotoLaMarinaData"
 import { abasoloFestivalInfo, abasoloFestival } from "@/constants/Municipios/abasoloData"
 import { aldamaFestivalInfo, aldamaFestival } from "@/constants/Municipios/aldamaData"
 import { burgosFestivalInfo, burgosFestival } from "@/constants/Municipios/burgosData"
@@ -74,7 +74,7 @@ export default function MunicipalityPage() {
     "altamira": { info: altamiraFestivalInfo, events: altamiraFestival },
     "camargo": { info: camargoFestivalInfo, events: camargoFestival },
     "mante": { info: manteFestivalInfo, events: manteFestival },
-    "san-fernando": { info: sanFernandoFestivalInfo, events: sanfernandoFestival },
+    "san-fernando": { info: sanFernandoFestivalInfo, events: sanFernandoFestival },
     "valle-hermoso": { info: valleHermosoFestivalInfo, events: vallehermosoFestival },
     "rio-bravo": { info: rioBravoFestivalInfo, events: rioBravoFestival },
     "miguel-aleman": { info: miguelAlemanFestivalInfo, events: miguelAlemanFestival },
@@ -90,9 +90,9 @@ export default function MunicipalityPage() {
     "tula": { info: tulaFestivalInfo, events: tulaFestival },
     "ocampo": { info: ocampoFestivalInfo, events: ocampoFestival },
     "nuevo-morelos": { info: nuevoMorelosFestivalInfo, events: nuevomorelosFestival },
-    "antiguo-morelos": { info: antiguoMorelosFestivalInfo, events: antiguomorelosFestival },
+    "antiguo-morelos": { info: antiguoMorelosFestivalInfo, events: antiguoMorelosFestival },
     "casas": { info: casasFestivalInfo, events: casasFestival },
-    "gomez-farias": { info: gomezFariasFestivalInfo, events: gomezfariasFestival },
+    "gomez-farias": { info: gomezFariasFestivalInfo, events: gomezFariasFestival },
     "guerrero": { info: guerreroFestivalInfo, events: guerreroFestival },
     "guemez": { info: guemezFestivalInfo, events: guemezFestival },
     "hidalgo": { info: hidalgoFestivalInfo, events: hidalgoFestival },
@@ -101,9 +101,9 @@ export default function MunicipalityPage() {
     "mendez": { info: mendezFestivalInfo, events: mendezFestival },
     "mier": { info: mierFestivalInfo, events: mierFestival },
     "padilla": { info: padillaFestivalInfo, events: padillaFestival },
-    "san-carlos": { info: sanCarlosFestivalInfo, events: sancarlosFestival },
-    "san-nicolas": { info: sanNicolasFestivalInfo, events: sannicolasFestival },
-    "soto-la-marina": { info: sotoLaMarinaFestivalInfo, events: sotolamarinaFestival },
+    "san-carlos": { info: sanCarlosFestivalInfo, events: sanCarlosFestival },
+    "san-nicolas": { info: sanNicolasFestivalInfo, events: sanNicolasFestival },
+    "soto-la-marina": { info: sotoLaMarinaFestivalInfo, events: sotoLaMarinaFestival },
     "abasolo": { info: abasoloFestivalInfo, events: abasoloFestival },
     "aldama": { info: aldamaFestivalInfo, events: aldamaFestival },
     "burgos": { info: burgosFestivalInfo, events: burgosFestival },
@@ -179,15 +179,10 @@ export default function MunicipalityPage() {
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <OptimizedImage
+        <img
           src={municipalityImage}
           alt="Background"
-          fill
-          className="object-cover filter grayscale blur-sm opacity-30"
-          priority={true}
-          sizes="100vw"
-          quality={60}
-          placeholder="blur"
+          className="absolute inset-0 w-full h-full object-cover filter grayscale blur-sm opacity-30"
         />
       </div>
 
@@ -209,15 +204,10 @@ export default function MunicipalityPage() {
           {/* Municipality Image */}
           <div className="flex justify-center mb-6">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#864e94] border-opacity-50 shadow-2xl relative">
-              <OptimizedImage
+              <img
                 src={municipalityImage}
                 alt={municipality.name}
-                fill
-                className="object-cover"
-                priority={true}
-                sizes="(max-width: 768px) 192px, 256px"
-                quality={90}
-                placeholder="blur"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

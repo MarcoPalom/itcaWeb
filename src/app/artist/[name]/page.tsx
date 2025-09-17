@@ -3,17 +3,27 @@ import { useState, useEffect } from "react"
 import { ArrowLeft, ChevronDown } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useParams, useRouter } from "next/navigation"
-import OptimizedImage from "@/components/ui/OptimizedImage"
-import { internationalArtists, InternationalArtist } from "@/constants/internationalArtistData"
-import { nationalArtists, NationalArtist } from "@/constants/nationalArtistData"
-import { tamaulipecosArtists, TamaulipecoArtist } from "@/constants/tamaulipecosArtistData"
 import { getArtistImageUniversal } from "@/constants/artistImages"
+import { getTamaulipecoArtistByName } from "@/constants/tamaulipecosArtistData"
+import { getArtistByName as getNationalArtistByName } from "@/constants/nationalArtistData"
+import { getArtistByName as getInternationalArtistByName } from "@/constants/internationalArtistData"
 import EventList from "@/components/artist/EventList"
 import FestivalLoading from "@/components/FestivalLoading"
 import { useFestivalLoading } from "@/hooks/useFestivalLoading"
+import { getArtistStatsFromAllMunicipalities, ArtistEventWithMunicipality } from "@/utils/artistEvents"
 
-type Artist = InternationalArtist | NationalArtist | TamaulipecoArtist
-type ArtistEvent = InternationalArtist['events'][0] | NationalArtist['events'][0] | TamaulipecoArtist['events'][0]
+// Tipos genéricos para artistas de municipios
+type Artist = {
+  name: string
+  origin: string
+  category: string
+  subcategory?: string
+  events: ArtistEventWithMunicipality[]
+  municipalities: string[]
+  description?: string
+}
+
+type ArtistEvent = ArtistEventWithMunicipality
 
 export default function ArtistPage() {
   const params = useParams()
@@ -32,27 +42,44 @@ export default function ArtistPage() {
     if (params.name) {
       const artistName = decodeURIComponent(params.name as string)
       
-      let foundArtist = internationalArtists.find(a => 
-        a.name.toLowerCase().replace(/\s+/g, '-') === artistName
-      )
+      // 1. Buscar datos del artista en arrays estáticos (tamaulipecos, nacionales, internacionales)
+      let staticArtist = getTamaulipecoArtistByName(artistName)
       
-      if (!foundArtist) {
-        foundArtist = nationalArtists.find(a => 
-          a.name.toLowerCase().replace(/\s+/g, '-') === artistName
-        )
+      if (!staticArtist) {
+        staticArtist = getNationalArtistByName(artistName)
       }
       
-      if (!foundArtist) {
-        foundArtist = tamaulipecosArtists.find(a => 
-          a.name.toLowerCase().replace(/\s+/g, '-') === artistName
-        )
+      if (!staticArtist) {
+        staticArtist = getInternationalArtistByName(artistName)
       }
       
-      if (foundArtist) {
-        setArtist(foundArtist)
+      if (staticArtist) {
+        // 2. Buscar eventos en arrays dinámicos de municipios
+        let artistStats = getArtistStatsFromAllMunicipalities(staticArtist.name, false)
+        
+        // También probar con el nombre de la URL por si acaso
+        if (artistStats.totalEvents === 0) {
+          const artistStatsUrl = getArtistStatsFromAllMunicipalities(artistName, false)
+          if (artistStatsUrl.totalEvents > 0) {
+            artistStats = artistStatsUrl
+          }
+        }
+        
+        // 3. Combinar datos estáticos del artista con eventos dinámicos
+        const combinedArtist = {
+          ...staticArtist,
+          events: artistStats.events.map((event: ArtistEventWithMunicipality) => ({
+            ...event,
+            municipality: event.municipality
+          })),
+          municipalities: artistStats.municipalityNames
+        }
+        
+        setArtist(combinedArtist as any)
       }
     }
   }, [params.name])
+
 
   if (isLoading) {
     return (
@@ -81,22 +108,19 @@ export default function ArtistPage() {
   }
 
   const artistImage = getArtistImageUniversal(artist.name)
-  const municipalities = [...new Set(artist.events.map((event: ArtistEvent) => event.municipality))]
+  // Usar municipalities del objeto si está disponible (datos completos), sino calcular desde events
+  const municipalities = (artist as any).municipalities || [...new Set(artist.events.map((event: ArtistEvent) => event.municipality))]
+
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
 
 
       <div className="absolute inset-0 z-0">
-        <OptimizedImage
+        <img
           src={artistImage}
           alt="Background"
-          fill
-          className="object-cover filter grayscale blur-sm opacity-30"
-          priority={true}
-          sizes="100vw"
-          quality={60}
-          placeholder="blur"
+          className="absolute inset-0 w-full h-full object-cover filter grayscale blur-sm opacity-30"
         />
       </div>
 
@@ -114,15 +138,10 @@ export default function ArtistPage() {
         <div className="px-4 md:px-6 pb-6">
           <div className="flex justify-center mb-6">
             <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#864e94] border-opacity-50 shadow-2xl relative">
-              <OptimizedImage
+              <img
                 src={artistImage}
                 alt={artist.name}
-                fill
-                className="object-cover"
-                priority={true}
-                sizes="(max-width: 768px) 192px, 256px"
-                quality={90}
-                placeholder="blur"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
@@ -198,7 +217,7 @@ export default function ArtistPage() {
               Municipios Visitados
             </h3>
             <div className="flex flex-wrap gap-2 justify-center">
-              {municipalities.map((municipality, index) => (
+              {municipalities.map((municipality: string, index: number) => (
                 <span
                   key={index}
                   className="px-3 py-1 bg-[#864e94] text-white text-sm font-medium rounded-full"

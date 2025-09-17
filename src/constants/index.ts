@@ -242,3 +242,6 @@ export * from './Municipios/maderoData';
 
 // Importar data del Festival del Municipio Tampico
 export * from './Municipios/tampicoData';
+
+// Importar utilidades para eventos de artistas
+export * from '../utils/artistEvents';

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function TopNav() {
@@ -26,7 +25,7 @@ export default function TopNav() {
         pointerEvents: isVisible ? 'auto' : 'none'
       }}
     >
-      <Image className="w-20 h-20" src="/logo.svg" alt="ITCA Web" width={80} height={80} />
+      <img className="w-20 h-20" src="/logo.svg" alt="ITCA Web" />
       <div className="flex gap-6">
         <Link href="/" className="text-white hover:text-blue-200 transition-colors">Inicio</Link>
         <Link href="/about" className="text-white hover:text-blue-200 transition-colors">Acerca</Link>

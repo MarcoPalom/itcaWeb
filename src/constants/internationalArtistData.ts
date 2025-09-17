@@ -491,11 +491,15 @@ export const getArtistEvents = (artistName: string): InternationalArtistEvent[] 
   return artist ? artist.events : [];
 };
 
-// Función para obtener artista por nombre
+// Función para obtener artista por nombre (compara con slug)
 export const getArtistByName = (artistName: string): InternationalArtist | undefined => {
-  return internationalArtists.find(a => 
-    a.name.toLowerCase().includes(artistName.toLowerCase())
-  );
+  const found = internationalArtists.find(a => {
+    const artistSlug = a.name.toLowerCase().replace(/\s+/g, '-')
+    const isMatch = artistSlug === artistName.toLowerCase()
+    return isMatch
+  });
+  
+  return found;
 };
 
 // Función para obtener todos los eventos por municipio

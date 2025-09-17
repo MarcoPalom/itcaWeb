@@ -1,11 +1,12 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ArrowLeft, Search, ChevronDown, Check } from "lucide-react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-import OptimizedImage from "@/components/ui/OptimizedImage"
+// Usando img nativo de HTML en lugar de Image de Next.js
 import { nationalArtists } from "@/constants/nationalArtistData"
 import { getArtistImage } from "@/constants/artistImages"
+import { getArtistEventsFromAllMunicipalities } from "@/utils/artistEvents"
 import FestivalBackground from "@/components/festival/FestivalBackground"
 import FestivalLoading from "@/components/FestivalLoading"
 import { useFestivalLoading } from "@/hooks/useFestivalLoading"
@@ -21,6 +22,7 @@ export default function NationalArtistsPage() {
   const [selectedCategory, setSelectedCategory] = useState("")
   const [sortBy, setSortBy] = useState("name")
   const [currentPage, setCurrentPage] = useState(1)
+  const [imagesPreloaded, setImagesPreloaded] = useState(false)
   const itemsPerPage = 10
 
 
@@ -30,6 +32,31 @@ export default function NationalArtistsPage() {
   })
 
   useMobileScrollFix()
+
+  // Función para precargar todas las imágenes de artistas
+  const preloadImages = async () => {
+    const imagePromises = nationalArtists.map(artist => {
+      return new Promise((resolve, reject) => {
+        const img = new Image()
+        img.onload = () => resolve(img)
+        img.onerror = () => reject(new Error(`Failed to load image for ${artist.name}`))
+        img.src = getArtistImage(artist.name, 'national')
+      })
+    })
+
+    try {
+      await Promise.all(imagePromises)
+      setImagesPreloaded(true)
+    } catch (error) {
+      console.warn('Some images failed to preload:', error)
+      setImagesPreloaded(true) // Continuar aunque algunas imágenes fallen
+    }
+  }
+
+  // Precargar imágenes al montar el componente
+  useEffect(() => {
+    preloadImages()
+  }, [])
 
   const sortOptions = [
     { id: "name", name: "Ordenar A-Z" },
@@ -84,6 +111,22 @@ export default function NationalArtistsPage() {
 
   const getArtistImageForNational = (artistName: string) => {
     return getArtistImage(artistName, 'national')
+  }
+
+  const handleArtistClick = (artist: any) => {
+    // Generar array temporal con todos los eventos del artista desde todos los municipios
+    const allArtistEvents = getArtistEventsFromAllMunicipalities(artist.name)
+    
+    // Crear objeto con datos completos del artista
+    const artistWithAllEvents = {
+      ...artist,
+      events: allArtistEvents.length > 0 ? allArtistEvents : artist.events,
+      totalEvents: allArtistEvents.length,
+      municipalities: [...new Set(allArtistEvents.map(event => event.municipality))]
+    }
+    
+    // Guardar en sessionStorage para pasar a la página del artista
+    sessionStorage.setItem('selectedArtist', JSON.stringify(artistWithAllEvents))
   }
 
   if (isLoading) {
@@ -234,24 +277,20 @@ export default function NationalArtistsPage() {
           </div>
 
           <div className="px-4 md:px-6 pb-6">
-            <div className={`backdrop-blur-sm rounded-lg mx-2 overflow-hidden ${isDark ? 'bg-gray-900/80' : 'bg-white/90'}`}>
+            <div className={`rounded-lg mx-2 overflow-hidden ${isDark ? 'bg-gray-900/80' : 'bg-white/90'}`}>
               {currentArtists.map((artist, index) => (
                 <div key={artist.id} className="w-full">
                   <Link
                     href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`}
                     className="block h-full"
+                    onClick={() => handleArtistClick(artist)}
                   >
                     <div className={`flex items-center gap-4 p-4 min-h-[120px] md:min-h-[150px] transition-colors ${isDark ? 'hover:bg-gray-800/50' : 'hover:bg-gray-100/50'}`}>
                       <div className="w-20 h-28 md:w-24 md:h-36 flex-shrink-0 rounded-lg overflow-hidden relative">
-                        <OptimizedImage
+                        <img
                           src={getArtistImageForNational(artist.name)}
                           alt={artist.name}
-                          fill
-                          className="object-cover"
-                          priority={index < 5} // Priorizar las primeras 5 imágenes visibles
-                          sizes="(max-width: 768px) 80px, 96px"
-                          quality={85}
-                          placeholder="blur"
+                          className="w-full h-full object-cover"
                         />
                       </div>
 
