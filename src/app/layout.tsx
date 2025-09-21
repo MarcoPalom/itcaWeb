@@ -5,6 +5,7 @@ import TopNav from "../components/TopNav";
 import FestivalTopNav from "../components/FestivalTopNav";
 import FestivalWarningLabel from "../components/FestivalWarningLabel";
 import Footer from "../components/Footer";
+import MaintenanceScreen from "../components/MaintenanceScreen";
 import { ReactNode, useRef, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion"
 import { ScrollLockProvider } from '../hooks/ScrollLockContext';
@@ -21,6 +22,10 @@ export default function RootLayout({
   const lastScroll = useRef(0);
   const ticking = useRef(false);
 
+  // Show maintenance screen for all routes
+  // Change to false to disable maintenance mode
+  const showMaintenance = true;
+  
   // Check if we're on pages that should show FestivalTopNav
   const showFestivalTopNav = pathname === '/' || pathname === '/national-artists' || pathname === '/international-artists' || pathname === '/municipal-billboards' || pathname === '/artists-tamaulipecos' || pathname.startsWith('/artist/') || pathname.startsWith('/municipio/');
   
@@ -74,19 +79,25 @@ export default function RootLayout({
       <body>
         <ThemeProvider>
           <ScrollLockProvider>
-            <motion.div
-              initial={{ scaleY: 1 }}
-              animate={controls}
-              style={{ minHeight: "100vh", width: "100vw", position: "fixed", top: 0, left: 0, zIndex: -1, background: "#f8fafc" }}
-            />
-            <div style={{ position: "relative", zIndex: 1 }}>
-              {!hideTopNav && <TopNav />}
-              {showFestivalTopNav && <FestivalTopNav />}
-              {showFestivalTopNav && <FestivalWarningLabel />}
-              {showFestivalTopNav && <div className="h-16" />} {/* Spacer for fixed nav */}
-              {children}
-              <Footer />
-            </div>
+            {showMaintenance ? (
+              <MaintenanceScreen />
+            ) : (
+              <>
+                <motion.div
+                  initial={{ scaleY: 1 }}
+                  animate={controls}
+                  style={{ minHeight: "100vh", width: "100vw", position: "fixed", top: 0, left: 0, zIndex: -1, background: "#f8fafc" }}
+                />
+                <div style={{ position: "relative", zIndex: 1 }}>
+                  {!hideTopNav && <TopNav />}
+                  {showFestivalTopNav && <FestivalTopNav />}
+                  {showFestivalTopNav && <FestivalWarningLabel />}
+                  {showFestivalTopNav && <div className="h-16" />} {/* Spacer for fixed nav */}
+                  {children}
+                  <Footer />
+                </div>
+              </>
+            )}
           </ScrollLockProvider>
         </ThemeProvider>
       </body>
