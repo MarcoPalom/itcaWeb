@@ -53,8 +53,6 @@ export function isArtistInSharedShow(artistName: string, showTitle: string): boo
 
 // Función para obtener el nombre del show original de un artista individual
 export function getOriginalShowTitle(artistName: string, allShows: string[]): string | null {
-  const normalizedArtistName = normalizeArtistName(artistName)
-  
   for (const show of allShows) {
     if (isArtistInSharedShow(artistName, show)) {
       return show

@@ -1,6 +1,6 @@
 // Utilidades para extraer eventos de artistas de todos los municipios
 import { FestivalEvent } from '@/constants/types';
-import { extractIndividualArtists, isArtistInSharedShow, normalizeArtistName } from './artistNameNormalization';
+import { isArtistInSharedShow, normalizeArtistName } from './artistNameNormalization';
 
 // Importar todos los festivales de municipios
 import { maderoFestival } from '@/constants/Municipios/maderoData';
