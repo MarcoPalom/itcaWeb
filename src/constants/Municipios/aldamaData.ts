@@ -90,6 +90,17 @@ export const aldamaFestival: FestivalEvent[] = [
     category: "Música",
     venue: "Explanada de Presidencia Municipal en Cabecera Municipal",
     time: "18:00 hrs."
+  },
+  {
+    id: "al-9",
+    date: "12",
+    day: "domingo",
+    title: "El Wero Hernández",
+    artist: "El Wero Hernández",
+    origin: "Estados Unidos",
+    category: "Música",
+    venue: "Explanada de Presidencia Municipal en Cabecera Municipal",
+    time: "19:00 hrs."
   }
 ];
 
@@ -97,7 +108,7 @@ export const aldamaFestival: FestivalEvent[] = [
 export const aldamaFestivalInfo: FestivalInfo = {
   name: "Aldama",
   location: "Aldama",
-  totalEvents: 8,
+  totalEvents: 9,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
   categories: ["Música", "Teatro", "Interdisciplinario"]

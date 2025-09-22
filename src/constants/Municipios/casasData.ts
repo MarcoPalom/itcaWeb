@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Casas
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Casas
+// Done
 export const casasFestival: FestivalEvent[] = [
   {
     id: "ca-1",

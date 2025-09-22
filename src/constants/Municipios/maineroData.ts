@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Mainero
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Mainero
+// done
 export const maineroFestival: FestivalEvent[] = [
   {
     id: "ma-1",

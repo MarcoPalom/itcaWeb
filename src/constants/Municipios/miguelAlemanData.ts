@@ -52,17 +52,6 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     id: "ma-5",
     date: "3",
     day: "viernes",
-    title: "Queen of the Gym",
-    artist: "Grupo \"Power Kids\"",
-    origin: "Tamaulipas",
-    category: "Danza",
-    venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
-    time: "20:35 hrs."
-  },
-  {
-    id: "ma-6",
-    date: "3",
-    day: "viernes",
     title: "Casa del Arte",
     artist: "Municipio de Miguel Alemán",
     origin: "Tamaulipas",
@@ -72,7 +61,7 @@ export const miguelAlemanFestival: FestivalEvent[] = [
   },
   // Sábado 4 de octubre
   {
-    id: "ma-7",
+    id: "ma-6",
     date: "4",
     day: "sábado",
     title: "Casa del Arte",
@@ -83,18 +72,18 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     time: "19:10 hrs."
   },
   {
-    id: "ma-8",
+    id: "ma-7",
     date: "4",
     day: "sábado",
-    title: "Noches Adictiva5",
-    artist: "Adicto5",
+    title: "Huapangos tamaulipecos, la raíz de mi tierra",
+    artist: "Grupo Honda Nor-T",
     origin: "Tamaulipas",
     category: "Música",
     venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
     time: "19:20 hrs."
   },
   {
-    id: "ma-9",
+    id: "ma-8",
     date: "4",
     day: "sábado",
     title: "Queen of the Gym",
@@ -105,7 +94,7 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     time: "20:40 hrs."
   },
   {
-    id: "ma-10",
+    id: "ma-9",
     date: "4",
     day: "sábado",
     title: "Grupo \"Extasis\"",
@@ -116,7 +105,7 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     time: "20:50 hrs."
   },
   {
-    id: "ma-11",
+    id: "ma-10",
     date: "4",
     day: "sábado",
     title: "Casa de Cultura - Guitarra",
@@ -128,7 +117,7 @@ export const miguelAlemanFestival: FestivalEvent[] = [
   },
   // Domingo 5 de octubre
   {
-    id: "ma-12",
+    id: "ma-11",
     date: "5",
     day: "domingo",
     title: "Queen of the Gym",
@@ -139,7 +128,7 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     time: "19:15 hrs."
   },
   {
-    id: "ma-13",
+    id: "ma-12",
     date: "5",
     day: "domingo",
     title: "América grande otra vez - Cancionero popular de las Américas",
@@ -155,7 +144,7 @@ export const miguelAlemanFestival: FestivalEvent[] = [
 export const miguelAlemanFestivalInfo: FestivalInfo = {
   name: "Miguel Alemán",
   location: "Miguel Alemán",
-  totalEvents: 13,
+  totalEvents: 12,
   startDate: "3 de octubre de 2025",
   endDate: "5 de octubre de 2025",
   categories: ["Interdisciplinario", "Danza", "Música"]

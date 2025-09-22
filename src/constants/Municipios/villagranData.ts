@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Villagrán
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Villagrán
+// Done
 export const villagranFestival: FestivalEvent[] = [
   {
     id: "vi-1",

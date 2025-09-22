@@ -1,7 +1,7 @@
 // Data del Festival del Municipio San Nicolás
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio San Nicolás
+// Done
 export const sanNicolasFestival: FestivalEvent[] = [
   {
     id: "sn-1",
@@ -19,7 +19,7 @@ export const sanNicolasFestival: FestivalEvent[] = [
     date: "4",
     day: "sábado",
     title: "El Zar de Monterrey",
-    artist: "Nuevo León",
+    artist: "El Zar de Monterrey",
     origin: "Nuevo León",
     category: "Música",
     venue: "Plaza Principal de la Cabecera Municipal",

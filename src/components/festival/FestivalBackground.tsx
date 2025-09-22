@@ -104,11 +104,10 @@ export default function FestivalBackground() {
         </div>
       ))}
       
-      {/* Center Logo */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="relative">
           <img
-            src="/images/logos/logo.png"
+            src={isDark ? "/images/logos/logo.png" : "/images/logos/logol.png"}
             alt="Festival Logo"
             className="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 object-contain"
             style={{
@@ -119,8 +118,6 @@ export default function FestivalBackground() {
           />
         </div>
       </div>
-
-      {/* Static decorative elements */}
       <div className="absolute inset-0">
         <div 
           className="absolute inset-0 opacity-20"

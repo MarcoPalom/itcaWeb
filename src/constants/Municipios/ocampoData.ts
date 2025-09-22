@@ -22,8 +22,8 @@ export const ocampoFestival: FestivalEvent[] = [
     artist: "Grupo Pendiente",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Plaza Ejidal del Ejido \"El Pensil\"",
-    time: "20:00 hrs."
+    venue: "Techumbre del Ejido Ricardo Flores Magón",
+    time: "19:00 hrs."
   },
   {
     id: "oc-3",

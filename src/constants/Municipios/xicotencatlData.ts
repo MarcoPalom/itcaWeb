@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Xicoténcatl
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Xicoténcatl
+// done
 export const xicotencatlFestival: FestivalEvent[] = [
   {
     id: "xi-1",

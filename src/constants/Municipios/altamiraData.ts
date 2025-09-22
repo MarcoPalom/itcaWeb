@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Altamira
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Altamira
+// Dane
 export const altamiraFestival: FestivalEvent[] = [
   {
     id: "al-1",

@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Llera
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Llera
+// Done
 export const lleraFestival: FestivalEvent[] = [
   {
     id: "ll-1",

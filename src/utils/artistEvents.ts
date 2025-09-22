@@ -1,5 +1,6 @@
 // Utilidades para extraer eventos de artistas de todos los municipios
 import { FestivalEvent } from '@/constants/types';
+import { extractIndividualArtists, isArtistInSharedShow, normalizeArtistName } from './artistNameNormalization';
 
 // Importar todos los festivales de municipios
 import { maderoFestival } from '@/constants/Municipios/maderoData';
@@ -104,14 +105,21 @@ export function getArtistEventsFromAllMunicipalities(
   exactMatch: boolean = false
 ): ArtistEventWithMunicipality[] {
   const results: ArtistEventWithMunicipality[] = [];
-
+  const normalizedArtistName = normalizeArtistName(artistName);
 
   allMunicipalFestivals.forEach(({ name: municipality, events }) => {
     
     events.forEach((event: FestivalEvent, eventIndex) => {
-      const isMatch = exactMatch 
-        ? event.artist.toLowerCase() === artistName.toLowerCase()
-        : event.artist.toLowerCase().includes(artistName.toLowerCase());
+      let isMatch = false;
+      
+      if (exactMatch) {
+        // Búsqueda exacta: comparar nombre normalizado
+        isMatch = normalizeArtistName(event.artist) === normalizedArtistName;
+      } else {
+        // Búsqueda parcial: verificar si el artista está en el evento
+        isMatch = event.artist.toLowerCase().includes(artistName.toLowerCase()) ||
+                 isArtistInSharedShow(artistName, event.artist);
+      }
 
       if (isMatch) {
         results.push({

@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Soto la Marina
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Soto la Marina
+// done
 export const sotoLaMarinaFestival: FestivalEvent[] = [
   {
     id: "slm-1",
@@ -74,7 +74,7 @@ export const sotoLaMarinaFestival: FestivalEvent[] = [
     date: "11",
     day: "sábado",
     title: "Del Vali y Wero Hernández",
-    artist: "Estados Unidos",
+    artist: "Del Vali & El Wero Hernández",
     origin: "Estados Unidos",
     category: "Música",
     venue: "Explanada Municipal",

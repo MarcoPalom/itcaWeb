@@ -1,38 +1,42 @@
 // Constantes de imágenes para artistas organizadas por tipo
 
-// Imágenes de artistas internacionales
+// done: bianca, malasya, sabor life, ballet nepantla, charlotte, matias, wero, del vali
 export const internationalArtistImages: { [key: string]: string } = {
-  "Bianca Marroquín": "/images/bianca_marroquin.jpg",
-  "Argelia Fragoso": "/images/argelia_fragoso.jpg",
-  "Hands Percussion of Malaysia": "/images/hand_percusion.jpg",
-  "Charlotte Pescayre": "/images/charlotte.jpeg",
-  "Sabor Life is Rhythm": "/images/sabor_life.jpg", 
-  "Ballet Nepantla": "/images/ballet_nepantla.jpg",
-  "Matías Aguayo": "/images/matias_aguayo.jpg",
-  "Del Vali": "/images/del_vali.png",
-  "Wero Hernández": "/images/el_wero.jpg",
+  "Bianca Marroquín": "/images/international_artists/bianca_marroquin.png",
+  "Argelia Fragoso": "/images/international_artists/argelia.jpg",
+  "Hands Percussion of Malaysia": "/images/international_artists/malasya.jpg",
+  "Charlotte Pescayre": "/images/international_artists/charlotte.jpg",
+  "Sabor Life is Rhythm": "/images/international_artists/sabor_life.jpg", 
+  "Ballet Nepantla": "/images/international_artists/ballet_nepantla.jpeg",
+  "Matías Aguayo": "/images/international_artists/matias.jpg",
+  "Del Vali": "/images/international_artists/delvali.jpg",
+  "Wero Hernández": "/images/international_artists/wero.jpg",
 }
 
 // Imágenes de artistas nacionales
 export const nationalArtistImages: { [key: string]: string } = {
   "María Katzarava": "/images/national_artists/maria_katza.jpg",
   "Centro de Producción de Danza Contemporánea (CEPRODAC)": "/images/national_artists/ceprodac1.jpg",
-  "Grupo La Trenza": "/images/national_artists/latrenza.jpg",
+  "Cuatete Sound": "/images/national_artists/cuatete.jpeg",
+  "Grupo La Trenza": "/images/national_artists/latrenza.jpeg",
   "Grupo Tayer": "/images/national_artists/grupo_tayer.jpg",
+  "Majestuosa Camada \"San Simón Cerro\"": "/images/national_artists/camada.jpg",
   "La Percha Teatro": "/images/national_artists/la_percha.jpg",
+  "Las Jaras": "/images/national_artists/jaras.jpeg",
+  "Last Word Trío": "/images/national_artists/lwtrio.jpg",
   "Ballet Folklórico de la Guardia Nacional": "/images/national_artists/guardia.jpg",
   "CIA. A la Deriva Teatro": "/images/national_artists/miss.png",
-  "Compañía Claunodromo": "/images/national_artists/miss.png",
-  "Grupo El Zar": "/images/national_artists/elzar.jpg",
-  "Guillermo Méndez": "/images/national_artists/miss.png",
+  "Compañía Claunodromo": "/images/national_artists/claun.jpg",
+  "El Zar de Monterrey": "/images/national_artists/elzar.jpg",
+  "Guillermo Méndez": "/images/national_artists/organi.jpg",
   "Las Hermanas García": "/images/national_artists/lashermanas.png",
   "Las Plastiqué Teatro": "/images/national_artists/lasplas.jpg",
   "Los Bernal de Linares": "/images/national_artists/bernal.jpg",
   "Mardonio Carballo y Juan Pablo Villa": "/images/national_artists/mardonio.jpg",
   "Orquesta Sinfónica de Alientos de la Guardia Nacional": "/images/national_artists/guardia2.jpeg",
-  "Patricia Guerrero": "/images/national_artists/pati.jpeg",
+  "Patricia y sus Guerreros": "/images/national_artists/pati.jpeg",
   "PROTEAC": "/images/national_artists/protec.jpg",
-  "Ráfaga Teatro": "/images/national_artists/miss.png",
+  "Ráfaga Teatro": "/images/national_artists/rafaga.jpg",
   "Ronda Machetera (Ronda Bogotá + Pato Machete)": "/images/national_artists/ronda.jpg",
   "Viola Trigo": "/images/national_artists/viola.jpg",
 }

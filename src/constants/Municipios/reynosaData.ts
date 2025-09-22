@@ -21,8 +21,8 @@ export const reynosaFestival: FestivalEvent[] = [
     date: "4",
     day: "sábado",
     title: "Sabor Life is Rhythm",
-    artist: "España, Inglaterra, Francia, Italia y México",
-    origin: "Internacional",
+    artist: "Sabor Life is Rhythm",
+    origin: "España, Inglaterra, Francia, Italia y México",
     category: "Interdisciplinario",
     venue: "Teatro Principal del Parque Cultural Reynosa",
     time: "19:00 hrs."
@@ -161,8 +161,8 @@ export const reynosaFestival: FestivalEvent[] = [
     artist: "Mardonio Carballo y Juan Pablo Villa",
     origin: "Veracruz-CDMX",
     category: "Interdisciplinario",
-    venue: "Instalaciones de la Universidad Tecnológica de Tamaulipas Norte",
-    time: "17:00 hrs."
+    venue: "Explanada del Museo del Ferrocarril, Historia, Arte y Maquiladora \"MFHAM\"",
+    time: "18:00 hrs."
   },
   {
     id: "re-7c",

@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Gustavo Díaz Ordaz
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Gustavo Díaz Ordaz
+// Done
 export const gustavoDiazOrdazFestival: FestivalEvent[] = [
   {
     id: "gdo-1",

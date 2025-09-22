@@ -130,21 +130,11 @@ export const ceprodac: NationalArtist = {
 // Data de Patricia Guerrero
 export const patriciaGuerrero: NationalArtist = {
   id: "pg-001",
-  name: "Patricia Guerrero",
+  name: "Patricia y sus Guerreros",
   origin: "Nuevo León",
   category: "Música",
   description: "Patricia Guerrero es cantante, maestra y narradora oral escénica con más de 40 años de experiencia, su trabajo ha recorrido plazas, museos, escuelas, teatros, iglesias, bibliotecas etc. siempre cerca de los niños y todo aquel que desee compartir, historias, música y arte.",
-  events: [
-    {
-      id: "g-11",
-      title: "Cuentos, música y arte para mi ciudad, Guerrero",
-      date: "11",
-      day: "sábado",
-      venue: "Casa de la Cultura Municipal",
-      time: "19:00 hrs.",
-      municipality: "Guerrero"
-    }
-  ]
+  events: []
 };
 
 // Data de Grupo La Trenza
@@ -406,40 +396,12 @@ export const proteac: NationalArtist = {
 // Data de Grupo El Zar
 export const grupoElZar: NationalArtist = {
   id: "gez-001",
-  name: "Grupo El Zar",
+  name: "El Zar de Monterrey",
   origin: "Nuevo León",
   category: "Música",
   subcategory: "Norteño",
   description: "Descripción pendiente",
-  events: [
-    {
-      id: "sn-4",
-      title: "El Zar de Monterrey",
-      date: "4",
-      day: "sábado",
-      venue: "Plaza Principal de la Cabecera Municipal",
-      time: "19:00 hrs.",
-      municipality: "San Nicolás"
-    },
-    {
-      id: "hd-5",
-      title: "El Zar de Monterrey",
-      date: "5",
-      day: "domingo",
-      venue: "Lugar por definir",
-      time: "Horario por definir",
-      municipality: "Hidalgo"
-    },
-    {
-      id: "gf-3",
-      title: "El Zar de Monterrey",
-      date: "3",
-      day: "viernes",
-      venue: "Lugar por definir",
-      time: "Horario por definir",
-      municipality: "Gómez Farías"
-    }
-  ]
+  events: []
 };
 
 // Data de La Percha Teatro
@@ -507,35 +469,7 @@ export const guillermoMendez: NationalArtist = {
   category: "Teatro",
   subcategory: "Teatro de calle",
   description: "Artista teatral de Jalisco especializado en teatro de calle con su obra 'Organillermo'",
-  events: [
-    {
-      id: "jm-6",
-      title: "Organillermo",
-      date: "6",
-      day: "lunes",
-      venue: "Kiosko de la Plaza Principal \"Plaza Hidalgo\"",
-      time: "18:00 hrs.",
-      municipality: "Jiménez"
-    },
-    {
-      id: "pd-5",
-      title: "Organillermo",
-      date: "5",
-      day: "domingo",
-      venue: "Teatro del Pueblo",
-      time: "17:30 hrs.",
-      municipality: "Padilla"
-    },
-    {
-      id: "gm-8",
-      title: "Organillermo",
-      date: "8",
-      day: "miércoles",
-      venue: "Lugar por definir",
-      time: "Horario por definir",
-      municipality: "Güémez"
-    }
-  ]
+  events: []
 };
 
 // Data de Las Hermanas García
@@ -933,28 +867,10 @@ export const violaTrigo: NationalArtist = {
   id: "vt-001",
   name: "Viola Trigo",
   origin: "CDMX",
-  category: "Literatura",
+  category: "",
   description: "La Mtra. Viola Trigo inició su carrera con el grupo Los Tres con Ella y ha participado en proyectos emblemáticos como el doblaje de Julie Andrews en Mary Poppins y la interpretación de la Virgen de Guadalupe en la película homónima. Integrante del grupo del compositor yucateco Guadalupe Trigo, asumió desde su fallecimiento el compromiso de difundir su herencia musical y la de los grandes autores de México y Latinoamérica. Con más de diez años llevando poesía a diversos estados del país a través del programa Leo, luego existo del INBAL, ha compartido escenario con figuras como Mercedes Sosa, Chabuca Granda y Silvio Rodríguez. En esta ocasión, llega a Tamaulipas con el espectáculo Poetas y Lugares, acompañada por la guitarra del Mtro. Bernardo Lozano.",
-  events: [
-    {
-      id: "at-3",
-      title: "Poetas y lugares con Viola Trigo",
-      date: "6",
-      day: "Lunes",
-      venue: "Por confirmar",
-      time: "Por confirmar",
-      municipality: "Altamira"
-    },
-    {
-      id: "md-3",
-      title: "Poetas y Lugares con Viola Trigo",
-      date: "5",
-      day: "Domingo",
-      venue: "Por confirmar",
-      time: "Por confirmar",
-      municipality: "Madero"
-    }
-  ]
+  events: []
+   
 };
 
 // Array de todos los artistas nacionales

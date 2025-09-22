@@ -1,12 +1,10 @@
 "use client"
-import React, { useState } from "react";
+import React from "react";
 import Fastival from "../components/festival/Fastival";
 import FestivalLoading from "../components/FestivalLoading";
-import FestivalWelcome from "../components/FestivalWelcome";
 import { useFestivalLoading } from "../hooks/useFestivalLoading";
 
 export default function Home() {
-  const [showWelcome, setShowWelcome] = useState(true);
   const { isLoading, progress, message } = useFestivalLoading({
     initialDelay: 500,
     minLoadingTime: 2500,
@@ -14,10 +12,6 @@ export default function Home() {
       // Loading completed
     }
   });
-
-  const handleWelcomeComplete = () => {
-    setShowWelcome(false);
-  };
 
   if (isLoading) {
     return (
@@ -29,10 +23,5 @@ export default function Home() {
     );
   }
 
-  return (
-    <>
-      {showWelcome && <FestivalWelcome onComplete={handleWelcomeComplete} />}
-      <Fastival />
-    </>
-  );
+  return <Fastival />;
 } 

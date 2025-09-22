@@ -44,7 +44,7 @@ export const guerreroFestival: FestivalEvent[] = [
     artist: "Raíces Huastecas",
     origin: "Tamaulipas",
     category: "Interdisciplinario",
-    venue: "Ruinas de Viejo Guerrero o Explanada de Palacio Municipal",
+    venue: "Casa de la Cultura",
     time: "19:00 hrs."
   },
   {

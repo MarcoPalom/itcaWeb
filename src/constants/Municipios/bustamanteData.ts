@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Bustamante
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Bustamante
+// Done
 export const bustamanteFestival: FestivalEvent[] = [
   {
     id: "bu-1",

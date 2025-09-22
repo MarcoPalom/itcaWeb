@@ -11,8 +11,8 @@ export const hidalgoFestival: FestivalEvent[] = [
     artist: "Grupo Honda Nor-T",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Plaza Principal de la Cabecera Municipal",
+    time: "19:00 hrs."
   },
   {
     id: "hi-2",
@@ -22,19 +22,19 @@ export const hidalgoFestival: FestivalEvent[] = [
     artist: "La Nota Alegre",
     origin: "Tamaulipas-PROFEST",
     category: "Música",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Comité Ejidal del Ejido \"Guillermo Zúñiga\"",
+    time: "19:00 hrs."
   },
   {
     id: "hi-3",
     date: "5",
     day: "domingo",
     title: "El Zar de Monterrey",
-    artist: "Nuevo León",
+    artist: "El Zar de Monterrey",
     origin: "Nuevo León",
     category: "Música",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Comité Ejidal del Ejido \"Guillermo Zúñiga\"",
+    time: "19:00 hrs."
   },
   {
     id: "hi-4",
@@ -44,8 +44,8 @@ export const hidalgoFestival: FestivalEvent[] = [
     artist: "Érase una vez dos veces",
     origin: "Tamaulipas",
     category: "Interdisciplinario",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Esc. Primaria \"Baldomero Sánchez\" de la Cabecera Municipal",
+    time: "11:00 hrs."
   },
   {
     id: "hi-5",
@@ -55,8 +55,8 @@ export const hidalgoFestival: FestivalEvent[] = [
     artist: "Los del Pueblo",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Plaza Principal del Ejido \"Estación Santa Engracia\"",
+    time: "19:00 hrs."
   },
   {
     id: "hi-6",
@@ -66,8 +66,8 @@ export const hidalgoFestival: FestivalEvent[] = [
     artist: "Grupo Tayer",
     origin: "Nuevo León",
     category: "Música",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Plaza Principal de la Cabecera Municipal",
+    time: "19:00 hrs."
   }
 ];
 

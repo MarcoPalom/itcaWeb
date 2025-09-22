@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Cruillas
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Cruillas
+// Done
 export const cruillasFestival: FestivalEvent[] = [
   {
     id: "cr-1",

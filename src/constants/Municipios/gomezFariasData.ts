@@ -7,12 +7,12 @@ export const gomezFariasFestival: FestivalEvent[] = [
     id: "gf-1",
     date: "3",
     day: "viernes",
-    title: "Tamaulipas es mi Tierra",
-    artist: "Arael & Erihka Peña",
-    origin: "Tamaulipas",
+    title: "El Zar de Monterrey",
+    artist: "El Zar de Monterrey",
+    origin: "Nuevo León",
     category: "Música",
-    venue: "Plaza Cultura",
-    time: "19:30 hrs."
+    venue: "Foro de la iglesia del Poblado \"Loma Alta\"",
+    time: "18:00 hrs."
   },
   {
     id: "gf-2",
@@ -22,8 +22,8 @@ export const gomezFariasFestival: FestivalEvent[] = [
     artist: "La Espuma de Mar",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Foro de la iglesia del Poblado \"Loma Alta\"",
+    time: "18:00 hrs."
   },
   {
     id: "gf-3",
@@ -33,8 +33,8 @@ export const gomezFariasFestival: FestivalEvent[] = [
     artist: "Colectivo Trueque",
     origin: "Tamaulipas-PROFEST",
     category: "Interdisciplinario",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Foro de la iglesia del Poblado \"Loma Alta\"",
+    time: "18:00 hrs."
   },
   {
     id: "gf-4",
@@ -44,8 +44,8 @@ export const gomezFariasFestival: FestivalEvent[] = [
     artist: "Guillermo Méndez",
     origin: "Jalisco",
     category: "Interdisciplinario",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Escuela Primaria \"Norberto Uriegas\" del Ejido 5 de Mayo",
+    time: "12:00 hrs"
   },
   {
     id: "gf-5",

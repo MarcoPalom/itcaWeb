@@ -240,35 +240,7 @@ export const saborLifeIsRhythm: InternationalArtist = {
   category: "Interdisciplinario",
   subcategory: "Música, tap, jazz",
   description: "Cinco instrumentos, cuatro bailarines, tres generaciones, una misión: difundir el \"Sabor\" y el Tap Dance (claqué), a través de un viaje desde sus orígenes hasta la actualidad, pasando por una fusión fresca de estilos y ritmos ejecutados con respeto y pasión. SABOR-Life is Rhythm invita a todo tipo de público a disfrutar de coreografías suculentas y ritmos frescos que sabrán satisfacer el paladar de cada comensal, una delicia para los sentidos. Con algunos de los mejores bailarines de Europa, es un espectáculo electrizante donde el carisma y la música en directo son los ingredientes principales que llegan al Festival Internacional en la Costa del Seno Mexicano. ¡La vida sin sabor no tiene ritmo!",
-  events: [
-    {
-      id: "r-4",
-      title: "Sabor Life is Rhythm",
-      date: "4",
-      day: "sábado",
-      venue: "Teatro Principal del Parque Cultural Reynosa",
-      time: "19:00 hrs.",
-      municipality: "Reynosa"
-    },
-    {
-      id: "mt-5",
-      title: "Sabor Life is Rhythm",
-      date: "5",
-      day: "domingo",
-      venue: "Teatro de la Reforma",
-      time: "20:00 hrs.",
-      municipality: "Matamoros"
-    },
-    {
-      id: "vc-3",
-      title: "Sabor Life is Rhythm",
-      date: "3",
-      day: "viernes",
-      venue: "Teatro \"Amalia G. de Castillo Ledón\" del Centro Cultural Tamaulipas",
-      time: "19:00 hrs.",
-      municipality: "Victoria"
-    }
-  ]
+  events: []
 };
 
 // Data de Ballet Nepantla
@@ -329,71 +301,7 @@ export const delVali: InternationalArtist = {
   origin: "Estados Unidos",
   category: "Música",
   description: "Del Valí es una nueva y electrizante fuerza en el mundo de la música norteña, que combina las ricas tradiciones de la música norteña y la cumbia con un enfoque urbano fresco e innovador, infundiendo su sonido con cautivadores nuevos géneros y melodías.",
-  events: [
-    {
-      id: "r-6",
-      title: "Del Vali",
-      date: "6",
-      day: "lunes",
-      venue: "Del Río, Plaza Comercial",
-      time: "17:00 hrs.",
-      municipality: "Reynosa"
-    },
-    {
-      id: "rb-4",
-      title: "Del Vali",
-      date: "4",
-      day: "sábado",
-      venue: "Plaza Principal \"Santa Apolonia\"",
-      time: "21:00 hrs.",
-      municipality: "Río Bravo"
-    },
-    {
-      id: "vh-5",
-      title: "Del Vali",
-      date: "5",
-      day: "domingo",
-      venue: "Foro al Aire Libre de la Plaza Principal",
-      time: "19:30 hrs.",
-      municipality: "Valle Hermoso"
-    },
-    {
-      id: "mt-3",
-      title: "Del Vali",
-      date: "3",
-      day: "viernes",
-      venue: "Plaza Principal \"Miguel Hidalgo\"",
-      time: "19:30 hrs.",
-      municipality: "Matamoros"
-    },
-    {
-      id: "sf-9",
-      title: "Del Vali",
-      date: "9",
-      day: "jueves",
-      venue: "Plaza Principal",
-      time: "20:00 hrs.",
-      municipality: "San Fernando"
-    },
-    {
-      id: "j-10",
-      title: "Del Vali",
-      date: "10",
-      day: "viernes",
-      venue: "Kiosko de la Plaza Principal \"Plaza Hidalgo\"",
-      time: "18:00 hrs.",
-      municipality: "Jiménez"
-    },
-    {
-      id: "slm-11",
-      title: "Del Vali",
-      date: "11",
-      day: "sábado",
-      venue: "Explanada Municipal",
-      time: "19:00 hrs.",
-      municipality: "Soto la Marina"
-    }
-  ]
+  events: []
 };
 
 // Data de Wero Hernández
@@ -403,71 +311,7 @@ export const weroHernandez: InternationalArtist = {
   origin: "Estados Unidos",
   category: "Música",
   description: "\"El Wero\" Hernández es una estrella en ascenso en el mundo de la música norteña-texana. Está listo para inspirar a una nueva generación de seguidores, creando un sonido que es tanto auténtico como innovador.",
-  events: [
-    {
-      id: "r-6",
-      title: "Wero Hernández",
-      date: "6",
-      day: "lunes",
-      venue: "Del Río, Plaza Comercial",
-      time: "17:00 hrs.",
-      municipality: "Reynosa"
-    },
-    {
-      id: "rb-4",
-      title: "Wero Hernández",
-      date: "4",
-      day: "sábado",
-      venue: "Plaza Principal \"Santa Apolonia\"",
-      time: "21:00 hrs.",
-      municipality: "Río Bravo"
-    },
-    {
-      id: "vh-5",
-      title: "Wero Hernández",
-      date: "5",
-      day: "domingo",
-      venue: "Foro al Aire Libre de la Plaza Principal",
-      time: "19:30 hrs.",
-      municipality: "Valle Hermoso"
-    },
-    {
-      id: "mt-3",
-      title: "Wero Hernández",
-      date: "3",
-      day: "viernes",
-      venue: "Plaza Principal \"Miguel Hidalgo\"",
-      time: "19:30 hrs.",
-      municipality: "Matamoros"
-    },
-    {
-      id: "sf-9",
-      title: "Wero Hernández",
-      date: "9",
-      day: "jueves",
-      venue: "Plaza Principal",
-      time: "20:00 hrs.",
-      municipality: "San Fernando"
-    },
-    {
-      id: "j-10",
-      title: "Wero Hernández",
-      date: "10",
-      day: "viernes",
-      venue: "Kiosko de la Plaza Principal \"Plaza Hidalgo\"",
-      time: "18:00 hrs.",
-      municipality: "Jiménez"
-    },
-    {
-      id: "slm-11",
-      title: "Wero Hernández",
-      date: "11",
-      day: "sábado",
-      venue: "Explanada Municipal",
-      time: "19:00 hrs.",
-      municipality: "Soto la Marina"
-    }
-  ]
+  events: []
 };
 
 // Array de todos los artistas internacionales

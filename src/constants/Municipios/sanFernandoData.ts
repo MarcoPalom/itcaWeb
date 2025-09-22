@@ -52,7 +52,7 @@ export const sanFernandoFestival: FestivalEvent[] = [
     date: "9",
     day: "jueves",
     title: "Del Vali & Wero Hernández",
-    artist: "Estados Unidos",
+    artist: "Del Vali & El Wero Hernández",
     origin: "Estados Unidos",
     category: "Música",
     venue: "Plaza Principal",
@@ -78,7 +78,7 @@ export const sanFernandoFestival: FestivalEvent[] = [
     origin: "Tamaulipas",
     category: "Música",
     venue: "Plaza Principal",
-    time: "20:00 hrs."
+    time: "18:00 hrs."
   }
 ];
 

@@ -1,14 +1,14 @@
 // Data del Festival del Municipio Tula
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Tula
+// Done
 export const tulaFestival: FestivalEvent[] = [
   {
     id: "tu-1",
     date: "3",
     day: "viernes",
     title: "Majestuosa Camada \"San Simón Cerro\"",
-    artist: "Majestuosa Camada",
+    artist: "Majestuosa Camada \"San Simón Cerro\"",
     origin: "Guerrero",
     category: "Interdisciplinario",
     venue: "Calles Principales",

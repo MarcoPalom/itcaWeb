@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Nuevo Morelos
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Nuevo Morelos
+// Done
 export const nuevomorelosFestival: FestivalEvent[] = [
   {
     id: "nu-1",

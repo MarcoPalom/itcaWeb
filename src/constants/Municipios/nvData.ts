@@ -26,17 +26,6 @@ export const nuevolaredoFestival: FestivalEvent[] = [
     venue: "Foro Cultural del Parque Viveros",
     time: "20:00 hrs."
   },
-  {
-    id: "nu-1c",
-    date: "3",
-    day: "viernes",
-    title: "Cumbia por el Mundo",
-    artist: "Ronda Machetera (Ronda Bogotá + Pato Machete)",
-    origin: "Nuevo León",
-    category: "Música",
-    venue: "Foro Cultural del Parque Viveros",
-    time: "20:00 hrs."
-  },
   // Sábado 4 de octubre
   {
     id: "nu-2",

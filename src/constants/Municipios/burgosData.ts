@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Burgos
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Burgos
+// done
 export const burgosFestival: FestivalEvent[] = [
   {
     id: "bu-1",

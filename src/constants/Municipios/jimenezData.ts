@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Jiménez
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Jiménez
+// Done
 export const jimenezFestival: FestivalEvent[] = [
   {
     id: "ji-1",
@@ -52,7 +52,7 @@ export const jimenezFestival: FestivalEvent[] = [
     date: "6",
     day: "lunes",
     title: "Organillermo",
-    artist: "Director: Guillermo Méndez",
+    artist: "Guillermo Méndez",
     origin: "Jalisco",
     category: "Música",
     venue: "Kiosko de la Plaza Principal \"Plaza Hidalgo\"",

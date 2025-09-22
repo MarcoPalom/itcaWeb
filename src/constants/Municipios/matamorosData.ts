@@ -88,8 +88,8 @@ export const matamorosFestival: FestivalEvent[] = [
     date: "5",
     day: "domingo",
     title: "Sabor Life is Rhythm",
-    artist: "España, Inglaterra, Francia, Italia y México",
-    origin: "Internacional",
+    artist: "Sabor Life is Rhythm",
+    origin: "España, Inglaterra, Francia, Italia y México",
     category: "Interdisciplinario",
     venue: "Teatro de la Reforma",
     time: "20:00 hrs."
@@ -475,17 +475,6 @@ export const matamorosFestival: FestivalEvent[] = [
     venue: "Plaza Principal \"Miguel Hidalgo\"",
     time: "21:00 hrs."
   },
-  {
-    id: "ma-10b",
-    date: "12",
-    day: "domingo",
-    title: "Marching Band",
-    artist: "Juan José de la Garza, Ricardo Flores Magón y Tecnológico de Matamoros",
-    origin: "Tamaulipas",
-    category: "Música",
-    venue: "Plaza Principal \"Miguel Hidalgo\"",
-    time: "19:00 hrs."
-  }
 ];
 
 // Información del Festival del Municipio Matamoros

@@ -24,7 +24,7 @@ export default function RootLayout({
 
   // Show maintenance screen for all routes
   // Change to false to disable maintenance mode
-  const showMaintenance = true;
+  const showMaintenance = false;
   
   // Check if we're on pages that should show FestivalTopNav
   const showFestivalTopNav = pathname === '/' || pathname === '/national-artists' || pathname === '/international-artists' || pathname === '/municipal-billboards' || pathname === '/artists-tamaulipecos' || pathname.startsWith('/artist/') || pathname.startsWith('/municipio/');

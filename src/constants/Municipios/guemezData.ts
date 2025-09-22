@@ -11,62 +11,51 @@ export const guemezFestival: FestivalEvent[] = [
     artist: "Grupo de danza Anacahuitas",
     origin: "Tamaulipas",
     category: "Danza",
-    venue: "Auditorio del Ayuntamiento en la Cabecera Municipal",
-    time: "19:00 hrs."
+    venue: "Escuela Normal Rural de Tamaulipas, Kilómetro 16 Carretera Nacional",
+    time: "18:00 hrs."
   },
   {
     id: "gu-2",
-    date: "5",
-    day: "domingo",
-    title: "Trío UATsteco",
-    artist: "Tamaulipas",
-    origin: "Tamaulipas",
-    category: "Música",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
-  },
-  {
-    id: "gu-3",
     date: "8",
     day: "miércoles",
     title: "Organillermo",
-    artist: "Director: Guillermo Méndez",
+    artist: "Guillermo Méndez",
     origin: "Jalisco",
     category: "Música",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Esc. Primaria \"Benito Juárez\", Ejido San José de las Flores, Kilómetro 18 Carretera Nacional",
+    time: "11:00 hrs."
   },
   {
-    id: "gu-4",
+    id: "gu-3",
     date: "9",
     day: "jueves",
     title: "Aristótefes y Sócrafes y el Misterio del Movimiento",
     artist: "Érase una vez dos veces",
     origin: "Tamaulipas",
     category: "Interdisciplinario",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Esc. Primaria \"Asención Gómez\", Cabecera Municipal, Kilómetro 26 Carretera Matamoros",
+    time: "11:00 hrs."
   },
   {
-    id: "gu-5",
+    id: "gu-4",
     date: "10",
     day: "viernes",
     title: "Canasta de cuentos de la zona donde vivimos",
     artist: "Teatro Guarapo",
     origin: "Tamaulipas",
     category: "Teatro",
-    venue: "Foro de la Escuela Secundaria Técnica #43 en la Cabecera Municipal",
+    venue: "Foro de la Escuela Secundaria Técnica #43 en la Cabecera Municipal, Kilómetro 26 Carretera Matamoros",
     time: "11:00 hrs."
   },
   {
-    id: "gu-6",
+    id: "gu-5",
     date: "12",
     day: "domingo",
     title: "Las favoritas con Grupo Relativo",
     artist: "Grupo Relativo",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Plaza Principal de la Cabecera Municipal",
+    venue: "Escuela Normal Rural de Tamaulipas, Kilómetro 16 Carretera Nacional",
     time: "19:00 hrs."
   }
 ];
@@ -75,7 +64,7 @@ export const guemezFestival: FestivalEvent[] = [
 export const guemezFestivalInfo: FestivalInfo = {
   name: "Güémez",
   location: "Güémez",
-  totalEvents: 6,
+  totalEvents: 5,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
   categories: ["Interdisciplinario", "Música", "Teatro", "Danza"]

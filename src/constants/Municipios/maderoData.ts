@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Madero
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Madero
+// Done
 export const maderoFestival: FestivalEvent[] = [
   {
     id: "ma-1",

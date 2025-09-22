@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Jaumave
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Jaumave
+// Dane
 export const jaumaveFestival: FestivalEvent[] = [
   {
     id: "ja-1",
@@ -19,7 +19,7 @@ export const jaumaveFestival: FestivalEvent[] = [
     date: "4",
     day: "sábado",
     title: "Majestuosa Camada \"San Simón Cerro\"",
-    artist: "Majestuosa Camada",
+    artist: "Majestuosa Camada \"San Simón Cerro\"",
     origin: "Guerrero",
     category: "Interdisciplinario",
     venue: "Plaza Hidalgo",

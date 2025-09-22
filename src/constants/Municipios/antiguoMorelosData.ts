@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Antiguo Morelos
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Antiguo Morelos
+// pending
 export const antiguoMorelosFestival: FestivalEvent[] = [
   {
     id: "am-1",

@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Padilla
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Padilla
+// done
 export const padillaFestival: FestivalEvent[] = [
   {
     id: "pa-1",
@@ -30,7 +30,7 @@ export const padillaFestival: FestivalEvent[] = [
     date: "5",
     day: "domingo",
     title: "Organillermo",
-    artist: "Director: Guillermo Méndez",
+    artist: "Guillermo Méndez",
     origin: "Jalisco",
     category: "Música",
     venue: "Teatro del Pueblo",

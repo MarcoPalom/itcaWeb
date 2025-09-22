@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Abasolo
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Abasolo
+// done
 export const abasoloFestival: FestivalEvent[] = [
   {
     id: "ab-1",

@@ -1,7 +1,7 @@
 // Data del Festival del Municipio González
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio González
+// Done
 export const gonzalezFestival: FestivalEvent[] = [
   {
     id: "go-1",

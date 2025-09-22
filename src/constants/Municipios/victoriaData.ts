@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Victoria
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Victoria
+// Done
 export const victoriaFestival: FestivalEvent[] = [
   // Viernes 3 de octubre
   {
@@ -9,8 +9,8 @@ export const victoriaFestival: FestivalEvent[] = [
     date: "3",
     day: "viernes",
     title: "Sabor Life is Rhythm",
-    artist: "España, Inglaterra, Francia, Italia y México",
-    origin: "Internacional",
+    artist: "Sabor Life is Rhythm",
+    origin: "España, Inglaterra, Francia, Italia y México",
     category: "Interdisciplinario",
     venue: "Teatro \"Amalia G. de Castillo Ledón del Centro Cultural Tamaulipas\"",
     time: "19:00 hrs."
@@ -132,7 +132,7 @@ export const victoriaFestival: FestivalEvent[] = [
     date: "5",
     day: "domingo",
     title: "Majestuosa Camada \"San Simón Cerro\"",
-    artist: "Guerrero",
+    artist: "Majestuosa Camada \"San Simón Cerro\"",
     origin: "Guerrero",
     category: "Danza",
     venue: "Libre 17",

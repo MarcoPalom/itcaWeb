@@ -1,7 +1,7 @@
 // Data del Festival del Municipio San Carlos
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio San Carlos
+// Done
 export const sanCarlosFestival: FestivalEvent[] = [
   {
     id: "sc-1",

@@ -35,19 +35,19 @@ export const rioBravoFestival: FestivalEvent[] = [
     artist: "Municipio de Río Bravo",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Plaza Principal \"Santa Apolonia\"",
-    time: "20:00 hrs."
+    venue: "Casa de Ladrillo Ex Hacienda \"La Sauteña\"",
+    time: "19:00 hrs."
   },
   {
     id: "rb-4",
     date: "4",
     day: "sábado",
     title: "Del Vali & El Wero Hernández",
-    artist: "Estados Unidos",
+    artist: "Del Vali & El Wero Hernández",
     origin: "Estados Unidos",
     category: "Música",
-    venue: "Plaza Principal \"Santa Apolonia\"",
-    time: "21:00 hrs."
+    venue: "Casa de Ladrillo Ex Hacienda \"La Sauteña\"",
+    time: "20:00 hrs."
   },
   // Domingo 5 de octubre
   {

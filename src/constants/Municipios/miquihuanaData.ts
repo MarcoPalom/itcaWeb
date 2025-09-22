@@ -11,8 +11,8 @@ export const miquihuanaFestival: FestivalEvent[] = [
     artist: "Roberto Cuentacuentos",
     origin: "Tamaulipas",
     category: "Literatura",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Plaza Principal \"Miguel Hidalgo\"",
+    time: "18:00 hrs."
   },
   {
     id: "mi-2",
@@ -22,8 +22,8 @@ export const miquihuanaFestival: FestivalEvent[] = [
     artist: "Compañía Claunodromo",
     origin: "Jalisco",
     category: "Interdisciplinario",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Esc. Sec. Tec. #26 \"Gral. Alberto Carrera Torres\"",
+    time: "11:00 hrs."
   },
   {
     id: "mi-3",
@@ -33,8 +33,8 @@ export const miquihuanaFestival: FestivalEvent[] = [
     artist: "Ráfaga Teatro",
     origin: "CDMX-Estado de México",
     category: "Teatro",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Plaza Principal \"Miguel Hidalgo\"",
+    time: "18:00 hrs."
   }
 ];
 

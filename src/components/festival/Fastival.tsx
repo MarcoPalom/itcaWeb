@@ -5,13 +5,18 @@ import { internationalArtists } from "@/constants/internationalArtistData"
 import { nationalArtists } from "@/constants/nationalArtistData"
 import { tamaulipecosArtists } from "@/constants/tamaulipecosArtistData"
 import FestivalBackground from "./FestivalBackground"
+import FestivalHeroCard from "./FestivalHeroCard"
 import { useTheme } from "@/contexts/ThemeContext"
 import { victoriaFestivalInfo } from "@/constants/Municipios/victoriaData"
 import { matamorosFestivalInfo } from "@/constants/Municipios/matamorosData"
 import { tampicoFestivalInfo } from "@/constants/Municipios/tampicoData"
 import { reynosaFestivalInfo } from "@/constants/Municipios/reynosaData"
 import { getMunicipalImage } from "@/constants/municipalImages"
-// Usando img nativo de HTML en lugar de Image de Next.js
+import { 
+  internationalArtistImages, 
+  nationalArtistImages, 
+  tamaulipecosArtistImages 
+} from "@/constants/artistImages"
 import {
   Carousel,
   CarouselContent,
@@ -22,51 +27,14 @@ import Autoplay from "embla-carousel-autoplay"
 export default function Fastival() {
   const { isDark } = useTheme()
 
-  // Mapeo de imágenes para cada artista
-  const artistImages: { [key: string]: string } = {
-    "Bianca Marroquín": "/images/bianca_marroquin.jpg",
-    "Argelia Fragoso": "/images/argelia_fragoso.jpg",
-    "Hands Percussion of Malaysia": "/images/hand_percusion.jpg",
-    "Charlotte Pescayre": "/images/charlotte.jpeg",
-    "Sabor Life is Rhythm": "/images/sabor_life.jpg", 
-    "Ballet Nepantla": "/images/ballet_nepantla.jpg",
-    "Matías Aguayo": "/images/matias_aguayo.jpg",
-    "Del Vali": "/images/del_vali.png",
-    "Wero Hernández": "/images/el_wero.jpg"
-  }
-
-  // Mapeo de imágenes para artistas nacionales
-  const nationalArtistImages: { [key: string]: string } = {
-    "María Katzarava": "/images/national_artists/maria_katza.jpg", // Usando imagen similar
-    "Centro de Producción de Danza Contemporánea (CEPRODAC)": "/images/national_artists/grupo_tayer.jpg", // Imagen genérica para teatro
-    "La Percha Teatro": "/images/national_artists/la_percha.jpg", // Imagen genérica para danza
-    "Grupo La Trenza": "/images/national_artists/latrenza.jpg", // Imagen genérica para teatro
-    "Grupo Tayer": "/images/national_artists/grupo_tayer.jpg" // Imagen genérica para teatro
-  }
-
-  // Mapeo de imágenes para artistas tamaulipecos
-  const tamaulipecoArtistImages: { [key: string]: string } = {
-    "Polvo Enamorado": "/images/estatal_artists/polvo.jpg",
-    "Afrodescendencia Matamoros": "/images/estatal_artists/afro.jpg",
-    "DOSCE La Compañía": "/images/estatal_artists/dosce.jpg",
-    "En Boca Ensamble": "/images/estatal_artists/ensamble.JPG",
-    "Colectivo teatro de bolsillo": "/images/estatal_artists/bolsillo.JPG",
-    "Warislov": "/images/estatal_artists/warislov.jpg",
-    "Los Valdés Ska": "/images/estatal_artists/valdes.jpg",
-    "Kani Ensamble Coral": "/images/estatal_artists/camereta.jpg",
-    "Ensamble de Mujeres \"María Bonita\"": "/images/estatal_artists/ensamble.JPG",
-  }
-
-  // Seleccionar 5 artistas nacionales al azar
   const selectedNationalArtists = [
-    nationalArtists[0],  // María Katzarava
-    nationalArtists[1],  // CEPRODAC
-    nationalArtists[9],  // la percha teatro
-    nationalArtists[3],  // Grupo La Trenza
-    nationalArtists[4]   // Grupo Tayer
+    nationalArtists[0],
+    nationalArtists[1],
+    nationalArtists[9],
+    nationalArtists[3],
+    nationalArtists[4]
   ]
 
-  // Seleccionar 5 artistas tamaulipecos específicos
   const selectedTamaulipecoArtists = [
     tamaulipecosArtists.find(a => a.name === "Polvo Enamorado")!,
     tamaulipecosArtists.find(a => a.name === "Afrodescendencia Matamoros")!,
@@ -75,7 +43,6 @@ export default function Fastival() {
     tamaulipecosArtists.find(a => a.name === "Colectivo teatro de bolsillo")!
   ]
 
-  // Mapeo de información de municipios (4 elementos para que quepa "Ver Todas")
   const municipalFestivals = [
     victoriaFestivalInfo,
     matamorosFestivalInfo,
@@ -91,17 +58,9 @@ export default function Fastival() {
       <FestivalBackground />
       <div className={`min-h-screen w-full relative z-10 ${isDark ? 'text-white' : 'text-gray-800'}`}>
 
+      <div className="p-4 space-y-6 md:px-6 md:space-y-8">
+        <FestivalHeroCard />
 
-      {/* Header */}
-      <div className="flex items-center justify-between p-4 md:p-6">
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-medium md:text-lg">Bienvenido al FICSM</span>
-        </div>
-      </div>
-
-      {/* Artists Sections */}
-      <div className="px-4 space-y-6 md:px-6 md:space-y-8">
-        {/* Artistas Internacionales - Carrusel con shadcn */}
         <section>
           <div className="flex items-center justify-between mb-4 md:mb-6">
             <h2 className={`text-lg font-semibold md:text-xl ${isDark ? 'text-white' : 'text-gray-800'}`}>Artistas Internacionales</h2>
@@ -135,12 +94,11 @@ export default function Fastival() {
                       }}
                     >
                       <img
-                        src={artistImages[artist.name] || "/elegant-female-opera-singer-performing-on-stage.png"}
+                        src={internationalArtistImages[artist.name] || "/elegant-female-opera-singer-performing-on-stage.png"}
                         alt={artist.name}
                         className="absolute inset-0 w-full h-full object-cover"
                       />
                       
-                      {/* Label en la parte inferior */}
                       <div className={`absolute bottom-0 left-0 right-0 z-10 backdrop-blur-sm p-1 ${isDark ? 'bg-black/70' : 'bg-white/80'}`}>
                         <h3 className={`font-semibold text-sm ${isDark ? 'text-white' : 'text-gray-800'}`}>{artist.name}</h3>
                         <p className={`text-xs ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{artist.category}</p>
@@ -153,7 +111,6 @@ export default function Fastival() {
           </Carousel>
         </section>
 
-        {/* Artistas Nacionales */}
         <section>
           <div className="flex items-center justify-between mb-4 md:mb-6">
             <h2 className={`text-lg font-semibold md:text-xl ${isDark ? 'text-white' : 'text-gray-800'}`}>Artistas Nacionales</h2>
@@ -172,7 +129,6 @@ export default function Fastival() {
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     
-                    {/* Label en la parte inferior */}
                     <div className={`absolute bottom-0 left-0 right-0 z-10 backdrop-blur-sm p-1 ${isDark ? 'bg-black/70' : 'bg-white/90'}`}>
                       <h3 className={`font-semibold text-sm ${isDark ? 'text-white' : 'text-gray-800'}`}>{artist.name}</h3>
                       <p className={`text-xs ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{artist.category}</p>
@@ -198,7 +154,6 @@ export default function Fastival() {
           </div>
         </section>
 
-        {/* Artistas Tamaulipecos */}
         <section className="pb-6 md:pb-8">
           <div className="flex items-center justify-between mb-4 md:mb-6">
             <h2 className={`text-lg font-semibold md:text-xl ${isDark ? 'text-white' : 'text-gray-800'}`}>Artistas Tamaulipecos</h2>
@@ -212,12 +167,11 @@ export default function Fastival() {
                 <Link href={`/artist/${artist.name.toLowerCase().replace(/\s+/g, '-')}`} className="block h-full">
                   <div className={`rounded-lg overflow-hidden md:rounded-xl h-48 md:h-56 relative ${isDark ? 'bg-gray-800' : 'bg-white/90'}`}>
                     <img
-                      src={tamaulipecoArtistImages[artist.name] || "/images/img_0.png"}
+                      src={tamaulipecosArtistImages[artist.name] || "/images/img_0.png"}
                       alt={artist.name}
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     
-                    {/* Label en la parte inferior */}
                     <div className={`absolute bottom-0 left-0 right-0 z-10 backdrop-blur-sm p-1 ${isDark ? 'bg-black/70' : 'bg-white/90'}`}>
                       <h3 className={`font-semibold text-sm ${isDark ? 'text-white' : 'text-gray-800'}`}>{artist.name}</h3>
                       <p className={`text-xs ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{artist.category}</p>
@@ -243,7 +197,6 @@ export default function Fastival() {
           </div>
         </section>
 
-        {/* Carteleras de Municipios */}
         <section className="pb-6 md:pb-8">
           <div className="flex items-center justify-between mb-4 md:mb-6">
             <h2 className={`text-lg font-semibold md:text-xl ${isDark ? 'text-white' : 'text-gray-800'}`}>Carteleras de Municipios</h2>
@@ -262,7 +215,6 @@ export default function Fastival() {
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     
-                    {/* Label en la parte inferior */}
                     <div className={`absolute bottom-0 left-0 right-0 z-10 backdrop-blur-sm p-2 ${isDark ? 'bg-black/70' : 'bg-white/90'}`}>
                       <h3 className={`font-semibold text-sm leading-tight ${isDark ? 'text-white' : 'text-gray-800'}`}>{municipality.name.replace('Festival del Municipio ', '')}</h3>
                       <p className={`text-xs ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>{municipality.totalEvents} eventos</p>

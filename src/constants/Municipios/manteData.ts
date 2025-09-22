@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Mante
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Mante
+// Dane
 export const manteFestival: FestivalEvent[] = [
   {
     id: "ma-1",

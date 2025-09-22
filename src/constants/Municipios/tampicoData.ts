@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Tampico
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Tampico
+// Done
 export const tampicoFestival: FestivalEvent[] = [
   // Viernes 3 de octubre
   {

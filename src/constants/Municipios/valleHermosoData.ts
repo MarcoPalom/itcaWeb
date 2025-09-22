@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Valle Hermoso
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Valle Hermoso
+// done
 export const vallehermosoFestival: FestivalEvent[] = [
   {
     id: "va-1",
@@ -30,7 +30,7 @@ export const vallehermosoFestival: FestivalEvent[] = [
     date: "5",
     day: "domingo",
     title: "Del Vali & Wero Hernández",
-    artist: "Estados Unidos",
+    artist: "Del Vali & El Wero Hernández",
     origin: "Estados Unidos",
     category: "Música",
     venue: "Foro al Aire Libre de la Plaza Principal",

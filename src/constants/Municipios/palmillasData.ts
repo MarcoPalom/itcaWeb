@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Palmillas
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Palmillas
+// Dane
 export const palmillasFestival: FestivalEvent[] = [
   {
     id: "pa-1",

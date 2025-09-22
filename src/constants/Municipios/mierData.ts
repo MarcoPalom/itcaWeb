@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Mier
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Mier
+// done
 export const mierFestival: FestivalEvent[] = [
   {
     id: "mi-1",

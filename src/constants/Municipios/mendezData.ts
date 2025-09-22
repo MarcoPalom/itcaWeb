@@ -1,7 +1,7 @@
 // Data del Festival del Municipio Méndez
 import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 
-// Data del Festival del Municipio Méndez
+// done
 export const mendezFestival: FestivalEvent[] = [
   {
     id: "me-1",
@@ -22,8 +22,8 @@ export const mendezFestival: FestivalEvent[] = [
     artist: "Kani Ensamble Coral",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Auditorio \"Rodolfo Torre Cantú\"",
+    time: "16:00 hrs."
   },
   {
     id: "me-3",
@@ -66,8 +66,8 @@ export const mendezFestival: FestivalEvent[] = [
     artist: "Son Kndla",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Plaza Principal, Cabecera Municipal",
+    time: "20:00 hrs."
   }
 ];
 
