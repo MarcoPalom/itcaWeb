@@ -50,23 +50,6 @@ import { aldamaFestivalInfo, aldamaFestival } from "@/constants/Municipios/aldam
 import { burgosFestivalInfo, burgosFestival } from "@/constants/Municipios/burgosData"
 import { gustavoDiazOrdazFestivalInfo, gustavoDiazOrdazFestival } from "@/constants/Municipios/gustavoDiazOrdazData"
 
-// Función para generar parámetros estáticos
-export async function generateStaticParams() {
-  const municipios = [
-    "victoria", "matamoros", "tampico", "reynosa", "nuevo-laredo", "altamira", 
-    "camargo", "mante", "san-fernando", "valle-hermoso", "rio-bravo", 
-    "miguel-aleman", "mier", "guerrero", "madero", "gonzalez", "antiguo-morelos", 
-    "nuevo-morelos", "gomez-farias", "xicotencatl", "ocampo", "tula", 
-    "miquihuana", "palmillas", "bustamante", "jaumave", "llera", "casas", 
-    "padilla", "guemez", "soto-la-marina", "abasolo", "jimenez", "hidalgo", 
-    "villagran", "mainero", "san-carlos", "san-nicolas", "cruillas", "burgos", 
-    "mendez", "aldama", "gustavo-diaz-ordaz"
-  ];
-
-  return municipios.map((municipio) => ({
-    name: municipio,
-  }));
-}
 
 import { cruillasFestivalInfo, cruillasFestival } from "@/constants/Municipios/cruillasData"
 import { getArtistImageUniversal } from "@/constants/artistImages"
