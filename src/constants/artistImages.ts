@@ -46,7 +46,7 @@ export const tamaulipecosArtistImages: { [key: string]: string } = {
   "Polvo Enamorado": "/images/estatal_artists/polvo.jpg",
   "Camerata del Colegio \"San Juan Siglo XXI\"": "/images/estatal_artists/camereta.jpg",
   "Afrodescendencia Matamoros": "/images/estatal_artists/afro.jpg",
-  "DOSCE La Compañía": "/images/estatal_artists/dosce.jpg",
+  "DOSCE La Compañía": "/images/estatal_artists/orinoco.jpg",
   "Raíces Huastecas": "/images/estatal_artists/miss.png",
   "En Boca Ensamble": "/images/estatal_artists/ensamble.JPG",
   "Soraima y sus Huastecos": "/images/estatal_artists/miss.png",
