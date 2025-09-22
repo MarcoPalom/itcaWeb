@@ -119,13 +119,15 @@ export default function ArtistPage() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={artistImage}
-            alt="Background"
-            className="absolute inset-0 w-full h-full object-cover filter grayscale blur-sm opacity-30"
-          />
-        </div>
+
+
+      <div className="absolute inset-0 z-0">
+        <img
+          src={artistImage}
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover filter grayscale blur-sm opacity-30"
+        />
+      </div>
 
       <div className="relative z-10">
         <div className="flex items-center justify-between p-4 md:p-6">

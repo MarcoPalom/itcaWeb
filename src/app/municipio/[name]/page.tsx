@@ -49,8 +49,6 @@ import { abasoloFestivalInfo, abasoloFestival } from "@/constants/Municipios/aba
 import { aldamaFestivalInfo, aldamaFestival } from "@/constants/Municipios/aldamaData"
 import { burgosFestivalInfo, burgosFestival } from "@/constants/Municipios/burgosData"
 import { gustavoDiazOrdazFestivalInfo, gustavoDiazOrdazFestival } from "@/constants/Municipios/gustavoDiazOrdazData"
-
-
 import { cruillasFestivalInfo, cruillasFestival } from "@/constants/Municipios/cruillasData"
 import { getArtistImageUniversal } from "@/constants/artistImages"
 import { municipalImages } from "@/constants/municipalImages"
