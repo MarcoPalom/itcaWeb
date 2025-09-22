@@ -13,6 +13,23 @@ import FestivalLoading from "@/components/FestivalLoading"
 import { useFestivalLoading } from "@/hooks/useFestivalLoading"
 import { getArtistStatsFromAllMunicipalities, ArtistEventWithMunicipality } from "@/utils/artistEvents"
 
+// Función para generar parámetros estáticos
+export async function generateStaticParams() {
+  // Obtener todos los artistas de todas las categorías
+  const allArtists = [
+    // Artistas tamaulipecos
+    ...require("@/constants/tamaulipecosArtistData").tamaulipecosArtists.map((artist: any) => artist.name),
+    // Artistas nacionales
+    ...require("@/constants/nationalArtistData").nationalArtists.map((artist: any) => artist.name),
+    // Artistas internacionales
+    ...require("@/constants/internationalArtistData").internationalArtists.map((artist: any) => artist.name)
+  ];
+
+  return allArtists.map((name) => ({
+    name: encodeURIComponent(name.toLowerCase().replace(/\s+/g, '-')),
+  }));
+}
+
 // Tipos genéricos para artistas de municipios
 type Artist = {
   name: string
