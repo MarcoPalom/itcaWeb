@@ -1,0 +1,40 @@
+{
+  "name": "FICSM 2025 - Festival Internacional en la Costa del Seno Mexicano",
+  "short_name": "FICSM 2025",
+  "description": "FICSM 2025 - Arte, música y tradición se unen en la costa más vibrante de México. Del 3 al 12 de octubre en Tamaulipas.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#864e94",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["entertainment", "music", "culture", "festival"],
+  "lang": "es-MX",
+  "dir": "ltr"
+}

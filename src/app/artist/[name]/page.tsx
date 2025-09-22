@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { ArrowLeft, ChevronDown } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useParams, useRouter } from "next/navigation"
+import Head from "next/head"
 import { getArtistImageUniversal } from "@/constants/artistImages"
 import { getTamaulipecoArtistByName } from "@/constants/tamaulipecosArtistData"
 import { getArtistByName as getNationalArtistByName } from "@/constants/nationalArtistData"
@@ -118,16 +119,58 @@ export default function ArtistPage() {
 
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-
-
-      <div className="absolute inset-0 z-0">
-        <img
-          src={artistImage}
-          alt="Background"
-          className="absolute inset-0 w-full h-full object-cover filter grayscale blur-sm opacity-30"
+    <>
+      <Head>
+        <title>{artist.name} - FICSM 2025 | Festival Internacional Costa del Seno Mexicano</title>
+        <meta name="description" content={`${artist.name} se presenta en FICSM 2025 - Festival Internacional en la Costa del Seno Mexicano. ${artist.origin} - ${artist.category}. Conoce sus fechas y lugares de presentación.`} />
+        <meta name="keywords" content={`${artist.name}, FICSM, festival internacional, costa del seno mexicano, ${artist.origin}, ${artist.category}, tamaulipas, conciertos, música, arte`} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={`${artist.name} - FICSM 2025 | Festival Internacional Costa del Seno Mexicano`} />
+        <meta property="og:description" content={`${artist.name} se presenta en FICSM 2025 - Festival Internacional en la Costa del Seno Mexicano. ${artist.origin} - ${artist.category}.`} />
+        <meta property="og:image" content={artistImage} />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content={`https://festivaltamaulipas.com.mx/artist/${encodeURIComponent(artist.name)}`} />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${artist.name} - FICSM 2025 | Festival Internacional Costa del Seno Mexicano`} />
+        <meta name="twitter:description" content={`${artist.name} se presenta en FICSM 2025 - Festival Internacional en la Costa del Seno Mexicano.`} />
+        <meta name="twitter:image" content={artistImage} />
+        
+        {/* Canonical */}
+        <link rel="canonical" href={`https://festivaltamaulipas.com.mx/artist/${encodeURIComponent(artist.name)}`} />
+        
+        {/* JSON-LD para artista */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": artist.name,
+              "jobTitle": artist.category,
+              "nationality": artist.origin,
+              "description": artist.description || `${artist.name} es ${artist.category} de ${artist.origin} que se presenta en FICSM 2025 - Festival Internacional en la Costa del Seno Mexicano.`,
+              "image": artistImage,
+              "url": `https://festivaltamaulipas.com.mx/artist/${encodeURIComponent(artist.name)}`,
+              "worksFor": {
+                "@type": "Organization",
+                "name": "FICSM - Festival Internacional en la Costa del Seno Mexicano"
+              }
+            })
+          }}
         />
-      </div>
+      </Head>
+      
+      <div className="min-h-screen bg-black text-white relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={artistImage}
+            alt="Background"
+            className="absolute inset-0 w-full h-full object-cover filter grayscale blur-sm opacity-30"
+          />
+        </div>
 
       <div className="relative z-10">
         <div className="flex items-center justify-between p-4 md:p-6">
@@ -234,6 +277,7 @@ export default function ArtistPage() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
