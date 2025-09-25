@@ -10,18 +10,18 @@ export const palmillasFestival: FestivalEvent[] = [
     title: "Tributo al príncipe de la canción \"José José\"",
     artist: "Rondalla Magisterial de Tamaulipas",
     origin: "Tamaulipas",
-    category: "Música",
+    category: "Música | Versátil",
     venue: "Parque de Bienestar \"Plazuela\"",
-    time: "18:00 hrs."
+    time: "18:00 hrs"
   },
   {
     id: "pa-2",
     date: "4",
     day: "sábado",
-    title: "Cuentos del mundo",
+    title: "Cuentos para el mundo",
     artist: "Roberto Cuentacuentos",
     origin: "Tamaulipas",
-    category: "Literatura",
+    category: "Teatro | Cuentacuentos",
     venue: "Parque de Bienestar \"Plazuela\"",
     time: "18:00 hrs."
   },
@@ -32,9 +32,9 @@ export const palmillasFestival: FestivalEvent[] = [
     title: "La tienda de Don Verdi",
     artist: "José Palacios",
     origin: "Tamaulipas",
-    category: "Interdisciplinario",
+    category: "Teatro",
     venue: "Escuela Primaria Lauro Aguirre",
-    time: "9:00 hrs."
+    time: "9:00 hrs"
   },
   {
     id: "pa-4",
@@ -43,7 +43,7 @@ export const palmillasFestival: FestivalEvent[] = [
     title: "Las futbolistas",
     artist: "Ráfaga Teatro",
     origin: "CDMX-Estado de México",
-    category: "Teatro",
+    category: "Teatro | Teatro de calle",
     venue: "Escuela Telesecundaria \"Miguel Hidalgo\"",
     time: "9:00 hrs."
   },
@@ -54,7 +54,7 @@ export const palmillasFestival: FestivalEvent[] = [
     title: "Marimba perpetua",
     artist: "Percutam Dúo",
     origin: "Tamaulipas",
-    category: "Interdisciplinario",
+    category: "Música | Marimba",
     venue: "Parque de Bienestar \"Plazuela\"",
     time: "18:00 hrs."
   }
@@ -67,7 +67,7 @@ export const palmillasFestivalInfo: FestivalInfo = {
   totalEvents: 5,
   startDate: "3 de octubre de 2025",
   endDate: "11 de octubre de 2025",
-  categories: ["Música", "Literatura", "Interdisciplinario", "Teatro"]
+  categories: ["Música", "Teatro", "Versátil", "Cuentacuentos", "Teatro de calle", "Marimba"]
 };
 
 // Exposiciones del Festival del Municipio Palmillas

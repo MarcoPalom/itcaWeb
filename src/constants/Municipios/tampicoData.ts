@@ -30,7 +30,7 @@ export const tampicoFestival: FestivalEvent[] = [
     id: "ta-1c",
     date: "3",
     day: "viernes",
-    title: "Marching Band COBAT 15",
+    title: "Marching Band COBAT 04",
     artist: "Tamaulipas",
     origin: "Tamaulipas",
     category: "Música",

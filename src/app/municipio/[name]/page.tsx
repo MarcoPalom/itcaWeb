@@ -169,7 +169,8 @@ export default function MunicipalityPage() {
     venue: event.venue,
     time: event.time,
     municipality: municipality.name,
-    artistImage: getEventImage(event)
+    artistImage: getEventImage(event),
+    artist: event.artist
   }))
 
   return (

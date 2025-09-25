@@ -56,7 +56,7 @@ export const tamaulipecosArtistImages: { [key: string]: string } = {
   "Cirko Frontera": "/images/estatal_artists/criko.jpg",
   "Los Valdés SKA": "/images/estatal_artists/valdes.jpg",
   "El Contrato": "/images/estatal_artists/contrato.jpeg",
-  "Banda Sinfónica Municipal de Reynosa \"Mtro. Elías Valenzuela\"": "/images/estatal_artists/miss.png",
+  "Banda Sinfónica Municipal de Reynosa \"Mtro. Elías Valenzuela\"": "/images/estatal_artists/bandareynosa.jpg",
   "La Nota Alegre": "/images/estatal_artists/notale.jpg",
   "Los Del Pueblo": "/images/estatal_artists/pueblo.png",
   "Amenaza Norteña": "/images/estatal_artists/amenaza.jpg",

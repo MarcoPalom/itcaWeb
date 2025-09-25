@@ -66,8 +66,8 @@ export const maderoFestival: FestivalEvent[] = [
     artist: "Punto Exacto, El cuervo y Mr. Trash",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Plaza de Arte, Escolleras",
-    time: "19:00 hrs."
+    venue: "Parque Bicentenario, Evento Teletón 2025",
+    time: "20:00 hrs."
   },
   {
     id: "ma-7",
@@ -77,7 +77,7 @@ export const maderoFestival: FestivalEvent[] = [
     artist: "Adicto5",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Plaza de Arte, Escolleras",
+    venue: "Plaza de Arte Miramar (Acceso a escolleras)",
     time: "19:00 hrs."
   }
 ];

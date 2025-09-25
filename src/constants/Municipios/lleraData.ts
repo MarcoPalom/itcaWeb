@@ -22,7 +22,7 @@ export const lleraFestival: FestivalEvent[] = [
     artist: "Colectivo Trueque",
     origin: "Tamaulipas-PROFEST",
     category: "Interdisciplinario",
-    venue: "Primaria \"Leyes de Reforma\"",
+    venue: "Esc. Primaria Lauro Aguirre",
     time: "11:00 hrs."
   },
   {

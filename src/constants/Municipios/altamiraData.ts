@@ -11,29 +11,29 @@ export const altamiraFestival: FestivalEvent[] = [
     artist: "Distrito Cero",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Isla de la Esperanza, Blvd. Cuco Sánchez",
-    time: "19:00 hrs."
+    venue: "Isla de la Esperanza Blvd. Cuco Sánchez",
+    time: "19:00 hrs"
   },
   {
     id: "al-2",
     date: "4",
     day: "sábado",
     title: "Nación SKA",
-    artist: "Los Valdés Ska",
+    artist: "Los Valdés SKA",
     origin: "Tamaulipas",
-    category: "Música",
-    venue: "Isla de la Esperanza, Blvd. Cuco Sánchez",
+    category: "Música | Fusión",
+    venue: "Isla de la Esperanza Blvd. Cuco Sánchez",
     time: "19:00 hrs."
   },
   {
     id: "al-3",
     date: "6",
     day: "lunes",
-    title: "Poetas y lugares",
+    title: "Poetas y lugares con Viola Trigo",
     artist: "Viola Trigo",
     origin: "CDMX",
     category: "Interdisciplinario",
-    venue: "Calle Quinterno N° 100, Zona Centro",
+    venue: "Calle Quinterno N° 100 Zona Centro",
     time: "19:00 hrs."
   },
   {
@@ -43,8 +43,8 @@ export const altamiraFestival: FestivalEvent[] = [
     title: "Seguiré mi viaje",
     artist: "Las Hermanas García",
     origin: "Guerrero",
-    category: "Música",
-    venue: "Isla de la Esperanza, Blvd. Cuco Sánchez",
+    category: "Música | Boleros Costeños",
+    venue: "Isla de la Esperanza Blvd. Cuco Sánchez",
     time: "19:00 hrs."
   },
   {
@@ -53,20 +53,20 @@ export const altamiraFestival: FestivalEvent[] = [
     day: "viernes",
     title: "Del Circo a la Calle",
     artist: "Cirque erös",
-    origin: "Tamaulipas-PROFEST",
-    category: "Interdisciplinario",
-    venue: "Isla de la Esperanza, Blvd. Cuco Sánchez",
+    origin: "Tamaulipas",
+    category: "Artes de la representación | Circense",
+    venue: "Isla de la Esperanza Blvd. Cuco Sánchez",
     time: "19:00 hrs."
   },
   {
     id: "al-6",
     date: "11",
     day: "sábado",
-    title: "Cuatete a la carta",
+    title: "Cuatete Sound",
     artist: "Cuatete Sound",
     origin: "Guerrero",
     category: "Música",
-    venue: "Isla de la Esperanza, Blvd. Cuco Sánchez",
+    venue: "Isla de la Esperanza Blvd. Cuco Sánchez",
     time: "19:00 hrs."
   },
   {
@@ -74,10 +74,10 @@ export const altamiraFestival: FestivalEvent[] = [
     date: "12",
     day: "domingo",
     title: "Afro-ecos: raíces que susurran en el canto",
-    artist: "Kani Ensamble Coral",
+    artist: "Kani ensamble coral",
     origin: "Tamaulipas",
-    category: "Música",
-    venue: "Isla de la Esperanza, Blvd. Cuco Sánchez",
+    category: "Música | Fusión",
+    venue: "Isla de la Esperanza Blvd. Cuco Sánchez",
     time: "19:00 hrs."
   }
 ];
@@ -89,7 +89,7 @@ export const altamiraFestivalInfo: FestivalInfo = {
   totalEvents: 7,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Música", "Interdisciplinario"]
+  categories: ["Música", "Interdisciplinario", "Artes de la representación"]
 };
 
 // Exposiciones del Festival del Municipio Altamira

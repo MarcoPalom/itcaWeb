@@ -23,7 +23,7 @@ export const aldamaFestival: FestivalEvent[] = [
     origin: "Tamaulipas",
     category: "Música",
     venue: "Auditorio Municipal en Cabecera Municipal",
-    time: "10:30 hrs."
+    time: "18:00 hrs."
   },
   {
     id: "al-3",

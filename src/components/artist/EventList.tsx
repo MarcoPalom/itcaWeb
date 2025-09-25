@@ -11,6 +11,7 @@ interface Event {
   time?: string
   municipality: string
   artistImage?: string
+  artist?: string
 }
 
 interface EventListProps {
@@ -51,9 +52,12 @@ export default function EventList({ events, artistImage, artistName }: EventList
 
             {/* Event Details */}
             <div className="flex-1 min-w-0">
-              <h3 className="font-bold text-lg md:text-xl text-white mb-2">
-                {event.title || artistName}
+              <h3 className="font-bold text-lg md:text-xl text-white mb-1">
+                {event.artist || artistName}
               </h3>
+              <p className="text-[#864e94] font-medium text-sm md:text-base mb-2">
+                {event.title || artistName}
+              </p>
               
               <div className="space-y-2 text-sm md:text-base">
                 <div className="flex items-center gap-2 text-gray-300">

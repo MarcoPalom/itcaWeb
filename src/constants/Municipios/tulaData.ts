@@ -9,8 +9,8 @@ export const tulaFestival: FestivalEvent[] = [
     day: "viernes",
     title: "Majestuosa Camada \"San Simón Cerro\"",
     artist: "Majestuosa Camada \"San Simón Cerro\"",
-    origin: "Guerrero",
-    category: "Interdisciplinario",
+    origin: "Tlaxcala",
+    category: "Danza | Tradicional del Estado de Tlaxcala",
     venue: "Calles Principales",
     time: "18:00 hrs."
   },
@@ -18,22 +18,22 @@ export const tulaFestival: FestivalEvent[] = [
     id: "tu-2",
     date: "3",
     day: "viernes",
-    title: "Un atardecer con la Internacional Orquesta Tampico de Claudio Rosas",
+    title: "Concierto musical \"Un atardecer con la Internacional Orquesta Tampico de Claudio Rosas\"",
     artist: "Internacional Orquesta de Tampico",
     origin: "Tamaulipas",
-    category: "Música",
-    venue: "Kiosko de la Plaza",
+    category: "Música | Versátil",
+    venue: "Kiosco de la Plaza",
     time: "19:00 hrs."
   },
   {
     id: "tu-3",
     date: "4",
     day: "sábado",
-    title: "Marimba perpetua",
+    title: "Marimba Perpetua",
     artist: "Percutam Dúo",
     origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Explanda de la Presidencia Municipal",
+    category: "Música | Marimba",
+    venue: "Explanada de la Presidencia",
     time: "18:30 hrs."
   },
   {
@@ -43,8 +43,8 @@ export const tulaFestival: FestivalEvent[] = [
     title: "Primera Cita",
     artist: "Los Bernal de Linares",
     origin: "Nuevo León",
-    category: "Música",
-    venue: "Explanda de la Presidencia Municipal",
+    category: "Música | Norteño",
+    venue: "Explanada de la Presidencia",
     time: "18:30 hrs."
   },
   {
@@ -54,8 +54,8 @@ export const tulaFestival: FestivalEvent[] = [
     title: "Me importas tú, boleros para abrazar",
     artist: "CIA. A la Deriva Teatro",
     origin: "Jalisco",
-    category: "Teatro",
-    venue: "Escuela Primaria \"Miguel Hidalgo Centro\"",
+    category: "Teatro | Teatro para primera infancia",
+    venue: "Jardín de niños \"Teresita\"",
     time: "10:30 hrs."
   },
   {
@@ -65,8 +65,8 @@ export const tulaFestival: FestivalEvent[] = [
     title: "La tienda de Don Verdi",
     artist: "José Palacios",
     origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Escuela Primaria \"Benito Juárez\"",
+    category: "Teatro",
+    venue: "Escuela Primaria Benito Juárez",
     time: "10:30 hrs."
   },
   {
@@ -76,8 +76,8 @@ export const tulaFestival: FestivalEvent[] = [
     title: "Mi voz al mundo",
     artist: "Argelia Fragoso",
     origin: "Cuba",
-    category: "Interdisciplinario",
-    venue: "Explanda de la Presidencia Municipal",
+    category: "Música | Boleros",
+    venue: "Explanada de la Presidencia",
     time: "18:30 hrs."
   },
   {
@@ -87,8 +87,8 @@ export const tulaFestival: FestivalEvent[] = [
     title: "Trío UATsteco",
     artist: "Trío UATsteco",
     origin: "Tamaulipas",
-    category: "Música",
-    venue: "Explanda de la Presidencia Municipal",
+    category: "UAT | Música",
+    venue: "Explanada de la Presidencia",
     time: "18:30 hrs."
   },
   {
@@ -98,8 +98,8 @@ export const tulaFestival: FestivalEvent[] = [
     title: "En tierras Tamaulipecas",
     artist: "Norteños de Río Bravo",
     origin: "Tamaulipas",
-    category: "Música",
-    venue: "Explanda de la Presidencia Municipal",
+    category: "Música | Norteña",
+    venue: "Explanada de la Presidencia",
     time: "18:30 hrs."
   }
 ];
@@ -111,7 +111,7 @@ export const tulaFestivalInfo: FestivalInfo = {
   totalEvents: 9,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Interdisciplinario", "Teatro", "Música"]
+  categories: ["Danza", "Música", "Teatro", "Tradicional del Estado de Tlaxcala", "Versátil", "Marimba", "Norteño", "Teatro para primera infancia", "Boleros", "UAT", "Norteña"]
 };
 
 // Exposiciones del Festival del Municipio Tula

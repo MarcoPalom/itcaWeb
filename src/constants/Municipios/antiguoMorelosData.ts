@@ -11,8 +11,8 @@ export const antiguoMorelosFestival: FestivalEvent[] = [
     artist: "Colectivo Trueque",
     origin: "Tamaulipas",
     category: "Interdisciplinario",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Escuela Primaria Niños Héroes, Congregación Fortines",
+    time: "11:00 hrs."
   },
   {
     id: "am-2",
@@ -22,8 +22,8 @@ export const antiguoMorelosFestival: FestivalEvent[] = [
     artist: "Ráfaga Teatro",
     origin: "CDMX-Estado de México",
     category: "Teatro",
-    venue: "Lugar por definir",
-    time: "Horario por definir"
+    venue: "Escuela Primaria José María Morelos y Pavón",
+    time: "11:00 hrs."
   }
 ];
 

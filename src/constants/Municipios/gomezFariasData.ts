@@ -10,8 +10,8 @@ export const gomezFariasFestival: FestivalEvent[] = [
     title: "El Zar de Monterrey",
     artist: "El Zar de Monterrey",
     origin: "Nuevo León",
-    category: "Música",
-    venue: "Foro de la iglesia del Poblado \"Loma Alta\"",
+    category: "Música | Norteño",
+    venue: "Foro de la Iglesia del Poblado Loma alta",
     time: "18:00 hrs."
   },
   {
@@ -21,7 +21,7 @@ export const gomezFariasFestival: FestivalEvent[] = [
     title: "Si la brisa se vuelve canción, marejada musical por \"La espuma del mar\"",
     artist: "La Espuma de Mar",
     origin: "Tamaulipas",
-    category: "Música",
+    category: "Música | Norteño",
     venue: "Foro de la iglesia del Poblado \"Loma Alta\"",
     time: "18:00 hrs."
   },
@@ -31,8 +31,8 @@ export const gomezFariasFestival: FestivalEvent[] = [
     day: "domingo",
     title: "Animación con zanqueros y mimo",
     artist: "Colectivo Trueque",
-    origin: "Tamaulipas-PROFEST",
-    category: "Interdisciplinario",
+    origin: "Tamaulipas",
+    category: "Teatro | Animación",
     venue: "Foro de la iglesia del Poblado \"Loma Alta\"",
     time: "18:00 hrs."
   },
@@ -43,8 +43,8 @@ export const gomezFariasFestival: FestivalEvent[] = [
     title: "Organillermo",
     artist: "Guillermo Méndez",
     origin: "Jalisco",
-    category: "Interdisciplinario",
-    venue: "Escuela Primaria \"Norberto Uriegas\" del Ejido 5 de Mayo",
+    category: "Teatro | Teatro de calle",
+    venue: "Esc. Primaria Norberto Uriegas, Ej. 5 de Mayo",
     time: "12:00 hrs"
   },
   {
@@ -54,8 +54,8 @@ export const gomezFariasFestival: FestivalEvent[] = [
     title: "Afro-ecos: raíces que susurran en el canto",
     artist: "Kani Ensamble Coral",
     origin: "Tamaulipas",
-    category: "Música",
-    venue: "Foro de la Iglesia del Poblado \"Loma Alta\"",
+    category: "Música | Fusión",
+    venue: "Foro de la Iglesia del Poblado Loma Alta",
     time: "18:00 hrs."
   },
   {
@@ -63,10 +63,10 @@ export const gomezFariasFestival: FestivalEvent[] = [
     date: "12",
     day: "domingo",
     title: "Huapangos tamaulipecos, la raíz de mi tierra",
-    artist: "Grupo Honda Nor-T",
+    artist: "Grupo Honda Nor-t",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Explanada de la Presidencia Municipal",
+    venue: "Explanada de la Presidencia",
     time: "18:00 hrs."
   }
 ];
@@ -78,7 +78,7 @@ export const gomezFariasFestivalInfo: FestivalInfo = {
   totalEvents: 6,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Música", "Interdisciplinario"]
+  categories: ["Música", "Teatro", "Norteño", "Fusión", "Animación", "Teatro de calle"]
 };
 
 // Exposiciones del Festival del Municipio Gómez Farías

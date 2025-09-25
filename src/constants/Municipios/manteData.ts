@@ -34,7 +34,7 @@ export const manteFestival: FestivalEvent[] = [
     origin: "Tamaulipas",
     category: "Teatro",
     venue: "Esc. \"Héctor Pérez Martínez\"",
-    time: "10:00 hrs."
+    time: "9:00 hrs."
   },
   {
     id: "ma-4",
@@ -44,8 +44,8 @@ export const manteFestival: FestivalEvent[] = [
     artist: "CIA. A la Deriva Teatro",
     origin: "Jalisco",
     category: "Teatro",
-    venue: "Guardería \"Tres Palacios\"",
-    time: "10:00 hrs."
+    venue: "Jardín de Niños \"Margarita Maza de Juárez\"",
+    time: "9:00 hrs."
   },
   {
     id: "ma-5",
@@ -66,7 +66,7 @@ export const manteFestival: FestivalEvent[] = [
     artist: "Teatromorfosis",
     origin: "Tamaulipas",
     category: "Teatro",
-    venue: "Escuela J.B. Tijerina",
+    venue: "Preparatoria \"Mante\"",
     time: "10:00 hrs."
   },
   {

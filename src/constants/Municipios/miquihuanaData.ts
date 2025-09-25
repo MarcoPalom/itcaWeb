@@ -21,7 +21,7 @@ export const miquihuanaFestival: FestivalEvent[] = [
     title: "¡Llévame!",
     artist: "Compañía Claunodromo",
     origin: "Jalisco",
-    category: "Interdisciplinario",
+    category: "Teatro | Teatro Comedia",
     venue: "Esc. Sec. Tec. #26 \"Gral. Alberto Carrera Torres\"",
     time: "11:00 hrs."
   },
@@ -32,7 +32,7 @@ export const miquihuanaFestival: FestivalEvent[] = [
     title: "Las futbolistas",
     artist: "Ráfaga Teatro",
     origin: "CDMX-Estado de México",
-    category: "Teatro",
+    category: "Teatro | Teatro de calle",
     venue: "Plaza Principal \"Miguel Hidalgo\"",
     time: "18:00 hrs."
   }
@@ -45,7 +45,7 @@ export const miquihuanaFestivalInfo: FestivalInfo = {
   totalEvents: 3,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Literatura", "Interdisciplinario", "Teatro"]
+  categories: ["Teatro", "Teatro Comedia", "Teatro de calle"]
 };
 
 // Exposiciones del Festival del Municipio Miquihuana
