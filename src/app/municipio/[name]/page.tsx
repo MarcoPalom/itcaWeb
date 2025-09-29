@@ -51,7 +51,7 @@ import { burgosFestivalInfo, burgosFestival } from "@/constants/Municipios/burgo
 import { gustavoDiazOrdazFestivalInfo, gustavoDiazOrdazFestival } from "@/constants/Municipios/gustavoDiazOrdazData"
 import { cruillasFestivalInfo, cruillasFestival } from "@/constants/Municipios/cruillasData"
 import { getArtistImageUniversal } from "@/constants/artistImages"
-import { municipalImages, getMunicipalImage } from "@/constants/municipalImages"
+import { municipalImages } from "@/constants/municipalImages"
 
 export default function MunicipalityPage() {
   const params = useParams()
