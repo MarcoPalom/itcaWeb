@@ -19,7 +19,7 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     id: "ma-2",
     date: "3",
     day: "viernes",
-    title: "Casa del Arte",
+    title: "Casa de Cultura",
     artist: "Municipio de Miguel Alemán",
     origin: "Tamaulipas",
     category: "Interdisciplinario",
@@ -30,23 +30,23 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     id: "ma-3",
     date: "3",
     day: "viernes",
-    title: "Casa de Cultura",
-    artist: "Municipio de Miguel Alemán",
-    origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
-    time: "19:20 hrs."
-  },
-  {
-    id: "ma-4",
-    date: "3",
-    day: "viernes",
     title: "¡Ajua Raza! Homenaje a Piporro",
     artist: "Grupo Tayer",
     origin: "Nuevo León",
     category: "Música",
     venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
     time: "19:25 hrs."
+  },
+  {
+    id: "ma-4",
+    date: "3",
+    day: "viernes",
+    title: "Queen of the Gym",
+    artist: "Grupo \"Power Kids\"",
+    origin: "Tamaulipas",
+    category: "Danza",
+    venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
+    time: "20:35 hrs."
   },
   {
     id: "ma-5",

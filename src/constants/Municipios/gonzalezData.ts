@@ -74,7 +74,7 @@ export const gonzalezFestival: FestivalEvent[] = [
     date: "12",
     day: "domingo",
     title: "Tamaulipas es mi Tierra",
-    artist: "Arael & Erihka Peña",
+    artist: "Arael",
     origin: "Tamaulipas",
     category: "Música",
     venue: "Plaza Principal de González",

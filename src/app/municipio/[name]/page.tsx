@@ -51,7 +51,7 @@ import { burgosFestivalInfo, burgosFestival } from "@/constants/Municipios/burgo
 import { gustavoDiazOrdazFestivalInfo, gustavoDiazOrdazFestival } from "@/constants/Municipios/gustavoDiazOrdazData"
 import { cruillasFestivalInfo, cruillasFestival } from "@/constants/Municipios/cruillasData"
 import { getArtistImageUniversal } from "@/constants/artistImages"
-import { municipalImages } from "@/constants/municipalImages"
+import { municipalImages, getMunicipalImage } from "@/constants/municipalImages"
 
 export default function MunicipalityPage() {
   const params = useParams()
@@ -152,6 +152,10 @@ export default function MunicipalityPage() {
 
   const municipalityImage = municipalImages[municipality.name] || "/images/municipal-festival-placeholder.jpg"
   
+  // Municipios que necesitan la funcionalidad especial para eventos con "Municipio de [nombre]"
+  const specialMunicipalities = ["Victoria", "Matamoros", "Nuevo Laredo", "Reynosa", "Tampico"]
+  const needsSpecialImage = specialMunicipalities.includes(municipality.name)
+  
   // Obtener categorías únicas
   const categories = [...new Set(municipalityEvents.map((event: FestivalEvent) => event.category))]
 
@@ -170,7 +174,8 @@ export default function MunicipalityPage() {
     time: event.time,
     municipality: municipality.name,
     artistImage: getEventImage(event),
-    artist: event.artist
+    artist: event.artist,
+    origin: event.origin
   }))
 
   return (
@@ -235,6 +240,7 @@ export default function MunicipalityPage() {
             events={transformedEvents}
             artistImage={municipalityImage}
             artistName={municipality.name}
+            municipalityImage={needsSpecialImage ? municipalityImage : undefined}
           />
 
           {/* Categories Summary */}

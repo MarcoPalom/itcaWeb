@@ -55,15 +55,26 @@ export const maderoFestival: FestivalEvent[] = [
     artist: "Brassas Mexican Beat",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Plaza de Arte, Escolleras",
+    venue: "Plaza de Arte Miramar (Acceso a Escolleras)",
     time: "19:00 hrs."
   },
   {
     id: "ma-6",
     date: "11",
     day: "sábado",
-    title: "ROCK",
-    artist: "Punto Exacto, El cuervo y Mr. Trash",
+    title: "Mr. Trash",
+    artist: "Mr. Trash",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Plaza de Arte Miramar (Acceso a Escolleras)",
+    time: "19:00 hrs."
+  },
+  {
+    id: "ma-6b",
+    date: "11",
+    day: "sábado",
+    title: "Punto Exacto y El Cuervo",
+    artist: "Punto Exacto y El Cuervo",
     origin: "Tamaulipas",
     category: "Música",
     venue: "Parque Bicentenario, Evento Teletón 2025",
@@ -86,7 +97,7 @@ export const maderoFestival: FestivalEvent[] = [
 export const maderoFestivalInfo: FestivalInfo = {
   name: "Madero",
   location: "Madero",
-  totalEvents: 7,
+  totalEvents: 8,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
   categories: ["Música", "Interdisciplinario"]

@@ -11,6 +11,7 @@ export const internationalArtistImages: { [key: string]: string } = {
   "Matías Aguayo": "/images/international_artists/matias.jpg",
   "Del Vali": "/images/international_artists/delvali.jpg",
   "Wero Hernández": "/images/international_artists/wero.jpg",
+  "Del Vali & Wero Hernández": "/images/international_artists/delwero.jpg",
 }
 
 // Imágenes de artistas nacionales
@@ -68,18 +69,18 @@ export const tamaulipecosArtistImages: { [key: string]: string } = {
   "Roberto Cuentacuentos": "/images/estatal_artists/roberto.jpg",
   "Grupo Pendiente": "/images/estatal_artists/pendiente.jpg",
   "Érase una vez dos veces": "/images/estatal_artists/eraseuna.jpeg",
-  "Trío UATsteco": "/images/estatal_artists/miss.png",
-  "Quinteto de Alientos UAT": "/images/estatal_artists/miss.png",
-  "Trío Bohemia UAT": "/images/estatal_artists/miss.png",
+  "Trío UATsteco": "/images/estatal_artists/triouat.jpg",
+  "Quinteto de Alientos UAT": "/images/estatal_artists/quinteto.JPG",
+  "Trío Bohemia UAT": "/images/estatal_artists/triobouat.png",
   "Grupo de teatro Guarapo": "/images/estatal_artists/guarapo.jpg",
   "José Palacios": "/images/estatal_artists/josepa.jpeg",
   "MFOX La Puerta del Talento": "/images/estatal_artists/mfox.jpg",
   "Rockpango": "/images/estatal_artists/rockpan.jpg",
-  "Norteños de Río Bravo": "/images/estatal_artists/miss.png",
+  "Norteños de Río Bravo": "/images/estatal_artists/nortenos.JPG",
   "Grupo de danza Anacahuitas": "/images/estatal_artists/anaca.jpg",
   "Grupo Relativo": "/images/estatal_artists/relativo.JPG",
   "Bocatoma Jazz": "/images/estatal_artists/bocatoma.jpg",
-  "Grupo Folclórico Kauyumarie": "/images/estatal_artists/miss.png",
+  "Grupo Folclórico Kauyumarie": "/images/estatal_artists/kauy.jpg",
   "Brassas Mexican Beat": "/images/estatal_artists/brassas.jpg",
   "Selección del Sistema Tamaulipeco de Agrupaciones Musicales Comunitarias": "/images/estatal_artists/miss.png",
   "Apapacho Teatro, arte y diversidad": "/images/estatal_artists/apapacho.png",
@@ -95,8 +96,8 @@ export const tamaulipecosArtistImages: { [key: string]: string } = {
   "Melissa Castellanos": "/images/estatal_artists/meliss.jpeg",
   "Esther Tovar": "/images/estatal_artists/esther.jpg",
   "Punto Exacto": "/images/estatal_artists/punto.jpg",
-  "El Cuervo": "/images/estatal_artists/miss.png",
-  "Mr. Trash": "/images/estatal_artists/miss.png",
+  "El Cuervo": "/images/estatal_artists/elcuervo.jpg",
+  "Mr. Trash": "/images/estatal_artists/trash.png",
   "Adicto5": "/images/estatal_artists/adicto5.jpg",
   "HIJK Teatro": "/images/estatal_artists/hij.jpg",
   "Alex del Ángel": "/images/estatal_artists/alex.JPEG",
@@ -105,13 +106,18 @@ export const tamaulipecosArtistImages: { [key: string]: string } = {
   "Jimmy Yunes": "/images/estatal_artists/jimmy.jpg",
   "Marching Band COBAT 15": "/images/estatal_artists/miss.png",
   "Orquesta Sinfónica Comunitaria de Tampico": "/images/estatal_artists/miss.png",
-  "Ensamble de Mujeres \"María Bonita\"": "/images/estatal_artists/miss.png",
+  "Ensamble de Mujeres \"María Bonita\"": "/images/estatal_artists/mariabo.jpg",
   "Lobos teatro": "/images/estatal_artists/miss.png",
   "Paquidermo Artes Escénicas": "/images/estatal_artists/miss.png",
   "Festival de Huapango": "/images/estatal_artists/miss.png",
   "La Orquesta Tampico de Claudio Rosas": "/images/estatal_artists/intampico.png",
   "Aldebarán Acústico": "/images/estatal_artists/aldeba.jpg",
-  "Grupo Honda Nor-T": "/images/estatal_artists/miss.png"
+  "Grupo Honda Nor-T": "/images/estatal_artists/nort.jpg",
+  "Imparte: Mayra Sérbulo": "/images/estatal_artists/mayra.jpg",
+  "Mayra Sérbulo, Alex Orozco, Petrona de la Cruz": "/images/estatal_artists/comboindi.jpg",
+  "Petrona de la Cruz, Sonia Gregorio, Mayra Sérbulo, Yaremi Chan": "/images/estatal_artists/comboindi2.jpg",
+  "Imparte: Petrona de la Cruz": "/images/estatal_artists/petrona.jpg",
+  "Monólogo: Bala Na - De Alexis Orozco": "/images/estatal_artists/bala.jpg"
 }
 
 // Función helper para obtener imagen de artista por nombre y tipo

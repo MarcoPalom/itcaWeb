@@ -66,7 +66,7 @@ export const gomezFariasFestival: FestivalEvent[] = [
     artist: "Grupo Honda Nor-t",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Explanada de la Presidencia",
+    venue: "Explanada de la Presidencia Municipal",
     time: "18:00 hrs."
   }
 ];

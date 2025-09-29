@@ -30,44 +30,7 @@ export const biancaMarroquin: InternationalArtist = {
   category: "Teatro",
   subcategory: "Teatro Musical",
   description: "Reconocida artista mexicana a nivel internacional, Bianca Marroquín es mejor conocida por estelarizar obras musicales en Broadway, incluyendo los dos papeles protagonistas en \"Chicago, The Musical\" en el Teatro Ambassador, por el cual fue galardonada con el Premio Helen Hayes y \"Anita\" en West Side Story para el Carnegie Hall, The Pajama Game, In The Heights y otros. Además de interpretar a Chita Rivero en la serie de televisión Fosse/Verdon para FX, aparece en otros programas y series como Acapulco, de Apple y jueza \"Mira Quién Baila\" o \"Pequeños Gigantes\" para el público latino. Regresa a Tamaulipas, al Festival Internacional en la Costa del Seno Mexicano con \"Broadway Baby\", que narra su propia historia como una niña fronteriza que soñaba con bailar y se catapultó hasta ser la primera mujer mexicana en estelarizar una obra en Broadway. En una experiencia de concierto teatral, Bianca nos brinda un mensaje poderosamente inspirador a través de una mezcla ecléctica de música y danza.",
-  events: [
-    {
-      id: "nl-3",
-      title: "Broadway Baby",
-      date: "3",
-      day: "viernes",
-      venue: "Teatro Principal del Centro Cultural Nuevo Laredo",
-      time: "19:00 hrs.",
-      municipality: "Nuevo Laredo"
-    },
-    {
-      id: "r-5",
-      title: "Broadway Baby",
-      date: "5",
-      day: "domingo",
-      venue: "Teatro Principal del Parque Cultural Reynosa",
-      time: "17:00 hrs.",
-      municipality: "Reynosa"
-    },
-    {
-      id: "mt-7",
-      title: "Broadway Baby",
-      date: "7",
-      day: "martes",
-      venue: "Teatro de la Reforma",
-      time: "20:00 hrs.",
-      municipality: "Matamoros"
-    },
-    {
-      id: "vc-9",
-      title: "Broadway Baby",
-      date: "9",
-      day: "jueves",
-      venue: "Teatro \"Amalia G. de Castillo Ledón\" del Centro Cultural Tamaulipas",
-      time: "19:00 hrs.",
-      municipality: "Victoria"
-    }
-  ]
+  events: []
 };
 
 // Data de Argelia Fragoso

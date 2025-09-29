@@ -33,7 +33,7 @@ export const tulaFestival: FestivalEvent[] = [
     artist: "Percutam Dúo",
     origin: "Tamaulipas",
     category: "Música | Marimba",
-    venue: "Explanada de la Presidencia",
+    venue: "Explanada de la Presidencia Municipal",
     time: "18:30 hrs."
   },
   {
@@ -44,7 +44,7 @@ export const tulaFestival: FestivalEvent[] = [
     artist: "Los Bernal de Linares",
     origin: "Nuevo León",
     category: "Música | Norteño",
-    venue: "Explanada de la Presidencia",
+    venue: "Explanada de la Presidencia Municipal",
     time: "18:30 hrs."
   },
   {
@@ -55,7 +55,7 @@ export const tulaFestival: FestivalEvent[] = [
     artist: "CIA. A la Deriva Teatro",
     origin: "Jalisco",
     category: "Teatro | Teatro para primera infancia",
-    venue: "Jardín de niños \"Teresita\"",
+    venue: "Jardín de Niños \"Teresita\"",
     time: "10:30 hrs."
   },
   {
@@ -66,7 +66,7 @@ export const tulaFestival: FestivalEvent[] = [
     artist: "José Palacios",
     origin: "Tamaulipas",
     category: "Teatro",
-    venue: "Escuela Primaria Benito Juárez",
+    venue: "Escuela Primaria \"Benito Juárez\"",
     time: "10:30 hrs."
   },
   {
@@ -77,7 +77,7 @@ export const tulaFestival: FestivalEvent[] = [
     artist: "Argelia Fragoso",
     origin: "Cuba",
     category: "Música | Boleros",
-    venue: "Explanada de la Presidencia",
+    venue: "Explanada de la Presidencia Municipal",
     time: "18:30 hrs."
   },
   {
@@ -88,7 +88,7 @@ export const tulaFestival: FestivalEvent[] = [
     artist: "Trío UATsteco",
     origin: "Tamaulipas",
     category: "UAT | Música",
-    venue: "Explanada de la Presidencia",
+    venue: "Explanada de la Presidencia Municipal",
     time: "18:30 hrs."
   },
   {
@@ -99,7 +99,7 @@ export const tulaFestival: FestivalEvent[] = [
     artist: "Norteños de Río Bravo",
     origin: "Tamaulipas",
     category: "Música | Norteña",
-    venue: "Explanada de la Presidencia",
+    venue: "Explanada de la Presidencia Municipal",
     time: "18:30 hrs."
   }
 ];
