@@ -440,16 +440,7 @@ export const brassasMexicanBeat: TamaulipecoArtist = {
   events: []
 };
 
-// Data de Selección del Sistema Tamaulipeco de Agrupaciones Musicales Comunitarias
-export const seleccionSistemaTamaulipeco: TamaulipecoArtist = {
-  id: "sstamc-001",
-  name: "Selección del Sistema Tamaulipeco de Agrupaciones Musicales Comunitarias",
-  origin: "Tamaulipas",
-  category: "Música",
-  subcategory: "Música comunitaria",
-  description: "Descripción no disponible",
-  events: []
-};
+
 
 // Data de Apapacho Teatro, arte y diversidad
 export const apapachoTeatro: TamaulipecoArtist = {
@@ -737,16 +728,7 @@ export const paquidermoArtesEscenicas: TamaulipecoArtist = {
   events: []
 };
 
-// Data de Festival de Huapango (Evento especial)
-export const festivalDeHuapango: TamaulipecoArtist = {
-  id: "fdh-001",
-  name: "Festival de Huapango",
-  origin: "Tamaulipas",
-  category: "Festival",
-  subcategory: "Festival tradicional",
-  description: "Descripción no disponible",
-  events: []
-};
+
 
 // Data de Internacional Orquesta de Tampico
 export const internacionalOrquestaTampico: TamaulipecoArtist = {
@@ -833,7 +815,6 @@ export const tamaulipecosArtists: TamaulipecoArtist[] = [
   bocatomaJazz,
   grupoFolkloricoKauyumarie,
   brassasMexicanBeat,
-  seleccionSistemaTamaulipeco,
   apapachoTeatro,
   colectivoTrueque,
   percutamDuo,
@@ -860,7 +841,6 @@ export const tamaulipecosArtists: TamaulipecoArtist[] = [
   ensambleMujeresMariaBonita,
   lobosTeatro,
   paquidermoArtesEscenicas,
-  festivalDeHuapango,
   internacionalOrquestaTampico,
   aldebaranAcustico,
   grupoHondaNorT,

@@ -26,7 +26,7 @@ export const nationalArtistImages: { [key: string]: string } = {
   "Las Jaras": "/images/national_artists/jaras.jpeg",
   "Last Word Trío": "/images/national_artists/lwtrio.jpg",
   "Ballet Folklórico de la Guardia Nacional": "/images/national_artists/guardia.jpg",
-  "CIA. A la Deriva Teatro": "/images/national_artists/miss.png",
+  "CIA. A la Deriva Teatro": "/images/national_artists/cia.png",
   "Compañía Claunodromo": "/images/national_artists/claun.jpg",
   "El Zar de Monterrey": "/images/national_artists/elzar.jpg",
   "Guillermo Méndez": "/images/national_artists/organi.jpg",
@@ -48,9 +48,9 @@ export const tamaulipecosArtistImages: { [key: string]: string } = {
   "Camerata del Colegio \"San Juan Siglo XXI\"": "/images/estatal_artists/camereta.jpg",
   "Afrodescendencia Matamoros": "/images/estatal_artists/afro.jpg",
   "DOSCE La Compañía": "/images/estatal_artists/orinoco.jpg",
-  "Raíces Huastecas": "/images/estatal_artists/miss.png",
+  "Raíces Huastecas": "/images/estatal_artists/raizhuas.png",
   "En Boca Ensamble": "/images/estatal_artists/ensamble.JPG",
-  "Soraima y sus Huastecos": "/images/estatal_artists/miss.png",
+  "Soraima y sus Huastecos": "/images/estatal_artists/soraima.png",
   "Colectivo teatro de bolsillo": "/images/estatal_artists/bolsillo.JPG",
   "Warislov": "/images/estatal_artists/warislov.jpg",
   "Aglaé Salinas": "/images/estatal_artists/aglae.jpeg",
@@ -82,7 +82,6 @@ export const tamaulipecosArtistImages: { [key: string]: string } = {
   "Bocatoma Jazz": "/images/estatal_artists/bocatoma.jpg",
   "Grupo Folclórico Kauyumarie": "/images/estatal_artists/kauy.jpg",
   "Brassas Mexican Beat": "/images/estatal_artists/brassas.jpg",
-  "Selección del Sistema Tamaulipeco de Agrupaciones Musicales Comunitarias": "/images/estatal_artists/miss.png",
   "Apapacho Teatro, arte y diversidad": "/images/estatal_artists/apapacho.png",
   "Colectivo Trueque": "/images/estatal_artists/trueque.jpg",
   "Percutam Dúo": "/images/estatal_artists/percu.jpg",
@@ -102,14 +101,13 @@ export const tamaulipecosArtistImages: { [key: string]: string } = {
   "HIJK Teatro": "/images/estatal_artists/hij.jpg",
   "Alex del Ángel": "/images/estatal_artists/alex.JPEG",
   "Serendipia Teatro": "/images/estatal_artists/seren.jpg",
-  "Feminoflexia": "/images/estatal_artists/miss.png",
+  "Feminoflexia": "/images/estatal_artists/feminoflexia.png",
   "Jimmy Yunes": "/images/estatal_artists/jimmy.jpg",
-  "Marching Band COBAT 15": "/images/estatal_artists/miss.png",
-  "Orquesta Sinfónica Comunitaria de Tampico": "/images/estatal_artists/miss.png",
+  "Marching Band COBAT 15": "/images/missing.png",
+  "Orquesta Sinfónica Comunitaria de Tampico": "/images/estatal_artists/orqtam.jpg",
   "Ensamble de Mujeres \"María Bonita\"": "/images/estatal_artists/mariabo.jpg",
-  "Lobos teatro": "/images/estatal_artists/miss.png",
-  "Paquidermo Artes Escénicas": "/images/estatal_artists/miss.png",
-  "Festival de Huapango": "/images/estatal_artists/miss.png",
+  "Lobos teatro": "/images/estatal_artists/lobos.jpg",
+  "Paquidermo Artes Escénicas": "/images/estatal_artists/pakidermo.jpg",
   "La Orquesta Tampico de Claudio Rosas": "/images/estatal_artists/intampico.png",
   "Aldebarán Acústico": "/images/estatal_artists/aldeba.jpg",
   "Grupo Honda Nor-T": "/images/estatal_artists/nort.jpg",
@@ -135,10 +133,10 @@ export const getArtistImage = (artistName: string, artistType: 'international' |
       imageMap = tamaulipecosArtistImages
       break
     default:
-      return "/images/miss.png"
+      return "/images/missing.png"
   }
   
-  return imageMap[artistName] || "/images/miss.png"
+  return imageMap[artistName] || "/images/missing.png"
 }
 
 // Función helper para obtener imagen de artista sin especificar tipo (busca en todos)
@@ -159,5 +157,5 @@ export const getArtistImageUniversal = (artistName: string): string => {
   }
   
   // Imagen por defecto
-  return "/images/miss.png"
+  return "/images/missing.png"
 }
