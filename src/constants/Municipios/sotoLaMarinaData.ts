@@ -73,9 +73,9 @@ export const sotoLaMarinaFestival: FestivalEvent[] = [
     id: "slm-7",
     date: "11",
     day: "sábado",
-    title: "Del Vali y Wero Hernández",
-    artist: "Del Vali & El Wero Hernández",
-    origin: "Estados Unidos",
+    title: "Distrito Cero",
+    artist: "Distrito Cero",
+    origin: "Tamaulipas",
     category: "Música",
     venue: "Explanada Municipal",
     time: "19:00 hrs."

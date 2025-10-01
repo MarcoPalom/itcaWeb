@@ -48,17 +48,6 @@ export const sanFernandoFestival: FestivalEvent[] = [
     time: "10:00 hrs."
   },
   {
-    id: "sf-5",
-    date: "9",
-    day: "jueves",
-    title: "Del Vali & Wero Hernández",
-    artist: "Del Vali & El Wero Hernández",
-    origin: "Estados Unidos",
-    category: "Música",
-    venue: "Plaza Principal",
-    time: "20:00 hrs."
-  },
-  {
     id: "sf-6",
     date: "11",
     day: "sábado",

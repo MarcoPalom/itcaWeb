@@ -45,7 +45,7 @@ export const guerreroFestival: FestivalEvent[] = [
     origin: "Tamaulipas",
     category: "Interdisciplinario",
     venue: "Casa de la Cultura",
-    time: "19:00 hrs."
+    time: "18:00 hrs."
   },
   {
     id: "gu-5",
@@ -55,8 +55,8 @@ export const guerreroFestival: FestivalEvent[] = [
     artist: "Patricia y sus Guerreros",
     origin: "Nuevo León",
     category: "Música",
-    venue: "Casa de la Cultura Municipal",
-    time: "19:00 hrs."
+    venue: "Museo Trazos Regionales",
+    time: "12:00 hrs."
   },
   {
     id: "gu-6",

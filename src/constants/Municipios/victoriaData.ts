@@ -150,6 +150,17 @@ export const victoriaFestival: FestivalEvent[] = [
     time: "18:00 hrs."
   },
   {
+    id: "vi-3g",
+    date: "5",
+    day: "domingo",
+    title: "Kali Bafa",
+    artist: "Ballet Folklórico de Apizaco",
+    origin: "Tlaxcala",
+    category: "Danza",
+    venue: "Escenario \"Plaza Juárez\"",
+    time: "17:00 hrs."
+  },
+  {
     id: "vi-3d",
     date: "5",
     day: "domingo",
@@ -282,6 +293,17 @@ export const victoriaFestival: FestivalEvent[] = [
     category: "Danza",
     venue: "Plaza \"Benito Juárez\"",
     time: "18:20 hrs."
+  },
+  {
+    id: "vi-5e",
+    date: "7",
+    day: "martes",
+    title: "Del Circo a la Calle",
+    artist: "Cirque erös",
+    origin: "Tamaulipas-PROFEST",
+    category: "Interdisciplinario",
+    venue: "Techumbre del Ejido \"La Libertad\"",
+    time: "17:00 hrs."
   },
   // Miércoles 8 de octubre
   {
@@ -485,6 +507,28 @@ export const victoriaFestival: FestivalEvent[] = [
     venue: "Plaza \"Benito Juárez\"",
     time: "19:00 hrs."
   },
+  {
+    id: "vi-9c",
+    date: "11",
+    day: "sábado",
+    title: "Vibraciones Ancestrales: Sonido que Sana",
+    artist: "Vibra/Tam",
+    origin: "Tamaulipas",
+    category: "Interdisciplinario",
+    venue: "Concha Acústica del Museo de Historia Natural de Tamaulipas TAMUX, ubicado en el Parque Cultural y Recreativo Siglo XXI",
+    time: "8:00 hrs."
+  },
+  {
+    id: "vi-9d",
+    date: "11",
+    day: "sábado",
+    title: "Raíces Tamaulipecas",
+    artist: "Agrupación de Casa del Arte Victoria",
+    origin: "Tamaulipas",
+    category: "Música",
+    venue: "Concha Acústica del Museo de Historia Natural de Tamaulipas TAMUX, ubicado en el Parque Cultural y Recreativo Siglo XXI",
+    time: "18:00 hrs."
+  },
   // Domingo 12 de octubre
   {
     id: "vi-10",
@@ -514,7 +558,7 @@ export const victoriaFestival: FestivalEvent[] = [
 export const victoriaFestivalInfo: FestivalInfo = {
   name: "Victoria",
   location: "Victoria",
-  totalEvents: 42,
+  totalEvents: 46,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
   categories: ["Interdisciplinario", "Danza", "Música", "Teatro", "Taller", "Conversatorio", "Clase Magistral"]

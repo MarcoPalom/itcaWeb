@@ -66,7 +66,7 @@ export const tulaFestival: FestivalEvent[] = [
     artist: "José Palacios",
     origin: "Tamaulipas",
     category: "Teatro",
-    venue: "Escuela Primaria \"Benito Juárez\"",
+    venue: "Escuela Miguel Hidalgo Centro",
     time: "10:30 hrs."
   },
   {
@@ -79,6 +79,17 @@ export const tulaFestival: FestivalEvent[] = [
     category: "Música | Boleros",
     venue: "Explanada de la Presidencia Municipal",
     time: "18:30 hrs."
+  },
+  {
+    id: "tu-7b",
+    date: "9",
+    day: "jueves",
+    title: "Kali Bafa",
+    artist: "Ballet Folklórico de Apizaco",
+    origin: "Tlaxcala",
+    category: "Danza | Folklórico",
+    venue: "Por definir",
+    time: "18:00 hrs."
   },
   {
     id: "tu-8",
@@ -108,10 +119,10 @@ export const tulaFestival: FestivalEvent[] = [
 export const tulaFestivalInfo: FestivalInfo = {
   name: "Tula",
   location: "Tula",
-  totalEvents: 9,
+  totalEvents: 10,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Danza", "Música", "Teatro", "Tradicional del Estado de Tlaxcala", "Versátil", "Marimba", "Norteño", "Teatro para primera infancia", "Boleros", "UAT", "Norteña"]
+  categories: ["Danza", "Música", "Teatro", "Tradicional del Estado de Tlaxcala", "Versátil", "Marimba", "Norteño", "Teatro para primera infancia", "Boleros", "UAT", "Norteña", "Folklórico"]
 };
 
 // Exposiciones del Festival del Municipio Tula

@@ -66,7 +66,7 @@ export const xicotencatlFestival: FestivalEvent[] = [
     artist: "Norteños de Río Bravo",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Plaza Cultura",
+    venue: "Plaza Cultural",
     time: "19:30 hrs."
   },
   {

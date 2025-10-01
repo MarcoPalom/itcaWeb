@@ -73,9 +73,9 @@ export const jimenezFestival: FestivalEvent[] = [
     id: "ji-7",
     date: "10",
     day: "viernes",
-    title: "Del Vali & Wer Hernández",
-    artist: "Estados Unidos",
-    origin: "Estados Unidos",
+    title: "Distrito Cero",
+    artist: "Distrito Cero",
+    origin: "Tamaulipas",
     category: "Música",
     venue: "Kiosko de la Plaza Principal \"Plaza Hidalgo\"",
     time: "18:00 hrs."

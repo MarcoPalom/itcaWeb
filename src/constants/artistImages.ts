@@ -103,7 +103,6 @@ export const tamaulipecosArtistImages: { [key: string]: string } = {
   "Serendipia Teatro": "/images/estatal_artists/seren.jpg",
   "Feminoflexia": "/images/estatal_artists/feminoflexia.png",
   "Jimmy Yunes": "/images/estatal_artists/jimmy.jpg",
-  "Marching Band COBAT 15": "/images/missing.png",
   "Orquesta Sinfónica Comunitaria de Tampico": "/images/estatal_artists/orqtam.jpg",
   "Ensamble de Mujeres \"María Bonita\"": "/images/estatal_artists/mariabo.jpg",
   "Lobos teatro": "/images/estatal_artists/lobos.jpg",

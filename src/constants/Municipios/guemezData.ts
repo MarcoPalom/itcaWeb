@@ -12,7 +12,7 @@ export const guemezFestival: FestivalEvent[] = [
     origin: "Tamaulipas",
     category: "Danza",
     venue: "Escuela Normal Rural de Tamaulipas, Kilómetro 16 Carretera Nacional",
-    time: "18:00 hrs."
+    time: "18:30 hrs."
   },
   {
     id: "gu-2",

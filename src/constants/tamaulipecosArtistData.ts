@@ -673,16 +673,6 @@ export const jimmyYunes: TamaulipecoArtist = {
   events: []
 };
 
-// Data de Marching Band COBAT 15
-export const marchingBandCOBAT15: TamaulipecoArtist = {
-  id: "mbc15-001",
-  name: "Marching Band COBAT 15",
-  origin: "Tamaulipas",
-  category: "Música",
-  subcategory: "Banda de marcha",
-  description: "Descripción no disponible",
-  events: []
-};
 
 // Data de Orquesta Sinfónica Comunitaria de Tampico
 export const orquestaSinfonicaComunitariaTampico: TamaulipecoArtist = {
@@ -836,7 +826,6 @@ export const tamaulipecosArtists: TamaulipecoArtist[] = [
   serendipiaTeatro,
   feminoflexia,
   jimmyYunes,
-  marchingBandCOBAT15,
   orquestaSinfonicaComunitariaTampico,
   ensambleMujeresMariaBonita,
   lobosTeatro,

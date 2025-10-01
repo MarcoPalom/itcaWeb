@@ -26,6 +26,17 @@ export const jaumaveFestival: FestivalEvent[] = [
     time: "20:00 hrs."
   },
   {
+    id: "ja-2b",
+    date: "5",
+    day: "domingo",
+    title: "Kali Bafa",
+    artist: "Ballet Folklórico de Apizaco",
+    origin: "Tlaxcala",
+    category: "Danza",
+    venue: "Teatro del Pueblo",
+    time: "20:00 hrs."
+  },
+  {
     id: "ja-3",
     date: "6",
     day: "lunes",
@@ -75,10 +86,10 @@ export const jaumaveFestival: FestivalEvent[] = [
 export const jaumaveFestivalInfo: FestivalInfo = {
   name: "Jaumave",
   location: "Jaumave",
-  totalEvents: 6,
+  totalEvents: 7,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
-  categories: ["Música", "Interdisciplinario", "Literatura"]
+  categories: ["Música", "Interdisciplinario", "Literatura", "Danza"]
 };
 
 // Exposiciones del Festival del Municipio Jaumave

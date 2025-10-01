@@ -26,17 +26,6 @@ export const tampicoFestival: FestivalEvent[] = [
     venue: "Plaza Hijas de Tampico",
     time: "19:30 hrs."
   },
-  {
-    id: "ta-1c",
-    date: "3",
-    day: "viernes",
-    title: "Marching Band COBAT 04",
-    artist: "Marching Band COBAT 04",
-    origin: "Tamaulipas",
-    category: "Música",
-    venue: "Barco Museo del Niño",
-    time: "17:00 hrs."
-  },
   // Sábado 4 de octubre
   {
     id: "ta-2",
@@ -339,7 +328,7 @@ export const tampicoFestival: FestivalEvent[] = [
     origin: "Municipio de Tampico",
     category: "Danza",
     venue: "Peatonal Plaza de Armas",
-    time: "19:00 hrs."
+    time: "17:00 hrs."
   },
   {
     id: "ta-8f",
@@ -425,7 +414,7 @@ export const tampicoFestival: FestivalEvent[] = [
     date: "12",
     day: "domingo",
     title: "El viaje de Azul",
-    artist: "Paquidermo Artes Escénicas",
+    artist: "Pakidermo Artes Escénicas",
     origin: "Tamaulipas",
     category: "Teatro",
     venue: "Barco Museo del Niño",
