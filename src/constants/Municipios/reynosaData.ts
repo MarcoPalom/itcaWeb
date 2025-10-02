@@ -77,7 +77,7 @@ export const reynosaFestival: FestivalEvent[] = [
     id: "re-4b",
     date: "6",
     day: "lunes",
-    title: "Del Vali y Wero Hernández",
+    title: "Del Vali & Wero Hernández",
     artist: "Del Vali & Wero Hernández",
     origin: "Estados Unidos",
     category: "Música",

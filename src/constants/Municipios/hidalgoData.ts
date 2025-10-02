@@ -23,7 +23,7 @@ export const hidalgoFestival: FestivalEvent[] = [
     origin: "Tamaulipas-PROFEST",
     category: "Música",
     venue: "Comité Ejidal del Ejido \"Guillermo Zúñiga\"",
-    time: "19:00 hrs."
+    time: "18:00 hrs."
   },
   {
     id: "hi-3",
@@ -34,7 +34,7 @@ export const hidalgoFestival: FestivalEvent[] = [
     origin: "Nuevo León",
     category: "Música",
     venue: "Comité Ejidal del Ejido \"Guillermo Zúñiga\"",
-    time: "19:00 hrs."
+    time: "18:00 hrs."
   },
   {
     id: "hi-4",
@@ -56,7 +56,7 @@ export const hidalgoFestival: FestivalEvent[] = [
     origin: "Tamaulipas",
     category: "Música",
     venue: "Plaza Principal del Ejido \"Estación Santa Engracia\"",
-    time: "19:00 hrs."
+    time: "18:00 hrs."
   },
   {
     id: "hi-6",

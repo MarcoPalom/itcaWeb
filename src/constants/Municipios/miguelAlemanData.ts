@@ -10,7 +10,7 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     day: "viernes",
     title: "Queen of the Gym",
     artist: "Grupo \"Power Kids\"",
-    origin: "Tamaulipas",
+    origin: "Municipio de Miguel Alemán",
     category: "Danza",
     venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
     time: "19:15 hrs."
@@ -20,8 +20,8 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     date: "3",
     day: "viernes",
     title: "Casa de Cultura",
-    artist: "Municipio de Miguel Alemán",
-    origin: "Tamaulipas",
+    artist: "Casa de Cultura",
+    origin: "Municipio de Miguel Alemán",
     category: "Interdisciplinario",
     venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
     time: "19:20 hrs."
@@ -43,7 +43,7 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     day: "viernes",
     title: "Queen of the Gym",
     artist: "Grupo \"Power Kids\"",
-    origin: "Tamaulipas",
+    origin: "Municipio de Miguel Alemán",
     category: "Danza",
     venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
     time: "20:35 hrs."
@@ -53,8 +53,8 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     date: "3",
     day: "viernes",
     title: "Casa del Arte",
-    artist: "Municipio de Miguel Alemán",
-    origin: "Tamaulipas",
+    artist: "Casa del Arte",
+    origin: "Municipio de Miguel Alemán",
     category: "Interdisciplinario",
     venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
     time: "20:40 hrs."
@@ -65,8 +65,8 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     date: "4",
     day: "sábado",
     title: "Casa del Arte",
-    artist: "Municipio de Miguel Alemán",
-    origin: "Tamaulipas",
+    artist: "Casa del Arte",
+    origin: "Municipio de Miguel Alemán",
     category: "Interdisciplinario",
     venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
     time: "19:10 hrs."
@@ -88,7 +88,7 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     day: "sábado",
     title: "Queen of the Gym",
     artist: "Grupos de Danza Lírica minis y Danza Lírica Junior",
-    origin: "Tamaulipas",
+    origin: "Municipio de Miguel Alemán",
     category: "Danza",
     venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
     time: "20:40 hrs."
@@ -98,8 +98,8 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     date: "4",
     day: "sábado",
     title: "Grupo \"Extasis\"",
-    artist: "Municipio de Miguel Alemán",
-    origin: "Tamaulipas",
+    artist: "Grupo \"Extasis\"",
+    origin: "Municipio de Miguel Alemán",
     category: "Música",
     venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
     time: "20:50 hrs."
@@ -109,8 +109,8 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     date: "4",
     day: "sábado",
     title: "Casa de Cultura - Guitarra",
-    artist: "Municipio de Miguel Alemán",
-    origin: "Tamaulipas",
+    artist: "Casa de Cultura - Guitarra",
+    origin: "Municipio de Miguel Alemán",
     category: "Música",
     venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
     time: "21:00 hrs."
@@ -122,7 +122,7 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     day: "domingo",
     title: "Queen of the Gym",
     artist: "Grupo Gymnastic flex, Acrodance",
-    origin: "Tamaulipas",
+    origin: "Municipio de Miguel Alemán",
     category: "Danza",
     venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
     time: "19:15 hrs."
@@ -137,7 +137,7 @@ export const miguelAlemanFestival: FestivalEvent[] = [
     category: "Interdisciplinario",
     venue: "Foro Eleazar García \"Chelelo\" de la Plaza Principal \"Miguel Hidalgo\"",
     time: "19:25 hrs."
-  }
+  },
 ];
 
 // Información del Festival del Municipio Miguel Alemán

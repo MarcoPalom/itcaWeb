@@ -47,7 +47,7 @@ export const tampicoFestival: FestivalEvent[] = [
     origin: "Tamaulipas",
     category: "Teatro",
     venue: "Teatro Experimental del Espacio Cultural Metropolitano",
-    time: "19:30 hrs."
+    time: "19:30 hrs.",
   },
   {
     id: "ta-2c",

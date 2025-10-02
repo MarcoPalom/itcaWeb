@@ -9,6 +9,7 @@ export interface TamaulipecoArtist {
   subcategory?: string;
   description?: string;
   events: TamaulipecoArtistEvent[];
+  warning?: string;
 }
 
 // Interfaz para eventos de artistas tamaulipecos
@@ -190,7 +191,7 @@ export const laNotaAlegre: TamaulipecoArtist = {
 // Data de Los del Pueblo
 export const losDelPueblo: TamaulipecoArtist = {
   id: "ldp-001",
-  name: "Los Del Pueblo",
+  name: "Los del Pueblo",
   origin: "Aldama, Tamaulipas",
   category: "Música",
   subcategory: "Música del norte tamaulipeco",
@@ -245,7 +246,7 @@ export const cirqueEros: TamaulipecoArtist = {
 // Data de Grupo espejos taller de teatro y pantomima
 export const grupoEspejos: TamaulipecoArtist = {
   id: "ge-001",
-  name: "Grupo Espejos",
+  name: "Grupo espejos taller de teatro y pantomima",
   origin: "Tamaulipas",
   category: "Teatro",
   subcategory: "Teatro y pantomima",
@@ -333,7 +334,7 @@ export const trioBohemiaUAT: TamaulipecoArtist = {
 // Data de Teatro Guarapo
 export const teatroGuarapo: TamaulipecoArtist = {
   id: "tg-002",
-  name: "Grupo de teatro Guarapo",
+  name: "Teatro Guarapo",
   origin: "El Mante, Tamaulipas",
   category: "Teatro",
   subcategory: "Teatro comunitario",
@@ -421,7 +422,7 @@ export const bocatomaJazz: TamaulipecoArtist = {
 // Data de Grupo Folklórico Kauyumarie
 export const grupoFolkloricoKauyumarie: TamaulipecoArtist = {
   id: "gfk-001",
-  name: "Grupo Folclórico Kauyumarie",
+  name: "Grupo Folklórico Kauyumarie",
   origin: "Tamaulipas",
   category: "Danza",
   subcategory: "Danza folklórica",
@@ -489,7 +490,7 @@ export const rondallaMagisterialTamaulipas: TamaulipecoArtist = {
 // Data de Arael & Erihka Peña
 export const araelErihkaPena: TamaulipecoArtist = {
   id: "aep-001",
-  name: "Arael & Erihka Peña",
+  name: "Arael",
   origin: "Tamaulipas",
   category: "Música",
   subcategory: "Música popular",
@@ -500,7 +501,7 @@ export const araelErihkaPena: TamaulipecoArtist = {
 // Data de La Espuma de Mar
 export const laEspumaDeMar: TamaulipecoArtist = {
   id: "ledm-001",
-  name: "La Espuma del Mar",
+  name: "La Espuma de Mar",
   origin: "Tamaulipas",
   category: "Música",
   subcategory: "Música tradicional mexicana",
@@ -577,7 +578,7 @@ export const estherTovar: TamaulipecoArtist = {
 // Data de Punto Exacto
 export const puntoExacto: TamaulipecoArtist = {
   id: "pe-002",
-  name: "Punto Exacto",
+  name: "Punto Exacto y El Cuervo",
   origin: "Tamaulipas",
   category: "Música",
   subcategory: "Rock",
@@ -625,6 +626,7 @@ export const hijk: TamaulipecoArtist = {
   origin: "Nuevo Laredo, Tamaulipas",
   category: "Teatro",
   subcategory: "Teatro experimental",
+  warning: "+18",
   description: "Wyrd es una experiencia escénica inmersiva que invita al público a habitar y transformar el escenario junto al elenco. Inspirada en la noción anglosajona de wyrd —el devenir del destino—, la obra combina teatro, performance, danza, instalación y participación directa. A través de un lenguaje escénico no convencional y una propuesta colectiva, se abordan temas como la identidad, el deseo, la memoria y la autoafirmación. Con dinámicas lúdicas, rituales, karaoke y confesiones personales, este montaje de HIJK Teatro, busca crear un espacio seguro y festivo donde público y artistas construyen juntos el sentido de la obra. HIJK Teatro es una compañía independiente de Nuevo Laredo, fundada en 2019 por un colectivo de artistas decididos a revitalizar la escena teatral local. Su objetivo es fomentar la creatividad, la colaboración y la formación de públicos a través de montajes originales y clásicos.",
   events: []
 };
@@ -710,7 +712,7 @@ export const lobosTeatro: TamaulipecoArtist = {
 // Data de Paquidermo Artes Escénicas
 export const paquidermoArtesEscenicas: TamaulipecoArtist = {
   id: "pae-001",
-  name: "Paquidermo Artes Escénicas",
+  name: "Pakidermo Artes Escénicas",
   origin: "Tamaulipas",
   category: "Teatro",
   subcategory: "Teatro experimental",
@@ -723,7 +725,7 @@ export const paquidermoArtesEscenicas: TamaulipecoArtist = {
 // Data de Internacional Orquesta de Tampico
 export const internacionalOrquestaTampico: TamaulipecoArtist = {
   id: "iot-001",
-  name: "La Orquesta Tampico de Claudio Rosas",
+  name: "Internacional Orquesta de Tampico",
   origin: "Tampico, Tamaulipas",
   category: "Música",
   subcategory: "Música de orquesta",
@@ -754,13 +756,25 @@ export const grupoHondaNorT: TamaulipecoArtist = {
 };
 
 
-// Data de Andrés Gea y su guitarra mexicana
-export const andresGea: TamaulipecoArtist = {
-  id: "ag-001",
-  name: "Andrés Gea y su guitarra mexicana",
+
+// Data de Distrito Cero
+export const distritoCero: TamaulipecoArtist = {
+  id: "dc-001",
+  name: "Distrito Cero",
   origin: "Tamaulipas",
   category: "Música",
-  subcategory: "Música mexicana",
+  subcategory: "Música de banda",
+  description: "Distrito Cero es una agrupación musical de Tamaulipas especializada en música de banda. Su propuesta artística se centra en interpretar y difundir la riqueza musical de este género tradicional mexicano, llevando la esencia de la música de banda a diversos escenarios del estado y la región.",
+  events: []
+};
+
+// Data de Tacto
+export const tacto: TamaulipecoArtist = {
+  id: "t-001",
+  name: "Grupo TACTO",
+  origin: "Tamaulipas",
+  category: "Música",
+  subcategory: "Música",
   description: "Descripción no disponible",
   events: []
 };
@@ -833,7 +847,8 @@ export const tamaulipecosArtists: TamaulipecoArtist[] = [
   internacionalOrquestaTampico,
   aldebaranAcustico,
   grupoHondaNorT,
-  andresGea
+  distritoCero,
+  tacto
 ];
 
 // Función para obtener todos los eventos de un artista específico

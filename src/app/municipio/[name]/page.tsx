@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect, useMemo } from "react"
-import { ArrowLeft} from "lucide-react"
+import { ArrowLeft, Search, X } from "lucide-react"
 import { useParams, useRouter } from "next/navigation"
 // Usando img nativo de HTML en lugar de Image de Next.js
 import { FestivalEvent, FestivalInfo } from "@/constants/types"
@@ -23,7 +23,7 @@ import { gonzalezFestivalInfo, gonzalezFestival } from "@/constants/Municipios/g
 import { xicotencatlFestivalInfo, xicotencatlFestival } from "@/constants/Municipios/xicotencatlData"
 import { lleraFestivalInfo, lleraFestival } from "@/constants/Municipios/lleraData"
 import { jaumaveFestivalInfo, jaumaveFestival } from "@/constants/Municipios/jaumaveData"
-import { palmillasFestivalInfo, palmillasFestival } from "@/constants/Municipios/palmillasData" 
+import { palmillasFestivalInfo, palmillasFestival } from "@/constants/Municipios/palmillasData"
 import { maineroFestivalInfo, maineroFestival } from "@/constants/Municipios/maineroData"
 import { villagranFestivalInfo, villagranFestival } from "@/constants/Municipios/villagranData"
 import { bustamanteFestivalInfo, bustamanteFestival } from "@/constants/Municipios/bustamanteData"
@@ -52,12 +52,18 @@ import { gustavoDiazOrdazFestivalInfo, gustavoDiazOrdazFestival } from "@/consta
 import { cruillasFestivalInfo, cruillasFestival } from "@/constants/Municipios/cruillasData"
 import { getArtistImageUniversal } from "@/constants/artistImages"
 import { municipalImages } from "@/constants/municipalImages"
+import Pagination from "@/components/Pagination"
+import { useTheme } from "@/contexts/ThemeContext"
 
 export default function MunicipalityPage() {
   const params = useParams()
   const router = useRouter()
+  const { isDark } = useTheme()
   const [municipality, setMunicipality] = useState<FestivalInfo | null>(null)
   const [municipalityEvents, setMunicipalityEvents] = useState<FestivalEvent[]>([])
+  const [searchTerm, setSearchTerm] = useState("")
+  const [currentPage, setCurrentPage] = useState(1)
+  const itemsPerPage = 10
 
   const { isLoading, progress, message } = useFestivalLoading({
     initialDelay: 500,
@@ -111,12 +117,36 @@ export default function MunicipalityPage() {
     "cruillas": { info: cruillasFestivalInfo, events: cruillasFestival }
   }), [])
 
+  // Filtrar eventos basado en el término de búsqueda
+  const filteredEvents = useMemo(() => {
+    if (!searchTerm.trim()) return municipalityEvents
+
+    return municipalityEvents.filter((event: FestivalEvent) =>
+      event.artist.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      event.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (event.venue && event.venue.toLowerCase().includes(searchTerm.toLowerCase())) ||
+      event.day.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  }, [municipalityEvents, searchTerm])
+
+  // Paginación
+  const totalPages = Math.ceil(filteredEvents.length / itemsPerPage)
+  const startIndex = (currentPage - 1) * itemsPerPage
+  const endIndex = startIndex + itemsPerPage
+  const paginatedEvents = filteredEvents.slice(startIndex, endIndex)
+
+  // Función para manejar cambios en la búsqueda
+  const handleSearchChange = (value: string) => {
+    setSearchTerm(value)
+    setCurrentPage(1) // Reset a la primera página cuando se busca
+  }
 
   useEffect(() => {
     if (params.name) {
       const municipalitySlug = params.name as string
       const municipalityData = municipalitiesData[municipalitySlug as keyof typeof municipalitiesData]
-      
+
       if (municipalityData) {
         setMunicipality(municipalityData.info)
         setMunicipalityEvents(municipalityData.events)
@@ -126,7 +156,7 @@ export default function MunicipalityPage() {
 
   if (isLoading) {
     return (
-      <FestivalLoading 
+      <FestivalLoading
         message={message}
         showProgress={true}
         progress={progress}
@@ -136,10 +166,12 @@ export default function MunicipalityPage() {
 
   if (!municipality) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+      <div className={`min-h-screen flex items-center justify-center ${
+        isDark ? "bg-black text-white" : "bg-yellow-300 text-gray-800"
+      }`}>
         <div className="text-center">
           <div className="text-xl mb-4">Municipio no encontrado</div>
-          <button 
+          <button
             onClick={() => router.back()}
             className="text-[#864e94] hover:underline"
           >
@@ -151,11 +183,11 @@ export default function MunicipalityPage() {
   }
 
   const municipalityImage = municipalImages[municipality.name] || "/images/municipal-festival-placeholder.jpg"
-  
+
   // Municipios que necesitan la funcionalidad especial para eventos con "Municipio de [nombre]"
-  const specialMunicipalities = ["Victoria", "Matamoros", "Nuevo Laredo", "Reynosa", "Tampico"]
+  const specialMunicipalities = ["Victoria", "Matamoros", "Nuevo Laredo", "Reynosa", "Tampico", "Río Bravo", "Miguel Alemán"]
   const needsSpecialImage = specialMunicipalities.includes(municipality.name)
-  
+
   // Obtener categorías únicas
   const categories = [...new Set(municipalityEvents.map((event: FestivalEvent) => event.category))]
 
@@ -165,7 +197,7 @@ export default function MunicipalityPage() {
   }
 
   // Transformar eventos de municipio al formato que espera EventList
-  const transformedEvents = municipalityEvents.map((event: FestivalEvent) => ({
+  const transformedEvents = paginatedEvents.map((event: FestivalEvent) => ({
     id: event.id,
     title: event.title,
     date: event.date,
@@ -179,7 +211,9 @@ export default function MunicipalityPage() {
   }))
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <div className={`min-h-screen relative overflow-hidden ${
+      isDark ? "bg-black text-white" : "bg-yellow-100 text-gray-800"
+    }`}>
       {/* Status Bar - Solo visible en móvil */}
 
 
@@ -196,14 +230,21 @@ export default function MunicipalityPage() {
       <div className="relative z-10">
         {/* Header */}
         <div className="flex items-center justify-between p-4 md:p-6">
-          <button 
+          <button
             onClick={() => router.back()}
-            className="flex items-center gap-2 text-white hover:text-[#864e94] transition-colors"
+            className={`flex items-center gap-2 transition-colors ${
+              isDark 
+                ? "text-white hover:text-[#864e94]" 
+                : "text-gray-800 hover:text-[#864e94]"
+            }`}
           >
             <ArrowLeft className="w-5 h-5" />
             <span className="text-sm font-medium md:text-lg">Volver</span>
           </button>
         </div>
+
+        {/* Search Bar */}
+
 
         {/* Municipality Info */}
         <div className="px-4 md:px-6 pb-6">
@@ -218,34 +259,105 @@ export default function MunicipalityPage() {
             </div>
           </div>
 
+
           {/* Municipality Details */}
           <div className="text-center mb-8">
-            <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">{municipality.name}</h1>
+            <h1 className={`text-2xl md:text-4xl font-bold mb-4 ${
+              isDark ? "text-white" : "text-gray-800"
+            }`}>{municipality.name}</h1>
             <div className="text-[#864e94] mb-2 font-medium">
               {municipality.location}
             </div>
-            <div className="text-gray-300 mb-2">
+            <div className={`mb-2 ${
+              isDark ? "text-gray-300" : "text-gray-600"
+            }`}>
               Festival Municipal
             </div>
-            <div className="text-white text-sm mb-4">
-              {municipality.totalEvents} evento{municipality.totalEvents !== 1 ? 's' : ''} programado{municipality.totalEvents !== 1 ? 's' : ''}
+            <div className={`text-sm mb-4 ${
+              isDark ? "text-white" : "text-gray-800"
+            }`}>
+              {searchTerm ? filteredEvents.length : municipality.totalEvents} evento{(searchTerm ? filteredEvents.length : municipality.totalEvents) !== 1 ? 's' : ''} programado{(searchTerm ? filteredEvents.length : municipality.totalEvents) !== 1 ? 's' : ''}
             </div>
-            <div className="text-gray-300 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
+            <div className={`text-sm md:text-base leading-relaxed max-w-2xl mx-auto ${
+              isDark ? "text-gray-300" : "text-gray-600"
+            }`}>
               Del {municipality.startDate} al {municipality.endDate}
             </div>
           </div>
 
+          
+          <h2 className={`text-xl md:text-2xl font-semibold text-center mb-6 ${
+            isDark ? "text-white" : "text-gray-800"
+          }`}>
+            Próximos Eventos
+          </h2>
+          
+          <div className="w-full mb-6">
+            <div className="relative max-w-md mx-auto">
+              <div className="relative">
+                <Search className={`absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 ${
+                  isDark ? "text-gray-400" : "text-gray-500"
+                }`} />
+                <input
+                  type="text"
+                  placeholder="Buscar eventos, artistas, categorías..."
+                  value={searchTerm}
+                  onChange={(e) => handleSearchChange(e.target.value)}
+                  className={`w-full pl-10 pr-10 py-3 border rounded-lg focus:outline-none focus:border-[#864e94] focus:ring-1 focus:ring-[#864e94] transition-colors ${
+                    isDark 
+                      ? "bg-gray-900 border-gray-700 text-white placeholder-gray-400"
+                      : "bg-white border-gray-300 text-gray-800 placeholder-gray-500"
+                  }`}
+                />
+                {searchTerm && (
+                  <button
+                    onClick={() => handleSearchChange("")}
+                    className={`absolute right-3 top-1/2 transform -translate-y-1/2 transition-colors ${
+                      isDark 
+                        ? "text-gray-400 hover:text-white" 
+                        : "text-gray-500 hover:text-gray-700"
+                    }`}
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                )}
+              </div>
+              {searchTerm && (
+                <div className={`mt-2 text-sm text-center ${
+                  isDark ? "text-gray-400" : "text-gray-600"
+                }`}>
+                  {filteredEvents.length} evento{filteredEvents.length !== 1 ? 's' : ''} encontrado{filteredEvents.length !== 1 ? 's' : ''}
+                </div>
+              )}
+            </div>
+          </div>
+
           {/* Events List */}
-          <EventList 
+          <EventList
             events={transformedEvents}
             artistImage={municipalityImage}
             artistName={municipality.name}
             municipalityImage={needsSpecialImage ? municipalityImage : undefined}
           />
 
+          {/* Pagination - Solo mostrar si hay más de 10 eventos */}
+          {filteredEvents.length > 10 && (
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={setCurrentPage}
+            />
+          )}
+
           {/* Categories Summary */}
-          <div className="mt-8 p-4 bg-gray-900 rounded-lg border border-gray-700">
-            <h3 className="text-lg font-semibold text-white mb-3 text-center">
+          <div className={`mt-8 p-4 rounded-lg border ${
+            isDark 
+              ? "bg-gray-900 border-gray-700" 
+              : "bg-gray-100 border-gray-300"
+          }`}>
+            <h3 className={`text-lg font-semibold mb-3 text-center ${
+              isDark ? "text-white" : "text-gray-800"
+            }`}>
               Categorías Presentes
             </h3>
             <div className="flex flex-wrap gap-2 justify-center">

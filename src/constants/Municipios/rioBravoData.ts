@@ -20,8 +20,8 @@ export const rioBravoFestival: FestivalEvent[] = [
     date: "3",
     day: "viernes",
     title: "Karla Delfín",
-    artist: "Municipio de Río Bravo",
-    origin: "Tamaulipas",
+    artist: "Karla Delfín",
+    origin: "Municipio de Río Bravo",
     category: "Música",
     venue: "Casa de Ladrillo Ex Hacienda \"La Sauteña\"",
     time: "20:00 hrs."
@@ -32,8 +32,8 @@ export const rioBravoFestival: FestivalEvent[] = [
     date: "4",
     day: "sábado",
     title: "Grupo \"La Joya\"",
-    artist: "Municipio de Río Bravo",
-    origin: "Tamaulipas",
+    artist: "Grupo \"La Joya\"",
+    origin: "Municipio de Río Bravo",
     category: "Música",
     venue: "Casa de Ladrillo Ex Hacienda \"La Sauteña\"",
     time: "19:00 hrs."
@@ -42,8 +42,8 @@ export const rioBravoFestival: FestivalEvent[] = [
     id: "rb-4",
     date: "4",
     day: "sábado",
-    title: "Del Vali & El Wero Hernández",
-    artist: "Del Vali & El Wero Hernández",
+    title: "Del Vali & Wero Hernández",
+    artist: "Del Vali & Wero Hernández",
     origin: "Estados Unidos",
     category: "Música",
     venue: "Casa de Ladrillo Ex Hacienda \"La Sauteña\"",
@@ -55,8 +55,8 @@ export const rioBravoFestival: FestivalEvent[] = [
     date: "5",
     day: "domingo",
     title: "Casa del Arte Río Bravo",
-    artist: "Municipio de Río Bravo",
-    origin: "Tamaulipas",
+    artist: "Casa del Arte Río Bravo",
+    origin: "Municipio de Río Bravo",
     category: "Interdisciplinario",
     venue: "Plaza \"Benito Juárez\"",
     time: "18:00 hrs."
@@ -78,8 +78,8 @@ export const rioBravoFestival: FestivalEvent[] = [
     date: "6",
     day: "lunes",
     title: "Folklór Casa del Arte",
-    artist: "Municipio de Río Bravo",
-    origin: "Tamaulipas",
+    artist: "Folklór Casa del Arte",
+    origin: "Municipio de Río Bravo",
     category: "Danza",
     venue: "Plaza Principal de Villa de Nuevo Progreso",
     time: "19:00 hrs."
@@ -101,8 +101,8 @@ export const rioBravoFestival: FestivalEvent[] = [
     date: "7",
     day: "martes",
     title: "Folklór Academias",
-    artist: "Municipio de Río Bravo",
-    origin: "Tamaulipas",
+    artist: "Folklór Academias",
+    origin: "Municipio de Río Bravo",
     category: "Danza",
     venue: "Explanada de Casa de Cultura y Arte \"Las Liebres\"",
     time: "18:00 hrs."
@@ -125,8 +125,8 @@ export const rioBravoFestival: FestivalEvent[] = [
     date: "9",
     day: "jueves",
     title: "Academias de Ballet",
-    artist: "Municipio de Río Bravo",
-    origin: "Tamaulipas",
+    artist: "Academias de Ballet",
+    origin: "Municipio de Río Bravo",
     category: "Danza",
     venue: "Explanada de Casa de Cultura y Arte \"Las Liebres\"",
     time: "18:00 hrs."
@@ -137,8 +137,8 @@ export const rioBravoFestival: FestivalEvent[] = [
     date: "10",
     day: "viernes",
     title: "Ensamble de Violín y Piano de Casa del Arte de Río Bravo",
-    artist: "Municipio de Río Bravo",
-    origin: "Tamaulipas",
+    artist: "Ensamble de Violín y Piano de Casa del Arte de Río Bravo",
+    origin: "Municipio de Río Bravo",
     category: "Música",
     venue: "Escuela Primaria Nissan",
     time: "10:00 hrs."
@@ -160,8 +160,8 @@ export const rioBravoFestival: FestivalEvent[] = [
     date: "11",
     day: "sábado",
     title: "Rondalla CBTIS y Mariachis CBTIS",
-    artist: "Municipio de Río Bravo",
-    origin: "Tamaulipas",
+    artist: "Rondalla CBTIS y Mariachis CBTIS",
+    origin: "Municipio de Río Bravo",
     category: "Música",
     venue: "Gimnasio \"Las Liebres\"",
     time: "17:00 hrs."
@@ -183,8 +183,8 @@ export const rioBravoFestival: FestivalEvent[] = [
     date: "12",
     day: "domingo",
     title: "Casa del Arte",
-    artist: "Municipio de Río Bravo",
-    origin: "Tamaulipas",
+    artist: "Casa del Arte",
+    origin: "Municipio de Río Bravo",
     category: "Interdisciplinario",
     venue: "Casa del Arte de Río Bravo",
     time: "18:00 hrs."
@@ -199,6 +199,73 @@ export const rioBravoFestival: FestivalEvent[] = [
     category: "Música",
     venue: "Casa del Arte de Río Bravo",
     time: "19:00 hrs."
+  },
+  // Eventos adicionales identificados
+  {
+    id: "rb-18",
+    date: "4",
+    day: "sábado",
+    title: "Humberto Madrigal Villanueva",
+    artist: "Humberto Madrigal Villanueva",
+    origin: "Municipio de Río Bravo",
+    category: "Música",
+    venue: "Plaza \"Benito Juárez\"",
+    time: "18:30 hrs."
+  },
+  {
+    id: "rb-19",
+    date: "5",
+    day: "domingo",
+    title: "Ing. Arturo Escalón",
+    artist: "Ing. Arturo Escalón",
+    origin: "Municipio de Río Bravo",
+    category: "Música",
+    venue: "Plaza Principal de Villa de Nuevo Progreso",
+    time: "19:00 hrs."
+  },
+  {
+    id: "rb-20",
+    date: "6",
+    day: "lunes",
+    title: "La Bella y la Bestia",
+    artist: "Grupo de Teatro \"Roca\" del Centro Cultural Caleti",
+    origin: "Municipio de Río Bravo",
+    category: "Teatro",
+    venue: "Explanada de Casa de Cultura y Arte \"Las Liebres\"",
+    time: "18:00 hrs."
+  },
+  {
+    id: "rb-21",
+    date: "9",
+    day: "jueves",
+    title: "Academias de Danza",
+    artist: "Danielas Dance Academy, Manzur Dance Academy, Zaga Academia de Baile, Cero Uno, Grupo de Danza Folklórica de Danza de Arte Valle Hermoso, Grupo de Danza Folklórica CBTIS 73, Grupo de Danza Folklórica Municipal de Cultura y Arte, Grupo de Danza Folklórica del Prof. Gilberto Limas",
+    origin: "Municipio de Río Bravo",
+    category: "Danza",
+    venue: "Explanada de Casa de Cultura y Arte \"Las Liebres\"",
+    time: "18:00 hrs."
+  },
+  {
+    id: "rb-22",
+    date: "10",
+    day: "viernes",
+    title: "Mentiras el Musical",
+    artist: "Grupo Representativo de Teatro de la Universidad Tamaulipeca, Campus Río Bravo",
+    origin: "Municipio de Río Bravo",
+    category: "Teatro",
+    venue: "Escuela Primaria Nissan",
+    time: "10:00 hrs."
+  },
+  {
+    id: "rb-23",
+    date: "4",
+    day: "sábado",
+    title: "Grupo \"Rayo\"",
+    artist: "Grupo \"Rayo\"",
+    origin: "Municipio de Río Bravo",
+    category: "Música",
+    venue: "Plaza \"Benito Juárez\"",
+    time: "18:45 hrs."
   }
 ];
 
@@ -206,7 +273,7 @@ export const rioBravoFestival: FestivalEvent[] = [
 export const rioBravoFestivalInfo: FestivalInfo = {
   name: "Río Bravo",
   location: "Río Bravo",
-  totalEvents: 17,
+  totalEvents: 23,
   startDate: "3 de octubre de 2025",
   endDate: "12 de octubre de 2025",
   categories: ["Interdisciplinario", "Música", "Danza", "Teatro"]

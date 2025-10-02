@@ -8,7 +8,8 @@ export interface NationalArtist {
   category: string;
   subcategory?: string;
   description?: string;
-  events: NationalArtistEvent[];
+  warning?: string;
+  events: NationalArtistEvent[]
 }
 
 // Interfaz para eventos de artistas nacionales

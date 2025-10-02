@@ -462,19 +462,7 @@ export const matamorosFestival: FestivalEvent[] = [
     category: "Música",
     venue: "Plaza Principal \"Miguel Hidalgo\"",
     time: "19:00 hrs."
-  },
-  // Domingo 12 de octubre
-  {
-    id: "ma-10",
-    date: "12",
-    day: "domingo",
-    title: "La Casetera",
-    artist: "La Casetera",
-    origin: "FIO y Municipio H. Matamoros",
-    category: "Interdisciplinario",
-    venue: "Plaza Principal \"Miguel Hidalgo\"",
-    time: "21:00 hrs."
-  },
+  }
 ];
 
 // Información del Festival del Municipio Matamoros

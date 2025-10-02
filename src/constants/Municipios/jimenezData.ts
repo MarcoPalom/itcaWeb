@@ -19,7 +19,7 @@ export const jimenezFestival: FestivalEvent[] = [
     date: "4",
     day: "sábado",
     title: "Trío UATsteco",
-    artist: "Tamaulipas",
+    artist: "Trío UATsteco",
     origin: "Tamaulipas",
     category: "Música",
     venue: "Kiosko de la Plaza Principal \"Plaza Hidalgo\"",

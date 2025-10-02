@@ -30,7 +30,7 @@ export const vallehermosoFestival: FestivalEvent[] = [
     date: "5",
     day: "domingo",
     title: "Del Vali & Wero Hernández",
-    artist: "Del Vali & El Wero Hernández",
+    artist: "Del Vali & Wero Hernández",
     origin: "Estados Unidos",
     category: "Música",
     venue: "Foro al Aire Libre de la Plaza Principal",

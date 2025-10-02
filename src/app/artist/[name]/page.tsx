@@ -11,6 +11,7 @@ import EventList from "@/components/artist/EventList"
 import FestivalLoading from "@/components/FestivalLoading"
 import { useFestivalLoading } from "@/hooks/useFestivalLoading"
 import { getArtistStatsFromAllMunicipalities, ArtistEventWithMunicipality } from "@/utils/artistEvents"
+import { useTheme } from "@/contexts/ThemeContext"
 
 // Tipos genéricos para artistas de municipios
 type Artist = {
@@ -33,6 +34,7 @@ type ArtistEvent = ArtistEventWithMunicipality
 export default function ArtistPage() {
   const params = useParams()
   const router = useRouter()
+  const { isDark } = useTheme()
   const [artist, setArtist] = useState<Artist | null>(null)
   const [showDescription, setShowDescription] = useState(false)
 
@@ -98,7 +100,9 @@ export default function ArtistPage() {
 
   if (!artist) {
     return (
-      <div className="min-h-screen bg-black text-white flex items-center justify-center">
+      <div className={`min-h-screen flex items-center justify-center ${
+        isDark ? "bg-black text-white" : "bg-white text-gray-800"
+      }`}>
         <div className="text-center">
           <div className="text-xl mb-4">Artista no encontrado</div>
           <button 
@@ -118,7 +122,9 @@ export default function ArtistPage() {
 
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <div className={`min-h-screen relative overflow-hidden ${
+      isDark ? "bg-black text-white" : "bg-yellow-100 text-gray-800"
+    }`}>  
 
 
       <div className="absolute inset-0 z-0">
@@ -133,7 +139,11 @@ export default function ArtistPage() {
         <div className="flex items-center justify-between p-4 md:p-6">
           <button 
             onClick={() => router.back()}
-            className="flex items-center gap-2 text-white hover:text-[#864e94] transition-colors"
+            className={`flex items-center gap-2 transition-colors ${
+              isDark 
+                ? "text-white hover:text-[#864e94]" 
+                : "text-gray-800 hover:text-[#864e94]"
+            }`}
           >
             <ArrowLeft className="w-5 h-5" />
             <span className="text-sm font-medium md:text-lg">Volver</span>
@@ -152,17 +162,25 @@ export default function ArtistPage() {
           </div>
 
           <div className="text-center mb-8">
-            <h1 className="text-2xl md:text-4xl font-bold text-white mb-4">{artist.name}</h1>
+            <h1 className={`text-2xl md:text-4xl font-bold mb-4 ${
+              isDark ? "text-white" : "text-gray-800"
+            }`}>{artist.name}</h1>
             <div className="text-[#864e94] mb-2 font-medium">
               {artist.origin}
             </div>
-            <div className="text-gray-300 mb-2">
+            <div className={`mb-2 ${
+              isDark ? "text-gray-300" : "text-gray-600"
+            }`}>
               {artist.category}
               {artist.subcategory && (
-                <span className="block text-sm mt-1 text-gray-400">{artist.subcategory}</span>
+                <span className={`block text-sm mt-1 ${
+                  isDark ? "text-gray-400" : "text-gray-500"
+                }`}>{artist.subcategory}</span>
               )}
             </div>
-            <div className="text-white text-sm mb-4">
+            <div className={`text-sm mb-4 ${
+              isDark ? "text-white" : "text-gray-800"
+            }`}>
               Se presentará en {municipalities.length} municipio{municipalities.length !== 1 ? 's' : ''}
             </div>
             {artist.description && (
@@ -198,9 +216,15 @@ export default function ArtistPage() {
                         animate={{ y: 0 }}
                         exit={{ y: -10 }}
                         transition={{ duration: 0.3, delay: 0.1 }}
-                        className="p-4 bg-gray-900/50 rounded-lg border border-gray-700/50 backdrop-blur-sm"
+                        className={`p-4 rounded-lg border backdrop-blur-sm ${
+                          isDark 
+                            ? "bg-gray-900/50 border-gray-700/50" 
+                            : "bg-gray-100/50 border-gray-300/50"
+                        }`}
                       >
-                        <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                        <p className={`text-sm md:text-base leading-relaxed ${
+                          isDark ? "text-gray-300" : "text-gray-600"
+                        }`}>
                           {artist.description}
                         </p>
                       </motion.div>
@@ -217,8 +241,14 @@ export default function ArtistPage() {
             artistName={artist.name}
           />
 
-          <div className="mt-8 p-4 bg-gray-900 rounded-lg border border-gray-700">
-            <h3 className="text-lg font-semibold text-white mb-3 text-center">
+          <div className={`mt-8 p-4 rounded-lg border ${
+            isDark 
+              ? "bg-gray-900 border-gray-700" 
+              : "bg-gray-100 border-gray-300"
+          }`}>
+            <h3 className={`text-lg font-semibold mb-3 text-center ${
+              isDark ? "text-white" : "text-gray-800"
+            }`}>
               Municipios Visitados
             </h3>
             <div className="flex flex-wrap gap-2 justify-center">

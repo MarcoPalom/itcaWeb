@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     description: 'Festival Internacional en la Costa del Seno Mexicano. Evento cultural que reúne artistas nacionales e internacionales en Tamaulipas.',
     images: [
       {
-        url: '/images/logos/logo.png',
+        url: '/images/logos/logol.png',
         width: 1200,
         height: 630,
         alt: 'FICSM - Festival Internacional en la Costa del Seno Mexicano',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'FICSM - Festival Internacional en la Costa del Seno Mexicano',
     description: 'Festival Internacional en la Costa del Seno Mexicano. Evento cultural que reúne artistas nacionales e internacionales en Tamaulipas.',
-    images: ['/images/logos/logo.png'],
+    images: ['/images/logos/logol.png'],
     creator: '@ficsm',
     site: '@ficsm',
   },
@@ -81,12 +81,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/images/logos/logo.png', sizes: '32x32', type: 'image/png' },
-      { url: '/images/logos/logo.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/images/logos/logol.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/logos/logol.png', sizes: '16x16', type: 'image/png' },
     ],
-    shortcut: '/images/logos/logo.png',
+    shortcut: '/favicon.ico',
     apple: [
-      { url: '/images/logos/logo.png', sizes: '180x180', type: 'image/png' },
+      { url: '/images/logos/logol.png', sizes: '180x180', type: 'image/png' },
     ],
   },
   manifest: '/manifest.json',
@@ -103,8 +104,16 @@ export default function RootLayout({
       <head>
         <StructuredData />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#1a365d" />
+        <meta name="theme-color" content="#864e94" />
+        <meta name="msapplication-TileColor" content="#864e94" />
+        <meta name="msapplication-TileImage" content="/images/logos/logol.png" />
         <link rel="canonical" href="https://ficsm.com" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/images/logos/logol.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="twitter:image:alt" content="FICSM - Festival Internacional en la Costa del Seno Mexicano" />
       </head>
       <body>
         <ClientLayout>

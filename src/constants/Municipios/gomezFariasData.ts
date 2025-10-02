@@ -63,7 +63,7 @@ export const gomezFariasFestival: FestivalEvent[] = [
     date: "12",
     day: "domingo",
     title: "Huapangos tamaulipecos, la raíz de mi tierra",
-    artist: "Grupo Honda Nor-t",
+    artist: "Grupo Honda Nor-T",
     origin: "Tamaulipas",
     category: "Música",
     venue: "Explanada de la Presidencia Municipal",

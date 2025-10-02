@@ -52,7 +52,7 @@ export const nuevomorelosFestival: FestivalEvent[] = [
     date: "12",
     day: "domingo",
     title: "Con las manos entre los pies",
-    artist: "Grupo Espejos taller de teatro y pantomima",
+    artist: "Grupo espejos taller de teatro y pantomima",
     origin: "Tamaulipas",
     category: "Teatro | Pantomima",
     venue: "Explanada Ejidal, Ejido Ampliación de la Reforma",

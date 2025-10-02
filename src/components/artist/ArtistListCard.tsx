@@ -1,5 +1,5 @@
 "use client"
-import { MapPin } from "lucide-react"
+import { MapPin, AlertTriangle } from "lucide-react"
 import Image from "next/image"
 
 interface ArtistListCardProps {
@@ -9,6 +9,7 @@ interface ArtistListCardProps {
     origin: string
     category: string
     subcategory?: string
+    warning?: string
     events: Array<{
       id: string
       title: string
@@ -65,20 +66,16 @@ export default function ArtistListCard({ artist, imageSrc, isLast = false }: Art
                 )}
               </div>
 
-              {/* Events Summary */}
-              <div className="flex items-center justify-between mt-3">
-                <span className="text-[#864e94] text-sm font-medium">
-                  {artist.events.length} evento{artist.events.length !== 1 ? 's' : ''}
-                </span>
-                <div className="text-xs text-gray-500">
-                  {artist.events.length > 0 && (
-                    <span>
-                      {artist.events[0].municipality}
-                      {artist.events.length > 1 && ` +${artist.events.length - 1} más`}
-                    </span>
-                  )}
+              {/* Warning Tag */}
+              {artist.warning && (
+                <div className="mt-2">
+                  <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold bg-red-500/20 text-red-400 border border-red-500/30">
+                    <AlertTriangle className="w-3 h-3" />
+                    {artist.warning}
+                  </span>
                 </div>
-              </div>
+              )}
+
             </div>
           </div>
       </div>

@@ -8,6 +8,7 @@ export interface InternationalArtist {
   category: string;
   subcategory?: string;
   description?: string;
+  warning?: string;
   events: InternationalArtistEvent[];
 }
 

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { tamaulipecosArtists, TamaulipecoArtist } from "@/constants/tamaulipecosArtistData"
 import { getArtistImage } from "@/constants/artistImages"
-import { getArtistEventsFromAllMunicipalities } from "@/utils/artistEvents"
+import { getArtistEventsFromAllMunicipalities, getArtistStatsFromAllMunicipalities } from "@/utils/artistEvents"
 import FestivalBackground from "@/components/festival/FestivalBackground"
 import FestivalLoading from "@/components/FestivalLoading"
 import { useFestivalLoading } from "@/hooks/useFestivalLoading"
@@ -309,17 +309,24 @@ export default function ArtistsTamaulipecosPage() {
                           </div>
 
                           <div className="flex items-center justify-between mt-3">
-                            <span className="text-[#864e94] text-sm font-medium">
-                              {artist.events.length} evento{artist.events.length !== 1 ? 's' : ''}
-                            </span>
-                            <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
-                              {artist.events.length > 0 && (
-                                <span>
-                                  {artist.events[0].municipality}
-                                  {artist.events.length > 1 && ` +${artist.events.length - 1} más`}
-                                </span>
-                              )}
-                            </div>
+                            {(() => {
+                              const artistStats = getArtistStatsFromAllMunicipalities(artist.name);
+                              return (
+                                <>
+                                  <span className="text-[#864e94] text-sm font-medium">
+                                    {artistStats.totalEvents} evento{artistStats.totalEvents !== 1 ? 's' : ''}
+                                  </span>
+                                  <div className={`text-xs ${isDark ? 'text-gray-500' : 'text-gray-500'}`}>
+                                    {artistStats.totalEvents > 0 && (
+                                      <span>
+                                        {artistStats.municipalityNames[0]}
+                                        {artistStats.municipalityNames.length > 1 && ` +${artistStats.municipalityNames.length - 1} más`}
+                                      </span>
+                                    )}
+                                  </div>
+                                </>
+                              );
+                            })()}
                           </div>
                         </div>
                       </div>
