@@ -556,11 +556,11 @@ export const teatromorfosis: TamaulipecoArtist = {
 // Data de Melissa Castellanos
 export const melissaCastellanos: TamaulipecoArtist = {
   id: "mc-001",
-  name: "Melissa Castellanos",
+  name: "Melisa Castellanos",
   origin: "Ciudad Mante, Tamaulipas",
   category: "Música",
   subcategory: "Música de autor",
-  description: "Melissa Castellanos es una compositora, cantante y multiinstrumentista originaria de Ciudad Mante, Tamaulipas, radicada en Ciudad de México desde 2014. Su música fusiona raíces mexicanas con pop, rock y world music, creando una propuesta íntima y emocional. En 2020 lanzó Granar, su primer EP, y actualmente prepara el lanzamiento de Solata (octubre 2025), su primer álbum de larga duración. Ha participado en festivales como Vive Latino, SXSW, Tecate Comuna y Festival Marvin. Forma parte de la agrupación CENTAVRVS como acordeonista y cantante, y ha colaborado en proyectos cinematográficos y escénicos. En 2024 fue nominada a los Premios Metropolitanos de Teatro y recibió el Premio Estatal de la Juventud en Tamaulipas por su labor artística y docente. En este espectáculo, Melisa presenta su nuevo disco a través de un concierto lleno de fuerza emocional y sonoridades diversas. Solata recorre las fases del duelo con una mezcla de géneros, instrumentación variada y una puesta en escena vibrante. Más que un show, es una experiencia compartida donde el dolor se transforma en música y el público es invitado a cantar, sanar y sentir en colectivo.",
+  description: "Melisa Castellanos es una compositora, cantante y multiinstrumentista originaria de Ciudad Mante, Tamaulipas, radicada en Ciudad de México desde 2014. Su música fusiona raíces mexicanas con pop, rock y world music, creando una propuesta íntima y emocional. En 2020 lanzó Granar, su primer EP, y actualmente prepara el lanzamiento de Solata (octubre 2025), su primer álbum de larga duración. Ha participado en festivales como Vive Latino, SXSW, Tecate Comuna y Festival Marvin. Forma parte de la agrupación CENTAVRVS como acordeonista y cantante, y ha colaborado en proyectos cinematográficos y escénicos. En 2024 fue nominada a los Premios Metropolitanos de Teatro y recibió el Premio Estatal de la Juventud en Tamaulipas por su labor artística y docente. En este espectáculo, Melisa presenta su nuevo disco a través de un concierto lleno de fuerza emocional y sonoridades diversas. Solata recorre las fases del duelo con una mezcla de géneros, instrumentación variada y una puesta en escena vibrante. Más que un show, es una experiencia compartida donde el dolor se transforma en música y el público es invitado a cantar, sanar y sentir en colectivo.",
   events: []
 };
 

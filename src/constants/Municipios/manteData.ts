@@ -107,7 +107,7 @@ export const manteFestival: FestivalEvent[] = [
     date: "12",
     day: "domingo",
     title: "Solata - Un concierto sobre duelo, distancia y raíz",
-    artist: "Melissa Castellanos",
+    artist: "Melisa Castellanos",
     origin: "Tamaulipas",
     category: "Música",
     venue: "Plaza Principal \"Plutarco Elías Calles\"",
