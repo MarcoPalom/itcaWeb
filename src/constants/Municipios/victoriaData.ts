@@ -128,17 +128,6 @@ export const victoriaFestival: FestivalEvent[] = [
     time: "19:00 hrs."
   },
   {
-    id: "vi-3b",
-    date: "5",
-    day: "domingo",
-    title: "Majestuosa Camada \"San Simón Cerro\"",
-    artist: "Majestuosa Camada \"San Simón Cerro\"",
-    origin: "Guerrero",
-    category: "Danza",
-    venue: "Libre 17",
-    time: "17:00 hrs."
-  },
-  {
     id: "vi-3c",
     date: "5",
     day: "domingo",

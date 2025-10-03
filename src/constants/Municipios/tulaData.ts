@@ -4,17 +4,6 @@ import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 // Done
 export const tulaFestival: FestivalEvent[] = [
   {
-    id: "tu-1",
-    date: "3",
-    day: "viernes",
-    title: "Majestuosa Camada \"San Simón Cerro\"",
-    artist: "Majestuosa Camada \"San Simón Cerro\"",
-    origin: "Tlaxcala",
-    category: "Danza | Tradicional del Estado de Tlaxcala",
-    venue: "Calles Principales",
-    time: "18:00 hrs."
-  },
-  {
     id: "tu-2",
     date: "3",
     day: "viernes",

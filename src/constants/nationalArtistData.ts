@@ -803,44 +803,7 @@ export const lasJaras: NationalArtist = {
   ]
 };
 
-// Data de Majestuosa Camada "San Simón Cerro"
-export const majestuosaCamadaSanSimonCerro: NationalArtist = {
-  id: "mcssc-001",
-  name: "Majestuosa Camada \"San Simón Cerro\"",
-  origin: "Guerrero",
-  category: "Danza",
-  subcategory: "Danza Tradicional",
-  description: "Descripción pendiente",
-  events: [
-    {
-      id: "vc-5",
-      title: "Majestuosa Camada \"San Simón Cerro\"",
-      date: "5",
-      day: "domingo",
-      venue: "Libre 17",
-      time: "17:00 hrs.",
-      municipality: "Victoria"
-    },
-    {
-      id: "j-4",
-      title: "Majestuosa Camada \"San Simón Cerro\"",
-      date: "4",
-      day: "sábado",
-      venue: "Plaza Hidalgo",
-      time: "20:00 hrs.",
-      municipality: "Jaumave"
-    },
-    {
-      id: "t-3",
-      title: "Majestuosa Camada \"San Simón Cerro\"",
-      date: "3",
-      day: "viernes",
-      venue: "Calles Principales",
-      time: "18:00 hrs.",
-      municipality: "Tula"
-    }
-  ]
-};
+
 
 // Data de Cuatete Sound
 export const cuateteSound: NationalArtist = {
@@ -898,7 +861,6 @@ export const nationalArtists: NationalArtist[] = [
   lastWordTrio,
   companiaNacionalTeatro,
   lasJaras,
-  majestuosaCamadaSanSimonCerro,
   cuateteSound,
   violaTrigo
 ];

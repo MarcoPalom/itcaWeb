@@ -15,17 +15,6 @@ export const jaumaveFestival: FestivalEvent[] = [
     time: "20:00 hrs."
   },
   {
-    id: "ja-2",
-    date: "4",
-    day: "sábado",
-    title: "Majestuosa Camada \"San Simón Cerro\"",
-    artist: "Majestuosa Camada \"San Simón Cerro\"",
-    origin: "Guerrero",
-    category: "Interdisciplinario",
-    venue: "Plaza Hidalgo",
-    time: "20:00 hrs."
-  },
-  {
     id: "ja-2b",
     date: "5",
     day: "domingo",
