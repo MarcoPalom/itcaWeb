@@ -258,15 +258,6 @@ export const matiasAguayo: InternationalArtist = {
   ]
 };
 
-// Data de Del Vali
-export const delVali: InternationalArtist = {
-  id: "dv-001",
-  name: "Del Vali",
-  origin: "Estados Unidos",
-  category: "Música",
-  description: "Del Valí es una nueva y electrizante fuerza en el mundo de la música norteña, que combina las ricas tradiciones de la música norteña y la cumbia con un enfoque urbano fresco e innovador, infundiendo su sonido con cautivadores nuevos géneros y melodías.",
-  events: []
-};
 
 // Data de Wero Hernández
 export const weroHernandez: InternationalArtist = {
@@ -287,7 +278,6 @@ export const internationalArtists: InternationalArtist[] = [
   saborLifeIsRhythm,
   balletNepantla,
   matiasAguayo,
-  delVali,
   weroHernandez
 ];
 

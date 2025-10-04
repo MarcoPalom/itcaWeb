@@ -4,17 +4,6 @@ import { FestivalEvent, FestivalExhibition, FestivalInfo } from '../types';
 // Data del Festival del Municipio Reynosa
 export const reynosaFestival: FestivalEvent[] = [
   // Viernes 3 de octubre
-  {
-    id: "re-1",
-    date: "3",
-    day: "viernes",
-    title: "Diálogo en piel",
-    artist: "Hands Percussion of Malaysia",
-    origin: "Malasia",
-    category: "Interdisciplinario",
-    venue: "Teatro Principal del Parque Cultural Reynosa",
-    time: "19:00 hrs."
-  },
   // Sábado 4 de octubre
   {
     id: "re-2",
@@ -77,8 +66,8 @@ export const reynosaFestival: FestivalEvent[] = [
     id: "re-4b",
     date: "6",
     day: "lunes",
-    title: "Del Vali & Wero Hernández",
-    artist: "Del Vali & Wero Hernández",
+    title: "Wero Hernández",
+    artist: "Wero Hernández",
     origin: "Estados Unidos",
     category: "Música",
     venue: "Del Río, Plaza Comercial",
@@ -222,6 +211,17 @@ export const reynosaFestival: FestivalEvent[] = [
     time: "18:00 hrs."
   },
   // Domingo 12 de octubre
+  {
+    id: "re-1",
+    date: "12",
+    day: "domingo",
+    title: "Diálogo en piel",
+    artist: "Hands Percussion of Malaysia",
+    origin: "Malasia",
+    category: "Interdisciplinario",
+    venue: "Teatro Principal del Parque Cultural Reynosa",
+    time: "11:00 hrs."
+  },
   {
     id: "re-10",
     date: "12",

@@ -9,9 +9,7 @@ export const internationalArtistImages: { [key: string]: string } = {
   "Sabor Life is Rhythm": "/images/international_artists/sabor_life.jpg", 
   "Ballet Nepantla": "/images/international_artists/ballet_nepantla.jpeg",
   "Matías Aguayo": "/images/international_artists/matias.jpg",
-  "Del Vali": "/images/international_artists/delvali.jpg",
   "Wero Hernández": "/images/international_artists/wero.jpg",
-  "Del Vali & Wero Hernández": "/images/international_artists/delwero.jpg",
 }
 
 // Imágenes de artistas nacionales
