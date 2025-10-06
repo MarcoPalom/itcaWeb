@@ -467,7 +467,7 @@ export const victoriaFestival: FestivalEvent[] = [
     date: "10",
     day: "viernes",
     title: "El barco papel",
-    artist: "Teatro ingenio – Creación",
+    artist: "Teatro Ingenio - Creación",
     origin: "Tamaulipas",
     category: "Teatro",
     venue: "Auditorio \"Alberto López\" del Centro Cultural Tamaulipas",
