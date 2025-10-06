@@ -67,7 +67,7 @@ export const hidalgoFestival: FestivalEvent[] = [
     origin: "Nuevo León",
     category: "Música",
     venue: "Plaza Principal de la Cabecera Municipal",
-    time: "19:00 hrs."
+    time: "18:00 hrs."
   }
 ];
 
