@@ -63,7 +63,7 @@ export const gonzalezFestival: FestivalEvent[] = [
     date: "11",
     day: "sábado",
     title: "Solata - Un concierto sobre duelo, distancia y raíz",
-    artist: "Melissa Castellanos",
+    artist: "Melisa Castellanos",
     origin: "Tamaulipas",
     category: "Música",
     venue: "Plaza Principal de Estación Manuel",

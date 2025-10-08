@@ -66,8 +66,8 @@ export const tulaFestival: FestivalEvent[] = [
     artist: "Argelia Fragoso",
     origin: "Cuba",
     category: "Música | Boleros",
-    venue: "Explanada de la Presidencia Municipal",
-    time: "18:30 hrs."
+    venue: "Escuela Miguel Hidalgo Centro",
+    time: "17:00 hrs."
   },
   {
     id: "tu-7b",
