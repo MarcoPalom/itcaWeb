@@ -33,7 +33,7 @@ export const casasFestival: FestivalEvent[] = [
     artist: "Teatro Guarapo",
     origin: "Tamaulipas",
     category: "Teatro",
-    venue: "Lienzo Charro de Casas",
+    venue: "Auditorio de la presidencia municipal",
     time: "10:00 hrs."
   }
 ];

@@ -55,7 +55,7 @@ export const maderoFestival: FestivalEvent[] = [
     artist: "Brassas Mexican Beat",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Plaza de Arte Miramar (Acceso a Escolleras)",
+    venue: "Plaza de isauro alfaro",
     time: "19:00 hrs."
   },
   {
@@ -66,7 +66,7 @@ export const maderoFestival: FestivalEvent[] = [
     artist: "Mr. Trash",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Plaza de Arte Miramar (Acceso a Escolleras)",
+    venue: "Plaza de isauro alfaro",
     time: "19:00 hrs."
   },
   {
@@ -88,7 +88,7 @@ export const maderoFestival: FestivalEvent[] = [
     artist: "Adicto5",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Plaza de Arte Miramar (Acceso a escolleras)",
+    venue: "Plaza de Arte Escolleras",
     time: "19:00 hrs."
   }
 ];

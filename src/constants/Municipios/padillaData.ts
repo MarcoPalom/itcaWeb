@@ -44,7 +44,7 @@ export const padillaFestival: FestivalEvent[] = [
     artist: "Teatro Guarapo",
     origin: "Tamaulipas",
     category: "Teatro",
-    venue: "Escuela Primaria \"Conrado Castillo\"",
+    venue: "Escuela Primaria \"Heroes de Chapultepec\"",
     time: "9:00 hrs."
   },
   {

@@ -215,7 +215,7 @@ export const tampicoFestival: FestivalEvent[] = [
     artist: "Trío Alegría Huasteca",
     origin: "Municipio de Tampico",
     category: "Música",
-    venue: "Plaza Hijas de Tampico",
+    venue: "cede teatro el farol",
     time: "19:30 hrs."
   },
   {
@@ -260,7 +260,7 @@ export const tampicoFestival: FestivalEvent[] = [
     artist: "Cuatete Sound",
     origin: "Guerrero",
     category: "Música",
-    venue: "Plaza \"Hija de Tampico\"",
+    venue: "Teatro “El Farol” del Centro Cultural IRBA",
     time: "19:30 hrs."
   },
   {
@@ -283,7 +283,7 @@ export const tampicoFestival: FestivalEvent[] = [
     artist: "Orquesta Sinfónica Comunitaria de Tampico",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Barco Museo del Niño",
+    venue: "Casa de la Cultura",
     time: "16:30 hrs."
   },
   {
@@ -309,17 +309,6 @@ export const tampicoFestival: FestivalEvent[] = [
     time: "19:00 hrs."
   },
   {
-    id: "ta-8d",
-    date: "10",
-    day: "viernes",
-    title: "Marimba Viva",
-    artist: "Marimba \"La Familia\"",
-    origin: "Municipio de Tampico",
-    category: "Música",
-    venue: "Parque Urbano de la Col. Solidaridad Voluntad y Trabajo",
-    time: "19:30 hrs."
-  },
-  {
     id: "ta-8e",
     date: "10",
     day: "viernes",
@@ -327,7 +316,7 @@ export const tampicoFestival: FestivalEvent[] = [
     artist: "Grupo de Danza Huehuecóyotl",
     origin: "Municipio de Tampico",
     category: "Danza",
-    venue: "Peatonal Plaza de Armas",
+    venue: "Teatro “El Farol” del Centro Cultural IRBA",
     time: "17:00 hrs."
   },
   {
@@ -338,7 +327,7 @@ export const tampicoFestival: FestivalEvent[] = [
     artist: "Orquesta Sinfónica Juvenil",
     origin: "Municipio de Tampico",
     category: "Música",
-    venue: "Plaza Hijas de Tampico",
+    venue: "Gran Salon, Casa de la Cultura",
     time: "19:30 hrs."
   },
   // Sábado 11 de octubre
@@ -361,7 +350,7 @@ export const tampicoFestival: FestivalEvent[] = [
     artist: "COBAT 104, CETIS 103, CETIS 109",
     origin: "Municipio de Tampico",
     category: "Música",
-    venue: "Teatro al aire libre del Canal de la Cortadura",
+    venue: "Gran Salon, Casa de la Cultura",
     time: "18:30 hrs."
   },
   {
@@ -372,7 +361,7 @@ export const tampicoFestival: FestivalEvent[] = [
     artist: "Elgar Diseño Musical",
     origin: "Municipio de Tampico",
     category: "Música",
-    venue: "Plaza Hijas de Tampico",
+    venue: "Teatro “El Farol” del Centro Cultural IRBA",
     time: "19:30 hrs."
   },
   {
@@ -406,7 +395,7 @@ export const tampicoFestival: FestivalEvent[] = [
     artist: "Show Acusticumbia",
     origin: "Municipio de Tampico",
     category: "Música",
-    venue: "Plaza Hijas de Tampico",
+    venue: "Teatro “El Farol” del Centro Cultural IRBA",
     time: "19:30 hrs."
   },
   {

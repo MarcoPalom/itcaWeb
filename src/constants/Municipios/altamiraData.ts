@@ -44,7 +44,7 @@ export const altamiraFestival: FestivalEvent[] = [
     artist: "Las Hermanas García",
     origin: "Guerrero",
     category: "Música | Boleros Costeños",
-    venue: "Isla de la Esperanza Blvd. Cuco Sánchez",
+    venue: "auditorio juan macias",
     time: "19:00 hrs."
   },
   {

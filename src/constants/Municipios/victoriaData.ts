@@ -285,7 +285,7 @@ export const victoriaFestival: FestivalEvent[] = [
   },
   {
     id: "vi-5e",
-    date: "7",
+    date: "11",
     day: "martes",
     title: "Del Circo a la Calle",
     artist: "Cirque erös",
@@ -507,9 +507,10 @@ export const victoriaFestival: FestivalEvent[] = [
     venue: "Concha Acústica del Museo de Historia Natural de Tamaulipas TAMUX, ubicado en el Parque Cultural y Recreativo Siglo XXI",
     time: "8:00 hrs."
   },
+  //jueves 8 rauces
   {
     id: "vi-9d",
-    date: "11",
+    date: "9",
     day: "sábado",
     title: "Raíces Tamaulipecas",
     artist: "Agrupación de Casa del Arte Victoria",

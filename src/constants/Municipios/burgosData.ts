@@ -55,7 +55,7 @@ export const burgosFestival: FestivalEvent[] = [
     artist: "Grupo Tayer",
     origin: "Nuevo León",
     category: "Música",
-    venue: "Plaza Principal",
+    venue: "Centro civico municipal agapito zuñiga",
     time: "18:00 hrs."
   },
   {

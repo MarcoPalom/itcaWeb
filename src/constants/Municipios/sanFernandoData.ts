@@ -47,6 +47,7 @@ export const sanFernandoFestival: FestivalEvent[] = [
     venue: "Escuela Primaria \"Juana de Asbaje y Ramírez\"",
     time: "10:00 hrs."
   },
+  //camvio pendiente 
   {
     id: "sf-6",
     date: "11",

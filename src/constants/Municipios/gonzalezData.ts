@@ -44,7 +44,7 @@ export const gonzalezFestival: FestivalEvent[] = [
     artist: "Colectivo Trueque",
     origin: "Tamaulipas-PROFEST",
     category: "Interdisciplinario",
-    venue: "Plaza Principal de Estación Manuel",
+    venue: "Unidad deportiva de Estación Manuel",
     time: "19:00 hrs."
   },
   {

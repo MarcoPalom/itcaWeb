@@ -67,7 +67,7 @@ export const aldamaFestival: FestivalEvent[] = [
     origin: "Cuba",
     category: "Interdisciplinario",
     venue: "Auditorio Municipal",
-    time: "17:00 hrs."
+    time: "18:00 hrs."
   },
   {
     id: "al-7",
