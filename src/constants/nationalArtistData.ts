@@ -811,7 +811,7 @@ export const cuateteSound: NationalArtist = {
   name: "Cuatete Sound",
   origin: "Guerrero",
   category: "Música",
-  subcategory: "Música Electrónica",
+  subcategory: "Música",
   description: "Descripción pendiente",
   events: [
     {
