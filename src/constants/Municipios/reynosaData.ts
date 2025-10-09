@@ -223,17 +223,6 @@ export const reynosaFestival: FestivalEvent[] = [
     time: "11:00 hrs."
   },
   {
-    id: "re-10",
-    date: "12",
-    day: "domingo",
-    title: "#porquelollevamosenlasangre",
-    artist: "Afrodescendencia Matamoros",
-    origin: "Tamaulipas",
-    category: "Interdisciplinario",
-    venue: "Teatro Principal del Parque Cultural Reynosa",
-    time: "19:00 hrs."
-  },
-  {
     id: "re-10b",
     date: "12",
     day: "domingo",

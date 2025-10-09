@@ -55,7 +55,7 @@ export const hidalgoFestival: FestivalEvent[] = [
     artist: "Los del Pueblo",
     origin: "Tamaulipas",
     category: "Música",
-    venue: "Plaza Principal del Ejido \"Estación Santa Engracia\"",
+    venue: "Ejido Emiliano Zapata",
     time: "18:00 hrs."
   },
   {
@@ -66,7 +66,7 @@ export const hidalgoFestival: FestivalEvent[] = [
     artist: "Grupo Tayer",
     origin: "Nuevo León",
     category: "Música",
-    venue: "Plaza Principal de la Cabecera Municipal",
+    venue: "Ejido Emiliano Zapata",
     time: "18:00 hrs."
   }
 ];

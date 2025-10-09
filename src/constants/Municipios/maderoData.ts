@@ -93,7 +93,7 @@ export const maderoFestival: FestivalEvent[] = [
   }
 ];
 
-// Información del Festival del Municipio Madero
+// Información  del Festival del Municipio Madero
 export const maderoFestivalInfo: FestivalInfo = {
   name: "Madero",
   location: "Madero",
