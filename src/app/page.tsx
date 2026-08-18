@@ -1,8 +1,8 @@
 "use client"
 import React from "react";
-import Fastival from "../components/festival/Fastival";
-import FestivalLoading from "../components/FestivalLoading";
-import { useFestivalLoading } from "../hooks/useFestivalLoading";
+import Festival from "@/components/festival/Festival";
+import FestivalLoading from "@/components/FestivalLoading";
+import { useFestivalLoading } from "@/hooks/useFestivalLoading";
 
 export default function Home() {
   const { isLoading, progress, message } = useFestivalLoading({
@@ -23,5 +23,5 @@ export default function Home() {
     );
   }
 
-  return <Fastival />;
+  return <Festival />;
 } 

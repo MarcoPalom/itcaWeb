@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
+import Image from "next/image";
 
 export default function Footer() {
   const [currentYear, setCurrentYear] = useState(2024)
@@ -13,9 +14,11 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex items-center space-x-4">
-            <img
+            <Image
               src="/images/logos/logol.png"
               alt="Festival Logo"
+              width={64}
+              height={32}
               className="h-8 w-auto"
             />
             <span className="text-gray-600 dark:text-gray-300 text-sm">

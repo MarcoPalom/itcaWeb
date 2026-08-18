@@ -1,10 +1,10 @@
 "use client"
+import Image from "next/image";
 import { useState } from "react"
 import { MapPin, Calendar, Clock, Users, ChevronDown, AlertTriangle } from "lucide-react"
-import { useTheme } from "@/contexts/ThemeContext"
-import { internationalArtists, getArtistByName as getInternationalArtist } from "@/constants/internationalArtistData"
-import { nationalArtists, getArtistByName as getNationalArtist } from "@/constants/nationalArtistData"
-import { tamaulipecosArtists, getTamaulipecoArtistByName } from "@/constants/tamaulipecosArtistData"
+import { internationalArtists, getArtistByName as getInternationalArtist } from "@/data/internationalArtists"
+import { nationalArtists, getArtistByName as getNationalArtist } from "@/data/nationalArtists"
+import { tamaulipecosArtists, getTamaulipecoArtistByName } from "@/data/tamaulipecanArtists"
 
 interface Event {
   id: string
@@ -28,7 +28,6 @@ interface EventListProps {
 }
 
 export default function EventList({ events, artistImage, artistName, municipalityImage }: EventListProps) {
-  const { isDark } = useTheme()
   const [expandedEvents, setExpandedEvents] = useState<Set<string>>(new Set())
 
   const sortedEvents = [...events].sort((a, b) => {
@@ -149,37 +148,28 @@ export default function EventList({ events, artistImage, artistName, municipalit
         })
         
         return (
-        <div 
+        <div
           key={event.id || index}
-          onClick={() => toggleEventExpansion(event.id)}
-          className={`rounded-lg p-4 border transition-all duration-300 cursor-pointer transform hover:scale-[1.02] ${
-            isDark 
-              ? "bg-gray-900 text-white" 
-              : "bg-white text-gray-800"
-          } ${
-            isExpanded 
-              ? 'border-[#864e94] shadow-lg shadow-[#864e94]/20' 
-              : isDark
-                ? 'border-gray-700 hover:border-[#864e94]'
-                : 'border-gray-300 hover:border-[#864e94]'
+          className={`rounded-xl border bg-surface p-4 text-ink transition-colors duration-200 ${
+            isExpanded ? "border-brand" : "border-line hover:border-line-strong"
           }`}
         >
           <div className="flex items-start gap-4">
             <div className="w-24 h-38 rounded-lg overflow-hidden flex-shrink-0">
-              <img
+              <Image
                 src={eventImage}
                 alt={event.title || event.municipality}
-                className="w-full h-full object-cover"
+                fill
+                sizes="96px"
+                className="object-cover"
               />
             </div>
 
             <div className="flex-1 min-w-0">
-              <h3 className={`font-bold text-lg md:text-xl mb-1 ${
-                isDark ? "text-white" : "text-gray-800"
-              }`}>
+              <h3 className="mb-1 text-lg font-bold text-ink md:text-xl">
                 {event.artist || artistName}
               </h3>
-              <p className="text-[#864e94] font-medium text-sm md:text-base mb-2">
+              <p className="mb-2 text-sm font-medium text-brand md:text-base">
                 {event.title || artistName}
               </p>
 
@@ -193,32 +183,26 @@ export default function EventList({ events, artistImage, artistName, municipalit
               )}
               
               <div className="space-y-2 text-sm md:text-base">
-                <div className={`flex items-center gap-2 ${
-                  isDark ? "text-gray-300" : "text-gray-600"
-                }`}>
-                  <MapPin className="w-4 h-4 text-[#864e94]" />
+                <div className="flex items-center gap-2 text-ink-muted">
+                  <MapPin aria-hidden="true" className="h-4 w-4 text-brand" />
                   <span className="font-medium">{event.municipality}</span>
                 </div>
                 
                 {event.venue && event.venue !== "Por confirmar" && (
-                  <div className={isDark ? "text-gray-400" : "text-gray-500"}>
+                  <div className="text-ink-faint">
                     {event.venue}
                   </div>
                 )}
                 
                 <div className="flex items-center gap-4">
-                  <div className={`flex items-center gap-2 ${
-                    isDark ? "text-gray-300" : "text-gray-600"
-                  }`}>
-                    <Calendar className="w-4 h-4 text-[#864e94]" />
+                  <div className="flex items-center gap-2 text-ink-muted">
+                    <Calendar aria-hidden="true" className="h-4 w-4 text-brand" />
                     <span>{event.day} {event.date}</span>
                   </div>
                   
                   {event.time && event.time !== "Por confirmar" && (
-                    <div className={`flex items-center gap-2 ${
-                      isDark ? "text-gray-300" : "text-gray-600"
-                    }`}>
-                      <Clock className="w-4 h-4 text-[#864e94]" />
+                    <div className="flex items-center gap-2 text-ink-muted">
+                      <Clock aria-hidden="true" className="h-4 w-4 text-brand" />
                       <span>{event.time}</span>
                     </div>
                   )}
@@ -227,13 +211,22 @@ export default function EventList({ events, artistImage, artistName, municipalit
             </div>
             
             {artistDescription && (
-              <div className="flex justify-center mt-2">
-                <ChevronDown 
-                  className={`w-5 h-5 text-[#864e94] transition-transform duration-300 ${
-                    isExpanded ? 'rotate-180' : 'rotate-0'
-                  }`} 
+              <button
+                type="button"
+                onClick={() => toggleEventExpansion(event.id)}
+                aria-expanded={isExpanded}
+                className="mt-1 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-brand transition-colors hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+              >
+                <span className="sr-only">
+                  {isExpanded ? "Ocultar detalle" : "Ver detalle"}
+                </span>
+                <ChevronDown
+                  aria-hidden="true"
+                  className={`h-5 w-5 transition-transform duration-300 ${
+                    isExpanded ? "rotate-180" : ""
+                  }`}
                 />
-              </div>
+              </button>
             )}
           </div>
           
@@ -241,12 +234,8 @@ export default function EventList({ events, artistImage, artistName, municipalit
             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
               isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
             }`}>
-              <div className={`mt-4 pt-4 border-t ${
-                isDark ? "border-gray-700" : "border-gray-300"
-              }`}>
-                <h5 className={`text-lg font-semibold mb-2 ${
-                  isDark ? "text-white" : "text-gray-800"
-                }`}>
+              <div className="mt-4 border-t border-line pt-4">
+                <h5 className="mb-2 text-base font-semibold text-ink">
                   {event.origin === "Municipio de Tampico" || 
                    event.origin === "Municipio de Victoria" || 
                    event.origin === "FIO y Municipio H. Matamoros" || 
@@ -258,9 +247,9 @@ export default function EventList({ events, artistImage, artistName, municipalit
                     : "Descripción del Artista"
                   }
                 </h5>
-                <p className={`leading-relaxed ${
-                  isDark ? "text-gray-300" : "text-gray-600"
-                }`}>{artistDescription}</p>
+                <p className="leading-relaxed text-ink-muted">
+                  {artistDescription}
+                </p>
               </div>
             </div>
           )}
@@ -270,12 +259,8 @@ export default function EventList({ events, artistImage, artistName, municipalit
 
       {events.length === 0 && (
         <div className="text-center py-8">
-          <Users className={`w-16 h-16 mx-auto mb-4 ${
-            isDark ? "text-gray-500" : "text-gray-400"
-          }`} />
-          <p className={`text-lg ${
-            isDark ? "text-gray-400" : "text-gray-600"
-          }`}>No hay eventos programados</p>
+          <Users aria-hidden="true" className="mx-auto mb-4 h-12 w-12 text-ink-faint" />
+          <p className="text-lg text-ink-muted">No hay funciones programadas</p>
         </div>
       )}
     </div>

@@ -1,49 +1,92 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Conecta la variante `dark:` de Tailwind al atributo que escribe ThemeContext.
+   Sin esto, `dark:` nunca se activa porque nadie pone la clase `dark` en el DOM. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-/* Fix for mobile scroll issues */
-html, body {
+/* Scroll de la pagina: html es el unico contenedor de scroll.
+   NO mover estas dos propiedades a `body` ni al selector universal `*`.
+   `overflow-x: hidden` convierte al elemento en contenedor de scroll (el
+   overflow-y pasa a `auto`); si eso le ocurre a body, body queda como un
+   scroller sin nada que scrollear, y `overscroll-behavior: none` le impide
+   encadenar el desplazamiento hacia html. El gesto tactil no lo nota, pero en
+   escritorio la rueda del mouse muere ahi y la pagina entera deja de scrollear. */
+html {
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: none;
+  overscroll-behavior-y: none;
 }
 
 body {
   position: relative;
   width: 100%;
-  height: 100%;
 }
 
-/* Prevent bounce scroll on iOS */
-* {
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: none;
+/* ------------------------------------------------------------------ *
+ * Tokens semanticos. Nunca escribir un hex suelto en un componente:
+ * usar estas variables para que el toggle de tema funcione en todos lados.
+ * El tema activo lo escribe ThemeContext en <html data-theme="...">.
+ * ------------------------------------------------------------------ */
+:root,
+:root[data-theme="light"] {
+  --canvas:        #f6f5f2;  /* fondo de pagina, papel calido */
+  --canvas-deep:   #ecebe6;  /* vinetas y zonas hundidas */
+  --surface:       #ffffff;  /* tarjetas */
+  --surface-2:     #f2f1ed;  /* tarjetas secundarias, skeletons */
+  --line:          #e2dfd8;  /* bordes y divisores */
+  --line-strong:   #cbc6bb;
+  --ink:           #14161c;  /* texto principal */
+  --ink-muted:     #5b6172;  /* texto secundario, 4.5:1 sobre --canvas */
+  --ink-faint:     #878c9b;  /* metadatos, 4.5:1 sobre --canvas */
+  --brand:         #7d4489;  /* morado FICSM */
+  --brand-hover:   #6a3874;
+  --on-brand:      #ffffff;
+  --accent:        #b8860b;  /* dorado, para destacar fechas */
+  --poster-shadow: 0 1px 2px rgb(20 22 28 / 0.06), 0 8px 24px -8px rgb(20 22 28 / 0.14);
+}
+
+:root[data-theme="dark"] {
+  --canvas:        #0b0d14;  /* azul noche casi neutro: deja que la foto ponga el color */
+  --canvas-deep:   #070911;
+  --surface:       #151926;
+  --surface-2:     #1d2231;
+  --line:          #272d3e;
+  --line-strong:   #3a4256;
+  --ink:           #f2f4f8;
+  --ink-muted:     #a3abbd;  /* 7.4:1 sobre --canvas */
+  --ink-faint:     #7d859a;  /* 4.8:1 sobre --canvas */
+  --brand:         #c07ada;  /* morado elevado: el #7d4489 no pasa contraste en oscuro */
+  --brand-hover:   #d199e8;
+  --on-brand:      #12060f;
+  --accent:        #f0b429;
+  --poster-shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px -12px rgb(0 0 0 / 0.7);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-canvas: var(--canvas);
+  --color-canvas-deep: var(--canvas-deep);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-on-brand: var(--on-brand);
+  --color-accent: var(--accent);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--ff-sans), system-ui, sans-serif;
+  --font-poster: var(--ff-display), var(--ff-sans), sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--ff-sans), system-ui, sans-serif;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  transition: background-color 200ms ease, color 200ms ease;
 }
 body::-webkit-scrollbar {
   display: none; 
@@ -55,29 +98,6 @@ html, body {
 }
 html::-webkit-scrollbar, body::-webkit-scrollbar {
   display: none; 
-}
-
-.custom-tabs .ant-tabs-nav {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  border-radius: 16px;
-  padding: 4px;
-  margin-bottom: 32px;
-}
-
-.custom-tabs .ant-tabs-tab {
-  border-radius: 12px;
-  font-weight: 500;
-}
-
-.custom-tabs .ant-tabs-tab-active {
-  background: linear-gradient(135deg, #8b5cf6, #a855f7) !important;
-  color: white !important;
-}
-
-.custom-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: white !important;
 }
 
 .line-clamp-2 {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme } from "@/contexts/ThemeContext";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface PaginationProps {
   currentPage: number;
@@ -9,114 +9,88 @@ interface PaginationProps {
   className?: string;
 }
 
-export default function Pagination({ 
-  currentPage, 
-  totalPages, 
-  onPageChange, 
-  className = "" 
-}: PaginationProps) {
-  const { isDark } = useTheme();
+/** Devuelve las paginas visibles, con elipsis donde se corta el rango. */
+function visiblePages(current: number, total: number): (number | "gap")[] {
+  const delta = 1;
+  const pages: (number | "gap")[] = [1];
+  const from = Math.max(2, current - delta);
+  const to = Math.min(total - 1, current + delta);
 
+  if (from > 2) pages.push("gap");
+  for (let i = from; i <= to; i++) pages.push(i);
+  if (to < total - 1) pages.push("gap");
+  if (total > 1) pages.push(total);
+
+  return pages;
+}
+
+const stepClasses =
+  "inline-flex h-10 w-10 items-center justify-center rounded-lg border border-line text-ink-muted transition-colors hover:border-line-strong hover:text-ink disabled:pointer-events-none disabled:opacity-40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-canvas";
+
+export default function Pagination({
+  currentPage,
+  totalPages,
+  onPageChange,
+  className = "",
+}: PaginationProps) {
   if (totalPages <= 1) return null;
 
-  const handlePrevious = () => {
-    if (currentPage > 1) {
-      onPageChange(currentPage - 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
-
-  const handleNext = () => {
-    if (currentPage < totalPages) {
-      onPageChange(currentPage + 1);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
-
-  const handlePageClick = (page: number) => {
+  const goTo = (page: number) => {
     onPageChange(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const getVisiblePages = () => {
-    const delta = 2; // Número de páginas a mostrar a cada lado de la página actual
-    const range = [];
-    const rangeWithDots = [];
-
-    for (let i = Math.max(2, currentPage - delta); i <= Math.min(totalPages - 1, currentPage + delta); i++) {
-      range.push(i);
-    }
-
-    if (currentPage - delta > 2) {
-      rangeWithDots.push(1, '...');
-    } else {
-      rangeWithDots.push(1);
-    }
-
-    rangeWithDots.push(...range);
-
-    if (currentPage + delta < totalPages - 1) {
-      rangeWithDots.push('...', totalPages);
-    } else if (totalPages > 1) {
-      rangeWithDots.push(totalPages);
-    }
-
-    return rangeWithDots;
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <div className={`flex justify-center items-center gap-2 mt-6 ${className}`}>
-      {/* Botón Anterior */}
+    <nav
+      aria-label="Paginación"
+      className={`mt-10 flex items-center justify-center gap-1.5 ${className}`}
+    >
       <button
-        onClick={handlePrevious}
+        type="button"
+        onClick={() => goTo(currentPage - 1)}
         disabled={currentPage === 1}
-        className={`px-4 py-2 rounded-lg transition-colors ${
-          currentPage === 1
-            ? 'opacity-50 cursor-not-allowed'
-            : isDark 
-              ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' 
-              : 'bg-white/90 text-gray-700 hover:bg-gray-100'
-        }`}
+        aria-label="Página anterior"
+        className={stepClasses}
       >
-        Anterior
+        <ChevronLeft aria-hidden="true" className="h-4 w-4" />
       </button>
-      
-      {/* Números de página */}
-      <div className="flex gap-1">
-        {getVisiblePages().map((page, index) => (
+
+      {visiblePages(currentPage, totalPages).map((page, i) =>
+        page === "gap" ? (
+          <span
+            key={`gap-${i}`}
+            aria-hidden="true"
+            className="px-1 text-ink-faint"
+          >
+            …
+          </span>
+        ) : (
           <button
-            key={index}
-            onClick={() => typeof page === 'number' && handlePageClick(page)}
-            disabled={page === '...'}
-            className={`px-3 py-2 rounded-lg transition-colors ${
-              page === '...'
-                ? 'cursor-default'
-                : currentPage === page
-                  ? 'bg-[#864e94] text-white'
-                  : isDark
-                    ? 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                    : 'bg-white/90 text-gray-700 hover:bg-gray-100'
+            key={page}
+            type="button"
+            onClick={() => goTo(page)}
+            aria-current={page === currentPage ? "page" : undefined}
+            aria-label={`Página ${page}`}
+            className={`inline-flex h-10 min-w-10 items-center justify-center rounded-lg px-3 text-sm font-medium tabular-nums transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-canvas ${
+              page === currentPage
+                ? "bg-brand text-on-brand"
+                : "border border-line text-ink-muted hover:border-line-strong hover:text-ink"
             }`}
           >
             {page}
           </button>
-        ))}
-      </div>
-      
-      {/* Botón Siguiente */}
+        ),
+      )}
+
       <button
-        onClick={handleNext}
+        type="button"
+        onClick={() => goTo(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className={`px-4 py-2 rounded-lg transition-colors ${
-          currentPage === totalPages
-            ? 'opacity-50 cursor-not-allowed'
-            : isDark 
-              ? 'bg-gray-800 text-gray-300 hover:bg-gray-700' 
-              : 'bg-white/90 text-gray-700 hover:bg-gray-100'
-        }`}
+        aria-label="Página siguiente"
+        className={stepClasses}
       >
-        Siguiente
+        <ChevronRight aria-hidden="true" className="h-4 w-4" />
       </button>
-    </div>
+    </nav>
   );
 }

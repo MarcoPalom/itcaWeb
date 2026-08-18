@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import { useState, useEffect } from "react"
 import { useTheme } from "@/contexts/ThemeContext"
 
@@ -62,9 +63,12 @@ export default function FestivalLoading({
           
           {/* Center Logo */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <img
+            <Image
               src={isDark ? "/images/logos/logo.png" : "/images/logos/logol.png"}
               alt="Festival Logo"
+              width={48}
+              height={48}
+              priority
               className={`w-10 h-10 md:w-12 md:h-12 animate-pulse ${
                 isDark ? "filter brightness-0 invert" : ""
               }`}

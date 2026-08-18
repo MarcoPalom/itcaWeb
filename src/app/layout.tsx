@@ -1,8 +1,32 @@
 import "./globals.css";
 import type { Metadata } from 'next';
 import { ReactNode } from "react";
-import ClientLayout from "../components/ClientLayout";
-import StructuredData from "../components/StructuredData";
+import localFont from "next/font/local";
+import ClientLayout from "@/components/ClientLayout";
+import StructuredData from "@/components/StructuredData";
+
+// Fuentes alojadas en el repo, no descargadas de Google en tiempo de build.
+// `next/font/google` rompe bajo Turbopack en esta version de Next (no resuelve
+// @vercel/turbopack-next/internal/font/google/font), y ademas esto evita una
+// conexion externa en tiempo de ejecucion. Ambas son variables: un solo archivo
+// cubre todos los pesos. Inter y Archivo estan bajo SIL Open Font License 1.1.
+const inter = localFont({
+  src: "./fonts/inter-variable.woff2",
+  weight: "100 900",
+  style: "normal",
+  variable: "--ff-sans",
+  display: "swap",
+  fallback: ["system-ui", "sans-serif"],
+});
+
+const archivo = localFont({
+  src: "./fonts/archivo-variable.woff2",
+  weight: "100 900",
+  style: "normal",
+  variable: "--ff-display",
+  display: "swap",
+  fallback: ["system-ui", "sans-serif"],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -100,7 +124,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="es-MX">
+    <html lang="es-MX" data-theme="dark" className={`${inter.variable} ${archivo.variable}`}>
       <head>
         <StructuredData />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
