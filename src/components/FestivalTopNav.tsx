@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -14,10 +15,10 @@ const FestivalTopNav = () => {
 
   const navItems = [
     { href: "/", label: "Festival" },
-    { href: "/national-artists", label: "Artistas Nacionales" },
-    { href: "/international-artists", label: "Artistas Internacionales" },
-    { href: "/artists-tamaulipecos", label: "Artistas Tamaulipecos" },
-    { href: "/municipal-billboards", label: "Municipios" },
+    { href: "/artistas-nacionales", label: "Artistas Nacionales" },
+    { href: "/artistas-internacionales", label: "Artistas Internacionales" },
+    { href: "/artistas-tamaulipecos", label: "Artistas Tamaulipecos" },
+    { href: "/carteleras", label: "Municipios" },
   ];
 
   return (
@@ -40,10 +41,13 @@ const FestivalTopNav = () => {
               whileTap={{ scale: 0.95 }}
               className="relative w-8 h-8"
             >
-              <img
+              <Image
                 src={isDark ? "/images/logos/logo.png" : "/images/logos/logol.png"}
                 alt="FICSM 2025"
-                className={`absolute inset-0 w-full h-full object-contain ${
+                fill
+                sizes="64px"
+                priority
+                className={`object-contain ${
                   isDark ? "filter brightness-0 invert" : ""
                 }`}
               />
@@ -55,9 +59,9 @@ const FestivalTopNav = () => {
             {navItems.map((item) => {
               const isActive = pathname === item.href || 
                 (item.href === "/" && pathname === "/") ||
-                (item.href === "/national-artists" && pathname.startsWith("/artist/")) ||
+                (item.href === "/artistas-nacionales" && pathname.startsWith("/artistas/")) ||
                 (item.href === "/tamaulipecos-artists" && pathname.startsWith("/tamaulipeco/")) ||
-                (item.href === "/municipal-billboards" && pathname.startsWith("/municipio/"));
+                (item.href === "/carteleras" && pathname.startsWith("/municipios/"));
               
               return (
                 <Link
@@ -137,9 +141,9 @@ const FestivalTopNav = () => {
                 {navItems.map((item) => {
                   const isActive = pathname === item.href || 
                     (item.href === "/" && pathname === "/") ||
-                    (item.href === "/national-artists" && pathname.startsWith("/artist/")) ||
+                    (item.href === "/artistas-nacionales" && pathname.startsWith("/artistas/")) ||
                     (item.href === "/tamaulipecos-artists" && pathname.startsWith("/tamaulipeco/")) ||
-                    (item.href === "/municipal-billboards" && pathname.startsWith("/municipio/"));
+                    (item.href === "/carteleras" && pathname.startsWith("/municipios/"));
                   
                   return (
                     <Link

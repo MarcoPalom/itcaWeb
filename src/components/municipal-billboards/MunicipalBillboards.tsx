@@ -1,552 +1,160 @@
 "use client";
 
-import {
-  ArrowLeft,
-  Search,
-  ChevronDown,
-  Check,
-} from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
-import FestivalBackground from "../festival/FestivalBackground";
-import { useTheme } from "@/contexts/ThemeContext";
+import { useMemo, useState } from "react";
+import { Search, X } from "lucide-react";
+import { allMunicipalFestivals } from "@/data/municipalities";
+import { getMunicipalImage } from "@/data/municipalImages";
+import FestivalBackground from "@/components/festival/FestivalBackground";
+import PosterCard from "@/components/festival/PosterCard";
+import PageHeader from "@/components/PageHeader";
 import Pagination from "@/components/Pagination";
-import { useMobileScrollFix } from "@/hooks/useMobileScrollFix";
-import {
-  Listbox,
-  Transition,
-  ListboxButton,
-  ListboxOptions,
-  ListboxOption,
-} from "@headlessui/react";
+import Select from "@/components/ui/Select";
 
-import { victoriaFestivalInfo } from "@/constants/Municipios/victoriaData";
-import { matamorosFestivalInfo } from "@/constants/Municipios/matamorosData";
-import { tampicoFestivalInfo } from "@/constants/Municipios/tampicoData";
-import { reynosaFestivalInfo } from "@/constants/Municipios/reynosaData";
-import { nvFestivalInfo } from "@/constants/Municipios/nvData";
-import { altamiraFestivalInfo } from "@/constants/Municipios/altamiraData";
-import { camargoFestivalInfo } from "@/constants/Municipios/camargoData";
-import { manteFestivalInfo } from "@/constants/Municipios/manteData";
-import { sanFernandoFestivalInfo } from "@/constants/Municipios/sanFernandoData";
-import { valleHermosoFestivalInfo } from "@/constants/Municipios/valleHermosoData";
-import { rioBravoFestivalInfo } from "@/constants/Municipios/rioBravoData";
-import { miguelAlemanFestivalInfo } from "@/constants/Municipios/miguelAlemanData";
-import { gonzalezFestivalInfo } from "@/constants/Municipios/gonzalezData";
-import { xicotencatlFestivalInfo } from "@/constants/Municipios/xicotencatlData";
-import { lleraFestivalInfo } from "@/constants/Municipios/lleraData";
-import { jaumaveFestivalInfo } from "@/constants/Municipios/jaumaveData";
-import { palmillasFestivalInfo } from "@/constants/Municipios/palmillasData";
-import { maineroFestivalInfo } from "@/constants/Municipios/maineroData";
-import { villagranFestivalInfo } from "@/constants/Municipios/villagranData";
-import { bustamanteFestivalInfo } from "@/constants/Municipios/bustamanteData";
-import { miquihuanaFestivalInfo } from "@/constants/Municipios/miquihuanaData";
-import { tulaFestivalInfo } from "@/constants/Municipios/tulaData";
-import { ocampoFestivalInfo } from "@/constants/Municipios/ocampoData";
-import { nuevoMorelosFestivalInfo } from "@/constants/Municipios/nuevoMorelosData";
-import { antiguoMorelosFestivalInfo } from "@/constants/Municipios/antiguoMorelosData";
-import { casasFestivalInfo } from "@/constants/Municipios/casasData";
-import { gomezFariasFestivalInfo } from "@/constants/Municipios/gomezFariasData";
-import { guerreroFestivalInfo } from "@/constants/Municipios/guerreroData";
-import { guemezFestivalInfo } from "@/constants/Municipios/guemezData";
-import { hidalgoFestivalInfo } from "@/constants/Municipios/hidalgoData";
-import { jimenezFestivalInfo } from "@/constants/Municipios/jimenezData";
-import { maderoFestivalInfo } from "@/constants/Municipios/maderoData";
-import { mendezFestivalInfo } from "@/constants/Municipios/mendezData";
-import { mierFestivalInfo } from "@/constants/Municipios/mierData";
-import { padillaFestivalInfo } from "@/constants/Municipios/padillaData";
-import { sanCarlosFestivalInfo } from "@/constants/Municipios/sanCarlosData";
-import { sanNicolasFestivalInfo } from "@/constants/Municipios/sanNicolasData";
-import { sotoLaMarinaFestivalInfo } from "@/constants/Municipios/sotoLaMarinaData";
-import { abasoloFestivalInfo } from "@/constants/Municipios/abasoloData";
-import { aldamaFestivalInfo } from "@/constants/Municipios/aldamaData";
-import { burgosFestivalInfo } from "@/constants/Municipios/burgosData";
-import { gustavoDiazOrdazFestivalInfo } from "@/constants/Municipios/gustavoDiazOrdazData";
-import { cruillasFestivalInfo } from "@/constants/Municipios/cruillasData";
-import { municipalImages } from "@/constants/municipalImages";
+const PER_PAGE = 16;
+
+const SORT_OPTIONS = [
+  { id: "name", name: "Orden alfabético" },
+  { id: "events", name: "Más eventos" },
+];
+
+const cleanName = (name: string) =>
+  name.replace("Festival del Municipio ", "").replace("Festival de ", "");
+
+const municipalitySlug = (name: string) =>
+  name
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace("festival-del-municipio-", "");
 
 export default function MunicipalBillboards() {
-  const { isDark } = useTheme();
-  useMobileScrollFix();
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedRegion, setSelectedRegion] = useState("");
   const [sortBy, setSortBy] = useState("name");
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
+  const [page, setPage] = useState(1);
 
-  const allMunicipalFestivals = [
-    victoriaFestivalInfo,
-    matamorosFestivalInfo,
-    tampicoFestivalInfo,
-    reynosaFestivalInfo,
-    nvFestivalInfo,
-    altamiraFestivalInfo,
-    camargoFestivalInfo,
-    manteFestivalInfo,
-    sanFernandoFestivalInfo,
-    valleHermosoFestivalInfo,
-    rioBravoFestivalInfo,
-    miguelAlemanFestivalInfo,
-    gonzalezFestivalInfo,
-    xicotencatlFestivalInfo,
-    lleraFestivalInfo,
-    jaumaveFestivalInfo,
-    palmillasFestivalInfo,
-    maineroFestivalInfo,
-    villagranFestivalInfo,
-    bustamanteFestivalInfo,
-    miquihuanaFestivalInfo,
-    tulaFestivalInfo,
-    ocampoFestivalInfo,
-    nuevoMorelosFestivalInfo,
-    antiguoMorelosFestivalInfo,
-    casasFestivalInfo,
-    gomezFariasFestivalInfo,
-    guerreroFestivalInfo,
-    guemezFestivalInfo,
-    hidalgoFestivalInfo,
-    jimenezFestivalInfo,
-    maderoFestivalInfo,
-    mendezFestivalInfo,
-    mierFestivalInfo,
-    padillaFestivalInfo,
-    sanCarlosFestivalInfo,
-    sanNicolasFestivalInfo,
-    sotoLaMarinaFestivalInfo,
-    abasoloFestivalInfo,
-    aldamaFestivalInfo,
-    burgosFestivalInfo,
-    gustavoDiazOrdazFestivalInfo,
-    cruillasFestivalInfo,
-  ];
-
-  const sortOptions = [
-    { id: "name", name: "Ordenar A-Z" },
-    { id: "events", name: "Más eventos" },
-  ];
-
-  const regions = ["Norte", "Centro", "Sur", "Frontera"];
-  const regionOptions = [
-    { id: "", name: "Todas las regiones" },
-    ...regions.map((region) => ({ id: region, name: region })),
-  ];
-
-  const handleSearchChange = (value: string) => {
-    setSearchTerm(value);
-    setCurrentPage(1);
-  };
-
-  const handleRegionChange = (value: string) => {
-    setSelectedRegion(value);
-    setCurrentPage(1);
-  };
-
-  const handleSortChange = (value: string) => {
-    setSortBy(value);
-    setCurrentPage(1);
-  };
-
-  const filteredMunicipalities = allMunicipalFestivals
-    .filter((municipality) => {
-      const municipalityName = municipality.name.replace(
-        "Festival del Municipio ",
-        ""
-      );
-      const matchesSearch = municipalityName
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase());
-      const matchesRegion = !selectedRegion || true;
-      return matchesSearch && matchesRegion;
-    })
-    .sort((a, b) => {
-      if (sortBy === "name") {
-        const nameA = a.name.replace("Festival del Municipio ", "");
-        const nameB = b.name.replace("Festival del Municipio ", "");
-        return nameA.localeCompare(nameB);
-      } else if (sortBy === "events") {
-        return (b.totalEvents || 0) - (a.totalEvents || 0);
-      }
-      return 0;
-    });
-
-  const totalPages = Math.ceil(filteredMunicipalities.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentMunicipalities = filteredMunicipalities.slice(
-    startIndex,
-    endIndex
+  const totalEvents = useMemo(
+    () => allMunicipalFestivals.reduce((n, m) => n + (m.totalEvents || 0), 0),
+    [],
   );
 
-  const selectedRegionOption =
-    regionOptions.find((option) => option.id === selectedRegion) ||
-    regionOptions[0];
-  const selectedSortOption =
-    sortOptions.find((option) => option.id === sortBy) || sortOptions[0];
+  const filtered = useMemo(() => {
+    const term = searchTerm.trim().toLowerCase();
+    return allMunicipalFestivals
+      .filter((m) => !term || cleanName(m.name).toLowerCase().includes(term))
+      .sort((a, b) =>
+        sortBy === "events"
+          ? (b.totalEvents || 0) - (a.totalEvents || 0)
+          : cleanName(a.name).localeCompare(cleanName(b.name), "es", {
+              sensitivity: "base",
+            }),
+      );
+  }, [searchTerm, sortBy]);
+
+  const totalPages = Math.ceil(filtered.length / PER_PAGE);
+  const start = (page - 1) * PER_PAGE;
+  const visible = filtered.slice(start, start + PER_PAGE);
+  const hasFilters = searchTerm !== "" || sortBy !== "name";
 
   return (
     <>
       <FestivalBackground />
-      <div
-        className={`min-h-screen w-full relative z-10 overflow-x-hidden ${
-          isDark ? "text-white" : "text-gray-800"
-        }`}
-        style={{ WebkitOverflowScrolling: "touch" }}
-      >
-        <div
-          className="relative z-10"
-          style={{ minHeight: "100vh", overflowY: "auto" }}
-        >
-          <div className="flex items-center justify-between p-4 md:p-6">
-            <Link
-              href="/festival"
-              className={`flex items-center gap-2 transition-colors ${
-                isDark
-                  ? "text-white hover:text-[#864e94]"
-                  : "text-gray-800 hover:text-[#864e94]"
-              }`}
-            >
-              <ArrowLeft className="w-5 h-5" />
-              <span className="text-sm font-medium md:text-lg">Volver</span>
-            </Link>
+
+      <div className="mx-auto w-full max-w-[1400px] px-4 pb-20 md:px-6 lg:px-8">
+        <PageHeader
+          title="Carteleras por municipio"
+          description="La programación completa del festival, municipio por municipio."
+          count={`${allMunicipalFestivals.length} municipios · ${totalEvents} eventos`}
+        />
+
+        <div className="mb-8 flex flex-col gap-3 md:flex-row">
+          <div className="relative flex-1">
+            <Search
+              aria-hidden="true"
+              className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-ink-faint"
+            />
+            <label htmlFor="municipality-search" className="sr-only">
+              Buscar municipio
+            </label>
+            <input
+              id="municipality-search"
+              type="search"
+              placeholder="Buscar municipio…"
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                setPage(1);
+              }}
+              className="w-full rounded-lg border border-line bg-surface py-3 pl-10 pr-4 text-sm text-ink placeholder:text-ink-faint transition-colors hover:border-line-strong focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+            />
           </div>
 
-          <div className="px-4 md:px-6 mb-6">
-            <h1
-              className={`text-3xl md:text-5xl font-bold text-center mb-2 ${
-                isDark ? "text-white" : "text-gray-800"
-              }`}
+          <Select
+            label="Ordenar"
+            value={sortBy}
+            options={SORT_OPTIONS}
+            onChange={(v) => {
+              setSortBy(v);
+              setPage(1);
+            }}
+            className="md:w-52"
+          />
+        </div>
+
+        <div className="mb-5 flex items-center justify-between gap-4">
+          <p aria-live="polite" className="text-sm text-ink-faint">
+            {filtered.length === 0
+              ? "Sin resultados"
+              : `${filtered.length} de ${allMunicipalFestivals.length} municipios`}
+          </p>
+          {hasFilters && (
+            <button
+              type="button"
+              onClick={() => {
+                setSearchTerm("");
+                setSortBy("name");
+                setPage(1);
+              }}
+              className="inline-flex items-center gap-1.5 rounded-md text-sm font-medium text-brand transition-colors hover:text-brand-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
             >
-              Carteleras de Municipios
-            </h1>
-            <p
-              className={`text-center text-sm md:text-base ${
-                isDark ? "text-gray-300" : "text-gray-600"
-              }`}
-            >
-              Descubre los festivales municipales de Tamaulipas
+              <X aria-hidden="true" className="h-3.5 w-3.5" />
+              Limpiar
+            </button>
+          )}
+        </div>
+
+        {filtered.length === 0 ? (
+          <div className="rounded-xl border border-dashed border-line py-20 text-center">
+            <p className="text-lg font-medium text-ink">
+              No encontramos ese municipio
+            </p>
+            <p className="mt-1 text-sm text-ink-muted">
+              Revisa la ortografía o limpia la búsqueda.
             </p>
           </div>
-
-          <div className="px-4 md:px-6 mb-6">
-            <div className="flex flex-col md:flex-row gap-4">
-              <div className="relative flex-1">
-                <Search
-                  className={`absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 ${
-                    isDark ? "text-gray-400" : "text-gray-500"
-                  }`}
+        ) : (
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-4">
+            {visible.map((municipality, i) => {
+              const name = cleanName(municipality.name);
+              return (
+                <PosterCard
+                  key={municipality.name}
+                  href={`/municipios/${municipalitySlug(municipality.name)}`}
+                  image={getMunicipalImage(name)}
+                  title={name}
+                  kicker={`${municipality.totalEvents} eventos`}
+                  meta={`${municipality.startDate} – ${municipality.endDate}`}
+                  ratio="landscape"
+                  priority={i < 4}
                 />
-                <input
-                  type="text"
-                  placeholder="Buscar municipio..."
-                  value={searchTerm}
-                  onChange={(e) => handleSearchChange(e.target.value)}
-                  className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:outline-none focus:border-[#864e94] ${
-                    isDark
-                      ? "bg-gray-800 border-gray-600 text-white placeholder-gray-400"
-                      : "bg-white/90 border-gray-300 text-gray-800 placeholder-gray-500"
-                  }`}
-                />
-              </div>
-
-              <Listbox value={selectedRegion} onChange={handleRegionChange}>
-                <div className="relative min-w-[200px] md:min-w-[220px]">
-                  <ListboxButton
-                    className={`relative w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-[#864e94] text-left ${
-                      isDark
-                        ? "bg-gray-800 border-gray-600 text-white"
-                        : "bg-white/90 border-gray-300 text-gray-800"
-                    }`}
-                  >
-                    <span className="block truncate">
-                      {selectedRegionOption.name}
-                    </span>
-                    <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                      <ChevronDown
-                        className={`w-5 h-5 ${
-                          isDark ? "text-gray-400" : "text-gray-500"
-                        }`}
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </ListboxButton>
-                  <Transition
-                    as="div"
-                    leave="transition ease-in duration-100"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                    enter="transition ease-out duration-100"
-                    enterFrom="opacity-0"
-                    enterTo="opacity-100"
-                  >
-                    <ListboxOptions
-                      className={`absolute z-10 mt-1 w-full border rounded-lg shadow-lg ${
-                        isDark
-                          ? "bg-gray-800 border-gray-600"
-                          : "bg-white border-gray-300"
-                      }`}
-                    >
-                      {regionOptions.map((option) => (
-                        <ListboxOption
-                          key={option.id}
-                          value={option.id}
-                          className={({ active }) =>
-                            `relative cursor-pointer select-none py-2 pl-10 pr-4 ${
-                              active
-                                ? "bg-[#864e94] text-white"
-                                : isDark
-                                ? "text-gray-300"
-                                : "text-gray-700"
-                            }`
-                          }
-                        >
-                          {({ selected }) => (
-                            <>
-                              <span
-                                className={`block truncate ${
-                                  selected ? "font-medium" : "font-normal"
-                                }`}
-                              >
-                                {option.name}
-                              </span>
-                              {selected ? (
-                                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-[#864e94]">
-                                  <Check
-                                    className="w-5 h-5"
-                                    aria-hidden="true"
-                                  />
-                                </span>
-                              ) : null}
-                            </>
-                          )}
-                        </ListboxOption>
-                      ))}
-                    </ListboxOptions>
-                  </Transition>
-                </div>
-              </Listbox>
-
-              <Listbox value={sortBy} onChange={handleSortChange}>
-                <div className="relative min-w-[200px] md:min-w-[220px]">
-                  <ListboxButton
-                    className={`relative w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-[#864e94] text-left ${
-                      isDark
-                        ? "bg-gray-800 border-gray-600 text-white"
-                        : "bg-white/90 border-gray-300 text-gray-800"
-                    }`}
-                  >
-                    <span className="block truncate">
-                      {selectedSortOption.name}
-                    </span>
-                    <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-                      <ChevronDown
-                        className={`w-5 h-5 ${
-                          isDark ? "text-gray-400" : "text-gray-500"
-                        }`}
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </ListboxButton>
-                  <Transition
-                    as="div"
-                    leave="transition ease-in duration-100"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                    enter="transition ease-out duration-100"
-                    enterFrom="opacity-0"
-                    enterTo="opacity-100"
-                  >
-                    <ListboxOptions
-                      className={`absolute z-10 mt-1 w-full border rounded-lg shadow-lg ${
-                        isDark
-                          ? "bg-gray-800 border-gray-600"
-                          : "bg-white border-gray-300"
-                      }`}
-                    >
-                      {sortOptions.map((option) => (
-                        <ListboxOption
-                          key={option.id}
-                          value={option.id}
-                          className={({ active }) =>
-                            `relative cursor-pointer select-none py-2 pl-10 pr-4 ${
-                              active
-                                ? "bg-[#864e94] text-white"
-                                : isDark
-                                ? "text-gray-300"
-                                : "text-gray-700"
-                            }`
-                          }
-                        >
-                          {({ selected }) => (
-                            <>
-                              <span
-                                className={`block truncate ${
-                                  selected ? "font-medium" : "font-normal"
-                                }`}
-                              >
-                                {option.name}
-                              </span>
-                              {selected ? (
-                                <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-[#864e94]">
-                                  <Check
-                                    className="w-5 h-5"
-                                    aria-hidden="true"
-                                  />
-                                </span>
-                              ) : null}
-                            </>
-                          )}
-                        </ListboxOption>
-                      ))}
-                    </ListboxOptions>
-                  </Transition>
-                </div>
-              </Listbox>
-            </div>
+              );
+            })}
           </div>
+        )}
 
-          <div className="px-4 md:px-6 pb-6">
-            <div
-              className={`backdrop-blur-sm rounded-lg mx-2 overflow-hidden ${
-                isDark ? "bg-gray-900/80" : "bg-white/90"
-              }`}
-            >
-              {currentMunicipalities.map((municipality, index) => (
-                <div key={municipality.name} className="w-full">
-                  <Link
-                    href={`/municipio/${municipality.name
-                      .replace("Festival del Municipio ", "")
-                      .toLowerCase()
-                      .normalize("NFD")
-                      .replace(/[\u0300-\u036f]/g, "")
-                      .replace(/\s+/g, "-")}`}
-                    className="block h-full"
-                  >
-                    <div
-                      className={`flex items-center gap-4 p-4 min-h-[120px] md:min-h-[150px] transition-colors ${
-                        isDark ? "hover:bg-gray-800/50" : "hover:bg-gray-100/50"
-                      }`}
-                    >
-                      <div className="w-20 h-28 md:w-24 md:h-36 flex-shrink-0 rounded-lg overflow-hidden relative">
-                        <Image
-                          src={
-                            municipalImages[
-                              municipality.name.replace(
-                                "Festival del Municipio ",
-                                ""
-                              )
-                            ] || "/images/municipal-festival-placeholder.jpg"
-                          }
-                          alt={municipality.name}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-
-                      <div className="flex-1 min-w-0 flex flex-col justify-center">
-                        <h3
-                          className={`font-bold text-lg md:text-xl mb-3 truncate ${
-                            isDark ? "text-white" : "text-gray-800"
-                          }`}
-                        >
-                          {municipality.name.replace(
-                            "Festival del Municipio ",
-                            ""
-                          )}
-                        </h3>
-
-                        <div className="space-y-2 text-sm">
-                          <div
-                            className={`flex items-center gap-2 ${
-                              isDark ? "text-gray-300" : "text-gray-600"
-                            }`}
-                          >
-                            <span className="text-[#864e94] font-medium">
-                              Tamaulipas
-                            </span>
-                          </div>
-
-                          <div
-                            className={
-                              isDark ? "text-gray-400" : "text-gray-600"
-                            }
-                          >
-                            Festival Municipal
-                          </div>
-
-                          <div className="flex items-center justify-between mt-3">
-                            <span className="text-[#864e94] text-sm font-medium">
-                              {municipality.totalEvents} evento
-                              {municipality.totalEvents !== 1 ? "s" : ""}
-                            </span>
-                            <div
-                              className={`text-xs ${
-                                isDark ? "text-gray-500" : "text-gray-500"
-                              }`}
-                            >
-                              <span>
-                                {municipality.startDate} -{" "}
-                                {municipality.endDate}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                  {index < currentMunicipalities.length - 1 && (
-                    <div
-                      className={`w-full h-px mx-4 ${
-                        isDark ? "bg-gray-700/50" : "bg-gray-300/50"
-                      }`}
-                    ></div>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            {filteredMunicipalities.length === 0 && (
-              <div className="text-center py-12">
-                <p
-                  className={`text-lg ${
-                    isDark ? "text-gray-400" : "text-gray-600"
-                  }`}
-                >
-                  No se encontraron municipios
-                </p>
-                <button
-                  onClick={() => {
-                    setSearchTerm("");
-                    setSelectedRegion("");
-                    setSortBy("name");
-                    setCurrentPage(1);
-                  }}
-                  className="mt-4 px-4 py-2 bg-[#864e94] text-white rounded-lg hover:bg-[#6d3d7a] transition-colors"
-                >
-                  Limpiar filtros
-                </button>
-              </div>
-            )}
-
-            <Pagination
-              currentPage={currentPage}
-              totalPages={totalPages}
-              onPageChange={setCurrentPage}
-            />
-
-            {filteredMunicipalities.length > 0 && (
-              <div
-                className={`text-center mt-4 text-sm ${
-                  isDark ? "text-gray-400" : "text-gray-600"
-                }`}
-              >
-                Mostrando {startIndex + 1}-
-                {Math.min(endIndex, filteredMunicipalities.length)} de{" "}
-                {filteredMunicipalities.length} municipios
-              </div>
-            )}
-          </div>
-        </div>
+        <Pagination
+          currentPage={page}
+          totalPages={totalPages}
+          onPageChange={setPage}
+        />
       </div>
     </>
   );

@@ -17,7 +17,7 @@ interface ThemeProviderProps {
 }
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light")
+  const [theme, setTheme] = useState<Theme>("dark")
 
   useEffect(() => {
     // Cargar tema guardado del localStorage
@@ -30,6 +30,8 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   useEffect(() => {
     // Guardar tema en localStorage
     localStorage.setItem("festival-theme", theme)
+    // Exponer el tema al CSS para que los tokens de color respondan al toggle.
+    document.documentElement.dataset.theme = theme
   }, [theme])
 
   const toggleTheme = () => {

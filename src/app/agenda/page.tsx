@@ -1,10 +1,11 @@
-import React from "react";
-import AgendaHero from "@/components/agenda/agenda-hero";
+import AgendaListing from "@/components/agenda/AgendaListing";
 
-const AgendaPage = () => {
-  return (
- <AgendaHero></AgendaHero>
-  );
+export const metadata = {
+  title: "Agenda cultural",
+  description:
+    "Actividad de los centros culturales de Tamaulipas durante el Festival Internacional en la Costa del Seno Mexicano.",
 };
 
-export default AgendaPage; 
+export default function AgendaPage() {
+  return <AgendaListing />;
+}
